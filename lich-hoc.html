@@ -13,7 +13,14 @@
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <div class="uk-flex uk-flex-wrap">
+    <div
+      class="uk-hidden@l uk-flex uk-flex-center uk-flex-middle"
+      style="width: 100vw; height: 100vh; flex-direction: column"
+    >
+      <p>Kích thước màn hình không hỗ trợ.</p>
+      <p>Vui lòng sử dụng kích thước màn hình lớn hơn</p>
+    </div>
+    <div class="uk-flex uk-flex-wrap uk-visible@l">
       <!-- Left menu -->
       <div
         style="
@@ -98,7 +105,7 @@
       </div>
 
       <!-- Content right -->
-      <div class="uk-width-expand">
+      <div class="w-full">
         <!-- header -->
         <div
           class="uk-flex uk-flex-between uk-text-center px-6 py-2 uk-box-shadow-small uk-margin-remove"
@@ -441,7 +448,7 @@
                         What’s the weather like today?
                       </p>
                       <a
-                        class="uk-button uk-button-primary rounded-10px px-4 uk-width-expand mt-2 flex-center"
+                        class="uk-button uk-button-primary rounded-10px px-4 w-full mt-2 flex-center"
                         style="height: 44px; text-transform: inherit"
                         href="/lop-hoc.html"
                       >
@@ -510,7 +517,7 @@
                       Đã có báo cáo học tập tuần 2 tháng 4 (từ 07/04 -> 15/04)
                     </p>
                     <button
-                      class="uk-button uk-button-default rounded-10px px-4 uk-width-expand mt-2"
+                      class="uk-button uk-button-default rounded-10px px-4 w-full mt-2"
                       style="
                         height: 44px;
                         text-transform: inherit;
@@ -565,7 +572,7 @@
               <p class="title1-bold mb-2">Lịch học</p>
               <div
                 uk-form-custom="target: > * > span:first-child"
-                class="uk-width-expand"
+                class="w-full"
                 style="
                   height: 44px;
                   border-radius: 8px;
@@ -574,7 +581,7 @@
                 "
               >
                 <select
-                  class="uk-width-expand"
+                  class="w-full"
                   aria-label="Custom controls"
                   style="color: #535557; height: 44px; border-radius: 8px"
                 >
@@ -583,7 +590,7 @@
                   <option value="2">Khoá học Ngữ pháp cơ bản</option>
                 </select>
                 <button
-                  class="uk-button uk-button-default uk-width-expand flex-items-center px-4"
+                  class="uk-button uk-button-default w-full flex-items-center px-4"
                   type="button"
                   tabindex="-1"
                   style="
@@ -1152,18 +1159,21 @@
                                 />
                               </button>
                               <div
+                                id="drop-info"
                                 class="uk-card uk-card-default"
                                 style="padding: 4px; border-radius: 8px"
                                 uk-drop="mode: click; pos: bottom-center"
                               >
                                 <ul class="uk-list uk-margin-remove">
                                   <li
+                                    onclick="toggleClickDrop('drop-info')"
                                     class="uk-navbar-left uk-text-center nav_button"
                                     uk-toggle="target: #modal-watch-video"
                                   >
                                     Xem lại video lớp học
                                   </li>
                                   <li
+                                    onclick="toggleClickDrop('drop-info')"
                                     class="uk-navbar-left uk-text-center nav_button"
                                     uk-toggle="target: #modal-course-content"
                                   >
@@ -2058,18 +2068,21 @@
                               />
                             </button>
                             <div
+                              id="drop-info"
                               class="uk-card uk-card-default"
                               style="padding: 4px; border-radius: 8px"
                               uk-drop="mode: click; pos: bottom-center"
                             >
                               <ul class="uk-list uk-margin-remove">
                                 <li
+                                  onclick="toggleClickDrop('drop-info')"
                                   class="uk-navbar-left uk-text-center nav_button"
                                   uk-toggle="target: #modal-watch-video"
                                 >
                                   Xem lại video lớp học
                                 </li>
                                 <li
+                                  onclick="toggleClickDrop('drop-info')"
                                   class="uk-navbar-left uk-text-center nav_button"
                                   uk-toggle="target: #modal-course-content"
                                 >
@@ -2432,5 +2445,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script>
+      function toggleClickDrop(dropId) {
+        const dropInfo = document.getElementById(dropId);
+        UIkit.drop(dropInfo).hide(false);
+      }
+    </script>
   </body>
 </html>

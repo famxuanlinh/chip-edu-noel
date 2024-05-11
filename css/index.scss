@@ -132,7 +132,77 @@ p {
   color: $neutral-07;
 }
 
+.button-primary {
+  @extend .button1;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 10px;
+  color: $neutral-00;
+  background-color: $primary-azure;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    opacity: 0.9;
+    color: $neutral-00;
+    text-decoration: none;
+  }
+
+  &-disabled {
+    @extend .button-primary;
+    background-color: #067ff380;
+    color: #ffffffbf;
+    cursor: not-allowed;
+
+    &:hover {
+      opacity: 1;
+      background-color: #067ff380;
+      color: #ffffffbf;
+    }
+  }
+}
+
+.button-secondary {
+  @extend .button-primary;
+  background-color: $neutral-01;
+  color: $neutral-06;
+  border: 2px solid $neutral-03;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+    // background-color: $neutral-01;
+    color: $neutral-06;
+    border: 2px solid $neutral-03;
+  }
+
+  &-disabled {
+    @extend .button-secondary;
+    background-color: #f9f9f980;
+    color: #272b30bf;
+    cursor: not-allowed;
+
+    &:hover {
+      opacity: 1;
+      background-color: #f9f9f980;
+      color: #272b30bf;
+      border: 2px solid #e7e8ea80;
+    }
+  }
+}
+
+.shadow {
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+}
+
 /* Header */
+.header {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 24px;
+}
 .nav_button_active {
   padding: 12px;
   border-radius: 12px;
@@ -144,21 +214,22 @@ p {
 }
 
 .nav_button {
+  @extend .body1-semibold;
   padding: 12px;
   border-radius: 12px;
   height: 48px;
   cursor: pointer;
-  color: $neutral-05;
   transition: 0.3ms;
-  font-weight: 600;
-}
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
 
-.nav_button:hover {
-  background-color: #efefef;
-}
-
-.nav_button:active {
-  color: #535557;
+  &:hover {
+    background-color: #efefef;
+  }
+  &:active {
+    color: #535557;
+  }
 }
 
 .label-form {
@@ -184,10 +255,10 @@ p {
 .btn-icon {
   background-color: transparent;
   transition: 0.3s;
-}
-
-.btn-icon:hover {
-  background-color: #efefef;
+  &:focus,
+  &:hover {
+    background-color: #efefef;
+  }
 }
 
 /* Header notification */
@@ -212,15 +283,25 @@ p {
   width: 100%;
 }
 
+.noti-active {
+  position: absolute;
+  left: 54.17%;
+  right: 25%;
+  top: 25%;
+  bottom: 54.17%;
+  width: 12px;
+  height: 12px;
+
+  background: #ff6a55;
+  border: 2px solid #fcfcfc;
+  border-radius: 12px;
+}
+
 .noti_item_title {
-  width: 100%;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
+  @extend .body1-semibold;
   text-align: left;
-  padding-bottom: 4px;
-  color: var(--title-neutral-07-color);
   display: flex;
+  padding-bottom: 4px;
   justify-content: space-between;
 }
 
@@ -230,31 +311,22 @@ p {
   background-color: var(--title-neutral-02-color);
   margin-top: 4px;
   text-align: left;
-}
 
-.noti_item_desc_block_title {
-  color: var(--title-neutral-06-color);
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 16px;
-  text-align: left;
-}
-.noti_item_desc_block_content {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-  margin-top: 4px;
-  color: var(--title-neutral-07-color);
+  &_title {
+    @extend .caption-medium;
+  }
+  &_content {
+    @extend .body2-semibold;
+    margin-top: 4px;
+  }
 }
 
 .noti_item_time {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
+  @extend .body2-medium;
+  color: $neutral-04;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--title-neutral-04-color);
 }
 
 .noti_item_active {
@@ -270,17 +342,8 @@ p {
 }
 
 .noti_item_desc {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  color: var(--title-neutral-06-color);
-  text-align: left;
-}
-
-#modal-profile,
-#modal-course-content,
-modal-watch-video {
-  z-index: 9999999;
+  @extend .body2-medium;
+  color: #272b30;
 }
 
 .divider-vertical {
@@ -433,6 +496,7 @@ modal-watch-video {
   &-image {
     border-radius: 16px;
     width: 100%;
+    height: calc((100vh - 80px - 128px - 16px) / 2);
     object-fit: cover;
   }
 
@@ -455,14 +519,16 @@ modal-watch-video {
 
   &-small {
     width: 100%;
+    height: calc((100vh - 112px - 64px) / 5);
     border-radius: 16px;
     position: relative;
+    flex: 1;
 
     &-image {
       border-radius: 16px;
       width: 100%;
+      height: 100%;
       object-fit: cover;
-      aspect-ratio: 210 / 126;
     }
 
     &-desc {
@@ -478,7 +544,8 @@ modal-watch-video {
         rgba(255, 0, 0, 0),
         rgb(0, 0, 0, 0.8)
       );
-      border-radius: 16px;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
     }
   }
 }
@@ -650,6 +717,24 @@ modal-watch-video {
       }
     }
 
+    &-title {
+      @extend .body1-semibold;
+      cursor: pointer;
+      color: $neutral-07 !important;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &-desc {
+      @extend .body2-regular;
+      margin-top: 4px;
+      margin-bottom: 12px;
+      max-height: 40px;
+      height: 100%;
+      color: $neutral-05;
+    }
+
     &-image {
       border-top-left-radius: 12px;
       border-top-right-radius: 12px;
@@ -711,7 +796,7 @@ summary {
   white-space: nowrap;
   position: relative;
 
-  &.is-expandable::before {
+  &.is-expandable:before {
     border-left: 2px solid $neutral-03;
     content: "";
     height: 100%;
@@ -719,6 +804,9 @@ summary {
     position: absolute;
     top: 22px;
     height: calc(100% - 22px);
+  }
+  &.last-item.is-expandable:before {
+    display: none;
   }
 
   .tree-nav__item {
@@ -748,7 +836,7 @@ summary {
       height: 1.6rem;
       background-image: url("/public/icon/chevron-right.svg");
     }
-    &:not(:last-child)::after {
+    &:last-child:after {
       position: absolute;
       content: "";
       width: 12px;
@@ -807,4 +895,36 @@ summary {
 .uk-child-width-1-3_1 > :last-child {
   width: calc(100% / 3.1 + 32px);
   padding-right: 32px;
+}
+
+// Circle proccess
+.single-chart {
+  justify-content: space-around;
+}
+
+.circular-chart {
+  display: block;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.3);
+  stroke-width: 7;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 7;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart .circle {
+  stroke: $neutral-00;
 }

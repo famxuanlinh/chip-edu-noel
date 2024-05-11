@@ -8,13 +8,19 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
     />
-    <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
 
   <body>
-    <div class="uk-flex uk-flex-wrap">
+    <div
+      class="uk-hidden@l uk-flex uk-flex-center uk-flex-middle"
+      style="width: 100vw; height: 100vh; flex-direction: column"
+    >
+      <p>Kích thước màn hình không hỗ trợ.</p>
+      <p>Vui lòng sử dụng kích thước màn hình lớn hơn</p>
+    </div>
+    <div class="uk-flex uk-flex-wrap uk-visible@l">
       <!-- Left menu -->
       <div
         style="
@@ -92,7 +98,7 @@
       </div>
 
       <!-- Content right -->
-      <div class="uk-width-expand">
+      <div class="w-full">
         <!-- header -->
         <div
           class="uk-flex uk-flex-between uk-text-center px-6 py-2 uk-box-shadow-small uk-margin-remove"
@@ -435,7 +441,7 @@
                         What’s the weather like today?
                       </p>
                       <a
-                        class="uk-button uk-button-primary rounded-10px px-4 uk-width-expand mt-2 flex-center"
+                        class="uk-button uk-button-primary rounded-10px px-4 w-full mt-2 flex-center"
                         style="height: 44px; text-transform: inherit"
                         href="/lop-hoc.html"
                       >
@@ -504,7 +510,7 @@
                       Đã có báo cáo học tập tuần 2 tháng 4 (từ 07/04 -> 15/04)
                     </p>
                     <button
-                      class="uk-button uk-button-default rounded-10px px-4 uk-width-expand mt-2"
+                      class="uk-button uk-button-default rounded-10px px-4 w-full mt-2"
                       style="
                         height: 44px;
                         text-transform: inherit;
@@ -557,7 +563,7 @@
             <div>
               <!-- Course header -->
               <div
-                class="flex-items-center uk-width-expand"
+                class="flex-items-center w-full"
                 style="justify-content: space-between"
               >
                 <div class="flex-items-center uk-margin-remove">
@@ -605,7 +611,8 @@
                 </div>
                 <div>
                   <div class="title1-bold">Khoá học phát âm cơ bản</div>
-                  <div class="body2-regular mt-4">
+
+                  <div class="course-card-desc mt-4">
                     Khoá học chứa nhiều từng vựng, cấu trúc câu dùng cho các
                     tình huống giao tiếp thông dụng thường ngày như ẩm thực, du
                     lịch, thể thao. Khoá học giúp bạn tự tin hơn khi giao tiếp
@@ -618,7 +625,7 @@
                   <div class="title2-semibold">
                     Bạn nhận được gì sau khoá học?
                   </div>
-                  <div class="body2-regular mt-2">
+                  <div class="course-card-desc mt-2">
                     Khoá học chứa nhiều từng vựng, cấu trúc câu dùng cho các
                     tình huống giao tiếp thông dụng thường ngày như ẩm thực, du
                     lịch, thể thao. Khoá học giúp bạn tự tin hơn khi giao tiếp
@@ -722,8 +729,8 @@
                         Unit 1: Các dạng bài cơ bản
                       </summary>
                       <div class="space-y-2">
-                        <details class="tree-nav__item is-expandable">
-                          <summary class="tree-nav__item-title mt-3">
+                        <details class="tree-nav__item is-expandable last-item">
+                          <summary class="tree-nav__item-title last-item mt-3">
                             Buổi 1: Meeting people
                           </summary>
                           <div
@@ -793,8 +800,8 @@
                           </div>
                         </details>
 
-                        <details class="tree-nav__item is-expandable">
-                          <summary class="tree-nav__item-title mt-3">
+                        <details class="tree-nav__item is-expandable last-item">
+                          <summary class="tree-nav__item-title last-item mt-3">
                             Buổi 2: Meeting people
                           </summary>
                           <div

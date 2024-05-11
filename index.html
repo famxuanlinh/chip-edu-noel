@@ -8,12 +8,18 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
     />
-    <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <div class="uk-flex uk-flex-wrap">
+    <div
+      class="uk-hidden@l uk-flex uk-flex-center uk-flex-middle"
+      style="width: 100vw; height: 100vh; flex-direction: column"
+    >
+      <p>Kích thước màn hình không hỗ trợ.</p>
+      <p>Vui lòng sử dụng kích thước màn hình lớn hơn</p>
+    </div>
+    <div class="uk-flex uk-flex-wrap uk-visible@l">
       <!-- Left menu -->
       <div
         style="
@@ -69,11 +75,9 @@
       </div>
 
       <!-- Content right -->
-      <div class="uk-width-expand">
+      <div class="w-full">
         <!-- header -->
-        <div
-          class="uk-flex uk-flex-between uk-text-center px-6 py-2 uk-box-shadow-small uk-margin-remove"
-        >
+        <div class="header">
           <div class="uk-inline">
             <button
               class="uk-text-center btn-icon"
@@ -93,45 +97,41 @@
                     justify-content: center;
                   "
                 >
-                  <div style="color: #535557; text-align: justify">
+                  <div class="body2-semibold" style="color: #535557">
                     Xin chào 👋
                   </div>
-                  <div>Hồ Trung Dũng</div>
+                  <div class="body1-semibold">Hồ Trung Dũng</div>
                 </div>
               </div>
             </button>
             <div
               class="uk-card uk-card-default"
               style="padding: 4px; border-radius: 12px"
-              uk-drop="mode: click"
+              uk-drop="mode: click; offset: 8"
+              id="drop-info"
             >
               <ul class="uk-list uk-margin-remove">
                 <li
-                  class="uk-navbar-left uk-text-center nav_button"
+                  onclick="toggleClickDrop('drop-info')"
+                  class="nav_button"
                   uk-toggle="target: #modal-profile"
                 >
-                  <a class="uk-link-reset">
-                    <img
-                      src="public/icon/person.svg"
-                      width="24"
-                      height="24"
-                      uk-svg
-                    />
-                    <span style="margin-left: 8px"
-                      >Chỉnh sửa hồ sơ cá nhân</span
-                    >
-                  </a>
+                  <img
+                    src="public/icon/person.svg"
+                    width="24"
+                    height="24"
+                    uk-svg
+                  />
+                  <span style="margin-left: 8px">Chỉnh sửa hồ sơ cá nhân</span>
                 </li>
-                <li class="uk-navbar-left uk-text-center nav_button">
-                  <a class="uk-link-reset" style="color: #535557" href="#">
-                    <img
-                      src="public/icon/logout.svg"
-                      width="24"
-                      height="24"
-                      uk-svg
-                    />
-                    <span style="margin-left: 8px">Đăng xuất</span>
-                  </a>
+                <li class="nav_button" onclick="toggleClickDrop('drop-info')">
+                  <img
+                    src="public/icon/logout.svg"
+                    width="24"
+                    height="24"
+                    uk-svg
+                  />
+                  <span style="margin-left: 8px">Đăng xuất</span>
                 </li>
               </ul>
             </div>
@@ -172,36 +172,22 @@
                         src="public/avatar.png"
                         width="96"
                       />
-                      <div
-                        style="margin-left: 32px; display: flex"
-                        class="uk-text-center"
-                      >
-                        <button
-                          class="uk-button uk-button-primary rounded-10px px-4"
-                          style="height: 44px; text-transform: inherit"
-                        >
+                      <div style="margin-left: 32px; display: flex">
+                        <button class="button-primary">
                           <img
                             src="public/icon/plus.svg"
                             width="24"
                             height="24"
                             uk-svg
+                            class="mr-2"
                           />
                           Tải lên ảnh mới
                         </button>
 
-                        <button
-                          class="uk-button uk-button-default rounded-10px px-4 mx-3"
-                          style="
-                            height: 44px;
-                            text-transform: inherit;
-                            background-color: #f9f9f9;
-                          "
-                        >
-                          Xoá ảnh
-                        </button>
+                        <button class="button-secondary ml-3">Xoá ảnh</button>
                       </div>
                     </div>
-                    <form class="my-4 text-left">
+                    <form style="margin-top: 18px" class="text-left">
                       <div>
                         <label for="name" class="label-form"
                           >Tên hiển thị</label
@@ -246,29 +232,20 @@
                           />
                         </div>
                       </div>
-                      <button
-                        disabled
-                        class="uk-button uk-button-primary rounded-10px px-4 mt-4"
-                        style="
-                          height: 44px;
-                          text-transform: inherit;
-                          cursor: not-allowed;
-                          background-color: #067ff3;
-                          opacity: 0.5;
-                        "
-                      >
+                      <button disabled class="button-primary-disabled mt-4">
                         <img
                           src="public/icon/save.svg"
                           width="24"
                           height="24"
                           uk-svg
+                          class="mr-2"
                         />
                         <span class="text-white" style="opacity: 0.75"
                           >Lưu thông tin</span
                         >
                       </button>
                     </form>
-                    <hr />
+                    <hr class="my-6" />
 
                     <div class="rounded-b-4 text-left">
                       <p class="text-xl text-black" style="font-weight: 600">
@@ -348,21 +325,20 @@
               <p class="text-xl text-black" style="margin-left: 4px">54</p>
             </div>
             <button
-              class="rounded-full btn-icon"
+              class="rounded-full btn-icon uk-position-relative noti-icon"
               style="width: 48px; height: 48px; cursor: pointer"
               type="button"
             >
               <img src="public/icon/bell.svg" width="24" height="24" />
+              <div class="noti-active"></div>
             </button>
             <div
-              uk-dropdown="mode: click; pos: bottom-right"
+              id="drop-noti"
+              uk-dropdown="mode: click; pos: bottom-right; animation: reveal-top; animate-out: true; offset: 16; duration: 500"
               style="width: 392px; border-radius: 16px"
-              class="py-4 px-0"
+              class="py-4 px-0 shadow"
             >
-              <p
-                class="text-main text-left text-xl px-4"
-                style="padding-bottom: 28px"
-              >
+              <p class="title2-semibold px-4" style="padding-bottom: 28px">
                 Thông báo
               </p>
               <div style="max-height: 568px; overflow: auto">
@@ -387,7 +363,7 @@
                     </p>
                   </div>
                 </div>
-                <hr />
+                <hr class="mx-4 my-4" />
                 <div class="noti_item px-4">
                   <div class="noti_item_icon" style="background-color: #63cc79">
                     <img
@@ -412,8 +388,7 @@
                         What’s the weather like today?
                       </p>
                       <a
-                        class="uk-button uk-button-primary rounded-10px px-4 uk-width-expand mt-2 flex-center"
-                        style="height: 44px; text-transform: inherit"
+                        class="button-primary w-full mt-2"
                         href="/lop-hoc.html"
                       >
                         <img
@@ -428,7 +403,7 @@
                     </div>
                   </div>
                 </div>
-                <hr />
+                <hr class="mx-4 my-4" />
                 <div class="noti_item px-4">
                   <div class="noti_item_icon" style="background-color: #f74a4a">
                     <img
@@ -450,6 +425,8 @@
                         What’s the weather like today?
                       </p>
                       <button
+                        onclick="toggleClickDrop('drop-noti');"
+                        uk-toggle="target: #modal-course-content"
                         class="mt-2"
                         style="
                           color: #067ff3;
@@ -464,7 +441,7 @@
                     </div>
                   </div>
                 </div>
-                <hr />
+                <hr class="mx-4 my-4" />
                 <div class="noti_item px-4">
                   <div class="noti_item_icon" style="background-color: #ef8869">
                     <img src="public/icon/message.svg" width="24" height="24" />
@@ -480,19 +457,12 @@
                     <p class="noti_item_desc">
                       Đã có báo cáo học tập tuần 2 tháng 4 (từ 07/04 -> 15/04)
                     </p>
-                    <button
-                      class="uk-button uk-button-default rounded-10px px-4 uk-width-expand mt-2"
-                      style="
-                        height: 44px;
-                        text-transform: inherit;
-                        background-color: #f9f9f9;
-                      "
-                    >
+                    <button class="button-secondary mt-2 w-full">
                       Xem báo cáo
                     </button>
                   </div>
                 </div>
-                <hr class="mx-3" />
+                <hr class="mx-4 my-4" />
                 <div class="noti_item px-4">
                   <div class="noti_item_icon" style="background-color: #7d5dff">
                     <img
@@ -545,10 +515,32 @@
                     >
                   </div>
                   <div class="uk-link-reset uk-flex uk-flex-middle">
-                    <img src="public/icon/circle.svg" width="22" height="22" />
+                    <div class="single-chart">
+                      <svg
+                        width="22"
+                        height="22"
+                        id="other-icon"
+                        viewBox="0 0 40 40"
+                        class="circular-chart"
+                      >
+                        <path
+                          class="circle-bg"
+                          d="M20 4
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
 
+                        <path
+                          class="circle"
+                          stroke-dasharray="60, 100"
+                          d="M20 4
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                      </svg>
+                    </div>
                     <span class="ml-2 text-neutral-00 body2-semibold"
-                      >hoàn thành</span
+                      >hoàn thành 60%</span
                     >
                   </div>
                 </div>
@@ -586,7 +578,7 @@
                         uk-toggle="target: #modal-teacher-info"
                       >
                         <img
-                          src="public/avatar.png"
+                          src="public/edward.jpg"
                           alt="avatar"
                           class="rounded-full"
                           style="width: 28px; height: 28px"
@@ -663,10 +655,33 @@
                     >
                   </div>
                   <div class="uk-link-reset uk-flex uk-flex-middle">
-                    <img src="public/icon/circle.svg" width="22" height="22" />
+                    <div class="single-chart">
+                      <svg
+                        width="22"
+                        height="22"
+                        id="other-icon"
+                        viewBox="0 0 40 40"
+                        class="circular-chart"
+                      >
+                        <path
+                          class="circle-bg"
+                          d="M20 4
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+
+                        <path
+                          class="circle"
+                          stroke-dasharray="40, 100"
+                          d="M20 4
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                      </svg>
+                    </div>
 
                     <span class="ml-2 text-neutral-00 body2-semibold"
-                      >hoàn thành</span
+                      >hoàn thành 40%</span
                     >
                   </div>
                 </div>
@@ -703,7 +718,7 @@
                         uk-toggle="target: #modal-teacher-info"
                       >
                         <img
-                          src="public/avatar.png"
+                          src="public/edward.jpg"
                           alt="avatar"
                           class="rounded-full"
                           style="width: 28px; height: 28px"
@@ -771,18 +786,21 @@
                           />
                         </button>
                         <div
+                          id="drop-more"
                           class="uk-card uk-card-default"
                           style="padding: 4px; border-radius: 8px"
                           uk-drop="mode: click; pos: bottom-center"
                         >
                           <ul class="uk-list uk-margin-remove">
                             <li
+                              onclick="toggleClickDrop('drop-more')"
                               class="uk-navbar-left uk-text-center nav_button"
                               uk-toggle="target: #modal-watch-video"
                             >
                               Xem lại video lớp học
                             </li>
                             <li
+                              onclick="toggleClickDrop('drop-more')"
                               class="uk-navbar-left uk-text-center nav_button"
                               uk-toggle="target: #modal-course-content"
                             >
@@ -833,32 +851,41 @@
           <!-- Tin tức -->
           <div id="news-in-home" class="mt-8">
             <p class="title1-bold mb-2">Tin tức</p>
-            <ul class="uk-subnav uk-subnav-pill uk-margin-remove" uk-switcher>
-              <li class="uk-padding-remove">
-                <a class="news-switcher-tag" href="#">Tất cả tin tức</a>
-              </li>
-              <li class="uk-padding-remove">
-                <a class="news-switcher-tag" href="#">Thông báo</a>
-              </li>
-              <li class="uk-padding-remove">
-                <a class="news-switcher-tag" href="#">Sự kiện</a>
-              </li>
-              <li class="uk-padding-remove">
-                <a class="news-switcher-tag" href="#">Tin tức</a>
-              </li>
-            </ul>
-            <div class="uk-switcher uk-margin mt-4">
-              <div class="uk-grid-small uk-child-width-1-3" uk-grid>
-                <div>
+            <div uk-filter="target: .js-filter">
+              <ul
+                class="uk-subnav uk-subnav-pill uk-margin-remove uk-padding-remove"
+              >
+                <li class="uk-active uk-padding-remove" uk-filter-control>
+                  <a class="news-switcher-tag" href="#">Tất cả tin tức</a>
+                </li>
+                <li
+                  class="uk-padding-remove"
+                  uk-filter-control=".tag-notifications"
+                >
+                  <a class="news-switcher-tag" href="#">Thông báo</a>
+                </li>
+                <li class="uk-padding-remove" uk-filter-control=".tag-events">
+                  <a class="news-switcher-tag" href="#">Sự kiện</a>
+                </li>
+                <li class="uk-padding-remove" uk-filter-control=".tag-news">
+                  <a class="news-switcher-tag" href="#">Tin tức</a>
+                </li>
+              </ul>
+
+              <ul
+                class="js-filter uk-grid-small uk-child-width-1-3 mt-4"
+                uk-grid
+              >
+                <div class="tag-notifications">
                   <div class="news-card">
                     <img
-                      src="public/course.png"
+                      src="public/news1.png"
                       alt="news card"
                       class="news-card-image"
                     />
                     <div class="p-4">
                       <div class="uk-flex uk-flex-between mb-2">
-                        <span class="news-card-tag">Sự kiện</span>
+                        <span class="news-card-tag">Thông báo</span>
                         <span class="caption-medium" style="color: #7f868d"
                           >12/05/2024</span
                         >
@@ -874,12 +901,208 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="uk-grid-small uk-child-width-1-3" uk-grid>
-                Thông báo
-              </div>
-              <div>Sự kiện</div>
-              <div>Tin tức</div>
+                <div class="tag-events">
+                  <div class="news-card">
+                    <img
+                      src="public/news2.png"
+                      alt="news card"
+                      class="news-card-image"
+                    />
+                    <div class="p-4">
+                      <div class="uk-flex uk-flex-between mb-2">
+                        <span class="news-card-tag">Sự kiện</span>
+                        <span class="caption-medium" style="color: #7f868d"
+                          >12/05/2024</span
+                        >
+                      </div>
+                      <div
+                        class="body1-semibold line-clamp-3 cursor-pointer"
+                        style="max-height: 72px; height: 100%"
+                        uk-toggle="target: #modal-news-detail"
+                      >
+                        Gặp gỡ và trao đổi với CEO Apple Tim Cook tại hội trường
+                        A1 trường Đại học Kinh tế Quốc dân
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tag-news">
+                  <div class="news-card">
+                    <img
+                      src="public/news3.png"
+                      alt="news card"
+                      class="news-card-image"
+                    />
+                    <div class="p-4">
+                      <div class="uk-flex uk-flex-between mb-2">
+                        <span class="news-card-tag">Tin tức</span>
+                        <span class="caption-medium" style="color: #7f868d"
+                          >12/05/2024</span
+                        >
+                      </div>
+                      <div
+                        class="body1-semibold line-clamp-3 cursor-pointer"
+                        style="max-height: 72px; height: 100%"
+                        uk-toggle="target: #modal-news-detail"
+                      >
+                        FPT Politechnic mở khoá đào tạo lập trình trí tuệ nhân
+                        tạo cho sinh viên mới nhập học
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tag-events">
+                  <div class="news-card">
+                    <img
+                      src="public/news2.png"
+                      alt="news card"
+                      class="news-card-image"
+                    />
+                    <div class="p-4">
+                      <div class="uk-flex uk-flex-between mb-2">
+                        <span class="news-card-tag">Sự kiện</span>
+                        <span class="caption-medium" style="color: #7f868d"
+                          >12/05/2024</span
+                        >
+                      </div>
+                      <div
+                        class="body1-semibold line-clamp-3 cursor-pointer"
+                        style="max-height: 72px; height: 100%"
+                        uk-toggle="target: #modal-news-detail"
+                      >
+                        Gặp gỡ và trao đổi với CEO Apple Tim Cook tại hội trường
+                        A1 trường Đại học Kinh tế Quốc dân
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tag-news">
+                  <div class="news-card">
+                    <img
+                      src="public/news3.png"
+                      alt="news card"
+                      class="news-card-image"
+                    />
+                    <div class="p-4">
+                      <div class="uk-flex uk-flex-between mb-2">
+                        <span class="news-card-tag">Tin tức</span>
+                        <span class="caption-medium" style="color: #7f868d"
+                          >12/05/2024</span
+                        >
+                      </div>
+                      <div
+                        class="body1-semibold line-clamp-3 cursor-pointer"
+                        style="max-height: 72px; height: 100%"
+                        uk-toggle="target: #modal-news-detail"
+                      >
+                        FPT Politechnic mở khoá đào tạo lập trình trí tuệ nhân
+                        tạo cho sinh viên mới nhập học
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tag-notifications">
+                  <div class="news-card">
+                    <img
+                      src="public/news1.png"
+                      alt="news card"
+                      class="news-card-image"
+                    />
+                    <div class="p-4">
+                      <div class="uk-flex uk-flex-between mb-2">
+                        <span class="news-card-tag">Thông báo</span>
+                        <span class="caption-medium" style="color: #7f868d"
+                          >12/05/2024</span
+                        >
+                      </div>
+                      <div
+                        class="body1-semibold line-clamp-3 cursor-pointer"
+                        style="max-height: 72px; height: 100%"
+                        uk-toggle="target: #modal-news-detail"
+                      >
+                        Chip Chip mở lớp bình thường xuyên suốt kỳ nghỉ lễ Giỗ
+                        tổ Hùng Vương 10/3
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tag-notifications">
+                  <div class="news-card">
+                    <img
+                      src="public/news1.png"
+                      alt="news card"
+                      class="news-card-image"
+                    />
+                    <div class="p-4">
+                      <div class="uk-flex uk-flex-between mb-2">
+                        <span class="news-card-tag">Thông báo</span>
+                        <span class="caption-medium" style="color: #7f868d"
+                          >12/05/2024</span
+                        >
+                      </div>
+                      <div
+                        class="body1-semibold line-clamp-3 cursor-pointer"
+                        style="max-height: 72px; height: 100%"
+                        uk-toggle="target: #modal-news-detail"
+                      >
+                        Chip Chip mở lớp bình thường xuyên suốt kỳ nghỉ lễ Giỗ
+                        tổ Hùng Vương 10/3
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tag-events">
+                  <div class="news-card">
+                    <img
+                      src="public/news2.png"
+                      alt="news card"
+                      class="news-card-image"
+                    />
+                    <div class="p-4">
+                      <div class="uk-flex uk-flex-between mb-2">
+                        <span class="news-card-tag">Sự kiện</span>
+                        <span class="caption-medium" style="color: #7f868d"
+                          >12/05/2024</span
+                        >
+                      </div>
+                      <div
+                        class="body1-semibold line-clamp-3 cursor-pointer"
+                        style="max-height: 72px; height: 100%"
+                        uk-toggle="target: #modal-news-detail"
+                      >
+                        Gặp gỡ và trao đổi với CEO Apple Tim Cook tại hội trường
+                        A1 trường Đại học Kinh tế Quốc dân
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tag-news">
+                  <div class="news-card">
+                    <img
+                      src="public/news3.png"
+                      alt="news card"
+                      class="news-card-image"
+                    />
+                    <div class="p-4">
+                      <div class="uk-flex uk-flex-between mb-2">
+                        <span class="news-card-tag">Tin tức</span>
+                        <span class="caption-medium" style="color: #7f868d"
+                          >12/05/2024</span
+                        >
+                      </div>
+                      <div
+                        class="body1-semibold line-clamp-3 cursor-pointer"
+                        style="max-height: 72px; height: 100%"
+                        uk-toggle="target: #modal-news-detail"
+                      >
+                        FPT Politechnic mở khoá đào tạo lập trình trí tuệ nhân
+                        tạo cho sinh viên mới nhập học
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
             </div>
           </div>
 
@@ -1206,7 +1429,7 @@
 
               <div
                 class="uk-flex rounded-t-4 uk-flex-center uk-flex-middle uk-background-cover uk-light"
-                data-src="public/course.png"
+                data-src="public/news3.png"
                 uk-img
                 style="height: 240px; object-fit: contain"
               ></div>
@@ -1251,5 +1474,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script>
+      function toggleClickDrop(dropId) {
+        const dropInfo = document.getElementById(dropId);
+        UIkit.drop(dropInfo).hide(false);
+      }
+    </script>
   </body>
 </html>
