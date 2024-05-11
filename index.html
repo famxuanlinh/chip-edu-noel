@@ -334,8 +334,8 @@
             </button>
             <div
               id="drop-noti"
-              uk-dropdown="mode: click; pos: bottom-right; animation: reveal-top; animate-out: true; offset: 16; duration: 500"
-              style="width: 392px; border-radius: 16px"
+              uk-drop="mode: click; pos: bottom-right; animation: reveal-top; animate-out: true; offset: 16; duration: 300"
+              style="width: 392px; border-radius: 16px; background-color: white"
               class="py-4 px-0 shadow"
             >
               <p class="title2-semibold px-4" style="padding-bottom: 28px">
@@ -425,9 +425,10 @@
                         What’s the weather like today?
                       </p>
                       <button
-                        onclick="toggleClickDrop('drop-noti');"
                         uk-toggle="target: #modal-course-content"
+                        onclick="toggleClickDrop('drop-noti');"
                         class="mt-2"
+                        type="button"
                         style="
                           color: #067ff3;
                           font-size: 14px;
@@ -1477,6 +1478,12 @@
     <script>
       function toggleClickDrop(dropId) {
         const dropInfo = document.getElementById(dropId);
+        if (dropId === "drop-noti") {
+          const modalCourseContent = document.getElementById(
+            "modal-course-content"
+          );
+          UIkit.modal(modalCourseContent).show();
+        }
         UIkit.drop(dropInfo).hide(false);
       }
     </script>

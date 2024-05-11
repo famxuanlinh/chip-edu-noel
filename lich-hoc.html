@@ -107,9 +107,7 @@
       <!-- Content right -->
       <div class="w-full">
         <!-- header -->
-        <div
-          class="uk-flex uk-flex-between uk-text-center px-6 py-2 uk-box-shadow-small uk-margin-remove"
-        >
+        <div class="header">
           <div class="uk-inline">
             <button
               class="uk-text-center btn-icon"
@@ -129,45 +127,41 @@
                     justify-content: center;
                   "
                 >
-                  <div style="color: #535557; text-align: justify">
+                  <div class="body2-semibold" style="color: #535557">
                     Xin chào 👋
                   </div>
-                  <div>Hồ Trung Dũng</div>
+                  <div class="body1-semibold">Hồ Trung Dũng</div>
                 </div>
               </div>
             </button>
             <div
               class="uk-card uk-card-default"
               style="padding: 4px; border-radius: 12px"
-              uk-drop="mode: click"
+              uk-drop="mode: click; offset: 8"
+              id="drop-info"
             >
               <ul class="uk-list uk-margin-remove">
                 <li
-                  class="uk-navbar-left uk-text-center nav_button"
+                  onclick="toggleClickDrop('drop-info')"
+                  class="nav_button"
                   uk-toggle="target: #modal-profile"
                 >
-                  <a class="uk-link-reset">
-                    <img
-                      src="public/icon/person.svg"
-                      width="24"
-                      height="24"
-                      uk-svg
-                    />
-                    <span style="margin-left: 8px"
-                      >Chỉnh sửa hồ sơ cá nhân</span
-                    >
-                  </a>
+                  <img
+                    src="public/icon/person.svg"
+                    width="24"
+                    height="24"
+                    uk-svg
+                  />
+                  <span style="margin-left: 8px">Chỉnh sửa hồ sơ cá nhân</span>
                 </li>
-                <li class="uk-navbar-left uk-text-center nav_button">
-                  <a class="uk-link-reset" style="color: #535557" href="#">
-                    <img
-                      src="public/icon/logout.svg"
-                      width="24"
-                      height="24"
-                      uk-svg
-                    />
-                    <span style="margin-left: 8px">Đăng xuất</span>
-                  </a>
+                <li class="nav_button" onclick="toggleClickDrop('drop-info')">
+                  <img
+                    src="public/icon/logout.svg"
+                    width="24"
+                    height="24"
+                    uk-svg
+                  />
+                  <span style="margin-left: 8px">Đăng xuất</span>
                 </li>
               </ul>
             </div>
@@ -208,36 +202,22 @@
                         src="public/avatar.png"
                         width="96"
                       />
-                      <div
-                        style="margin-left: 32px; display: flex"
-                        class="uk-text-center"
-                      >
-                        <button
-                          class="uk-button uk-button-primary rounded-10px px-4"
-                          style="height: 44px; text-transform: inherit"
-                        >
+                      <div style="margin-left: 32px; display: flex">
+                        <button class="button-primary">
                           <img
                             src="public/icon/plus.svg"
                             width="24"
                             height="24"
                             uk-svg
+                            class="mr-2"
                           />
                           Tải lên ảnh mới
                         </button>
 
-                        <button
-                          class="uk-button uk-button-default rounded-10px px-4 mx-3"
-                          style="
-                            height: 44px;
-                            text-transform: inherit;
-                            background-color: #f9f9f9;
-                          "
-                        >
-                          Xoá ảnh
-                        </button>
+                        <button class="button-secondary ml-3">Xoá ảnh</button>
                       </div>
                     </div>
-                    <form class="my-4 text-left">
+                    <form style="margin-top: 18px" class="text-left">
                       <div>
                         <label for="name" class="label-form"
                           >Tên hiển thị</label
@@ -282,29 +262,20 @@
                           />
                         </div>
                       </div>
-                      <button
-                        disabled
-                        class="uk-button uk-button-primary rounded-10px px-4 mt-4"
-                        style="
-                          height: 44px;
-                          text-transform: inherit;
-                          cursor: not-allowed;
-                          background-color: #067ff3;
-                          opacity: 0.5;
-                        "
-                      >
+                      <button disabled class="button-primary-disabled mt-4">
                         <img
                           src="public/icon/save.svg"
                           width="24"
                           height="24"
                           uk-svg
+                          class="mr-2"
                         />
                         <span class="text-white" style="opacity: 0.75"
                           >Lưu thông tin</span
                         >
                       </button>
                     </form>
-                    <hr />
+                    <hr class="my-6" />
 
                     <div class="rounded-b-4 text-left">
                       <p class="text-xl text-black" style="font-weight: 600">
@@ -384,21 +355,20 @@
               <p class="text-xl text-black" style="margin-left: 4px">54</p>
             </div>
             <button
-              class="rounded-full btn-icon"
+              class="rounded-full btn-icon uk-position-relative noti-icon"
               style="width: 48px; height: 48px; cursor: pointer"
               type="button"
             >
               <img src="public/icon/bell.svg" width="24" height="24" />
+              <div class="noti-active"></div>
             </button>
             <div
-              uk-dropdown="mode: click; pos: bottom-right"
-              style="width: 392px; border-radius: 16px"
-              class="py-4 px-0"
+              id="drop-noti"
+              uk-drop="mode: click; pos: bottom-right; animation: reveal-top; animate-out: true; offset: 16; duration: 300"
+              style="width: 392px; border-radius: 16px; background-color: white"
+              class="py-4 px-0 shadow"
             >
-              <p
-                class="text-main text-left text-xl px-4"
-                style="padding-bottom: 28px"
-              >
+              <p class="title2-semibold px-4" style="padding-bottom: 28px">
                 Thông báo
               </p>
               <div style="max-height: 568px; overflow: auto">
@@ -423,7 +393,7 @@
                     </p>
                   </div>
                 </div>
-                <hr />
+                <hr class="mx-4 my-4" />
                 <div class="noti_item px-4">
                   <div class="noti_item_icon" style="background-color: #63cc79">
                     <img
@@ -448,8 +418,7 @@
                         What’s the weather like today?
                       </p>
                       <a
-                        class="uk-button uk-button-primary rounded-10px px-4 w-full mt-2 flex-center"
-                        style="height: 44px; text-transform: inherit"
+                        class="button-primary w-full mt-2"
                         href="/lop-hoc.html"
                       >
                         <img
@@ -464,7 +433,7 @@
                     </div>
                   </div>
                 </div>
-                <hr />
+                <hr class="mx-4 my-4" />
                 <div class="noti_item px-4">
                   <div class="noti_item_icon" style="background-color: #f74a4a">
                     <img
@@ -486,7 +455,10 @@
                         What’s the weather like today?
                       </p>
                       <button
+                        uk-toggle="target: #modal-course-content"
+                        onclick="toggleClickDrop('drop-noti');"
                         class="mt-2"
+                        type="button"
                         style="
                           color: #067ff3;
                           font-size: 14px;
@@ -500,7 +472,7 @@
                     </div>
                   </div>
                 </div>
-                <hr />
+                <hr class="mx-4 my-4" />
                 <div class="noti_item px-4">
                   <div class="noti_item_icon" style="background-color: #ef8869">
                     <img src="public/icon/message.svg" width="24" height="24" />
@@ -516,19 +488,12 @@
                     <p class="noti_item_desc">
                       Đã có báo cáo học tập tuần 2 tháng 4 (từ 07/04 -> 15/04)
                     </p>
-                    <button
-                      class="uk-button uk-button-default rounded-10px px-4 w-full mt-2"
-                      style="
-                        height: 44px;
-                        text-transform: inherit;
-                        background-color: #f9f9f9;
-                      "
-                    >
+                    <button class="button-secondary mt-2 w-full">
                       Xem báo cáo
                     </button>
                   </div>
                 </div>
-                <hr class="mx-3" />
+                <hr class="mx-4 my-4" />
                 <div class="noti_item px-4">
                   <div class="noti_item_icon" style="background-color: #7d5dff">
                     <img
@@ -1159,21 +1124,21 @@
                                 />
                               </button>
                               <div
-                                id="drop-info"
+                                id="drop-more"
                                 class="uk-card uk-card-default"
                                 style="padding: 4px; border-radius: 8px"
                                 uk-drop="mode: click; pos: bottom-center"
                               >
                                 <ul class="uk-list uk-margin-remove">
                                   <li
-                                    onclick="toggleClickDrop('drop-info')"
+                                    onclick="toggleClickDrop('drop-more')"
                                     class="uk-navbar-left uk-text-center nav_button"
                                     uk-toggle="target: #modal-watch-video"
                                   >
                                     Xem lại video lớp học
                                   </li>
                                   <li
-                                    onclick="toggleClickDrop('drop-info')"
+                                    onclick="toggleClickDrop('drop-more')"
                                     class="uk-navbar-left uk-text-center nav_button"
                                     uk-toggle="target: #modal-course-content"
                                   >
@@ -2448,6 +2413,12 @@
     <script>
       function toggleClickDrop(dropId) {
         const dropInfo = document.getElementById(dropId);
+        if (dropId === "drop-noti") {
+          const modalCourseContent = document.getElementById(
+            "modal-course-content"
+          );
+          UIkit.modal(modalCourseContent).show();
+        }
         UIkit.drop(dropInfo).hide(false);
       }
     </script>

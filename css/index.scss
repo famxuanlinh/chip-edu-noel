@@ -204,25 +204,37 @@ p {
   padding: 8px 24px;
 }
 .nav_button_active {
-  padding: 12px;
+  padding: 0 12px;
   border-radius: 12px;
   background-color: #efefef;
   height: 48px;
+  width: 100%;
   cursor: pointer;
   color: #1a1d1f;
   font-weight: 600;
+  & > a {
+    padding: 12px 0;
+    width: 100%;
+    text-align: left;
+  }
 }
 
 .nav_button {
   @extend .body1-semibold;
-  padding: 12px;
+  padding: 0 12px;
   border-radius: 12px;
   height: 48px;
+  width: 100%;
   cursor: pointer;
   transition: 0.3ms;
   display: flex;
   align-items: center;
   transition: 0.3s;
+  & > a {
+    padding: 12px 0;
+    width: 100%;
+    text-align: left;
+  }
 
   &:hover {
     background-color: #efefef;
