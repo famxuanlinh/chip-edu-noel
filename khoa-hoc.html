@@ -199,16 +199,23 @@
                           width="96"
                         />
                         <div style="margin-left: 32px; display: flex">
-                          <button class="button-primary">
-                            <img
-                              src="public/icon/plus.svg"
-                              width="24"
-                              height="24"
-                              uk-svg
-                              class="mr-2"
-                            />
-                            Tải lên ảnh mới
-                          </button>
+                          <div
+                            style="cursor: pointer"
+                            class="js-upload"
+                            uk-form-custom
+                          >
+                            <input type="file" />
+                            <button class="button-primary">
+                              <img
+                                src="public/icon/plus.svg"
+                                width="24"
+                                height="24"
+                                uk-svg
+                                class="mr-2"
+                              />
+                              Tải lên ảnh mới
+                            </button>
+                          </div>
 
                           <button class="button-secondary ml-3">Xoá ảnh</button>
                         </div>
