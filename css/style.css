@@ -627,6 +627,24 @@ p {
   margin-right: 4px;
 }
 
+.login {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 48px;
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 768px) {
+  .login {
+    background-color: transparent;
+    border-radius: none;
+    padding: 16px;
+    width: 100%;
+    box-shadow: none;
+  }
+}
+
 .login-input, .login-input-error {
   height: 56px;
 }
