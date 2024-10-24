@@ -79,4 +79,33 @@
       color: color.$grayscale-dark-gray;
     }
   }
+
+  .otp {
+    &-input {
+      border-radius: 12px;
+      font-size: 36px;
+      border-radius: 16px;
+      border: 2px solid color.$grayscale-dim-dark-20;
+      background: var(--Grayscale-White, #fff);
+      padding: 0 16px;
+      font-weight: 300;
+      line-height: 100%; /* 36px */
+
+      width: 80px;
+      height: 80px;
+
+      margin: 0 10px;
+      text-align: center;
+      cursor: not-allowed;
+      pointer-events: none;
+      &:focus {
+        border: 3px solid color.$primary-green;
+        outline: none;
+      }
+      &:nth-child(1) {
+        cursor: pointer;
+        pointer-events: all;
+      }
+    }
+  }
 }

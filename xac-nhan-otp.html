@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhập OTP</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dongle"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <!-- <style>
+      /* Add styles for the disabled button */
+      .btn.disabled {
+        background-color: #d3d3d3; /* Light gray color for disabled state */
+        color: #a9a9a9; /* Dark gray text for better visibility */
+        cursor: not-allowed; /* Change cursor to indicate disabled */
+      }
+    </style> -->
+  </head>
+  <body>
+    <div
+      class="auth"
+      style="
+        background-image: url('public/images/login-bg.webp');
+        background-size: cover;
+      "
+    >
+      <div class="auth-wrapper">
+        <div class="flex-center h-full">
+          <div class="w-full">
+            <div class="w-full flex-center">
+              <img
+                class="flex-items-center"
+                src="public/images/logo.svg"
+                alt="logo"
+                width="106px"
+              />
+            </div>
+
+            <div class="auth-title chip-h2 grayscale-dark-gray flex-center">
+              Nhập OTP
+            </div>
+
+            <form id="confirmOTP">
+              <div id="otp-inputs" class="otp flex-center">
+                <input
+                  class="otp-input"
+                  type="text"
+                  inputmode="numeric"
+                  maxlength="1"
+                />
+                <input
+                  class="otp-input"
+                  type="text"
+                  inputmode="numeric"
+                  maxlength="1"
+                />
+                <input
+                  class="otp-input"
+                  type="text"
+                  inputmode="numeric"
+                  maxlength="1"
+                />
+                <input
+                  class="otp-input"
+                  type="text"
+                  inputmode="numeric"
+                  maxlength="1"
+                />
+              </div>
+              <a
+                href="/quen-mat-khau.html"
+                class="btn-back btn grayscale-dark-gray bg-greenscale-light-green button-l"
+                style="margin: 60px 0 20px 0"
+              >
+                Quay lại
+              </a>
+              <button
+                id="confirmButton"
+                class="btn grayscale-white bg-primary-green button-l"
+                type="submit"
+              >
+                Xác nhận
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script>
+      const inputs = document.getElementById("otp-inputs");
+      const confirmButton = document.getElementById("confirmButton");
+      let countdownInterval;
+      let countdownTime = 60; // 60 seconds countdown
+
+      inputs.addEventListener("input", function (e) {
+        const target = e.target;
+        const val = target.value;
+
+        if (isNaN(val)) {
+          target.value = "";
+          return;
+        }
+
+        if (val !== "") {
+          const next = target.nextElementSibling;
+          if (next) {
+            next.focus();
+          }
+        }
+      });
+
+      inputs.addEventListener("keyup", function (e) {
+        const target = e.target;
+        const key = e.key.toLowerCase();
+
+        if (key === "backspace" || key === "delete") {
+          target.value = "";
+          const prev = target.previousElementSibling;
+          if (prev) {
+            prev.focus();
+          }
+          return;
+        }
+      });
+
+      // Countdown function
+      function startCountdown() {
+        countdownTime = 60; // Reset countdown time
+        confirmButton.disabled = true; // Disable button during countdown
+        confirmButton.classList.add("disabled"); // Add disabled class for styling
+        confirmButton.textContent = `Gửi lại mã OTP (${countdownTime}s)`; // Initial button text
+
+        countdownInterval = setInterval(() => {
+          countdownTime--;
+          confirmButton.textContent = `Gửi lại mã OTP (${countdownTime}s)`; // Update button text
+
+          if (countdownTime <= 0) {
+            clearInterval(countdownInterval);
+            confirmButton.disabled = false; // Enable button when countdown is over
+            confirmButton.classList.remove("disabled"); // Remove disabled class
+            confirmButton.textContent = "Xác nhận"; // Reset button text
+          }
+        }, 1000);
+      }
+
+      // Function to handle form submission
+      document
+        .getElementById("confirmOTP")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+          const otpValues = Array.from(inputs.children)
+            .map((input) => input.value)
+            .join(""); // Get OTP value
+          console.log("OTP Data:", otpValues); // Output OTP value
+          startCountdown(); // Start countdown on form submission
+        });
+    </script>
+  </body>
+</html>

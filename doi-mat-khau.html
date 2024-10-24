@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đổi mật khẩu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dongle"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <div
+      class="auth"
+      style="
+        background-image: url('public/images/login-bg.webp');
+        background-size: cover;
+      "
+    >
+      <div class="auth-wrapper">
+        <div class="flex-center h-full">
+          <div class="w-full">
+            <div class="w-full flex-center">
+              <img
+                class="flex-items-center"
+                src="public/images/logo.svg"
+                alt="logo"
+                width="106px"
+              />
+            </div>
+
+            <div class="auth-title chip-h2 grayscale-dark-gray flex-center">
+              Đổi mật khẩu
+            </div>
+
+            <form id="forgotPasswordForm">
+              <div class="space-y-5">
+                <div class="uk-inline" style="width: 100%">
+                  <button
+                    class="uk-form-icon uk-form-icon-flip mr-6"
+                    style="background-color: transparent"
+                    type="button"
+                    onclick="togglePasswordVisibility('password')"
+                  >
+                    <img
+                      id="eye-password"
+                      src="public/icon/eye.svg"
+                      width="24"
+                      alt="toggle password visibility"
+                      class="cursor-pointer"
+                    />
+                  </button>
+
+                  <input
+                    class="uk-input auth-input"
+                    type="password"
+                    placeholder="Đặt mật khẩu mới"
+                    aria-label="Input"
+                    name="password"
+                    id="password"
+                    required
+                  />
+                </div>
+                <div class="uk-inline" style="width: 100%">
+                  <button
+                    class="uk-form-icon uk-form-icon-flip mr-6"
+                    style="background-color: transparent"
+                    type="button"
+                    onclick="togglePasswordVisibility('password-confirm')"
+                  >
+                    <img
+                      id="eye-password-confirm"
+                      src="public/icon/eye.svg"
+                      width="24"
+                      alt="toggle password visibility"
+                      class="cursor-pointer"
+                    />
+                  </button>
+
+                  <input
+                    class="uk-input auth-input"
+                    type="password"
+                    placeholder="Nhập lại mật khẩu mới"
+                    aria-label="Input"
+                    name="password-confirm"
+                    id="password-confirm"
+                    required
+                  />
+                </div>
+              </div>
+              <a
+                href="/xac-nhan-otp.html"
+                class="btn-back btn grayscale-dark-gray bg-greenscale-light-green button-l"
+                style="margin: 60px 0 20px 0"
+              >
+                Quay lại
+              </a>
+              <button class="btn grayscale-white bg-primary-green button-l">
+                Đổi mật khẩu
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script>
+      // Function to handle password visibility toggle
+      function togglePasswordVisibility(passwordFieldId) {
+        var passwordInput = document.getElementById(passwordFieldId);
+        var eyeIcon =
+          passwordFieldId === "password"
+            ? document.getElementById("eye-password")
+            : document.getElementById("eye-password-confirm");
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          eyeIcon.src = "public/icon/eye-slash.svg"; // icon cho mật khẩu hiển thị
+        } else {
+          passwordInput.type = "password";
+          eyeIcon.src = "public/icon/eye.svg"; // icon cho mật khẩu ẩn
+        }
+      }
+
+      // Function to handle form submission
+      document
+        .getElementById("forgotPasswordForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const password = this.password.value;
+          console.log("Data:", password);
+        });
+    </script>
+  </body>
+</html>

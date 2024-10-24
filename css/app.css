@@ -92,6 +92,30 @@ img {
   text-decoration: none;
   color: #252525;
 }
+.auth .otp-input {
+  border-radius: 12px;
+  font-size: 36px;
+  border-radius: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background: var(--Grayscale-White, #fff);
+  padding: 0 16px;
+  font-weight: 300;
+  line-height: 100%; /* 36px */
+  width: 80px;
+  height: 80px;
+  margin: 0 10px;
+  text-align: center;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.auth .otp-input:focus {
+  border: 3px solid #00B26B;
+  outline: none;
+}
+.auth .otp-input:nth-child(1) {
+  cursor: pointer;
+  pointer-events: all;
+}
 
 .chip-h0 {
   font-size: 280px;
@@ -260,6 +284,11 @@ img {
   border-radius: 20px;
   /* Drop Shadow/Button D */
   box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.btn.disabled {
+  background-color: #e5e5e5;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 html {
