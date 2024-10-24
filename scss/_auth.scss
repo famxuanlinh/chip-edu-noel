@@ -62,4 +62,9 @@
       }
     }
   }
+  .btn-register {
+    &:hover {
+      color: color.$primary-green;
+    }
+  }
 }
