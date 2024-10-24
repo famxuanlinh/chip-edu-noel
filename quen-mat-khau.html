@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quên mật khẩu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dongle"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <div
+      class="auth"
+      style="
+        background-image: url('public/images/login-bg.webp');
+        background-size: cover;
+      "
+    >
+      <div class="auth-wrapper">
+        <div class="flex-center h-full">
+          <div class="w-full">
+            <div class="w-full flex-center">
+              <img
+                class="flex-items-center"
+                src="public/images/logo.svg"
+                alt="logo"
+                width="106px"
+              />
+            </div>
+
+            <div class="auth-title chip-h2 grayscale-dark-gray flex-center">
+              Quên mật khẩu
+            </div>
+
+            <form id="forgotPasswordForm">
+              <div class="space-y-5">
+                <input
+                  class="uk-input auth-input"
+                  type="text"
+                  placeholder="Nhập số điện thoại đăng ký"
+                  aria-label="Input"
+                  name="phone"
+                  required
+                />
+              </div>
+              <a
+                href="/dang-nhap.html"
+                class="btn-back btn grayscale-dark-gray bg-greenscale-light-green button-l"
+                style="margin: 60px 0 20px 0"
+              >
+                Quay lại
+              </a>
+              <button class="btn grayscale-white bg-primary-green button-l">
+                Gửi mã xác nhận
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script>
+      // Function to handle password visibility toggle
+
+      // Function to handle form submission
+      document
+        .getElementById("forgotPasswordForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const phone = this.phone.value;
+
+          console.log("Data:", phone);
+        });
+    </script>
+  </body>
+</html>
