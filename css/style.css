@@ -4,7 +4,7 @@
   border: 0;
   font-size: 100%;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  /* font-family: "Inter", sans-serif; */
 }
 
 :root {
@@ -50,7 +50,6 @@ p {
   font-weight: 700;
   line-height: 32px;
   letter-spacing: -0.02em;
-  color: #1a1d1f;
 }
 
 .title2-semibold {
@@ -58,7 +57,6 @@ p {
   font-weight: 600;
   line-height: 32px;
   text-align: left;
-  color: #1a1d1f;
 }
 
 .body1-semibold, .tree-nav__item-title, .course-card-title, .class-sub-title, .noti_item_title, .nav_button {
@@ -66,7 +64,6 @@ p {
   font-weight: 600;
   line-height: 24px;
   text-align: left;
-  color: #1a1d1f;
 }
 
 .body1-medium {
@@ -74,7 +71,6 @@ p {
   font-weight: 500;
   line-height: 24px;
   text-align: left;
-  color: #1a1d1f;
 }
 
 .body1-regular {
@@ -82,7 +78,6 @@ p {
   font-weight: 400;
   line-height: 24px;
   text-align: left;
-  color: #1a1d1f;
 }
 
 .body2-semibold, .tag-course-progress, .tag-course-progress-done, .tag-course-progress-active, .news-modal-tag, #news-in-home .uk-subnav-pill > .uk-active > a, .noti_item_desc_block_content {
@@ -90,7 +85,6 @@ p {
   font-weight: 600;
   line-height: 20px;
   text-align: left;
-  color: #1a1d1f;
 }
 
 .body2-medium, .noti_item_desc, .noti_item_time {
@@ -98,7 +92,6 @@ p {
   font-weight: 500;
   line-height: 20px;
   text-align: left;
-  color: #1a1d1f;
 }
 
 .body2-regular, .course-card-desc, .chat-message-content, .news-switcher-tag {
@@ -106,7 +99,6 @@ p {
   font-weight: 400;
   line-height: 20px;
   text-align: left;
-  color: #1a1d1f;
 }
 
 .caption-semibold, .news-card-tag {
@@ -114,7 +106,6 @@ p {
   font-weight: 600;
   line-height: 16px;
   text-align: left;
-  color: #1a1d1f;
 }
 
 .caption-medium, .noti_item_desc_block_title {
@@ -122,7 +113,6 @@ p {
   font-weight: 500;
   line-height: 16px;
   text-align: left;
-  color: #1a1d1f;
 }
 
 .caption-regular {
@@ -130,43 +120,36 @@ p {
   font-weight: 400;
   line-height: 16px;
   text-align: left;
-  color: #1a1d1f;
 }
 
 .button1, .btn-primary-custom, .button-primary, .button-secondary, .button-secondary-disabled, .button-primary-disabled {
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-  color: #1a1d1f;
 }
 
 .button2 {
   font-size: 14px;
   font-weight: 600;
   line-height: 24px;
-  color: #1a1d1f;
 }
 
 .button-link {
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
-  color: #1a1d1f;
 }
 
 .button-primary, .button-secondary, .button-secondary-disabled, .button-primary-disabled {
   height: 44px;
   padding: 0 16px;
   border-radius: 10px;
-  color: #ffffff;
-  background-color: #067ff3;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .button-primary:hover, .button-secondary:hover, .button-secondary-disabled:hover, .button-primary-disabled:hover {
   opacity: 0.9;
-  color: #ffffff;
   text-decoration: none;
 }
 .button-primary-disabled {
@@ -181,15 +164,10 @@ p {
 }
 
 .button-secondary, .button-secondary-disabled {
-  background-color: #f9f9f9;
-  color: #272b30;
-  border: 2px solid #efefef;
   cursor: pointer;
 }
 .button-secondary:hover, .button-secondary-disabled:hover {
   opacity: 0.8;
-  color: #272b30;
-  border: 2px solid #efefef;
 }
 .button-secondary-disabled {
   background-color: rgba(249, 249, 249, 0.5019607843);
@@ -222,7 +200,6 @@ p {
   height: 48px;
   width: 100%;
   cursor: pointer;
-  color: #1a1d1f;
   font-weight: 600;
 }
 .nav_button_active > a {
@@ -237,7 +214,6 @@ p {
   border-radius: 12px;
   height: 48px;
   width: 100%;
-  color: #535557;
   cursor: pointer;
   transition: 0.3ms;
   display: flex;
@@ -267,7 +243,7 @@ p {
   font-size: 14px;
 }
 
-.input-form, .login-input, .login-input-error {
+.input-form {
   height: 48px;
   border-radius: 12px;
   color: black;
@@ -339,7 +315,6 @@ p {
 }
 
 .noti_item_time {
-  color: #7f868d;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -364,14 +339,11 @@ p {
 .divider-vertical {
   width: 2px;
   height: 20px;
-  background-color: #7f868d;
 }
 
 .modal-content-title {
   padding: 12px;
   border-radius: 8px;
-  background-color: #f9f9f9;
-  border: 1px solid #efefef;
   text-align: left;
 }
 .modal-content-video {
@@ -393,10 +365,6 @@ p {
   padding: 8px;
   border-radius: 6px;
 }
-.btn-teacher:hover {
-  background-color: #f4f4f4;
-}
-
 .tag-progress-already {
   height: 24px;
   padding: 4px 12px;
@@ -404,8 +372,6 @@ p {
   font-size: 12px;
   font-weight: 600;
   line-height: 16px;
-  color: #ffffff;
-  background-color: #07b682;
 }
 
 .tag-progress-cancel {
@@ -415,8 +381,6 @@ p {
   font-size: 12px;
   font-weight: 600;
   line-height: 16px;
-  color: #ffffff;
-  background-color: #f74a4a;
 }
 
 .tag-progress-not {
@@ -426,9 +390,6 @@ p {
   font-size: 12px;
   font-weight: 600;
   line-height: 16px;
-  color: #ffffff;
-  background-color: #efefef;
-  color: #272b30;
 }
 
 .tag-progress-missing {
@@ -438,14 +399,6 @@ p {
   font-size: 12px;
   font-weight: 600;
   line-height: 16px;
-  color: #ffffff;
-  background-color: #7f868d;
-}
-
-#news-in-home .uk-subnav-pill > .uk-active > a {
-  color: #ffffff;
-  background-color: #535557;
-  border: 1px solid #efefef;
 }
 
 .news-switcher-tag {
@@ -453,12 +406,8 @@ p {
   margin-right: 8px;
   padding: 8px 16px !important;
   text-transform: none !important;
-  color: #535557;
-  background-color: #f9f9f9;
-  border: 1px solid #efefef;
 }
 .news-card {
-  border: 1px solid #efefef;
   border-radius: 12px;
 }
 .news-card-image {
@@ -472,13 +421,11 @@ p {
   padding: 4px 8px;
   height: 24px;
   border-radius: 20px;
-  background-color: #efefef;
 }
 .news-modal-tag {
   padding: 4px 8px;
   height: 28px;
   border-radius: 20px;
-  background-color: #efefef;
 }
 
 .class {
@@ -546,7 +493,6 @@ p {
   padding: 8px 16px;
   width: 100%;
   height: 56px;
-  border-bottom: 1px solid #efefef;
 }
 .chat-body {
   max-height: calc(100vh - 216px);
@@ -558,7 +504,6 @@ p {
   display: flex;
   width: 100%;
   padding: 12px 16px;
-  border-top: 1px solid #efefef;
 }
 .chat-message-content {
   border-radius: 20px;
@@ -566,7 +511,6 @@ p {
   margin-left: 15px;
   margin-right: 7px;
   width: 245px;
-  background-color: #f4f4f4;
   position: relative;
 }
 .chat-message-content-arrow {
@@ -580,7 +524,6 @@ p {
   right: -7px;
 }
 .chat-message-content-time {
-  color: #535557;
   font-size: 10px;
   text-align: end;
   line-height: 10px;
@@ -611,7 +554,6 @@ p {
 .practice-card {
   padding: 8px;
   border-radius: 20px;
-  background-color: #ffffff;
   justify-content: start;
 }
 
@@ -622,42 +564,10 @@ p {
   font-size: 12px;
   font-weight: 600;
   line-height: 16px;
-  color: #ffffff;
-  background-color: #067ff3;
   margin-right: 4px;
 }
 
-.login {
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 48px;
-  max-width: 520px;
-  width: 100%;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-}
-@media screen and (max-width: 768px) {
-  .login {
-    background-color: transparent;
-    border-radius: none;
-    padding: 16px;
-    width: 100%;
-    box-shadow: none;
-  }
-}
-
-.login-input, .login-input-error {
-  height: 56px;
-}
-.login-input-error {
-  border: 2px solid #f74a4a;
-}
-
-.class-sub-title {
-  color: #7f868d;
-}
-
 .class-card {
-  border: 1px solid #efefef;
   border-radius: 12px;
 }
 .class-card-header, .class-card-header-in-schedule {
@@ -670,18 +580,15 @@ p {
 .class-card-header-in-schedule {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  border-bottom: 1px solid #efefef;
 }
 .class-card-content {
   padding: 24px;
 }
 
 .course-card {
-  border: 1px solid #efefef;
   border-radius: 12px;
 }
 .course-card-big {
-  border: 1px solid #efefef;
   border-radius: 12px;
 }
 .course-card-big-image {
@@ -695,7 +602,6 @@ p {
 }
 .course-card-title {
   cursor: pointer;
-  color: #1a1d1f !important;
 }
 .course-card-title:hover {
   text-decoration: none;
@@ -705,7 +611,6 @@ p {
   margin-bottom: 12px;
   max-height: 40px;
   height: 100%;
-  color: #535557;
 }
 .course-card-image {
   border-top-left-radius: 12px;
@@ -724,15 +629,6 @@ p {
   justify-content: center;
   align-items: center;
 }
-.tag-course-progress-active {
-  color: #067ff3;
-  background-color: #cde6fe;
-}
-.tag-course-progress-done {
-  color: #07b682;
-  background-color: #cefdef;
-}
-
 .uk-nav-sub {
   display: none; /* Hide submenu by default */
 }
@@ -761,7 +657,6 @@ summary::-webkit-details-marker {
   position: relative;
 }
 .tree-nav__item.is-expandable:before {
-  border-left: 2px solid #efefef;
   content: "";
   height: 100%;
   left: 12px;
@@ -776,7 +671,7 @@ summary::-webkit-details-marker {
   margin-left: 24px;
 }
 .tree-nav__item.is-expandable[open] > .tree-nav__item-title::before {
-  font-family: "ionicons";
+  /* font-family: "ionicons"; */
   transform: rotate(90deg);
 }
 .tree-nav__item.is-expandable[open] > summary.tree-nav__item-title::after {
@@ -803,7 +698,6 @@ summary::-webkit-details-marker {
   height: 24px;
   left: 12px;
   top: 26px;
-  border: 2px solid #efefef;
   border-bottom-left-radius: 4px;
   border-right: none;
   border-top: none;
@@ -877,9 +771,6 @@ summary::-webkit-details-marker {
   0% {
     stroke-dasharray: 0 100;
   }
-}
-.circular-chart .circle {
-  stroke: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */

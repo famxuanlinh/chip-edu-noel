@@ -1,0 +1,23 @@
+@use "color";
+@use "reset";
+@use "auth";
+@use "typography";
+@use "effect";
+@use "common";
+
+html {
+    scroll-behavior: smooth;
+    font-family: Dongle;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: Dongle;
+    
+  }
+  
+  

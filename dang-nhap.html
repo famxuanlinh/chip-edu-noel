@@ -8,46 +8,36 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
     />
-    <link rel="stylesheet" href="css/app.css" />
+    <link href='https://fonts.googleapis.com/css?family=Dongle' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
-    <div class="flex-center" style="background-color: #f4f4f4; height: 100vh">
+    <div class="auth" style="background-image: url('public/images/login-bg.webp');">
       <div>
-        <div class="w-full flex-center">
-          <img
-            class="mb-6 flex-items-center"
-            src="public/logo.png"
-            alt="logo"
-            width="90px"
-          />
-        </div>
+        
 
-        <div class="login">
-          <div class="title2-semibold" style="font-weight: 500">
-            Chào mừng bạn đến với 👋
+        <div class="auth-wrapper">
+          <div class="w-full flex-center">
+            <img
+              class="flex-items-center"
+              src="public/images/logo.svg"
+              alt="logo"
+              width="106px"
+            />
           </div>
+         
           <div
-            style="
-              font-weight: 700;
-              font-size: 40px;
-              color: #067ff3;
-              line-height: 40px;
-            "
+            class="auth-title chip-h2 grayscale-dark-gray flex-center"
           >
-            YouClass
+          Đăng nhập
           </div>
 
-          <div
-            class="body1-semibold"
-            style="font-weight: 500; margin-top: 40px; margin-bottom: 24px"
-          >
-            Vui lòng đăng nhập để tiếp tục
-          </div>
+         
 
           <form>
-            <div class="space-y-4 mb-8">
+            <div class="space-y-5">
               <!-- If heve error -->
               <!-- <div>
                 <input
@@ -68,11 +58,11 @@
 
               <!-- No error -->
               <input
-                class="uk-input login-input"
+                class="uk-input auth-input"
                 type="text"
-                placeholder="Tài khoản"
+                placeholder="Số điện thoại/Tên đăng nhập"
                 aria-label="Input"
-                name="name"
+                name="phone"
                 required
               />
 
@@ -102,7 +92,7 @@
                 </button>
 
                 <input
-                  class="uk-input login-input"
+                  class="uk-input auth-input"
                   type="password"
                   placeholder="Mật khẩu"
                   aria-label="Input"
@@ -112,24 +102,11 @@
                 />
               </div>
 
-              <div class="flex-items-center">
-                <input
-                  id="remember"
-                  type="checkbox"
-                  style="width: 20px; height: 20px"
-                />
-                <label
-                  for="remember"
-                  class="ml-2 body2-medium"
-                  style="color: #535557"
-                >
-                  Ghi nhớ đăng nhập</label
-                >
-              </div>
+              <div class="auth-forgot-password"><a href="/quen-mat-khau" class="auth-forgot-password-link  caption-m primary-yellow">Quên mật khẩu</a></div>
             </div>
             <button
-              class="uk-button uk-button-primary rounded-10px flex-center w-full"
-              style="height: 56px; text-transform: inherit; font-size: 16px"
+              class="btn grayscale-white bg-primary-green button-l"
+              style="margin-top: 60px;"
             >
               Đăng nhập
             </button>

@@ -1,0 +1,269 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+input {
+  line-height: normal;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.input-form, .auth-input, .auth-input-error {
+  height: 80px;
+  border-radius: 12px;
+  font-size: 36px;
+  border-radius: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background: var(--Grayscale-White, #fff);
+  padding: 0 16px;
+  font-weight: 300;
+  line-height: 100%; /* 36px */
+}
+.input-form ::placeholder, .auth-input ::placeholder, .auth-input-error ::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  opacity: 405;
+  font-weight: 300;
+}
+
+.auth {
+  height: 100vh;
+  display: flex;
+  justify-content: end;
+}
+.auth-title {
+  margin: 60px 0;
+}
+.auth-wrapper {
+  background-color: #ffffff;
+  border-radius: 40px;
+  padding: 48px 80px;
+  width: 640px;
+  margin: 20px 20px 20px 0;
+  height: calc(100vh - 40px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+.auth-input-error {
+  border: 2px solid #f74a4a;
+}
+.auth-forgot-password {
+  display: flex;
+  justify-content: end;
+}
+.auth-forgot-password-link:hover {
+  color: #FF9800;
+}
+
+.chip-h0 {
+  font-size: 280px;
+  font-weight: bold;
+  line-height: 100%;
+}
+
+.chip-h1 {
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 100%;
+}
+
+.chip-h2 {
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 100%;
+}
+
+.chip-h3 {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 100%;
+}
+
+.chip-h4 {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 100%;
+}
+
+.button-l {
+  font-size: 44px;
+  font-weight: bold;
+  line-height: 100%;
+}
+
+.button-m {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 100%;
+}
+
+.button-s {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 100%;
+}
+
+.button-xs {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 100%;
+}
+
+.body-l {
+  font-size: 44px;
+  font-weight: light;
+  line-height: 100%;
+}
+
+.body-m {
+  font-size: 36px;
+  font-weight: light;
+  line-height: 100%;
+}
+
+.body-s {
+  font-size: 32px;
+  font-weight: light;
+  line-height: 100%;
+}
+
+.body-xs {
+  font-size: 28px;
+  font-weight: light;
+  line-height: 100%;
+}
+
+.caption-l {
+  font-size: 44px;
+  font-weight: regular;
+  line-height: 100%;
+}
+
+.caption-m {
+  font-size: 36px;
+  font-weight: regular;
+  line-height: 100%;
+}
+
+.caption-s {
+  font-size: 32px;
+  font-weight: regular;
+  line-height: 150%;
+}
+
+.caption-xs {
+  font-size: 28px;
+  font-weight: regular;
+  line-height: 150%;
+}
+
+/* Drop Shadows */
+.drop-shadow-button-l {
+  box-shadow: -2px 2px 0 rgba(0, 0, 0, 0.25), inset 0px -4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.drop-shadow-button-d {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), inset 0px -4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.drop-shadow-button-u {
+  box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.drop-shadow-ava {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Background Blurs */
+.bg-blur-40 {
+  backdrop-filter: blur(40px);
+}
+
+.bg-blur-60 {
+  backdrop-filter: blur(60px);
+}
+
+/* Layer Blurs */
+.layer-blur-highlight {
+  filter: blur(100px);
+  backdrop-filter: blur(100px);
+}
+
+.layer-blur-4 {
+  filter: blur(4px);
+}
+
+/* Inner Blurs */
+.inner-blur-inner-x4-b0-20 {
+  box-shadow: inset 0px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.inner-blur-inner-b2-50 {
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+.inner-blur-inner-b4-20 {
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.inner-blur-inner-b8-60 {
+  box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.6);
+}
+
+.btn {
+  display: flex;
+  height: 80px;
+  padding: 0px 20px 4px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+  width: 100%;
+  border-radius: 20px;
+  /* Drop Shadow/Button D */
+  box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Dongle;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  font-family: Dongle;
+}
+
+/*# sourceMappingURL=app.css.map */

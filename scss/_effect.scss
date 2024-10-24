@@ -1,0 +1,52 @@
+/* Drop Shadows */
+.drop-shadow-button-l {
+    box-shadow: -2px 2px 0 rgba(0, 0, 0, 0.25), inset 0px -4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.drop-shadow-button-d {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), inset 0px -4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.drop-shadow-button-u {
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.drop-shadow-ava {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Background Blurs */
+.bg-blur-40 {
+    backdrop-filter: blur(40px);
+}
+
+.bg-blur-60 {
+    backdrop-filter: blur(60px);
+}
+
+/* Layer Blurs */
+.layer-blur-highlight {
+    filter: blur(100px);
+    backdrop-filter: blur(100px);
+}
+
+.layer-blur-4 {
+    filter: blur(4px);
+}
+
+/* Inner Blurs */
+.inner-blur-inner-x4-b0-20 {
+    box-shadow: inset 0px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.inner-blur-inner-b2-50 {
+    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+.inner-blur-inner-b4-20 {
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.inner-blur-inner-b8-60 {
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.6);
+}

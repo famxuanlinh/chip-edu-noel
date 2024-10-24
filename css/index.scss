@@ -1,4 +1,4 @@
-@import "./variables";
+@use "./colors";
 
 * {
   margin: 0;
@@ -6,7 +6,7 @@
   border: 0;
   font-size: 100%;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  // font-family: "Inter", sans-serif;
 }
 
 :root {
@@ -52,7 +52,7 @@ p {
   font-weight: 700;
   line-height: 32px;
   letter-spacing: -0.02em;
-  color: $neutral-07;
+  // color: colors.$neutral-07;
 }
 
 .title2-semibold {
@@ -60,7 +60,7 @@ p {
   font-weight: 600;
   line-height: 32px;
   text-align: left;
-  color: $neutral-07;
+  // color: colors.$neutral-07;
 }
 
 .body1-semibold {
@@ -68,7 +68,7 @@ p {
   font-weight: 600;
   line-height: 24px;
   text-align: left;
-  color: $neutral-07;
+  // color: colors.$neutral-07;
 }
 
 .body1-medium {
@@ -76,7 +76,7 @@ p {
   font-weight: 500;
   line-height: 24px;
   text-align: left;
-  color: $neutral-07;
+  // color: colors.$neutral-07;
 }
 
 .body1-regular {
@@ -84,7 +84,7 @@ p {
   font-weight: 400;
   line-height: 24px;
   text-align: left;
-  color: $neutral-07;
+  // color: colors.$neutral-07;
 }
 
 .body2-semibold {
@@ -92,7 +92,7 @@ p {
   font-weight: 600;
   line-height: 20px;
   text-align: left;
-  color: $neutral-07;
+  // color: colors.$neutral-07;
 }
 
 .body2-medium {
@@ -100,7 +100,7 @@ p {
   font-weight: 500;
   line-height: 20px;
   text-align: left;
-  color: $neutral-07;
+  // color: colors.$neutral-07;
 }
 
 .body2-regular {
@@ -108,7 +108,7 @@ p {
   font-weight: 400;
   line-height: 20px;
   text-align: left;
-  color: $neutral-07;
+  // color: colors.$neutral-07;
 }
 
 .caption-semibold {
@@ -116,7 +116,7 @@ p {
   font-weight: 600;
   line-height: 16px;
   text-align: left;
-  color: $neutral-07;
+  // color: colors.$neutral-07;
 }
 
 .caption-medium {
@@ -124,7 +124,7 @@ p {
   font-weight: 500;
   line-height: 16px;
   text-align: left;
-  color: $neutral-07;
+  // color: colors.$neutral-07;
 }
 
 .caption-regular {
@@ -132,26 +132,26 @@ p {
   font-weight: 400;
   line-height: 16px;
   text-align: left;
-  color: $neutral-07;
+  // color: colors.$neutral-07;
 }
 
 .button1 {
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-  color: $neutral-07;
+  // color: colors.$neutral-07;
 }
 .button2 {
   font-size: 14px;
   font-weight: 600;
   line-height: 24px;
-  color: $neutral-07;
+  // color: colors.$neutral-07;
 }
 .button-link {
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
-  color: $neutral-07;
+  // color: colors.$neutral-07;
 }
 
 .button-primary {
@@ -159,15 +159,15 @@ p {
   height: 44px;
   padding: 0 16px;
   border-radius: 10px;
-  color: $neutral-00;
-  background-color: $primary-azure;
+  // color: colors.$neutral-00;
+  // background-color: colors.$primary-azure;
   display: flex;
   justify-content: center;
   align-items: center;
 
   &:hover {
     opacity: 0.9;
-    color: $neutral-00;
+    // color: colors.$neutral-00;
     text-decoration: none;
   }
 
@@ -187,16 +187,16 @@ p {
 
 .button-secondary {
   @extend .button-primary;
-  background-color: $neutral-01;
-  color: $neutral-06;
-  border: 2px solid $neutral-03;
+  // background-color: colors.$neutral-01;
+  // color: colors.$neutral-06;
+  // border: 2px solid colors.$neutral-03;
   cursor: pointer;
 
   &:hover {
     opacity: 0.8;
-    // background-color: $neutral-01;
-    color: $neutral-06;
-    border: 2px solid $neutral-03;
+    // background-color: colors.$neutral-01;
+    // color: colors.$neutral-06;
+    // border: 2px solid colors.$neutral-03;
   }
 
   &-disabled {
@@ -232,7 +232,7 @@ p {
   height: 48px;
   width: 100%;
   cursor: pointer;
-  color: $neutral-07;
+  // color: colors.$neutral-07;
   font-weight: 600;
   & > a {
     padding: 12px 0;
@@ -248,7 +248,7 @@ p {
   border-radius: 12px;
   height: 48px;
   width: 100%;
-  color: $neutral-05;
+  // color: colors.$neutral-05;
   cursor: pointer;
   transition: 0.3ms;
   display: flex;
@@ -360,7 +360,7 @@ p {
 
 .noti_item_time {
   @extend .body2-medium;
-  color: $neutral-04;
+  // color: colors.$neutral-04;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -386,15 +386,15 @@ p {
 .divider-vertical {
   width: 2px;
   height: 20px;
-  background-color: $neutral-04;
+  // background-color: colors.$neutral-04;
 }
 
 .modal-content {
   &-title {
     padding: 12px;
     border-radius: 8px;
-    background-color: $neutral-01;
-    border: 1px solid $neutral-03;
+    // background-color: colors.$neutral-01;
+    // border: 1px solid colors.$neutral-03;
     text-align: left;
   }
 
@@ -420,7 +420,7 @@ p {
   border-radius: 6px;
 
   &:hover {
-    background-color: $neutral-02;
+    // background-color: colors.$neutral-02;
   }
 }
 
@@ -431,38 +431,38 @@ p {
   font-size: 12px;
   font-weight: 600;
   line-height: 16px;
-  color: $neutral-00;
+  // color: colors.$neutral-00;
 }
 
 .tag-progress-already {
   @include tag-style;
-  background-color: $primary-mint;
+  // background-color: colors.$primary-mint;
 }
 
 .tag-progress-cancel {
   @include tag-style;
-  background-color: $primary-red-rum;
+  // background-color: colors.$primary-red-rum;
 }
 
 .tag-progress-not {
   @include tag-style;
-  background-color: $neutral-03;
-  color: $neutral-06;
+  // background-color: colors.$neutral-03;
+  // color: colors.$neutral-06;
 }
 
 .tag-progress-missing {
   @include tag-style;
-  background-color: $neutral-04;
+  // background-color: colors.$neutral-04;
 }
 
 // News start
 
 #news-in-home {
   .uk-subnav-pill > .uk-active > a {
-    color: $neutral-00;
-    background-color: $neutral-05;
+    // color: colors.$neutral-00;
+    // background-color: colors.$neutral-05;
     @extend .body2-semibold;
-    border: 1px solid $neutral-03;
+    // border: 1px solid colors.$neutral-03;
   }
 }
 .news {
@@ -472,16 +472,16 @@ p {
       margin-right: 8px;
       padding: 8px 16px !important;
       text-transform: none !important;
-      color: $neutral-05;
-      background-color: $neutral-01;
-      border: 1px solid $neutral-03;
+      // color: colors.$neutral-05;
+      // background-color: colors.$neutral-01;
+      // border: 1px solid colors.$neutral-03;
 
       @extend .body2-regular;
     }
   }
 
   &-card {
-    border: 1px solid $neutral-03;
+    // border: 1px solid colors.$neutral-03;
     border-radius: 12px;
 
     &-image {
@@ -496,7 +496,7 @@ p {
       padding: 4px 8px;
       height: 24px;
       border-radius: 20px;
-      background-color: $neutral-03;
+      // background-color: colors.$neutral-03;
 
       @extend .caption-semibold;
     }
@@ -507,7 +507,7 @@ p {
       padding: 4px 8px;
       height: 28px;
       border-radius: 20px;
-      background-color: $neutral-03;
+      // background-color: colors.$neutral-03;
 
       @extend .body2-semibold;
     }
@@ -597,7 +597,7 @@ p {
     padding: 8px 16px;
     width: 100%;
     height: 56px;
-    border-bottom: 1px solid $neutral-03;
+    // border-bottom: 1px solid colors.$neutral-03;
   }
 
   &-body {
@@ -610,7 +610,7 @@ p {
     display: flex;
     width: 100%;
     padding: 12px 16px;
-    border-top: 1px solid $neutral-03;
+    // border-top: 1px solid colors.$neutral-03;
   }
   &-message {
     &-content {
@@ -620,7 +620,7 @@ p {
       margin-right: 7px;
       width: 245px;
       //   width: 100%;
-      background-color: $neutral-02;
+      // background-color: colors.$neutral-02;
       position: relative;
 
       @extend .body2-regular;
@@ -641,7 +641,7 @@ p {
         //   position: absolute;
         //   bottom: 6px;
         //   right: 12px;
-        color: $neutral-05;
+        // color: colors.$neutral-05;
         font-size: 10px;
         text-align: end;
         line-height: 10px;
@@ -681,42 +681,15 @@ p {
 .practice-card {
   padding: 8px;
   border-radius: 20px;
-  background-color: $neutral-00;
+  // background-color: colors.$neutral-00;
   justify-content: start;
 }
 
 //practice end
 .tag-practice {
   @include tag-style;
-  background-color: $primary-azure;
+  // background-color: colors.$primary-azure;
   margin-right: 4px;
-}
-
-// Login
-.login {
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 48px;
-  max-width: 520px;
-  width: 100%;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-
-  @media screen and (max-width: 768px) {
-    background-color: transparent;
-    border-radius: none;
-    padding: 16px;
-    width: 100%;
-    box-shadow: none;
-  }
-}
-
-.login-input {
-  @extend .input-form;
-  height: 56px;
-  &-error {
-    @extend .login-input;
-    border: 2px solid $primary-red-rum;
-  }
 }
 
 // Course
@@ -724,12 +697,12 @@ p {
   &-sub-title {
     @extend .body1-semibold;
 
-    color: $neutral-04;
+    // color: colors.$neutral-04;
   }
 }
 
 .class-card {
-  border: 1px solid $neutral-03;
+  // border: 1px solid colors.$neutral-03;
   border-radius: 12px;
 
   &-header {
@@ -744,7 +717,7 @@ p {
 
       border-top-right-radius: 10px;
       border-top-left-radius: 10px;
-      border-bottom: 1px solid $neutral-03;
+      // border-bottom: 1px solid colors.$neutral-03;
     }
   }
   &-content {
@@ -754,10 +727,10 @@ p {
 
 .course {
   &-card {
-    border: 1px solid $neutral-03;
+    // border: 1px solid colors.$neutral-03;
     border-radius: 12px;
     &-big {
-      border: 1px solid $neutral-03;
+      // border: 1px solid colors.$neutral-03;
       border-radius: 12px;
       &-image {
         border-top-left-radius: 12px;
@@ -774,7 +747,7 @@ p {
     &-title {
       @extend .body1-semibold;
       cursor: pointer;
-      color: $neutral-07 !important;
+      // color: colors.$neutral-07 !important;
       &:hover {
         text-decoration: none;
       }
@@ -786,7 +759,7 @@ p {
       margin-bottom: 12px;
       max-height: 40px;
       height: 100%;
-      color: $neutral-05;
+      // color: colors.$neutral-05;
     }
 
     &-image {
@@ -811,14 +784,14 @@ p {
 
   &-active {
     @extend .tag-course-progress;
-    color: $primary-azure;
-    background-color: $secondary-azure;
+    // color: colors.$primary-azure;
+    // background-color: colors.$secondary-azure;
   }
 
   &-done {
     @extend .tag-course-progress;
-    color: $primary-mint;
-    background-color: $secondary-mint;
+    // color: colors.$primary-mint;
+    // background-color: colors.$secondary-mint;
   }
 }
 
@@ -851,7 +824,7 @@ summary {
   position: relative;
 
   &.is-expandable:before {
-    border-left: 2px solid $neutral-03;
+    // border-left: 2px solid colors.$neutral-03;
     content: "";
     height: 100%;
     left: 12px;
@@ -868,7 +841,7 @@ summary {
   }
 
   &.is-expandable[open] > .tree-nav__item-title::before {
-    font-family: "ionicons";
+    // font-family: "ionicons";
     transform: rotate(90deg);
   }
 
@@ -897,7 +870,7 @@ summary {
       height: 24px;
       left: 12px;
       top: 26px;
-      border: 2px solid $neutral-03;
+      // border: 2px solid colors.$neutral-03;
       border-bottom-left-radius: 4px;
       border-right: none;
       border-top: none;
@@ -980,5 +953,5 @@ summary {
 }
 
 .circular-chart .circle {
-  stroke: $neutral-00;
+  // stroke: colors.$neutral-00;
 }
