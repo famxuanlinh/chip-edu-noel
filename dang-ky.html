@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Ký</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dongle"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <div
+      class="auth"
+      style="
+        background-image: url('public/images/login-bg.webp');
+        background-size: cover;
+      "
+    >
+      <div class="auth-wrapper">
+        <div class="flex-center h-full">
+          <div>
+            <div class="w-full flex-center">
+              <img
+                class="flex-items-center"
+                src="public/images/logo.svg"
+                alt="logo"
+                width="106px"
+              />
+            </div>
+
+            <div class="auth-title chip-h2 grayscale-dark-gray flex-center">
+              Đăng ký
+            </div>
+
+            <form id="registerForm">
+              <div class="space-y-5">
+                <input
+                  class="uk-input auth-input"
+                  type="text"
+                  placeholder="Họ và tên*"
+                  aria-label="Input"
+                  name="name"
+                  required
+                />
+                <input
+                  class="uk-input auth-input"
+                  type="email"
+                  placeholder="Email"
+                  aria-label="Input"
+                  name="email"
+                />
+                <input
+                  class="uk-input auth-input"
+                  type="text"
+                  placeholder="Số điện thoại* "
+                  aria-label="Input"
+                  name="phone"
+                  required
+                />
+
+                <div class="uk-inline" style="width: 100%">
+                  <button
+                    class="uk-form-icon uk-form-icon-flip mr-6"
+                    style="background-color: transparent"
+                  >
+                    <!-- <img
+                      onclick="clearPassword(event)"
+                      id="clear"
+                      type="button"
+                      src="public/icon/x.svg"
+                      alt="x"
+                      width="24"
+                      class="mr-3 cursor-pointer"
+                    /> -->
+                    <img
+                      onclick="togglePasswordVisibility(event)"
+                      id="eye"
+                      type="button"
+                      src="public/icon/eye.svg"
+                      width="24"
+                      alt="x"
+                      class="cursor-pointer"
+                    />
+                  </button>
+
+                  <input
+                    class="uk-input auth-input"
+                    type="password"
+                    placeholder="Mật khẩu*"
+                    aria-label="Input"
+                    name="password"
+                    id="password"
+                    required
+                  />
+                </div>
+              </div>
+              <button
+                class="btn grayscale-white bg-primary-green button-l"
+                style="margin: 60px 0"
+              >
+                Đăng ký
+              </button>
+              <div class="flex-center space-x-1">
+                <span class="body-m grayscale-dark-gray">Đã có tài khoản?</span>
+                <a
+                  class="btn-register caption-m primary-green"
+                  href="/dang-ky.html"
+                  >Đăng nhập</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script>
+      // Function to handle password visibility toggle
+      function togglePasswordVisibility(event) {
+        var passwordInput = document.getElementById("password");
+        var eyeIcon = document.getElementById("eye");
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          eyeIcon.src = "public/icon/eye-slash.svg";
+        } else {
+          passwordInput.type = "password";
+          eyeIcon.src = "public/icon/eye.svg";
+        }
+        event.preventDefault();
+      }
+
+      // Function to clear password input
+      //   function clearPassword(event) {
+      //     var passwordInput = document.getElementById("password");
+      //     passwordInput.value = "";
+      //     event.preventDefault();
+      //   }
+
+      // Function to handle form submission
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const phone = this.phone.value;
+          const password = this.password.value;
+
+          console.log("Data:", phone, password);
+        });
+    </script>
+  </body>
+</html>
