@@ -38,6 +38,10 @@ img {
   max-width: 100%;
 }
 
+p {
+  margin: 0;
+}
+
 .input-form, .auth-input, .auth-input-error {
   height: 80px;
   border-radius: 12px;
