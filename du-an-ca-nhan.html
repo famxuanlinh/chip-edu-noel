@@ -1,0 +1,609 @@
+<!-- old -->
+<!DOCTYPE html>
+<html lang="en" style="background-color: #d8eddd">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dự án cá nhân</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <div class="project">
+      <!-- project header -->
+      <div class="project-header">
+        <a class="project-header-button" href="/"
+          ><img src="/public/icons/arrow-left.svg" alt="icon arrow"
+        /></a>
+        <div class="project-header-tab">
+          <div class="project-header-tab-item-active button-l">
+            <img
+              src="public/icons/pencil.svg"
+              class="mr-5"
+              width="60"
+              height="60"
+              alt=""
+            />
+            Dự án cá nhân
+          </div>
+          <div class="project-header-tab-item button-l">
+            <img
+              src="public/icons/medal.svg"
+              class="mr-5"
+              width="60"
+              height="60"
+              alt=""
+            />
+            Thành tích
+          </div>
+        </div>
+      </div>
+      <!-- project info -->
+      <div class="project-info flex-center space-x-4">
+        <div
+          class="rounded-full mr-4"
+          style="
+            background-color: white;
+            width: fit-content;
+            height: fit-content;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          "
+        >
+          <img
+            class="rounded-full p-1"
+            width="110"
+            height="110"
+            src="public/images/avatar1.png"
+            alt="avatar"
+          />
+        </div>
+        <div class="space-y-5">
+          <p class="heading-h3 grayscale-dark-gray">Student’s Name</p>
+          <div class="flex-items-center">
+            <div
+              class="project-info-tag flex-items-center inner-blur-inner-b2-50 button-s"
+            >
+              <img
+                src="public/icons/star.svg"
+                class="mr-2"
+                width="24"
+                height="24"
+                alt=""
+              />200
+            </div>
+            <div
+              class="project-info-tag flex-items-center inner-blur-inner-b2-50 button-s"
+            >
+              <img
+                src="public/icons/book.svg"
+                class="mr-2"
+                width="24"
+                height="24"
+                alt=""
+              />15 buổi
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- project body -->
+      <div class="project-body">
+        <div class="project-card">
+          <!-- <img
+              class="project-card-image rounded-10px"
+              src="public/images/project.jpeg"
+              alt="project"
+            /> -->
+          <div
+            class="project-card-image rounded-10px bg-grayscale-dim-dark-10 flex-center"
+          >
+            <button
+              class="button-primary bg-primary-green flex-items-center px-5 grayscale-white button-s"
+            >
+              <img
+                src="public/icons/upload.svg"
+                class="mr-2"
+                width="20"
+                height="20"
+                alt="upload"
+              />
+              Tải tệp lên
+            </button>
+            <input
+              type="file"
+              id="file-upload"
+              accept="image/*"
+              class="sr-only"
+            />
+          </div>
+          <div
+            class="space-y-3 mt-5 flex-center"
+            style="flex-direction: column"
+          >
+            <div class="button-m grayscale-dark-gray">Project’s Name</div>
+            <div
+              class="project-card-status grayscale-white button-s bg-primary-yellow"
+            >
+              Chưa nộp bài
+            </div>
+            <div class="flex-center space-x-10" style="padding: 22px 0">
+              <div class="flex-center" style="flex-direction: column">
+                <div
+                  class="rounded-full"
+                  style="
+                    background-color: white;
+                    width: fit-content;
+                    height: fit-content;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                  "
+                >
+                  <img
+                    class="rounded-full p-1"
+                    width="60"
+                    height="60"
+                    src="public/images/avatar1.png"
+                    alt="avatar"
+                  />
+                </div>
+                <p class="grayscale-dark-gray button-xs mt-3">Cô Tina</p>
+              </div>
+            </div>
+            <div
+              class="flex-items-center w-full"
+              style="justify-content: space-between"
+            >
+              <div class="project-card-button">
+                <button
+                  class="project-card-button-left-part button-xs bg-primary-green"
+                >
+                  Level 3
+                </button>
+                <button class="project-card-button-right-part button-xs">
+                  Unit 3
+                </button>
+              </div>
+              <div
+                class="project-card-button"
+                style="border: 2px solid #ff9800"
+              >
+                <button
+                  class="project-card-button-left-part button-xs bg-primary-yellow"
+                >
+                  <img
+                    src="public/icons/calendar.svg"
+                    width="24"
+                    height="24"
+                    alt=""
+                  />
+                </button>
+                <button class="project-card-button-right-part button-xs">
+                  Thứ 6 - 01/02/2014
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img
+            class="project-card-image rounded-10px"
+            src="public/images/project.jpeg"
+            alt="project"
+          />
+          <div
+            class="space-y-3 mt-5 flex-center"
+            style="flex-direction: column"
+          >
+            <div class="button-m grayscale-dark-gray">Project’s Name</div>
+            <div
+              class="project-card-status button-s grayscale-dark-gray bg-greenscale-light-green"
+            >
+              Đã nộp bài
+            </div>
+            <div class="flex-center space-x-10" style="padding: 22px 0">
+              <div class="flex-center" style="flex-direction: column">
+                <div
+                  class="rounded-full"
+                  style="
+                    background-color: white;
+                    width: fit-content;
+                    height: fit-content;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                  "
+                >
+                  <img
+                    class="rounded-full p-1"
+                    width="60"
+                    height="60"
+                    src="public/images/avatar1.png"
+                    alt="avatar"
+                  />
+                </div>
+                <p class="grayscale-dark-gray button-xs mt-3">Cô Tina</p>
+              </div>
+              <div class="flex-center" style="flex-direction: column">
+                <img
+                  src="public/icons/star.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+                <p class="grayscale-dark-gray button-xs mt-3">200</p>
+              </div>
+            </div>
+            <div
+              class="flex-items-center w-full"
+              style="justify-content: space-between"
+            >
+              <div class="project-card-button">
+                <button
+                  class="project-card-button-left-part button-xs bg-primary-green"
+                >
+                  Level 3
+                </button>
+                <button class="project-card-button-right-part button-xs">
+                  Unit 3
+                </button>
+              </div>
+              <div
+                class="project-card-button"
+                style="border: 2px solid #ff9800"
+              >
+                <button
+                  class="project-card-button-left-part button-xs bg-primary-yellow"
+                >
+                  <img
+                    src="public/icons/calendar.svg"
+                    width="24"
+                    height="24"
+                    alt=""
+                  />
+                </button>
+                <button class="project-card-button-right-part button-xs">
+                  Thứ 6 - 01/02/2014
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img
+            class="project-card-image rounded-10px"
+            src="public/images/project.jpeg"
+            alt="project"
+          />
+          <div
+            class="space-y-3 mt-5 flex-center"
+            style="flex-direction: column"
+          >
+            <div class="button-m grayscale-dark-gray">Project’s Name</div>
+            <div
+              class="project-card-status button-s grayscale-white bg-primary-green"
+            >
+              Đã hoàn thành
+            </div>
+            <div class="flex-center space-x-10" style="padding: 22px 0">
+              <div class="flex-center" style="flex-direction: column">
+                <div
+                  class="rounded-full"
+                  style="
+                    background-color: white;
+                    width: fit-content;
+                    height: fit-content;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                  "
+                >
+                  <img
+                    class="rounded-full p-1"
+                    width="60"
+                    height="60"
+                    src="public/images/avatar1.png"
+                    alt="avatar"
+                  />
+                </div>
+                <p class="grayscale-dark-gray button-xs mt-3">Cô Tina</p>
+              </div>
+              <div class="flex-center" style="flex-direction: column">
+                <img
+                  src="public/icons/star.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+                <p class="grayscale-dark-gray button-xs mt-3">200</p>
+              </div>
+            </div>
+            <div
+              class="flex-items-center w-full"
+              style="justify-content: space-between"
+            >
+              <div class="project-card-button">
+                <button
+                  class="project-card-button-left-part button-xs bg-primary-green"
+                >
+                  Level 3
+                </button>
+                <button class="project-card-button-right-part button-xs">
+                  Unit 3
+                </button>
+              </div>
+              <div
+                class="project-card-button"
+                style="border: 2px solid #ff9800"
+              >
+                <button
+                  class="project-card-button-left-part button-xs bg-primary-yellow"
+                >
+                  <img
+                    src="public/icons/calendar.svg"
+                    width="24"
+                    height="24"
+                    alt=""
+                  />
+                </button>
+                <button class="project-card-button-right-part button-xs">
+                  Thứ 6 - 01/02/2014
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img
+            class="project-card-image rounded-10px"
+            src="public/images/project.jpeg"
+            alt="project"
+          />
+          <div
+            class="space-y-3 mt-5 flex-center"
+            style="flex-direction: column"
+          >
+            <div class="button-m grayscale-dark-gray">Project’s Name</div>
+            <div
+              class="project-card-status button-s grayscale-dark-gray bg-greenscale-light-green"
+            >
+              Đã nộp bài
+            </div>
+            <div class="flex-center space-x-10" style="padding: 22px 0">
+              <div class="flex-center" style="flex-direction: column">
+                <div
+                  class="rounded-full"
+                  style="
+                    background-color: white;
+                    width: fit-content;
+                    height: fit-content;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                  "
+                >
+                  <img
+                    class="rounded-full p-1"
+                    width="60"
+                    height="60"
+                    src="public/images/avatar1.png"
+                    alt="avatar"
+                  />
+                </div>
+                <p class="grayscale-dark-gray button-xs mt-3">Cô Tina</p>
+              </div>
+              <div class="flex-center" style="flex-direction: column">
+                <img
+                  src="public/icons/star.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+                <p class="grayscale-dark-gray button-xs mt-3">200</p>
+              </div>
+            </div>
+            <div
+              class="flex-items-center w-full"
+              style="justify-content: space-between"
+            >
+              <div class="project-card-button">
+                <button
+                  class="project-card-button-left-part button-xs bg-primary-green"
+                >
+                  Level 3
+                </button>
+                <button class="project-card-button-right-part button-xs">
+                  Unit 3
+                </button>
+              </div>
+              <div
+                class="project-card-button"
+                style="border: 2px solid #ff9800"
+              >
+                <button
+                  class="project-card-button-left-part button-xs bg-primary-yellow"
+                >
+                  <img
+                    src="public/icons/calendar.svg"
+                    width="24"
+                    height="24"
+                    alt=""
+                  />
+                </button>
+                <button class="project-card-button-right-part button-xs">
+                  Thứ 6 - 01/02/2014
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img
+            class="project-card-image rounded-10px"
+            src="public/images/project.jpeg"
+            alt="project"
+          />
+          <div
+            class="space-y-3 mt-5 flex-center"
+            style="flex-direction: column"
+          >
+            <div class="button-m grayscale-dark-gray">Project’s Name</div>
+            <div
+              class="project-card-status button-s grayscale-dark-gray bg-greenscale-light-green"
+            >
+              Đã nộp bài
+            </div>
+            <div class="flex-center space-x-10" style="padding: 22px 0">
+              <div class="flex-center" style="flex-direction: column">
+                <div
+                  class="rounded-full"
+                  style="
+                    background-color: white;
+                    width: fit-content;
+                    height: fit-content;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                  "
+                >
+                  <img
+                    class="rounded-full p-1"
+                    width="60"
+                    height="60"
+                    src="public/images/avatar1.png"
+                    alt="avatar"
+                  />
+                </div>
+                <p class="grayscale-dark-gray button-xs mt-3">Cô Tina</p>
+              </div>
+              <div class="flex-center" style="flex-direction: column">
+                <img
+                  src="public/icons/star.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+                <p class="grayscale-dark-gray button-xs mt-3">200</p>
+              </div>
+            </div>
+            <div
+              class="flex-items-center w-full"
+              style="justify-content: space-between"
+            >
+              <div class="project-card-button">
+                <button
+                  class="project-card-button-left-part button-xs bg-primary-green"
+                >
+                  Level 3
+                </button>
+                <button class="project-card-button-right-part button-xs">
+                  Unit 3
+                </button>
+              </div>
+              <div
+                class="project-card-button"
+                style="border: 2px solid #ff9800"
+              >
+                <button
+                  class="project-card-button-left-part button-xs bg-primary-yellow"
+                >
+                  <img
+                    src="public/icons/calendar.svg"
+                    width="24"
+                    height="24"
+                    alt=""
+                  />
+                </button>
+                <button class="project-card-button-right-part button-xs">
+                  Thứ 6 - 01/02/2014
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img
+            class="project-card-image rounded-10px"
+            src="public/images/project.jpeg"
+            alt="project"
+          />
+          <div
+            class="space-y-3 mt-5 flex-center"
+            style="flex-direction: column"
+          >
+            <div class="button-m grayscale-dark-gray">Project’s Name</div>
+            <div
+              class="project-card-status button-s grayscale-dark-gray bg-greenscale-light-green"
+            >
+              Đã nộp bài
+            </div>
+            <div class="flex-center space-x-10" style="padding: 22px 0">
+              <div class="flex-center" style="flex-direction: column">
+                <div
+                  class="rounded-full"
+                  style="
+                    background-color: white;
+                    width: fit-content;
+                    height: fit-content;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                  "
+                >
+                  <img
+                    class="rounded-full p-1"
+                    width="60"
+                    height="60"
+                    src="public/images/avatar1.png"
+                    alt="avatar"
+                  />
+                </div>
+                <p class="grayscale-dark-gray button-xs mt-3">Cô Tina</p>
+              </div>
+              <div class="flex-center" style="flex-direction: column">
+                <img
+                  src="public/icons/star.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+                <p class="grayscale-dark-gray button-xs mt-3">200</p>
+              </div>
+            </div>
+            <div
+              class="flex-items-center w-full"
+              style="justify-content: space-between"
+            >
+              <div class="project-card-button">
+                <button
+                  class="project-card-button-left-part button-xs bg-primary-green"
+                >
+                  Level 3
+                </button>
+                <button class="project-card-button-right-part button-xs">
+                  Unit 3
+                </button>
+              </div>
+              <div
+                class="project-card-button"
+                style="border: 2px solid #ff9800"
+              >
+                <button
+                  class="project-card-button-left-part button-xs bg-primary-yellow"
+                >
+                  <img
+                    src="public/icons/calendar.svg"
+                    width="24"
+                    height="24"
+                    alt=""
+                  />
+                </button>
+                <button class="project-card-button-right-part button-xs">
+                  Thứ 6 - 01/02/2014
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script></script>
+  </body>
+</html>

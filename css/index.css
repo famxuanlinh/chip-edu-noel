@@ -8,6 +8,10 @@
   height: 100%;
 }
 
+.p-1 {
+  padding: 4px;
+}
+
 .p-2 {
   padding: 8px;
 }
@@ -1043,6 +1047,10 @@
 
 .space-x-6> :not(:last-child) {
   margin-right: 24px;
+}
+
+.space-x-10> :not(:last-child) {
+  margin-right: 40px;
 }
 
 /* chip edu */

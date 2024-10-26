@@ -1,0 +1,117 @@
+@use "color";
+@use "typography";
+@use "effect";
+
+.project {
+  background-color: color.$greenscale-light-green;
+  height: 100%;
+  width: 100%;
+  padding: 0 80px;
+
+  &-header {
+    padding: 56px 0;
+    display: flex;
+    align-items: center;
+    &-button {
+      cursor: pointer;
+    }
+    &-tab {
+      flex: 1 1 0%;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 24px;
+      height: 90px;
+      padding: 8px;
+      &-item {
+        flex: 1 1 0%;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: color.$grayscale-dark-gray;
+
+        &-active {
+          @extend .project-header-tab-item;
+          background-color: color.$primary-green;
+          border-radius: 20px;
+          border-radius: 20px;
+          color: white;
+          box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset,
+            0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+  }
+  &-info {
+    &-tag {
+      border-radius: 40px;
+      background-color: white;
+      height: 40px;
+      padding: 12px;
+      margin-right: 12px;
+      color: color.$grayscale-dark-gray;
+    }
+  }
+  &-body {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 40px;
+    margin: 36px 0;
+  }
+  &-card {
+    width: fit-content;
+    border-radius: 16px;
+    padding: 8px;
+    background-color: #fff;
+
+    &-image {
+      aspect-ratio: 395/292;
+      width: full;
+      height: 292px;
+    }
+
+    &-status {
+      width: 160px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 24px;
+    }
+    &-button {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 12px;
+      padding: 0;
+      height: 42px;
+      font-size: 18px;
+      font-weight: bold;
+      border: 2px solid color.$primary-green;
+
+      &-left-part {
+        // background-color: color.$primary-green;
+        // background-image: url("../public/images/class-btn-unit.svg");
+
+        background-size: cover;
+        padding: 0 8px;
+        height: 100%;
+        color: white;
+        border-bottom-left-radius: 8px;
+        border-top-left-radius: 8px;
+      }
+
+      &-right-part {
+        background-color: white;
+        padding: 0 12px;
+        color: color.$grayscale-dark-gray;
+        flex: 1;
+        height: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+}

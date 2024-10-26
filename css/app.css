@@ -301,6 +301,24 @@ p {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.button-primary {
+  height: 60px;
+  border-radius: 20px;
+  box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .class {
   height: calc(100vh - 140px);
   display: flex;
@@ -337,7 +355,8 @@ p {
   border: 2px solid #00B26B;
 }
 .button-unit .left-part {
-  background-image: url("../public/images/class-btn-unit.svg");
+  background-color: #00B26B;
+  box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
   background-size: cover;
   padding: 0 12px;
   height: 100%;
@@ -469,6 +488,107 @@ p {
 
 .uk-position-bottom-center {
   bottom: 10px; /* Adjust bottom position */
+}
+
+.project {
+  background-color: #D8EDDD;
+  height: 100%;
+  width: 100%;
+  padding: 0 80px;
+}
+.project-header {
+  padding: 56px 0;
+  display: flex;
+  align-items: center;
+}
+.project-header-button {
+  cursor: pointer;
+}
+.project-header-tab {
+  flex: 1 1 0%;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 24px;
+  height: 90px;
+  padding: 8px;
+}
+.project-header-tab-item, .project-header-tab-item-active {
+  flex: 1 1 0%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #252525;
+}
+.project-header-tab-item-active {
+  background-color: #00B26B;
+  border-radius: 20px;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+.project-info-tag {
+  border-radius: 40px;
+  background-color: white;
+  height: 40px;
+  padding: 12px;
+  margin-right: 12px;
+  color: #252525;
+}
+.project-body {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px;
+  margin: 36px 0;
+}
+.project-card {
+  width: fit-content;
+  border-radius: 16px;
+  padding: 8px;
+  background-color: #fff;
+}
+.project-card-image {
+  aspect-ratio: 395/292;
+  width: full;
+  height: 292px;
+}
+.project-card-status {
+  width: 160px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+}
+.project-card-button {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 0;
+  height: 42px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid #00B26B;
+}
+.project-card-button-left-part {
+  background-size: cover;
+  padding: 0 8px;
+  height: 100%;
+  color: white;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.project-card-button-right-part {
+  background-color: white;
+  padding: 0 12px;
+  color: #252525;
+  flex: 1;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 html {
