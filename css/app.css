@@ -591,6 +591,37 @@ p {
   border-bottom-right-radius: 10px;
 }
 
+.project-upload {
+  background: linear-gradient(to bottom, #717bff 0%, #6d99e2 23%, #6abebf 56%, #67d4aa 83%, #67dda3 100%);
+  padding: 40px;
+}
+.project-upload-header {
+  justify-content: space-between;
+}
+.project-upload-body {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.project-upload-body-left {
+  flex: 1 1 0%;
+  flex-direction: column;
+}
+.project-upload-body-left-zone {
+  border-radius: 40px;
+  border: 2px dashed rgba(0, 0, 0, 0.2);
+}
+.project-upload-body-right {
+  flex: 1 1 0%;
+}
+.project-upload-body-right-card-upload-slider {
+  height: 24px;
+  padding: 2px;
+  border-radius: 30px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.05);
+}
+
 html {
   scroll-behavior: smooth;
   font-family: Nunito;

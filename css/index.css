@@ -363,6 +363,10 @@
   border-radius: 16px;
 }
 
+.rounded-5 {
+  border-radius: 20px;
+}
+
 /* Margin Utilities */
 .m-3 {
   margin: 12px;
@@ -1033,8 +1037,16 @@
   margin-bottom: 32px;
 }
 
+.space-y-10> :not(:last-child) {
+  margin-bottom: 40px;
+}
+
 .space-x-5> :not(:last-child) {
   margin-right: 20px;
+}
+
+.space-x-10> :not(:last-child) {
+  margin-right: 40px;
 }
 
 .space-x-11> :not(:last-child) {
