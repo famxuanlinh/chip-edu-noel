@@ -20,3 +20,25 @@ html {
   box-sizing: border-box;
   font-family: Nunito;
 }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  border-radius: 0;
+  width: 20px;
+  height: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #d8eddd;
+}
+
+// ::-webkit-scrollbar-thumb:hover {
+//   border-radius: 20px;
+//   background-color: blue;
+// }
+
+::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background-color: #0000000d;
+}

@@ -636,4 +636,21 @@ html {
   font-family: Nunito;
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+  border-radius: 0;
+  width: 20px;
+  height: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #d8eddd;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.0509803922);
+}
+
 /*# sourceMappingURL=app.css.map */
