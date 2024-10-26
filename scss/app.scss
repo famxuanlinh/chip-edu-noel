@@ -4,20 +4,18 @@
 @use "typography";
 @use "effect";
 @use "common";
+@use "class";
 
 html {
-    scroll-behavior: smooth;
-    font-family: Dongle;
-  }
+  scroll-behavior: smooth;
+  font-family: Nunito;
+}
 
-  * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    box-sizing: border-box;
-    font-family: Dongle;
-    
-  }
-  
-  
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  font-family: Nunito;
+}

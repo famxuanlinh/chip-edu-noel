@@ -1,0 +1,192 @@
+@use "color";
+@use "typography";
+
+.class {
+  height: calc(100vh - 140px);
+  // height: 100%;
+  // overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &-btn-unit {
+    display: flex;
+    align-items: center;
+    border: 2px solid color.$primary-green;
+    border-radius: 12px;
+    height: 40px;
+    &-l {
+      background-image: url(/public/images/class-btn-unit.svg);
+      display: flex;
+      padding: 12px;
+      justify-content: center;
+      align-items: center;
+    }
+    &-r {
+      padding-left: 12px;
+      padding-right: 16px;
+    }
+  }
+}
+.button-unit {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 0;
+  height: 42px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid color.$primary-green;
+
+  .left-part {
+    // background-color: color.$primary-green;
+    background-image: url("../public/images/class-btn-unit.svg");
+    background-size: cover;
+    padding: 0 12px;
+    height: 100%;
+    color: white;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  .right-part {
+    background-color: white;
+    padding: 0 12px;
+    color: color.$grayscale-dark-gray;
+    flex: 1;
+  }
+}
+
+.student-card {
+  width: 100%;
+  border-radius: 16px;
+  position: relative;
+
+  &-image {
+    border-radius: 16px;
+    width: 100%;
+    height: calc((100vh - 80px - 128px - 16px) / 2);
+    object-fit: cover;
+  }
+
+  &-desc {
+    position: absolute;
+    padding: 0 16px 16px 16px;
+
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 0, 0, 0),
+      rgb(0, 0, 0, 0.8)
+    );
+    border-radius: 16px;
+  }
+
+  &-small {
+    width: 100%;
+    height: calc((100vh - 112px - 64px) / 5);
+    border-radius: 16px;
+    position: relative;
+    flex: 1;
+
+    &-image {
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.chat {
+  display: none;
+  max-height: calc(100vh - 140px);
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-right: 20px;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: color.$grayscale-dim-dark-5;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    // border-bottom: 1px solid colors.$neutral-03;
+  }
+
+  &-body {
+    max-height: calc(100vh - 300px);
+    height: 100%;
+    overflow: auto;
+    padding: 20px;
+  }
+  &-footer {
+    height: 100px;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    background-color: color.$greenscale-light-green;
+    // border-top: 1px solid colors.$neutral-03;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  &-message {
+    &-content {
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      padding: 0 20px;
+      max-width: 238px;
+      min-height: 60px;
+      width: 100%;
+      border: 1px solid #0000001a;
+      background-color: #0000000d;
+      color: color.$grayscale-dark-gray;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+#vertical-slider {
+  max-height: calc(100vh - 140px); /* Max height */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Hide overflow */
+  position: relative; /* For absolute positioning of buttons */
+}
+
+.uk-slider-items {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  transition: transform 0.3s ease; /* Smooth transition */
+  height: 100%; /* Make items fill the height of the slider */
+}
+
+.uk-slider-items > div {
+  flex: 0 0 auto; /* Prevent flex items from growing */
+  height: calc(100vh - 140px); /* Each slide's height to match the slider */
+}
+
+/* Position buttons */
+.uk-position-top-center,
+.uk-position-bottom-center {
+  position: absolute; /* Position buttons absolutely */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center correction */
+}
+
+.uk-position-top-center {
+  top: 10px; /* Adjust top position */
+}
+
+.uk-position-bottom-center {
+  bottom: 10px; /* Adjust bottom position */
+}

@@ -121,106 +121,112 @@ p {
   pointer-events: all;
 }
 
-.chip-h0 {
-  font-size: 280px;
-  font-weight: bold;
+.heading-h0 {
+  font-size: 160px;
+  font-weight: 900;
   line-height: 100%;
 }
 
-.chip-h1 {
-  font-size: 100px;
-  font-weight: bold;
-  line-height: 100%;
-}
-
-.chip-h2 {
+.heading-points-m {
   font-size: 80px;
-  font-weight: bold;
+  font-family: "Grandstander";
+  font-weight: 700;
   line-height: 100%;
 }
 
-.chip-h3 {
+.heading-h1 {
   font-size: 60px;
-  font-weight: bold;
+  font-weight: 900;
   line-height: 100%;
 }
 
-.chip-h4 {
+.heading-h2 {
   font-size: 48px;
-  font-weight: bold;
+  font-weight: 800;
+  line-height: 100%;
+}
+
+.heading-h3 {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 100%;
+}
+
+.heading-h4 {
+  font-size: 28px;
+  font-weight: 800;
   line-height: 100%;
 }
 
 .button-l {
-  font-size: 44px;
-  font-weight: bold;
+  font-size: 24px;
+  font-weight: 800;
   line-height: 100%;
 }
 
 .button-m {
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 800;
   line-height: 100%;
 }
 
 .button-s {
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 800;
   line-height: 100%;
 }
 
 .button-xs {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 800;
   line-height: 100%;
 }
 
 .body-l {
-  font-size: 44px;
-  font-weight: light;
+  font-size: 24px;
+  font-weight: 500;
   line-height: 100%;
 }
 
 .body-m {
-  font-size: 36px;
-  font-weight: light;
+  font-size: 20px;
+  font-weight: 500;
   line-height: 100%;
 }
 
 .body-s {
-  font-size: 32px;
-  font-weight: light;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 100%;
 }
 
 .body-xs {
-  font-size: 28px;
-  font-weight: light;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 100%;
 }
 
 .caption-l {
-  font-size: 44px;
-  font-weight: regular;
+  font-size: 24px;
+  font-weight: 700;
   line-height: 100%;
 }
 
 .caption-m {
-  font-size: 36px;
-  font-weight: regular;
+  font-size: 20px;
+  font-weight: 700;
   line-height: 100%;
 }
 
 .caption-s {
-  font-size: 32px;
-  font-weight: regular;
-  line-height: 150%;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 100%;
 }
 
 .caption-xs {
-  font-size: 28px;
-  font-weight: regular;
-  line-height: 150%;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 /* Drop Shadows */
@@ -295,9 +301,179 @@ p {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.class {
+  height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.class-btn-unit {
+  display: flex;
+  align-items: center;
+  border: 2px solid #00B26B;
+  border-radius: 12px;
+  height: 40px;
+}
+.class-btn-unit-l {
+  background-image: url(/public/images/class-btn-unit.svg);
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+}
+.class-btn-unit-r {
+  padding-left: 12px;
+  padding-right: 16px;
+}
+
+.button-unit {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 0;
+  height: 42px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid #00B26B;
+}
+.button-unit .left-part {
+  background-image: url("../public/images/class-btn-unit.svg");
+  background-size: cover;
+  padding: 0 12px;
+  height: 100%;
+  color: white;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.button-unit .right-part {
+  background-color: white;
+  padding: 0 12px;
+  color: #252525;
+  flex: 1;
+}
+
+.student-card {
+  width: 100%;
+  border-radius: 16px;
+  position: relative;
+}
+.student-card-image {
+  border-radius: 16px;
+  width: 100%;
+  height: calc((100vh - 80px - 128px - 16px) / 2);
+  object-fit: cover;
+}
+.student-card-desc {
+  position: absolute;
+  padding: 0 16px 16px 16px;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  border-radius: 16px;
+}
+.student-card-small {
+  width: 100%;
+  height: calc((100vh - 112px - 64px) / 5);
+  border-radius: 16px;
+  position: relative;
+  flex: 1;
+}
+.student-card-small-image {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chat {
+  display: none;
+  max-height: calc(100vh - 140px);
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-right: 20px;
+}
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.0509803922);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.chat-body {
+  max-height: calc(100vh - 300px);
+  height: 100%;
+  overflow: auto;
+  padding: 20px;
+}
+.chat-footer {
+  height: 100px;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  background-color: #D8EDDD;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.chat-message-content {
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 0 20px;
+  max-width: 238px;
+  min-height: 60px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  background-color: rgba(0, 0, 0, 0.0509803922);
+  color: #252525;
+  display: flex;
+  align-items: center;
+}
+
+#vertical-slider {
+  max-height: calc(100vh - 140px); /* Max height */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Hide overflow */
+  position: relative; /* For absolute positioning of buttons */
+}
+
+.uk-slider-items {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  transition: transform 0.3s ease; /* Smooth transition */
+  height: 100%; /* Make items fill the height of the slider */
+}
+
+.uk-slider-items > div {
+  flex: 0 0 auto; /* Prevent flex items from growing */
+  height: calc(100vh - 140px); /* Each slide's height to match the slider */
+}
+
+/* Position buttons */
+.uk-position-top-center,
+.uk-position-bottom-center {
+  position: absolute; /* Position buttons absolutely */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center correction */
+}
+
+.uk-position-top-center {
+  top: 10px; /* Adjust top position */
+}
+
+.uk-position-bottom-center {
+  bottom: 10px; /* Adjust bottom position */
+}
+
 html {
   scroll-behavior: smooth;
-  font-family: Dongle;
+  font-family: Nunito;
 }
 
 * {
@@ -306,7 +482,7 @@ html {
   border: 0;
   font-size: 100%;
   box-sizing: border-box;
-  font-family: Dongle;
+  font-family: Nunito;
 }
 
 /*# sourceMappingURL=app.css.map */
