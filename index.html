@@ -3,17 +3,309 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Draggable Slider</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
-    <div class="slider">
-      <div class="slide" id="slide-1"></div>
-      <div class="slide" id="slide-2"></div>
-      <div class="slide" id="slide-3"></div>
-      <div class="slide" id="slide-4"></div>
-      <div class="slide" id="slide-5"></div>
+    <div class="home">
+      <!-- <div class="home-header">
+        <button
+          class="grayscale-white heading-h2 px-5 button-primary bg-primary-yellow"
+        >
+          Level 3
+        </button>
+      </div> -->
+      <div class="slider-wrapper">
+        <div class="slider">
+          <div class="slide" id="slide-1">
+            <img
+              class="select-none-img"
+              src="public/icons/planet1.svg"
+              width="400"
+              height="400"
+              alt="planet1"
+              style="
+                z-index: 1;
+                user-select: none;
+                position: relative;
+                user-select: none;
+              "
+            />
+
+            <p class="grayscale-white select-none mt-3 flex-center heading-h2">
+              Level 1
+            </p>
+            <img
+              class="select-none-img"
+              src="public/icons/line-to-bottom.png"
+              style="position: absolute; top: 200px; left: 200px"
+              alt="planet1"
+            />
+          </div>
+          <div
+            class="slide"
+            id="slide-2"
+            style="display: flex; align-items: end"
+          >
+            <div>
+              <img
+                class="select-none-img"
+                src="public/icons/planet2.svg"
+                width="400"
+                height="400"
+                alt="planet1"
+                style="
+                  z-index: 1;
+                  user-select: none;
+                  position: relative;
+                  user-select: none;
+                "
+              />
+
+              <p
+                class="grayscale-white select-none mt-3 flex-center heading-h2"
+              >
+                Level 2
+              </p>
+            </div>
+            <div>
+              <img
+                class="select-none-img"
+                src="public/icons/line-to-top.png"
+                style="position: absolute; bottom: 248px; left: 200px"
+                alt="planet1"
+              />
+            </div>
+          </div>
+          <div class="slide" id="slide-3">
+            <img
+              class="select-none-img"
+              src="public/icons/planet3.svg"
+              width="400"
+              height="400"
+              alt="planet1"
+              style="
+                z-index: 1;
+                user-select: none;
+                position: relative;
+                user-select: none;
+              "
+            />
+
+            <!-- <p class="grayscale-white select-none mt-3 flex-center heading-h2">
+                Level 3
+              </p> -->
+            <div class="flex-center mt-3">
+              <button
+                class="grayscale-white heading-h2 px-5 button-primary bg-primary-yellow"
+              >
+                Level 3
+              </button>
+            </div>
+            <img
+              class="select-none-img"
+              src="public/icons/space-craft.svg"
+              width="117"
+              height="117"
+              alt="planet1"
+              style="
+                z-index: 1;
+                user-select: none;
+                position: absolute;
+                top: 148px;
+                left: -52px;
+              "
+            />
+          </div>
+          <div
+            class="slide"
+            id="slide-4"
+            style="display: flex; align-items: end"
+          >
+            <div>
+              <img
+                class="select-none-img"
+                src="public/icons/planet4.svg"
+                width="400"
+                height="400"
+                alt="planet1"
+                style="
+                  z-index: 1;
+                  user-select: none;
+                  position: relative;
+                  user-select: none;
+                "
+              />
+
+              <p
+                class="grayscale-white select-none mt-3 flex-center heading-h2"
+              >
+                Level 4
+              </p>
+            </div>
+          </div>
+          <div class="slide" id="slide-5">
+            <img
+              class="select-none-img"
+              src="public/icons/planet5.svg"
+              width="400"
+              height="400"
+              alt="planet1"
+              style="
+                z-index: 1;
+                user-select: none;
+                position: relative;
+                user-select: none;
+              "
+            />
+
+            <p class="grayscale-white select-none mt-3 flex-center heading-h2">
+              Level 5
+            </p>
+          </div>
+          <div
+            class="slide"
+            id="slide-6"
+            style="display: flex; align-items: end"
+          >
+            <div>
+              <img
+                class="select-none-img"
+                src="public/icons/planet6.svg"
+                width="400"
+                height="400"
+                alt="planet1"
+                style="
+                  z-index: 1;
+                  user-select: none;
+                  position: relative;
+                  user-select: none;
+                "
+              />
+
+              <p
+                class="grayscale-white select-none mt-3 flex-center heading-h2"
+              >
+                Level 6
+              </p>
+            </div>
+          </div>
+          <div class="slide" id="slide-7">
+            <img
+              class="select-none-img"
+              src="public/icons/planet7.svg"
+              width="400"
+              height="400"
+              alt="planet1"
+              style="
+                z-index: 1;
+                user-select: none;
+                position: relative;
+                user-select: none;
+              "
+            />
+
+            <p class="grayscale-white select-none mt-3 flex-center heading-h2">
+              Level 7
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+      // Slider dragging
+      const slider = document.querySelector(".slider");
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      // Function to scroll to the active slide (in this case, slide 4) and center it
+      function scrollToActiveSlide() {
+        const activeSlide = document.getElementById("slide-3"); // Change this ID to the active slide
+        const sliderRect = slider.getBoundingClientRect();
+        const slideRect = activeSlide.getBoundingClientRect();
+
+        // Calculate the offset to center the active slide
+        const offset =
+          slideRect.left -
+          sliderRect.left -
+          sliderRect.width / 2 +
+          slideRect.width / 2;
+
+        slider.scrollLeft += offset; // Adjust scroll position to center the slide
+      }
+
+      // Call the function when the page loads
+      window.onload = function () {
+        scrollToActiveSlide();
+      };
+
+      slider.addEventListener("mousedown", (e) => {
+        isDown = true;
+        slider.classList.add("active");
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+        cancelMomentumTracking();
+      });
+
+      slider.addEventListener("mouseleave", () => {
+        isDown = false;
+        slider.classList.remove("active");
+      });
+
+      slider.addEventListener("mouseup", () => {
+        isDown = false;
+        slider.classList.remove("active");
+        beginMomentumTracking();
+      });
+
+      slider.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = x - startX; // scroll-fast
+        const prevScrollLeft = slider.scrollLeft;
+        slider.scrollLeft = scrollLeft - walk;
+        velX = slider.scrollLeft - prevScrollLeft;
+      });
+
+      // Momentum
+      let velX = 0;
+      let momentumID;
+
+      slider.addEventListener("wheel", (e) => {
+        cancelMomentumTracking();
+      });
+
+      function beginMomentumTracking() {
+        cancelMomentumTracking();
+        momentumID = requestAnimationFrame(momentumLoop);
+      }
+
+      function cancelMomentumTracking() {
+        cancelAnimationFrame(momentumID);
+      }
+
+      function momentumLoop() {
+        slider.scrollLeft += velX * 2;
+        velX *= 0.95;
+        if (Math.abs(velX) > 0.5) {
+          momentumID = requestAnimationFrame(momentumLoop);
+        }
+      }
+
+      // Scroll on wheel event
+      const scrollContainer = document.querySelector(".slider");
+
+      scrollContainer.addEventListener("wheel", (evt) => {
+        evt.preventDefault();
+        scrollContainer.scrollLeft += evt.deltaY;
+      });
+    </script>
   </body>
 </html>
