@@ -1041,6 +1041,10 @@
   margin-bottom: 40px;
 }
 
+.space-x-3> :not(:last-child) {
+  margin-right: 12px;
+}
+
 .space-x-5> :not(:last-child) {
   margin-right: 20px;
 }

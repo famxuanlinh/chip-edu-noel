@@ -35,7 +35,6 @@ a {
 
 img {
   display: block;
-  max-width: 100%;
 }
 
 p {
@@ -620,6 +619,30 @@ p {
   border-radius: 30px;
   border: 2px solid rgba(0, 0, 0, 0.1);
   background: rgba(0, 0, 0, 0.05);
+}
+
+.teacher-left {
+  flex: 1 1 0%;
+}
+.teacher-right {
+  flex: 1 1 0%;
+}
+
+/* Scrollbar */
+#teacher-description::-webkit-scrollbar {
+  border-radius: 0;
+  width: 12px;
+  height: 12px;
+}
+
+#teacher-description::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #d8eddd;
+}
+
+#teacher-description::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.0509803922);
 }
 
 html {
