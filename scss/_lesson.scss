@@ -1,0 +1,11 @@
+@use "color";
+@use "typography";
+@use "effect";
+
+.lesson-learned {
+  @media screen and (max-width: 1800px) {
+    &-buttons {
+      transform: scale(0.9);
+    }
+  }
+}
