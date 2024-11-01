@@ -1,16 +1,21 @@
 // Login
 @use "color";
+@use "mixin" as *;
 
 .input-form {
-  height: 80px;
+  height: 60px;
   border-radius: 12px;
-  font-size: 36px;
+  font-size: 20px;
+  font-weight: 500;
   border-radius: 16px;
   border: 2px solid color.$grayscale-dim-dark-20;
   background: var(--Grayscale-White, #fff);
   padding: 0 16px;
-  font-weight: 300;
   line-height: 100%; /* 36px */
+
+  @include maxw() {
+    height: 54px;
+  }
 
   &:focus {
     border-color: color.$primary-green !important;
@@ -22,6 +27,7 @@
     font-weight: 300;
   }
 }
+
 .auth {
   min-height: calc(100vh - 40px);
   display: flex;
@@ -29,6 +35,9 @@
 
   &-title {
     margin: 60px 0;
+    @include maxw() {
+      margin: 40px 0;
+    }
   }
 
   &-wrapper {
@@ -41,6 +50,10 @@
     // height: calc(100vh - 40px);
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    @include maxw() {
+      padding: 20px 50px;
+    }
   }
 
   // @media screen and (max-width: 768px) {
@@ -52,6 +65,7 @@
   // }
   &-input {
     @extend .input-form;
+
     &-error {
       @extend .auth-input;
       border: 2px solid #f74a4a;

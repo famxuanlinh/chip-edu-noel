@@ -20,15 +20,9 @@
   </head>
   <body>
     <div class="project-upload">
-      <div
-        class="p-10 pt-0"
-        style="border-radius: 20px; background-color: white"
-      >
+      <div class="project-content">
         <!-- header -->
-        <div
-          class="project-upload-header flex-items-center"
-          style="height: 160px"
-        >
+        <div class="project-upload-header flex-items-center">
           <a class="project-header-button" href="/"
             ><img src="/public/icons/arrow-left.svg" alt="icon arrow"
           /></a>
@@ -51,10 +45,10 @@
         <div>
           <div class="flex-justify-center" style="width: 50%">
             <div class="flex-items-center" style="flex-direction: column">
-              <div class="heading-h1 grayscale-dark-gray">Project’s Name</div>
+              <div class="heading-h2 grayscale-dark-gray">Project’s Name</div>
               <div
                 class="mt-2 project-card-status flex-justify-center grayscale-white button-l bg-primary-yellow"
-                style="margin-bottom: 60px"
+                style="margin-bottom: 20px"
               >
                 Chưa nộp bài
               </div>
@@ -62,10 +56,7 @@
             <div></div>
           </div>
           <div class="project-upload-body">
-            <div
-              class="project-upload-body-left flex-center"
-              style="height: 560px"
-            >
+            <div class="project-upload-body-left flex-center">
               <div
                 class="project-upload-body-left-zone flex-center w-full h-full p-5"
               >
@@ -96,7 +87,10 @@
               </div>
             </div>
             <div class="project-upload-body-right">
-              <div class="space-y-10">
+              <div
+                id="small-scroll"
+                class="space-y-3 project-upload-body-right-files"
+              >
                 <div class="flex-items-center space-x-5">
                   <div class="rounded-5" style="width: 130px; height: 100px">
                     <img
@@ -240,7 +234,7 @@
               >
                 <div
                   class="project-card-button"
-                  style="border: 2px solid #ff9800; margin: 30px 0"
+                  style="border: 2px solid #ff9800; margin: 20px 0"
                 >
                   <button
                     class="flex-items-center h-full button-m bg-primary-yellow grayscale-white pl-3 pr-5"
@@ -269,26 +263,26 @@
               <div class="flex-items-center space-x-10">
                 <button
                   class="button-primary grayscale-dark-gray flex-center w-full bg-greenscale-light-green px-5 grayscale-white button-l"
-                  style="height: 80px"
+                  style="height: 60px"
                 >
                   <img
                     src="public/icons/view.svg"
                     class="mr-2"
-                    width="60"
-                    height="60"
+                    width="40"
+                    height="40"
                     alt="upload"
                   />
                   Hướng dẫn
                 </button>
                 <button
                   class="button-primary flex-center w-full bg-primary-green px-5 grayscale-white button-l"
-                  style="height: 80px"
+                  style="height: 60px"
                 >
                   <img
                     src="public/icons/send1.svg"
                     class="mr-2"
-                    width="60"
-                    height="60"
+                    width="40"
+                    height="40"
                     alt="upload"
                   />
                   Nộp bài

@@ -1,12 +1,23 @@
 @use "color";
 @use "typography";
 @use "effect";
+@use "mixin" as *;
 
 .project {
   background-color: color.$greenscale-light-green;
   height: 100%;
   width: 100%;
   padding: 0 80px;
+
+  &-content {
+    padding: 40px;
+    border-radius: 20px;
+    background-color: white;
+
+    @include maxw() {
+      padding: 30px;
+    }
+  }
 
   &-header {
     padding: 56px 0;
@@ -125,10 +136,18 @@
     #67d4aa 83%,
     #67dda3 100%
   );
-  padding: 40px;
+  padding: 36px;
+  @include maxw() {
+    padding: 20px;
+  }
 
   &-header {
     justify-content: space-between;
+    height: 120px;
+
+    @include maxw() {
+      height: 92px;
+    }
   }
   &-body {
     display: flex;
@@ -138,6 +157,10 @@
     &-left {
       flex: 1 1 0%;
       flex-direction: column;
+      height: calc(100vh - 388px);
+      @include maxw() {
+        height: calc(100vh - 308px);
+      }
 
       &-zone {
         border-radius: 40px;
@@ -146,6 +169,15 @@
     }
     &-right {
       flex: 1 1 0%;
+
+      &-files {
+        height: calc(100vh - 530px);
+        overflow-y: scroll;
+
+        @include maxw() {
+          height: calc(100vh - 450px);
+        }
+      }
 
       &-card-upload {
         &-slider {

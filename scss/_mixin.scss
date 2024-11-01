@@ -1,0 +1,16 @@
+// @mixin maxw($breakpoint) {
+//   @media screen and (max-width: #{$breakpoint}px) {
+//     @content;
+//   }
+// }
+
+@mixin maxw() {
+  @media screen and (max-width: 1600px) {
+    @content;
+  }
+}
+// @mixin minw($breakpoint) {
+//   @media screen and (min-width: #{$breakpoint}px) {
+//     @content;
+//   }
+// }

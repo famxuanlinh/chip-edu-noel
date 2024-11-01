@@ -73,6 +73,10 @@
   padding-top: 28px;
 }
 
+.pt-10 {
+  padding-top: 40px;
+}
+
 /* Padding right utilities */
 .pr-0 {
   padding-right: 0;
@@ -1043,6 +1047,10 @@
 
 .space-x-3> :not(:last-child) {
   margin-right: 12px;
+}
+
+.space-x-4> :not(:last-child) {
+  margin-right: 16px;
 }
 
 .space-x-5> :not(:last-child) {
