@@ -20,20 +20,18 @@
   </head>
   <body>
     <div class="project-upload">
-      <div
-        class="p-10 pt-0"
-        style="border-radius: 20px; background-color: white"
-      >
+      <div class="project-content">
         <!-- header -->
-        <div
-          class="project-upload-header flex-items-center"
-          style="height: 160px"
-        >
+        <div class="project-upload-header flex-items-center">
           <a class="project-header-button" href="/"
             ><img src="/public/icons/arrow-left.svg" alt="icon arrow"
           /></a>
           <div>
-            <div class="heading-h3 grayscale-dark-gray mb-3">Level 3</div>
+            <div
+              class="heading-h3 grayscale-dark-gray mb-3 flex-center flex-center"
+            >
+              Level 3
+            </div>
             <div class="button-unit">
               <button class="left-part button-s">Unit 3</button>
               <button class="right-part button-l">Lesson 2</button>
@@ -49,17 +47,10 @@
         </div>
         <!-- Body -->
         <div>
-          <div
-            class="flex-items-center"
-            style="
-              justify-content: space-between;
-              height: 128px;
-              margin-bottom: 40px;
-            "
-          >
+          <div class="project-upload-body-title" style="margin: 30px 0 20px 0">
             <div
               class="project-card-button"
-              style="border: 2px solid #ff9800; height: 80px"
+              style="border: 2px solid #ff9800; height: 60px"
             >
               <button
                 class="flex-items-center h-full button-m bg-primary-yellow grayscale-white pl-3 pr-5"
@@ -92,30 +83,27 @@
                 Đã nộp bài
               </div>
             </div>
-            <button
-              class="button-primary flex-center bg-primary-green px-5 grayscale-white button-l"
-              style="height: 80px"
-            >
-              <img
-                src="public/icons/edit.svg"
-                class="mr-2"
-                width="60"
-                height="60"
-                alt="upload"
-              />
-              Sửa
-            </button>
+            <div style="display: flex; justify-content: end">
+              <button
+                class="button-primary flex-center bg-primary-green px-5 grayscale-white button-l"
+                style="height: 60px"
+              >
+                <img
+                  src="public/icons/edit.svg"
+                  class="mr-2"
+                  width="40"
+                  height="40"
+                  alt="upload"
+                />
+                Sửa
+              </button>
+            </div>
           </div>
-          <div class="flex-justify-center">
+          <div class="flex-justify-center project-upload-wrapper-image">
             <img
               src="public/images/project.jpeg"
-              style="
-                aspect-ratio: 843/632;
-                height: calc(100vh - 448px);
-                object-fit: cover;
-              "
-              class="rounded-xl"
-              alt=""
+              class="project-upload-image"
+              alt="image-upload"
             />
           </div>
         </div>

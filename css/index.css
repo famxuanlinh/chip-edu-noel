@@ -1310,3 +1310,10 @@
 .bg-secondary-light-gray {
   background-color: #E5E5E5;
 }
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

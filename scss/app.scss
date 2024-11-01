@@ -26,25 +26,28 @@ html {
 }
 
 /* Scrollbar */
-#project-done::-webkit-scrollbar {
-  border-radius: 0;
-  width: 20px;
-  height: 20px;
-}
+#project-done {
+  overflow-x: auto; // Chỉ hiển thị thanh cuộn ngang khi nội dung rộng hơn phần tử
+  width: 100%;
+  // Tùy chỉnh thanh cuộn
+  &::-webkit-scrollbar {
+    height: 16px; // Chiều cao thanh cuộn ngang
+    width: 100%;
 
-#project-done::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-  background-color: #d8eddd;
-}
+    @include maxw() {
+      height: 14px;
+    }
+  }
 
-// ::-webkit-scrollbar-thumb:hover {
-//   border-radius: 20px;
-//   background-color: blue;
-// }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #d8eddd;
+  }
 
-#project-done::-webkit-scrollbar-track {
-  border-radius: 20px;
-  background-color: #0000000d;
+  &::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background-color: #0000000d;
+  }
 }
 
 /* Scrollbar */

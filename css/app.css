@@ -596,6 +596,7 @@ p {
   display: inline-flex;
   align-items: center;
   border-radius: 12px;
+  width: fit-content;
   padding: 0;
   height: 42px;
   font-size: 18px;
@@ -643,6 +644,11 @@ p {
   align-items: center;
   gap: 40px;
 }
+.project-upload-body-title {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: grid;
+  align-items: center;
+}
 .project-upload-body-left {
   flex: 1 1 0%;
   flex-direction: column;
@@ -675,6 +681,29 @@ p {
   border-radius: 30px;
   border: 2px solid rgba(0, 0, 0, 0.1);
   background: rgba(0, 0, 0, 0.05);
+}
+.project-upload-image {
+  aspect-ratio: 843/632;
+  object-fit: cover;
+  border-radius: 18px;
+  height: 100%;
+}
+.project-upload-image-oops {
+  height: calc(100vh - 510px);
+  object-fit: cover;
+}
+@media screen and (max-width: 1600px) {
+  .project-upload-image-oops {
+    height: calc(100vh - 430px);
+  }
+}
+.project-upload-wrapper-image {
+  height: calc(100vh - 430px);
+}
+@media screen and (max-width: 1600px) {
+  .project-upload-wrapper-image {
+    height: calc(100vh - 350px);
+  }
 }
 
 .teacher-left {
@@ -771,17 +800,23 @@ html {
 }
 
 /* Scrollbar */
-#project-done::-webkit-scrollbar {
-  border-radius: 0;
-  width: 20px;
-  height: 20px;
+#project-done {
+  overflow-x: auto;
+  width: 100%;
 }
-
+#project-done::-webkit-scrollbar {
+  height: 16px;
+  width: 100%;
+}
+@media screen and (max-width: 1600px) {
+  #project-done::-webkit-scrollbar {
+    height: 14px;
+  }
+}
 #project-done::-webkit-scrollbar-thumb {
   border-radius: 20px;
   background-color: #d8eddd;
 }
-
 #project-done::-webkit-scrollbar-track {
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.0509803922);

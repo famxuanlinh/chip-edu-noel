@@ -20,20 +20,18 @@
   </head>
   <body>
     <div class="project-upload">
-      <div
-        class="p-10 pt-0"
-        style="border-radius: 20px; background-color: white"
-      >
+      <div class="project-content">
         <!-- header -->
-        <div
-          class="project-upload-header flex-items-center"
-          style="height: 160px"
-        >
+        <div class="project-upload-header flex-items-center">
           <a class="project-header-button" href="/"
             ><img src="/public/icons/arrow-left.svg" alt="icon arrow"
           /></a>
           <div>
-            <div class="heading-h3 grayscale-dark-gray mb-3">Level 3</div>
+            <div
+              class="heading-h3 grayscale-dark-gray mb-3 flex-center flex-center"
+            >
+              Level 3
+            </div>
             <div class="button-unit">
               <button class="left-part button-s">Unit 3</button>
               <button class="right-part button-l">Lesson 2</button>
@@ -49,15 +47,8 @@
         </div>
         <!-- Body -->
         <div>
-          <div
-            class="flex-items-center"
-            style="
-              justify-content: space-between;
-              height: 128px;
-              margin-bottom: 40px;
-            "
-          >
-            <div class="flex-center">
+          <div class="project-upload-body-title" style="margin: 30px 0 20px 0">
+            <div class="flex-center" style="width: fit-content">
               <div
                 class="rounded-full"
                 style="
@@ -86,45 +77,49 @@
                 Đã hoàn thành
               </div>
             </div>
-            <div class="flex-center">
-              <img src="public/icons/star.svg" width="60" height="60" alt="" />
-              <p class="grayscale-dark-gray button-xs ml-3">200</p>
+
+            <div style="display: flex; justify-content: end">
+              <div class="flex-center">
+                <img
+                  src="public/icons/star.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+                <p class="grayscale-dark-gray button-xs ml-3">200</p>
+              </div>
             </div>
           </div>
+
           <div
             id="project-done"
-            class="flex-items-center space-x-10"
-            style="overflow-x: scroll; padding-bottom: 20px"
+            class="flex-items-center space-x-10 project-upload-wrapper-image"
+            style="padding-bottom: 14px"
           >
             <img
               src="public/images/project.jpeg"
-              style="
-                aspect-ratio: 843/632;
-                height: calc(100vh - 488px);
-                object-fit: cover;
-              "
-              class="rounded-xl"
-              alt=""
+              class="project-upload-image"
+              alt="image-upload"
             />
             <img
               src="public/images/project.jpeg"
-              style="
-                aspect-ratio: 843/632;
-                height: calc(100vh - 488px);
-                object-fit: cover;
-              "
-              class="rounded-xl"
-              alt=""
+              class="project-upload-image"
+              alt="image-upload"
             />
             <img
               src="public/images/project.jpeg"
-              style="
-                aspect-ratio: 843/632;
-                height: calc(100vh - 488px);
-                object-fit: cover;
-              "
-              class="rounded-xl"
-              alt=""
+              class="project-upload-image"
+              alt="image-upload"
+            />
+            <img
+              src="public/images/project.jpeg"
+              class="project-upload-image"
+              alt="image-upload"
+            />
+            <img
+              src="public/images/project.jpeg"
+              class="project-upload-image"
+              alt="image-upload"
             />
           </div>
         </div>
