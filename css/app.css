@@ -344,6 +344,22 @@ p {
   align-items: center;
   width: 100%;
 }
+@media screen and (max-width: 1600px) {
+  .class {
+    height: calc(100vh - 110px);
+  }
+}
+.class-header {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 1600px) {
+  .class-header {
+    height: 100px;
+  }
+}
 .class-btn-unit {
   display: flex;
   align-items: center;
@@ -390,6 +406,18 @@ p {
   flex: 1;
 }
 
+.student-images {
+  width: 376px;
+  max-height: calc(100vh - 140px);
+  height: 100%;
+  overflow: hidden;
+}
+@media screen and (max-width: 1600px) {
+  .student-images {
+    width: 276px;
+  }
+}
+
 .student-card {
   width: 100%;
   border-radius: 16px;
@@ -414,7 +442,7 @@ p {
 }
 .student-card-small {
   width: 100%;
-  height: calc((100vh - 112px - 64px) / 5);
+  height: calc((100vh - 112px - 64px) / 4);
   border-radius: 16px;
   position: relative;
   flex: 1;

@@ -1,5 +1,6 @@
 @use "color";
 @use "typography";
+@use "mixin" as *;
 
 .class {
   height: calc(100vh - 140px);
@@ -8,6 +9,20 @@
   display: flex;
   align-items: center;
   width: 100%;
+
+  @include maxw() {
+    height: calc(100vh - 110px);
+  }
+
+  &-header {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include maxw() {
+      height: 100px;
+    }
+  }
 
   &-btn-unit {
     display: flex;
@@ -58,6 +73,17 @@
   }
 }
 
+.student-images {
+  width: 376px;
+  max-height: calc(100vh - 140px);
+  height: 100%;
+  overflow: hidden;
+
+  @include maxw() {
+    width: 276px;
+  }
+}
+
 .student-card {
   width: 100%;
   border-radius: 16px;
@@ -89,7 +115,7 @@
 
   &-small {
     width: 100%;
-    height: calc((100vh - 112px - 64px) / 5);
+    height: calc((100vh - 112px - 64px) / 4);
     border-radius: 16px;
     position: relative;
     flex: 1;
