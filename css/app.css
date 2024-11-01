@@ -346,7 +346,7 @@ p {
 }
 @media screen and (max-width: 1600px) {
   .class {
-    height: calc(100vh - 110px);
+    height: calc(100vh - 100px);
   }
 }
 .class-header {
@@ -442,10 +442,17 @@ p {
 }
 .student-card-small {
   width: 100%;
-  height: calc((100vh - 112px - 64px) / 4);
+  height: calc((100vh - 120px - 20px) / 4);
   border-radius: 16px;
   position: relative;
   flex: 1;
+  padding-bottom: 18px;
+}
+@media screen and (max-width: 1600px) {
+  .student-card-small {
+    height: calc((100vh - 130px - 20px) / 4);
+    padding-bottom: 10px;
+  }
 }
 .student-card-small-image {
   border-radius: 20px;
@@ -488,9 +495,7 @@ p {
   border-bottom-right-radius: 20px;
 }
 .chat-message-content {
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
   padding: 0 20px;
   max-width: 238px;
   min-height: 60px;
@@ -501,40 +506,81 @@ p {
   display: flex;
   align-items: center;
 }
-
-#vertical-slider {
-  max-height: calc(100vh - 140px); /* Max height */
-  height: 100%; /* Full height */
-  overflow: hidden; /* Hide overflow */
-  position: relative; /* For absolute positioning of buttons */
+@media screen and (max-width: 1600px) {
+  .chat-message-content {
+    padding: 0 12px;
+    min-height: 40px;
+    border-radius: 12px;
+  }
 }
 
-.uk-slider-items {
+.vertical-carousel {
+  position: relative;
+  width: 376px;
+  max-height: calc(100vh - 140px);
+  height: 100%; /* Adjust height as needed */
+  overflow: hidden; /* Hide overflow */
+}
+@media screen and (max-width: 1600px) {
+  .vertical-carousel {
+    width: 276px;
+  }
+}
+
+.carousel-container {
   display: flex;
   flex-direction: column; /* Stack items vertically */
-  transition: transform 0.3s ease; /* Smooth transition */
-  height: 100%; /* Make items fill the height of the slider */
+  transition: transform 0.5s ease; /* Smooth transition */
 }
 
-.uk-slider-items > div {
-  flex: 0 0 auto; /* Prevent flex items from growing */
-  height: calc(100vh - 140px); /* Each slide's height to match the slider */
+/* Adjust button styles */
+.carousel-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  border: none;
+  padding: 0 30px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1600px) {
+  .carousel-button {
+    padding: 0 15px;
+  }
+}
+.carousel-button-icon {
+  width: 40px;
+  height: 40px;
+}
+@media screen and (max-width: 1600px) {
+  .carousel-button-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 
-/* Position buttons */
-.uk-position-top-center,
-.uk-position-bottom-center {
-  position: absolute; /* Position buttons absolutely */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center correction */
+.prev {
+  top: 0; /* Position above carousel */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+@media screen and (max-width: 1600px) {
+  .prev {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
 }
 
-.uk-position-top-center {
-  top: 10px; /* Adjust top position */
+.next {
+  bottom: 0; /* Position below carousel */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
-
-.uk-position-bottom-center {
-  bottom: 10px; /* Adjust bottom position */
+@media screen and (max-width: 1600px) {
+  .next {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
 }
 
 .project {

@@ -125,76 +125,60 @@
             </div>
           </div>
 
-          <!-- List users 1 - many -->
-          <div
-            class="uk-position-relative uk-visible-toggle uk-light"
-            tabindex="-1"
-            uk-slider="finite: true"
-          >
-            <div class="uk-slider-items">
-              <div class="w-full space-y-3">
-                <div>
-                  <div class="student-card-small">
-                    <image
-                      src="public/images/class-student.png"
-                      class="student-card-small-image"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div class="student-card-small">
-                    <image
-                      src="public/images/class-student.png"
-                      class="student-card-small-image"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div class="student-card-small">
-                    <image
-                      src="public/images/class-student.png"
-                      class="student-card-small-image"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div class="student-card-small">
-                    <image
-                      src="public/images/class-student.png"
-                      class="student-card-small-image"
-                    />
-                  </div>
-                </div>
+          <div class="vertical-carousel">
+            <div class="carousel-container">
+              <div class="student-card-small">
+                <image
+                  src="public/images/class-student.png"
+                  class="student-card-small-image"
+                />
+              </div>
+              <div class="student-card-small">
+                <image
+                  src="public/images/class-student.png"
+                  class="student-card-small-image"
+                />
+              </div>
+              <div class="student-card-small">
+                <image
+                  src="public/images/class-student.png"
+                  class="student-card-small-image"
+                />
+              </div>
+              <div class="student-card-small">
+                <image
+                  src="public/images/class-student.png"
+                  class="student-card-small-image"
+                />
+              </div>
+              <div class="student-card-small">
+                <image
+                  src="public/images/class-student.png"
+                  class="student-card-small-image"
+                />
+              </div>
+              <div class="student-card-small">
+                <image
+                  src="public/images/class-student.png"
+                  class="student-card-small-image"
+                />
               </div>
             </div>
-
-            <a
-              class="uk-position-top-left uk-margin-remove rounded-full uk-hidden-hover"
-              href
-              uk-slidenav-previous
-              uk-slider-item="previous"
-              style="
-                color: #272b30;
-                background-color: #ffffff99;
-                margin-bottom: 48px;
-                top: 48px;
-                left: 8px;
-              "
-            ></a>
-            <a
-              class="uk-position-bottom-right uk-margin-remove rounded-full uk-hidden-hover"
-              href
-              uk-slidenav-next
-              uk-slider-item="next"
-              style="
-                color: #272b30;
-                background-color: #ffffff99;
-                margin-bottom: 48px;
-                bottom: 48px;
-                right: 8px;
-              "
-            >
-            </a>
+            <button class="carousel-button prev" aria-label="Previous">
+              <img
+                src="public/icons/arrow-down.svg"
+                alt="arrow"
+                class="carousel-button-icon"
+                style="transform: rotate(180deg)"
+              />
+            </button>
+            <button class="carousel-button next" aria-label="Next">
+              <img
+                src="public/icons/arrow-down.svg"
+                alt="arrow"
+                class="carousel-button-icon"
+              />
+            </button>
           </div>
 
           <!-- End list user -->
@@ -224,14 +208,16 @@
             <div class="space-y-5" style="align-items: end">
               <div class="space-y-2_5">
                 <div class="caption-xs">Chip</div>
-                <div class="chat-message-content body-xs">Lorem ipsum</div>
+                <div
+                  class="chat-message-content body-xs"
+                  style="border-top-left-radius: 0"
+                >
+                  Lorem ipsum
+                </div>
               </div>
               <div class="space-y-2_5">
                 <div class="caption-xs">Chip Chip 2</div>
-                <div
-                  class="chat-message-content body-xs"
-                  style="border-top-left-radius: 20px"
-                >
+                <div class="chat-message-content body-xs">
                   Lorem ipsum dolor sit amet
                 </div>
               </div>
@@ -241,11 +227,7 @@
               <div class="space-y-2 uk-flex uk-flex-right w-full">
                 <div
                   class="chat-message-content"
-                  style="
-                    background-color: #00b26b;
-                    color: white;
-                    border-top-left-radius: 20px;
-                  "
+                  style="background-color: #00b26b; color: white"
                 >
                   Em chào thầy ạ!
                 </div>
@@ -255,16 +237,10 @@
             <div class="space-y-5" style="align-items: end">
               <div class="space-y-2_5">
                 <div class="caption-xs">Chip</div>
-                <div
-                  class="chat-message-content body-xs"
-                  style="border-top-left-radius: 20px"
-                >
+                <div class="chat-message-content body-xs">
                   Lorem ipsum dolor sit amet
                 </div>
-                <div
-                  class="chat-message-content body-xs"
-                  style="border-top-left-radius: 20px"
-                >
+                <div class="chat-message-content body-xs">
                   Lorem ipsum dolor sit amet
                 </div>
               </div>
@@ -477,6 +453,51 @@
       function refreshPage() {
         location.reload();
       }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const container = document.querySelector(".carousel-container");
+        const items = document.querySelectorAll(".student-card-small");
+        const prevButton = document.querySelector(".prev");
+        const nextButton = document.querySelector(".next");
+
+        const itemsPerView = 4; // Number of items to show at once
+        let currentIndex = 0;
+
+        // Function to update the carousel position
+        function updateCarousel() {
+          const itemHeight = items[0].clientHeight; // Get height of one item
+          container.style.transform = `translateY(-${
+            currentIndex * itemHeight
+          }px)`; // Move the container
+          updateButtonVisibility(); // Check button visibility
+        }
+
+        // Function to update button visibility
+        function updateButtonVisibility() {
+          prevButton.style.display = currentIndex === 0 ? "none" : "block"; // Hide prev if on first slide
+          nextButton.style.display =
+            currentIndex >= items.length - itemsPerView ? "none" : "block"; // Hide next if on last slide
+        }
+
+        // Previous button click handler
+        prevButton.addEventListener("click", () => {
+          if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+          }
+        });
+
+        // Next button click handler
+        nextButton.addEventListener("click", () => {
+          if (currentIndex < items.length - itemsPerView) {
+            currentIndex++;
+            updateCarousel();
+          }
+        });
+
+        // Initial update
+        updateCarousel();
+      });
     </script>
   </body>
 </html>

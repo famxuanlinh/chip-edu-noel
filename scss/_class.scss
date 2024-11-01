@@ -11,7 +11,7 @@
   width: 100%;
 
   @include maxw() {
-    height: calc(100vh - 110px);
+    height: calc(100vh - 100px);
   }
 
   &-header {
@@ -115,10 +115,16 @@
 
   &-small {
     width: 100%;
-    height: calc((100vh - 112px - 64px) / 4);
+    height: calc((100vh - 120px - 20px) / 4);
     border-radius: 16px;
     position: relative;
     flex: 1;
+    padding-bottom: 18px;
+
+    @include maxw() {
+      height: calc((100vh - 130px - 20px) / 4);
+      padding-bottom: 10px;
+    }
 
     &-image {
       border-radius: 20px;
@@ -161,15 +167,12 @@
     width: 100%;
     padding: 20px;
     background-color: color.$greenscale-light-green;
-    // border-top: 1px solid colors.$neutral-03;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
   &-message {
     &-content {
-      border-top-right-radius: 20px;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
+      border-radius: 20px;
       padding: 0 20px;
       max-width: 238px;
       min-height: 60px;
@@ -179,41 +182,76 @@
       color: color.$grayscale-dark-gray;
       display: flex;
       align-items: center;
+
+      @include maxw() {
+        padding: 0 12px;
+        min-height: 40px;
+        border-radius: 12px;
+      }
     }
   }
 }
 
-#vertical-slider {
-  max-height: calc(100vh - 140px); /* Max height */
-  height: 100%; /* Full height */
+.vertical-carousel {
+  position: relative;
+  width: 376px;
+  max-height: calc(100vh - 140px);
+  height: 100%; /* Adjust height as needed */
   overflow: hidden; /* Hide overflow */
-  position: relative; /* For absolute positioning of buttons */
+
+  @include maxw() {
+    width: 276px;
+  }
 }
 
-.uk-slider-items {
+.carousel-container {
   display: flex;
   flex-direction: column; /* Stack items vertically */
-  transition: transform 0.3s ease; /* Smooth transition */
-  height: 100%; /* Make items fill the height of the slider */
+  transition: transform 0.5s ease; /* Smooth transition */
 }
 
-.uk-slider-items > div {
-  flex: 0 0 auto; /* Prevent flex items from growing */
-  height: calc(100vh - 140px); /* Each slide's height to match the slider */
+/* Adjust button styles */
+.carousel-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00000099; /* Semi-transparent background */
+  border: none;
+  padding: 0 30px;
+  cursor: pointer;
+
+  @include maxw() {
+    padding: 0 15px;
+  }
+
+  &-icon {
+    width: 40px;
+    height: 40px;
+
+    @include maxw() {
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
 
-/* Position buttons */
-.uk-position-top-center,
-.uk-position-bottom-center {
-  position: absolute; /* Position buttons absolutely */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center correction */
+.prev {
+  top: 0; /* Position above carousel */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  @include maxw() {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
 }
 
-.uk-position-top-center {
-  top: 10px; /* Adjust top position */
-}
-
-.uk-position-bottom-center {
-  bottom: 10px; /* Adjust bottom position */
+.next {
+  bottom: 0; /* Position below carousel */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  @include maxw() {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
 }
