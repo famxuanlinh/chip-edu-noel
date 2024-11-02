@@ -799,6 +799,52 @@ p {
   }
 }
 
+.lesson-body {
+  height: calc(100vh - 332px);
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 1600px) {
+  .lesson-body {
+    height: calc(100vh - 252px);
+    transform: scale(0.8);
+    padding-bottom: 20px;
+  }
+}
+
+.lesson-videos {
+  height: calc(100vh - 372px);
+  overflow-y: auto;
+}
+@media screen and (max-width: 1600px) {
+  .lesson-videos {
+    height: calc(100vh - 292px);
+  }
+}
+
+.lesson-video {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: calc(100vh - 372px);
+  aspect-ratio: 16/9;
+  border-radius: 20px;
+}
+@media screen and (max-width: 1600px) {
+  .lesson-video {
+    height: calc(100vh - 292px);
+  }
+}
+
+.lesson-incoming-body {
+  height: calc(100vh - 332px);
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 1600px) {
+  .lesson-incoming-body {
+    height: calc(100vh - 252px);
+    transform: scale(0.78);
+    padding-bottom: 20px;
+  }
+}
+
 .slider-wrapper {
   display: flex;
   justify-content: center;

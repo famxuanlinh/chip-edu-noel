@@ -303,6 +303,11 @@
   margin-bottom: 0;
 }
 
+.my-1 {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
 .my-2 {
   margin-top: 8px;
   margin-bottom: 8px;

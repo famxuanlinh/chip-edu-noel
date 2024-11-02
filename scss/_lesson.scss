@@ -1,11 +1,54 @@
 @use "color";
 @use "typography";
 @use "effect";
+@use "mixin" as *;
 
 .lesson-learned {
   @media screen and (max-width: 1800px) {
     &-buttons {
       transform: scale(0.9);
     }
+  }
+}
+
+.lesson-body {
+  height: calc(100vh - 332px);
+  padding-bottom: 40px;
+
+  @include maxw() {
+    height: calc(100vh - 252px);
+    transform: scale(0.8);
+    padding-bottom: 20px;
+  }
+}
+
+.lesson-videos {
+  height: calc(100vh - 372px);
+  overflow-y: auto;
+
+  @include maxw() {
+    height: calc(100vh - 292px);
+  }
+}
+
+.lesson-video {
+  background-color: #00000033;
+  height: calc(100vh - 372px);
+  aspect-ratio: 16/9;
+  border-radius: 20px;
+
+  @include maxw() {
+    height: calc(100vh - 292px);
+  }
+}
+
+.lesson-incoming-body {
+  height: calc(100vh - 332px);
+  padding-bottom: 40px;
+
+  @include maxw() {
+    height: calc(100vh - 252px);
+    transform: scale(0.78);
+    padding-bottom: 20px;
   }
 }
