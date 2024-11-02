@@ -71,17 +71,21 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 40px;
     margin: 36px 0;
+    @include maxw() {
+      // gap: 20px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
   }
   &-card {
-    width: fit-content;
+    width: 100%;
     border-radius: 16px;
     padding: 8px;
     background-color: #fff;
 
     &-image {
-      aspect-ratio: 395/292;
-      width: full;
+      width: 100%;
       height: 292px;
+      object-fit: cover;
     }
 
     &-status {

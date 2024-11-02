@@ -647,16 +647,21 @@ p {
   gap: 40px;
   margin: 36px 0;
 }
+@media screen and (max-width: 1600px) {
+  .project-body {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
 .project-card {
-  width: fit-content;
+  width: 100%;
   border-radius: 16px;
   padding: 8px;
   background-color: #fff;
 }
 .project-card-image {
-  aspect-ratio: 395/292;
-  width: full;
+  width: 100%;
   height: 292px;
+  object-fit: cover;
 }
 .project-card-status {
   width: 160px;
