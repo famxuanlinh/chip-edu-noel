@@ -956,17 +956,26 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  margin-top: -69px;
+}
+@media screen and (max-width: 1600px) {
+  .slider-wrapper {
+    margin-top: -83.5px;
+  }
 }
 
 .slider {
   display: flex;
-  width: 100vw;
   cursor: grab;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+@media screen and (max-width: 1600px) {
+  .slider {
+    height: 89vh;
+  }
 }
 
 .slider:active {
@@ -984,11 +993,18 @@ p {
 
 .slide {
   margin: auto;
-  margin-left: 80px;
   flex-shrink: 0;
-  width: 400px;
+  margin-right: -45px;
   height: 780px;
   position: relative;
+  transform: scale(0.75);
+}
+@media screen and (max-width: 1600px) {
+  .slide {
+    transform: scale(0.65);
+    height: 99.7vh;
+    margin-right: -138px;
+  }
 }
 
 .slide:last-child {
@@ -1016,6 +1032,39 @@ p {
   padding: 40px;
   display: flex;
   justify-content: end;
+}
+@media screen and (max-width: 1600px) {
+  .home-header {
+    padding: 20px;
+  }
+}
+
+.line-to-bottom {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+@media screen and (max-width: 1600px) {
+  .line-to-bottom {
+    position: absolute;
+    top: 200px;
+    left: 230px;
+    height: 238px;
+  }
+}
+
+.line-to-top {
+  position: absolute;
+  bottom: 248px;
+  left: 200px;
+}
+@media screen and (max-width: 1600px) {
+  .line-to-top {
+    position: absolute;
+    bottom: 248px;
+    left: 218px;
+    height: 251px;
+  }
 }
 
 html {

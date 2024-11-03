@@ -1,19 +1,28 @@
+@use "mixin" as *;
+
 .slider-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  // min-height: 100vh;
+  margin-top: -69px;
+  @include maxw() {
+    margin-top: -83.5px;
+  }
 }
 
 .slider {
   display: flex;
-  width: 100vw;
+  // width: 100vw;
   //   height: 75vh;
   cursor: grab;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  @include maxw() {
+    height: 89vh;
+  }
 }
 
 .slider:active {
@@ -31,12 +40,17 @@
 
 .slide {
   margin: auto;
-  margin-left: 80px;
   flex-shrink: 0;
-  width: 400px;
+  // width: 400px;
+  margin-right: -45px;
   height: 780px;
-  //   background-color: crimson;
   position: relative;
+  transform: scale(0.75);
+  @include maxw() {
+    transform: scale(0.65);
+    height: 99.7vh;
+    margin-right: -138px;
+  }
 }
 
 .slide:last-child {
@@ -69,5 +83,34 @@
     padding: 40px;
     display: flex;
     justify-content: end;
+
+    @include maxw() {
+      padding: 20px;
+    }
+  }
+}
+
+.line-to-bottom {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+
+  @include maxw() {
+    position: absolute;
+    top: 200px;
+    left: 230px;
+    height: 238px;
+  }
+}
+
+.line-to-top {
+  position: absolute;
+  bottom: 248px;
+  left: 200px;
+  @include maxw() {
+    position: absolute;
+    bottom: 248px;
+    left: 218px;
+    height: 251px;
   }
 }
