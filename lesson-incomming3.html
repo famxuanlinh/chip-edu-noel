@@ -45,16 +45,58 @@
         <!-- Body -->
         <div>
           <div
-            class="lesson-body flex-items-center"
+            class="flex-items-center lesson-incoming-body"
             style="justify-content: space-between"
           >
             <p></p>
 
             <div
-              class="flex-items-center space-y-8"
+              class="flex-items-center space-y-6"
               style="flex-direction: column"
             >
               <div class="heading-h1 grayscale-dark-gray">I can run</div>
+              <div
+                class="flex-center button-shadow bg-greenscale-light-green px-3 py-4 space-y-3"
+                style="width: 420px; flex-direction: column"
+              >
+                <div class="flex-center">
+                  <img
+                    width="60"
+                    height="60"
+                    src="public/icons/clock-color.svg"
+                    alt="avatar"
+                  />
+                  <p class="button-l grayscale-dark-gray ml-3">2 ngày nữa</p>
+                </div>
+                <div
+                  class="flex-items-center w-full bg-grayscale-white inner-blur-inner-b4-20"
+                  style="
+                    padding: 10px 8px;
+                    justify-content: space-between;
+                    border-radius: 12px;
+                    border: 2px solid rgba(0, 0, 0, 0.05);
+                  "
+                >
+                  <div class="flex-items-center button-m grayscale-dark-gray">
+                    <img
+                      width="24"
+                      height="24"
+                      class="mr-2"
+                      src="public/icons/clock.svg"
+                      alt="avatar"
+                    />04:59
+                  </div>
+                  <div class="flex-items-center caption-m grayscale-dark-gray">
+                    <img
+                      width="24"
+                      height="24"
+                      class="mr-2"
+                      src="public/icons/calendar-gray.svg"
+                      alt="avatar"
+                    />Thứ 2 - 12/12/2024
+                  </div>
+                </div>
+              </div>
               <div class="flex-center" style="flex-direction: column">
                 <div
                   class="rounded-full"
@@ -75,23 +117,17 @@
                 </div>
                 <p class="grayscale-dark-gray button-l mt-4">Cô Tina</p>
               </div>
-              <div class="flex-center">
-                <img
-                  src="public/icons/star.svg"
-                  width="60"
-                  height="60"
-                  alt=""
-                />
-                <p class="grayscale-dark-gray heading-h1 ml-3">200</p>
-              </div>
+
               <div class="flex-center mb-8">
                 <div class="" style="position: relative">
-                  <img
-                    src="public/icons/point-active.svg"
-                    width="60"
-                    height="60"
-                    alt=""
-                  />
+                  <div
+                    class="rounded-full my-4"
+                    style="
+                      height: 28px;
+                      width: 28px;
+                      background-color: #00000033;
+                    "
+                  ></div>
                   <p
                     class="button-l grayscale-dark-gray mt-5"
                     style="
@@ -105,16 +141,23 @@
                   </p>
                 </div>
                 <div
-                  class="bg-primary-green"
-                  style="height: 8px; width: 220px; margin: 0 -1px"
+                  class="bg-primary-green rounded-4"
+                  style="
+                    height: 8px;
+                    width: 220px;
+                    margin: 0 12px;
+                    background-color: #00000033;
+                  "
                 ></div>
                 <div class="" style="position: relative">
-                  <img
-                    src="public/icons/point-active.svg"
-                    width="60"
-                    height="60"
-                    alt=""
-                  />
+                  <div
+                    class="rounded-full my-4"
+                    style="
+                      height: 28px;
+                      width: 28px;
+                      background-color: #00000033;
+                    "
+                  ></div>
                   <p
                     class="button-l grayscale-dark-gray mt-5"
                     style="
@@ -138,7 +181,7 @@
                 ></div>
                 <div class="" style="position: relative">
                   <div
-                    class="rounded-full my-1"
+                    class="rounded-full my-4"
                     style="
                       height: 28px;
                       width: 28px;
@@ -169,19 +212,6 @@
                 style="height: 60px; width: 340px"
               >
                 <img
-                  src="public/icons/video.svg"
-                  class="mr-2"
-                  width="40"
-                  height="40"
-                  alt="upload"
-                />
-                Video buổi học
-              </button>
-              <button
-                class="button-primary grayscale-dark-gray flex-center bg-greenscale-light-green px-5 grayscale-white button-l"
-                style="height: 60px; width: 340px"
-              >
-                <img
                   src="public/icons/document.svg"
                   class="mr-2"
                   width="40"
@@ -191,11 +221,11 @@
                 Nội dung buổi học
               </button>
               <button
-                class="button-primary grayscale-dark-gray flex-center bg-greenscale-light-green px-5 grayscale-white button-l"
-                style="height: 60px; width: 340px"
+                class="button-primary grayscale-dark-gray flex-center bg-secondary-light-gray px-5 grayscale-white button-l"
+                style="height: 60px; width: 340px; color: #00000099"
               >
                 <img
-                  src="public/icons/download.svg"
+                  src="public/icons/download-gray.svg"
                   class="mr-2"
                   width="40"
                   height="40"
@@ -203,19 +233,7 @@
                 />
                 Tải Worksheet
               </button>
-              <button
-                class="button-primary flex-center bg-primary-green px-5 grayscale-white button-l"
-                style="height: 60px; width: 340px"
-              >
-                <img
-                  src="public/icons/send1.svg"
-                  class="mr-2"
-                  width="40"
-                  height="40"
-                  alt="upload"
-                />
-                Luyện tập
-              </button>
+              `
             </div>
           </div>
         </div>
