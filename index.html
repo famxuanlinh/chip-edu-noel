@@ -8,55 +8,284 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
+    />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
     <div class="home">
       <div class="home-header">
-        <div
-          class="bg-greenscale-light-green heading-h2 p-5 button-primary-1 bg-primary-yellow flex-items-center space-x-4"
-        >
-          <div
-            class="rounded-full"
-            style="
-              background-color: white;
-              width: fit-content;
-              height: fit-content;
-            "
-          >
-            <img
-              class="rounded-full p-1"
-              width="80"
-              height="80"
-              src="public/images/avatar1.png"
-              alt="avatar"
-            />
-          </div>
-          <div class="home-header-info space-y-4">
-            <p class="button-l flex-justify-center">Student’s Name</p>
-            <div class="flex-items-center">
+        <div></div>
+        <div class="uk-inline">
+          <button type="button" class="home-header-info-box">
+            <div
+              class="bg-greenscale-light-green heading-h2 p-5 button-primary-1 bg-primary-yellow flex-items-center space-x-4"
+            >
               <div
-                class="project-info-tag flex-items-center inner-blur-inner-b2-50 button-s"
+                class="rounded-full"
+                style="
+                  background-color: white;
+                  width: fit-content;
+                  height: fit-content;
+                "
               >
                 <img
-                  src="public/icons/star.svg"
-                  class="mr-2"
-                  width="24"
-                  height="24"
-                  alt=""
-                />200
+                  class="rounded-full p-1"
+                  width="80"
+                  height="80"
+                  src="public/images/avatar1.png"
+                  alt="avatar"
+                />
+              </div>
+              <div class="home-header-info space-y-4">
+                <p class="button-l flex-justify-center">Student’s Name</p>
+                <div class="flex-items-center">
+                  <div
+                    class="project-info-tag flex-items-center inner-blur-inner-b2-50 button-s"
+                  >
+                    <img
+                      src="public/icons/star.svg"
+                      class="mr-2"
+                      width="24"
+                      height="24"
+                      alt=""
+                    />200
+                  </div>
+                  <div
+                    class="project-info-tag flex-items-center inner-blur-inner-b2-50 button-s"
+                  >
+                    <img
+                      src="public/icons/book.svg"
+                      class="mr-2"
+                      width="24"
+                      height="24"
+                      alt=""
+                    />15 buổi
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+          <div
+            class="home-header-dropdown space-x-10"
+            uk-dropdown="mode: click; pos: bottom-right; animation: uk-animation-slide-top-small; duration: 1000"
+            id="my-dropdown"
+          >
+            <div style="display: flex">
+              <div class="space-y-5 uk-position-relative" style="width: 410px">
+                <a
+                  class="rounded-full uk-position-top-left btn-icon flex-justify-center"
+                  href="/index.html"
+                >
+                  <img src="public/icons/switch.svg" width="40" height="40" />
+                </a>
+                <div
+                  class="project-info flex-center space-x-4"
+                  style="flex-direction: column"
+                >
+                  <div
+                    class="rounded-full mr-4"
+                    style="
+                      background-color: white;
+                      width: fit-content;
+                      height: fit-content;
+                      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    "
+                  >
+                    <img
+                      class="rounded-full p-1"
+                      width="110"
+                      height="110"
+                      src="public/images/avatar1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div class="space-y-5">
+                    <p class="heading-h3 grayscale-dark-gray mt-6">
+                      Student’s Name
+                    </p>
+                    <div class="flex-items-center">
+                      <div
+                        class="project-info-tag flex-items-center inner-blur-inner-b2-50 button-s"
+                      >
+                        <img
+                          src="public/icons/star.svg"
+                          class="mr-2"
+                          width="24"
+                          height="24"
+                          alt=""
+                        />200
+                      </div>
+                      <div
+                        class="project-info-tag flex-items-center inner-blur-inner-b2-50 button-s"
+                      >
+                        <img
+                          src="public/icons/book.svg"
+                          class="mr-2"
+                          width="24"
+                          height="24"
+                          alt=""
+                        />15 buổi
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="button-primary flex-center w-full bg-greenscale-light-green px-5 grayscale-dark-gray button-l"
+                  style="height: 60px"
+                >
+                  <img
+                    src="public/icons/pencil.svg"
+                    width="40"
+                    height="40"
+                    alt=""
+                  />
+                  <span class="flex-1 flex-center"> Dự án cá nhân</span>
+                </button>
+                <button
+                  class="button-primary flex-center w-full bg-greenscale-light-green px-5 grayscale-dark-gray button-l"
+                  style="height: 60px"
+                >
+                  <img
+                    src="public/icons/medal.svg"
+                    width="40"
+                    height="40"
+                    alt=""
+                  />
+                  <span class="flex-1 flex-center"> Thành tích</span>
+                </button>
+                <button
+                  class="button-primary flex-center w-full bg-primary-green px-5 grayscale-white button-l"
+                  style="height: 60px"
+                >
+                  <img
+                    src="public/icons/parent.svg"
+                    width="40"
+                    height="40"
+                    alt=""
+                  />
+                  <span class="flex-1 flex-center"> Phụ huynh</span>
+                </button>
               </div>
               <div
-                class="project-info-tag flex-items-center inner-blur-inner-b2-50 button-s"
+                class="space-y-10 uk-position-relative"
+                style="padding-top: 78px"
               >
-                <img
-                  src="public/icons/book.svg"
-                  class="mr-2"
-                  width="24"
-                  height="24"
-                  alt=""
-                />15 buổi
+                <button
+                  type="button"
+                  onclick="hideDropdown()"
+                  class="rounded-full uk-position-top-right flex-justify-center"
+                  style="background-color: transparent"
+                >
+                  <img src="public/icons/x2.svg" width="40" height="40" />
+                </button>
+                <p class="caption-m grayscale-dark-gray flex-center">
+                  Đổi ảnh đại diện
+                </p>
+                <div class="home-header-dropdown-avatars px-10">
+                  <div class="rounded-full bg-grayscale-white">
+                    <img
+                      class="rounded-full p-2"
+                      width="96"
+                      height="96"
+                      src="public/images/avatar1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div class="rounded-full bg-grayscale-white">
+                    <img
+                      class="rounded-full p-2"
+                      width="96"
+                      height="96"
+                      src="public/images/avatar1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div class="rounded-full bg-grayscale-white">
+                    <img
+                      class="rounded-full p-2"
+                      width="96"
+                      height="96"
+                      src="public/images/avatar1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div class="rounded-full bg-grayscale-white">
+                    <img
+                      class="rounded-full p-2"
+                      width="96"
+                      height="96"
+                      src="public/images/avatar1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div class="rounded-full bg-grayscale-white">
+                    <img
+                      class="rounded-full p-2"
+                      width="96"
+                      height="96"
+                      src="public/images/avatar1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div class="rounded-full bg-grayscale-white">
+                    <img
+                      class="rounded-full p-2"
+                      width="96"
+                      height="96"
+                      src="public/images/avatar1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div class="rounded-full bg-grayscale-white">
+                    <img
+                      class="rounded-full p-2"
+                      width="96"
+                      height="96"
+                      src="public/images/avatar1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div class="rounded-full bg-grayscale-white">
+                    <img
+                      class="rounded-full p-2"
+                      width="96"
+                      height="96"
+                      src="public/images/avatar1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div class="rounded-full bg-grayscale-white">
+                    <img
+                      class="rounded-full p-2"
+                      width="96"
+                      height="96"
+                      src="public/images/avatar1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div class="rounded-full bg-grayscale-white">
+                    <img
+                      class="rounded-full p-2"
+                      width="96"
+                      height="96"
+                      src="public/images/avatar1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                  <div class="rounded-full bg-primary-green">
+                    <img
+                      class="rounded-full p-2"
+                      width="96"
+                      height="96"
+                      src="public/images/avatar1.png"
+                      alt="avatar"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -258,6 +487,8 @@
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
     <script>
       // Slider dragging
       const slider = document.querySelector(".slider");
@@ -347,6 +578,12 @@
         evt.preventDefault();
         scrollContainer.scrollLeft += evt.deltaY;
       });
+
+      function hideDropdown() {
+        const dropdownElement = document.getElementById("my-dropdown");
+
+        UIkit.dropdown(dropdownElement).hide(0);
+      }
     </script>
   </body>
 </html>

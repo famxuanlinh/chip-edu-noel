@@ -1017,15 +1017,33 @@ p {
   position: relative;
 }
 .home-header {
-  padding: 40px;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
 }
 @media screen and (max-width: 1600px) {
   .home-header {
     padding: 20px;
     zoom: 0.75;
   }
+}
+.home-header-info-box {
+  display: flex;
+  justify-content: end;
+  background-color: transparent;
+}
+.home-header-dropdown {
+  border-radius: 20px;
+  padding: 32px;
+  top: 0 !important;
+  right: 0 !important;
+  width: max-content !important;
+}
+.home-header-dropdown-avatars {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 4px;
 }
 
 .line-to-bottom {

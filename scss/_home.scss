@@ -1,4 +1,5 @@
 @use "mixin" as *;
+@use "color";
 
 .slider-wrapper {
   display: flex;
@@ -12,8 +13,6 @@
 
 .slider {
   display: flex;
-  // width: 100vw;
-  //   height: 75vh;
   cursor: grab;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -37,7 +36,6 @@
 .slide {
   margin: auto;
   flex-shrink: 0;
-  // width: 400px;
   margin-right: 80px;
   height: 780px;
   position: relative;
@@ -70,14 +68,36 @@
   );
   height: 100vh;
   position: relative;
-  &-header {
-    padding: 40px;
-    display: flex;
-    justify-content: end;
 
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
     @include maxw() {
       padding: 20px;
       zoom: 0.75;
+    }
+
+    &-info-box {
+      display: flex;
+      justify-content: end;
+      background-color: transparent;
+    }
+
+    &-dropdown {
+      border-radius: 20px;
+      padding: 32px;
+      top: 0 !important;
+      right: 0 !important;
+      width: max-content !important;
+      // display: flex;
+
+      &-avatars {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 4px;
+      }
     }
   }
 }
