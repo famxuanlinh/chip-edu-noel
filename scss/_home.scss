@@ -4,10 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // min-height: 100vh;
-  margin-top: -69px;
+
+  zoom: 0.9;
   @include maxw() {
-    margin-top: -83.5px;
+    zoom: 0.7;
   }
 }
 
@@ -20,9 +20,6 @@
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  @include maxw() {
-    height: 89vh;
-  }
 }
 
 .slider:active {
@@ -42,15 +39,9 @@
   margin: auto;
   flex-shrink: 0;
   // width: 400px;
-  margin-right: -45px;
+  margin-right: 80px;
   height: 780px;
   position: relative;
-  transform: scale(0.75);
-  @include maxw() {
-    transform: scale(0.65);
-    height: 99.7vh;
-    margin-right: -138px;
-  }
 }
 
 .slide:last-child {
@@ -78,14 +69,16 @@
     #67d4aa 83%,
     #67dda3 100%
   );
+  height: 100vh;
   position: relative;
   &-header {
-    padding: 40px;
+    padding: 40px 40px 0 40px;
     display: flex;
     justify-content: end;
 
     @include maxw() {
-      padding: 20px;
+      padding: 20px 20px 0 20px;
+      zoom: 0.75;
     }
   }
 }
@@ -94,23 +87,10 @@
   position: absolute;
   top: 200px;
   left: 200px;
-
-  @include maxw() {
-    position: absolute;
-    top: 200px;
-    left: 230px;
-    height: 238px;
-  }
 }
 
 .line-to-top {
   position: absolute;
-  bottom: 248px;
+  bottom: 200px;
   left: 200px;
-  @include maxw() {
-    position: absolute;
-    bottom: 248px;
-    left: 218px;
-    height: 251px;
-  }
 }

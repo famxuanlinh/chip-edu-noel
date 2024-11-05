@@ -956,11 +956,11 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -69px;
+  zoom: 0.9;
 }
 @media screen and (max-width: 1600px) {
   .slider-wrapper {
-    margin-top: -83.5px;
+    zoom: 0.7;
   }
 }
 
@@ -971,11 +971,6 @@ p {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-@media screen and (max-width: 1600px) {
-  .slider {
-    height: 89vh;
-  }
 }
 
 .slider:active {
@@ -994,17 +989,9 @@ p {
 .slide {
   margin: auto;
   flex-shrink: 0;
-  margin-right: -45px;
+  margin-right: 80px;
   height: 780px;
   position: relative;
-  transform: scale(0.75);
-}
-@media screen and (max-width: 1600px) {
-  .slide {
-    transform: scale(0.65);
-    height: 99.7vh;
-    margin-right: -138px;
-  }
 }
 
 .slide:last-child {
@@ -1026,16 +1013,18 @@ p {
 
 .home {
   background: linear-gradient(to top, #717bff 0%, #6d99e2 23%, #6abebf 56%, #67d4aa 83%, #67dda3 100%);
+  height: 100vh;
   position: relative;
 }
 .home-header {
-  padding: 40px;
+  padding: 40px 40px 0 40px;
   display: flex;
   justify-content: end;
 }
 @media screen and (max-width: 1600px) {
   .home-header {
-    padding: 20px;
+    padding: 20px 20px 0 20px;
+    zoom: 0.75;
   }
 }
 
@@ -1044,27 +1033,11 @@ p {
   top: 200px;
   left: 200px;
 }
-@media screen and (max-width: 1600px) {
-  .line-to-bottom {
-    position: absolute;
-    top: 200px;
-    left: 230px;
-    height: 238px;
-  }
-}
 
 .line-to-top {
   position: absolute;
-  bottom: 248px;
+  bottom: 200px;
   left: 200px;
-}
-@media screen and (max-width: 1600px) {
-  .line-to-top {
-    position: absolute;
-    bottom: 248px;
-    left: 218px;
-    height: 251px;
-  }
 }
 
 html {
