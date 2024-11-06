@@ -18,10 +18,49 @@
   <body>
     <div class="home">
       <div class="home-header project-upload-body-title">
-        <a class="project-header-button" href="/"
-          ><img src="/public/icons/arrow-left.svg" alt="icon arrow"
-        /></a>
-        <div>hello</div>
+        <div style="width: 368px" class="flex-items-center">
+          <a class="project-header-button" href="/"
+            ><img src="/public/icons/arrow-left-white.svg" alt="icon arrow"
+          /></a>
+          <img
+            width="100"
+            height="100"
+            src="/public/icons/planet3-small.svg"
+            alt="icon planet"
+          />
+          <p class="heading-h3 grayscale-white pl-5">Level 3</p>
+        </div>
+        <div>
+          <div class="flex-items-center" style="height: 60px">
+            <a class="project-header-button" href="/"
+              ><img
+                width="60"
+                height="60"
+                src="/public/icons/arrow-left-white.svg"
+                alt="icon arrow"
+            /></a>
+            <button
+              class="grayscale-white flex-items-center heading-h3 px-5 button-primary bg-primary-green"
+            >
+              <span class="px-4">Level 3</span>
+              <img
+                width="32"
+                height="32"
+                src="/public/icons/arrow-down-white.svg"
+                alt="icon arrow"
+              />
+            </button>
+            <a class="project-header-button" href="/"
+              ><img
+                width="60"
+                height="60"
+                style="transform: rotate(180deg)"
+                src="/public/icons/arrow-left-white.svg"
+                alt="icon arrow"
+            /></a>
+          </div>
+          <p class="heading-h2 flex-center grayscale-white pt-3">Bé vận động</p>
+        </div>
         <div class="uk-inline">
           <button type="button" class="home-header-info-box">
             <div
@@ -294,44 +333,16 @@
           </div>
         </div>
       </div>
-      <div class="slider-wrapper">
+      <div class="slider-wrapper" style="margin-top: 120px">
         <div class="slider">
-          <div class="slide" id="slide-1">
-            <img
-              class="select-none-img"
-              src="public/icons/planet1.svg"
-              width="400"
-              height="400"
-              alt="planet1"
-              style="
-                z-index: 1;
-                user-select: none;
-                position: relative;
-                user-select: none;
-              "
-            />
-
-            <p class="grayscale-white select-none mt-3 flex-center heading-h2">
-              Level 1
-            </p>
-            <img
-              class="select-none-img line-to-bottom"
-              src="public/icons/line-to-bottom.png"
-              alt="planet1"
-            />
-          </div>
-          <div
-            class="slide"
-            id="slide-2"
-            style="display: flex; align-items: end"
-          >
-            <div>
+          <div class="lesson-slide space-y-5" id="slide-1">
+            <div class="w-full flex-justify-center">
               <img
                 class="select-none-img"
-                src="public/icons/planet2.svg"
-                width="400"
-                height="400"
-                alt="planet1"
+                src="public/icons/lesson-icon.svg"
+                width="200"
+                height="200"
+                alt="lesson icon"
                 style="
                   z-index: 1;
                   user-select: none;
@@ -339,74 +350,208 @@
                   user-select: none;
                 "
               />
-
-              <p
-                class="grayscale-white select-none mt-3 flex-center heading-h2"
-              >
-                Level 2
-              </p>
             </div>
-            <div>
+
+            <div
+              class="space-y-2 flex-items-center"
+              style="flex-direction: column"
+            >
+              <p class="grayscale-white select-none caption-xs">Lesson 1</p>
+              <p class="grayscale-white select-none heading-h3">I can run</p>
+            </div>
+            <div class="flex-center space-x-4">
               <img
-                class="select-none-img line-to-top"
-                src="public/icons/line-to-top.png"
-                style="position: absolute; bottom: 248px; left: 200px"
+                class="select-none-img"
+                src="public/icons/point.svg"
+                width="24"
+                height="24"
+                alt="lesson icon"
+                style="
+                  z-index: 1;
+                  user-select: none;
+                  position: relative;
+                  user-select: none;
+                "
+              />
+              <img
+                class="select-none-img"
+                src="public/icons/point.svg"
+                width="24"
+                height="24"
+                alt="lesson icon"
+                style="
+                  z-index: 1;
+                  user-select: none;
+                  position: relative;
+                  user-select: none;
+                "
+              />
+              <div
+                class="bg-grayscale-white m-1 rounded-full"
+                style="height: 16px; width: 16px"
+              ></div>
+            </div>
+            <img
+              class="select-none-img lesson-line-to-bottom"
+              src="public/icons/lesson-line-to-bottom.png"
+              alt="planet1"
+            />
+          </div>
+          <div
+            class="lesson-slide flex-justify-center"
+            id="slide-2"
+            style="align-items: end"
+          >
+            <div class="space-y-5">
+              <div class="w-full flex-justify-center">
+                <img
+                  class="select-none-img"
+                  src="public/icons/lesson-icon.svg"
+                  width="200"
+                  height="200"
+                  alt="lesson icon"
+                  style="
+                    z-index: 1;
+                    user-select: none;
+                    position: relative;
+                    user-select: none;
+                  "
+                />
+              </div>
+
+              <div
+                class="space-y-2 flex-items-center"
+                style="flex-direction: column"
+              >
+                <p class="grayscale-white select-none caption-xs">Lesson 2</p>
+                <p class="grayscale-white select-none heading-h3">I can run</p>
+              </div>
+              <div class="flex-center space-x-4">
+                <img
+                  class="select-none-img"
+                  src="public/icons/point.svg"
+                  width="24"
+                  height="24"
+                  alt="lesson icon"
+                  style="
+                    z-index: 1;
+                    user-select: none;
+                    position: relative;
+                    user-select: none;
+                  "
+                />
+                <img
+                  class="select-none-img"
+                  src="public/icons/point.svg"
+                  width="24"
+                  height="24"
+                  alt="lesson icon"
+                  style="
+                    z-index: 1;
+                    user-select: none;
+                    position: relative;
+                    user-select: none;
+                  "
+                />
+                <div
+                  class="bg-grayscale-white m-1 rounded-full"
+                  style="height: 16px; width: 16px"
+                ></div>
+              </div>
+              <img
+                class="select-none-img lesson-line-to-bottom"
+                src="public/icons/lesson-line-to-top.png"
                 alt="planet1"
               />
             </div>
           </div>
-          <div class="slide" id="slide-3">
-            <img
-              class="select-none-img"
-              src="public/icons/planet3.svg"
-              width="400"
-              height="400"
-              alt="planet1"
-              style="
-                z-index: 1;
-                user-select: none;
-                position: relative;
-                user-select: none;
-              "
-            />
+          <div class="lesson-slide space-y-5" id="slide-3">
+            <div class="w-full flex-justify-center">
+              <img
+                class="select-none-img"
+                src="public/icons/lesson-active.svg"
+                width="200"
+                height="200"
+                alt="lesson icon"
+                style="
+                  z-index: 1;
+                  user-select: none;
+                  position: relative;
+                  user-select: none;
+                "
+              />
+            </div>
 
-            <!-- <p class="grayscale-white select-none mt-3 flex-center heading-h2">
-                Level 3
-              </p> -->
-            <div class="flex-center mt-3">
+            <div
+              class="space-y-2 flex-items-center"
+              style="flex-direction: column"
+            >
+              <p class="grayscale-white select-none caption-xs">Lesson 3</p>
+              <p class="grayscale-white select-none heading-h3">I can run</p>
+            </div>
+            <div class="flex-center space-x-4">
+              <img
+                class="select-none-img"
+                src="public/icons/point.svg"
+                width="24"
+                height="24"
+                alt="lesson icon"
+                style="
+                  z-index: 1;
+                  user-select: none;
+                  position: relative;
+                  user-select: none;
+                "
+              />
+              <img
+                class="select-none-img"
+                src="public/icons/point.svg"
+                width="24"
+                height="24"
+                alt="lesson icon"
+                style="
+                  z-index: 1;
+                  user-select: none;
+                  position: relative;
+                  user-select: none;
+                "
+              />
+              <div
+                class="bg-grayscale-white m-1 rounded-full"
+                style="height: 16px; width: 16px"
+              ></div>
+            </div>
+            <div class="flex-justify-center">
               <button
-                class="grayscale-white heading-h2 px-5 button-primary bg-primary-yellow"
+                class="grayscale-white flex-center button-l button-primary bg-primary-yellow"
+                style="height: 100px; width: 233px"
               >
-                Level 3
+                <img
+                  width="60"
+                  height="60"
+                  src="/public/icons/rocket.svg"
+                  alt="icon arrow"
+                />
+                <span class="ml-3">Vào lớp</span>
               </button>
             </div>
-            <img
-              class="select-none-img"
-              src="public/icons/space-craft.svg"
-              width="117"
-              height="117"
-              alt="planet1"
-              style="
-                z-index: 1;
-                user-select: none;
-                position: absolute;
-                top: 148px;
-                left: -52px;
-              "
-            />
           </div>
+
           <div
-            class="slide"
+            class="lesson-slide flex-justify-center"
             id="slide-4"
-            style="display: flex; align-items: end"
+            style="align-items: end"
           >
-            <div>
+            <div
+              class="space-y-5 flex-items-center"
+              style="flex-direction: column"
+            >
               <img
                 class="select-none-img"
-                src="public/icons/planet4.svg"
-                width="400"
-                height="400"
-                alt="planet1"
+                src="public/icons/lesson-lock.svg"
+                width="200"
+                height="200"
+                alt="lesson icon"
                 style="
                   z-index: 1;
                   user-select: none;
@@ -415,44 +560,65 @@
                 "
               />
 
-              <p
-                class="grayscale-white select-none mt-3 flex-center heading-h2"
+              <div
+                class="space-y-2 flex-items-center"
+                style="flex-direction: column"
               >
-                Level 4
-              </p>
+                <p class="grayscale-white select-none caption-xs">Lesson 4</p>
+                <p class="grayscale-white select-none heading-h3">I can run</p>
+              </div>
+              <button
+                class="grayscale-white flex-items-center caption-s px-4 button-primary bg-primary-green"
+                style="height: 50px"
+              >
+                <img
+                  width="20"
+                  height="20"
+                  src="/public/icons/eye.svg"
+                  alt="icon arrow"
+                />
+                <span class="ml-2">Xem nội dung</span>
+              </button>
+              <div
+                class="w-full flex-center button-shadow bg-greenscale-light-green px-2 py-3 space-y-3"
+                style="flex-direction: column"
+              >
+                <div class="flex-center">
+                  <img
+                    width="32"
+                    height="32"
+                    src="public/icons/clock-color.svg"
+                    alt="avatar"
+                  />
+                  <p class="button-l grayscale-dark-gray ml-3">2 ngày nữa</p>
+                </div>
+                <div
+                  class="flex-items-center w-full bg-grayscale-white inner-blur-inner-b4-20"
+                  style="
+                    padding: 10px 8px;
+                    justify-content: space-between;
+                    border-radius: 12px;
+                    border: 2px solid rgba(0, 0, 0, 0.05);
+                  "
+                >
+                  <div class="flex-center caption-s grayscale-dark-gray">
+                    04:59 - Thứ 2 12/12/2024
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="slide" id="slide-5">
-            <img
-              class="select-none-img"
-              src="public/icons/planet5.svg"
-              width="400"
-              height="400"
-              alt="planet1"
-              style="
-                z-index: 1;
-                user-select: none;
-                position: relative;
-                user-select: none;
-              "
-            />
-
-            <p class="grayscale-white select-none mt-3 flex-center heading-h2">
-              Level 5
-            </p>
-          </div>
-          <div
-            class="slide"
-            id="slide-6"
-            style="display: flex; align-items: end"
-          >
-            <div>
+          <div class="lesson-slide" id="slide-5">
+            <div
+              class="space-y-5 flex-items-center"
+              style="flex-direction: column"
+            >
               <img
                 class="select-none-img"
-                src="public/icons/planet6.svg"
-                width="400"
-                height="400"
-                alt="planet1"
+                src="public/icons/lesson-pencil.svg"
+                width="200"
+                height="200"
+                alt="lesson icon"
                 style="
                   z-index: 1;
                   user-select: none;
@@ -461,31 +627,35 @@
                 "
               />
 
-              <p
-                class="grayscale-white select-none mt-3 flex-center heading-h2"
+              <div
+                class="space-y-2 flex-items-center"
+                style="flex-direction: column"
               >
-                Level 6
-              </p>
-            </div>
-          </div>
-          <div class="slide" id="slide-7">
-            <img
-              class="select-none-img"
-              src="public/icons/planet7.svg"
-              width="400"
-              height="400"
-              alt="planet1"
-              style="
-                z-index: 1;
-                user-select: none;
-                position: relative;
-                user-select: none;
-              "
-            />
+                <p class="grayscale-white select-none caption-xs">Lesson 5</p>
+                <p class="grayscale-white select-none heading-h3">
+                  Dự án cá nhân
+                </p>
+              </div>
 
-            <p class="grayscale-white select-none mt-3 flex-center heading-h2">
-              Level 7
-            </p>
+              <div
+                class="w-full flex-center button-shadow bg-greenscale-light-green p-2"
+                style="flex-direction: column"
+              >
+                <div
+                  class="flex-items-center w-full bg-grayscale-white inner-blur-inner-b4-20"
+                  style="
+                    padding: 10px 8px;
+                    justify-content: space-between;
+                    border-radius: 12px;
+                    border: 2px solid rgba(0, 0, 0, 0.05);
+                  "
+                >
+                  <div class="flex-center caption-s grayscale-dark-gray">
+                    20:00 - Thứ 2 12/12/2024
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
