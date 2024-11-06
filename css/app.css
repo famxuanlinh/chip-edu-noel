@@ -433,6 +433,33 @@ p {
   flex: 1;
 }
 
+.level-button-unit {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 0;
+  height: 42px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid #D8EDDD;
+}
+.level-button-unit .level-left-part {
+  background-color: #D8EDDD;
+  background-size: cover;
+  padding: 0 12px;
+  height: 100%;
+  color: black;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.level-button-unit .level-right-part {
+  padding: 0 12px;
+  color: #252525;
+  background-color: transparent;
+  flex: 1 1 0%;
+  text-align: left;
+}
+
 .student-images {
   width: 376px;
   max-height: calc(100vh - 140px);
@@ -1083,6 +1110,67 @@ p {
   position: absolute;
   bottom: 200px;
   left: 200px;
+}
+
+.button-hover {
+  color: white;
+}
+.button-hover:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.uk-modal-dialog {
+  width: 920px !important;
+  height: calc(100vh - 80px);
+}
+
+.uk-modal-body {
+  padding: 40px !important;
+}
+
+.uk-modal {
+  padding: 40px !important;
+}
+
+@media screen and (max-width: 1600px) {
+  .level-modal {
+    zoom: 0.85;
+  }
+}
+.level-modal-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+}
+.level-modal-content-description {
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  max-height: calc(100vh - 428px);
+  overflow-y: auto;
+}
+.level-modal-content-left {
+  width: 100%;
+}
+.level-modal-content-right {
+  width: 100%;
+  max-height: calc(100vh - 260px);
+  overflow-y: auto;
+}
+.level-modal-tags {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.level-modal-tag {
+  height: 148px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 html {

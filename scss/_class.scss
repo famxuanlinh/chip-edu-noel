@@ -73,6 +73,36 @@
   }
 }
 
+.level-button-unit {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 0;
+  height: 42px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid color.$greenscale-light-green;
+
+  .level-left-part {
+    background-color: color.$greenscale-light-green;
+
+    background-size: cover;
+    padding: 0 12px;
+    height: 100%;
+    color: black;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  .level-right-part {
+    padding: 0 12px;
+    color: color.$grayscale-dark-gray;
+    background-color: transparent;
+    flex: 1 1 0%;
+    text-align: left;
+  }
+}
+
 .student-images {
   width: 376px;
   max-height: calc(100vh - 140px);
