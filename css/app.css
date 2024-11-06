@@ -1040,6 +1040,11 @@ p {
   right: 0 !important;
   width: max-content !important;
 }
+@media screen and (max-width: 1600px) {
+  .home-header-dropdown {
+    left: -682px !important;
+  }
+}
 .home-header-dropdown-avatars {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));

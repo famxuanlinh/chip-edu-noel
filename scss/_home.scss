@@ -92,6 +92,9 @@
       right: 0 !important;
       width: max-content !important;
       // display: flex;
+      @include maxw() {
+        left: -682px !important;
+      }
 
       &-avatars {
         display: grid;
