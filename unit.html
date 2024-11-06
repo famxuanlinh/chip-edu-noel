@@ -639,24 +639,26 @@
                 </p>
               </div>
 
-              <div
-                class="w-full flex-center button-shadow bg-greenscale-light-green p-2"
-                style="flex-direction: column"
-              >
+             <div>
                 <div
-                  class="flex-items-center w-full bg-grayscale-white inner-blur-inner-b4-20"
-                  style="
-                    padding: 10px 8px;
-                    justify-content: space-between;
-                    border-radius: 12px;
-                    border: 2px solid rgba(0, 0, 0, 0.05);
-                  "
+                  class="w-full flex-center button-shadow bg-greenscale-light-green p-2"
+                  style="flex-direction: column"
                 >
-                  <div class="flex-center caption-s grayscale-dark-gray">
-                    20:00 - Thứ 2 12/12/2024
+                  <div
+                    class="flex-items-center w-full bg-grayscale-white inner-blur-inner-b4-20"
+                    style="
+                      padding: 10px 8px;
+                      justify-content: space-between;
+                      border-radius: 12px;
+                      border: 2px solid rgba(0, 0, 0, 0.05);
+                    "
+                  >
+                    <div class="flex-center caption-s grayscale-dark-gray">
+                      20:00 - Thứ 2 12/12/2024
+                    </div>
                   </div>
                 </div>
-              </div>
+             </div>
             </div>
           </div>
         </div>
@@ -676,6 +678,7 @@
             <p class="heading-h3 grayscale-dark-gray">Level 3</p>
             <button
               type="button"
+              onclick="hideModal()"
               class="rounded-full flex-justify-center"
               style="background-color: transparent"
             >
@@ -898,6 +901,11 @@
         const dropdownElement = document.getElementById("my-dropdown");
 
         UIkit.dropdown(dropdownElement).hide(0);
+      }
+      function hideModal() {
+        const dropdownElement = document.getElementById("modal-center");
+
+        UIkit.modal(dropdownElement).hide(0);
       }
     </script>
   </body>

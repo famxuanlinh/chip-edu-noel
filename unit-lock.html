@@ -625,7 +625,11 @@
         />
       </div>
 
-      <div class="uk-position-center-right" style="cursor: pointer">
+      <a
+        href="/exam.html"
+        class="uk-position-center-right"
+        style="cursor: pointer"
+      >
         <img
           src="/public/icons/bg-exam.svg"
           alt="bg"
@@ -646,7 +650,7 @@
             alt=""
           />
         </div>
-      </div>
+      </a>
 
       <div id="modal-center" class="uk-flex-top" uk-modal>
         <div
@@ -662,6 +666,7 @@
             <p class="heading-h3 grayscale-dark-gray">Level 3</p>
             <button
               type="button"
+              onclick="hideModal()"
               class="rounded-full flex-justify-center"
               style="background-color: transparent"
             >
@@ -912,6 +917,11 @@
         const dropdownElement = document.getElementById("my-dropdown");
 
         UIkit.dropdown(dropdownElement).hide(0);
+      }
+      function hideModal() {
+        const dropdownElement = document.getElementById("modal-center");
+
+        UIkit.modal(dropdownElement).hide(0);
       }
     </script>
   </body>
