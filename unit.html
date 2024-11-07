@@ -40,7 +40,7 @@
                 alt="icon arrow"
             /></a>
             <a
-              class="grayscale-white flex-items-center heading-h3 px-5 button-hover button-primary bg-primary-green"
+              class="grayscale-white btn-animation flex-items-center heading-h3 px-5 button-link-white button-primary bg-primary-green"
               href="#modal-center"
               uk-toggle
             >
@@ -51,7 +51,7 @@
                 src="/public/icons/arrow-down-white.svg"
                 alt="icon arrow"
             /></a>
-           
+
             <a class="project-header-button" href="/"
               ><img
                 width="60"
@@ -178,7 +178,7 @@
                   </div>
                 </div>
                 <button
-                  class="button-primary flex-center w-full bg-greenscale-light-green px-5 grayscale-dark-gray button-l"
+                  class="button-primary btn-animation flex-center w-full bg-greenscale-light-green px-5 grayscale-dark-gray button-l"
                   style="height: 60px"
                 >
                   <img
@@ -190,7 +190,7 @@
                   <span class="flex-1 flex-center"> Dự án cá nhân</span>
                 </button>
                 <button
-                  class="button-primary flex-center w-full bg-greenscale-light-green px-5 grayscale-dark-gray button-l"
+                  class="button-primary btn-animation flex-center w-full bg-greenscale-light-green px-5 grayscale-dark-gray button-l"
                   style="height: 60px"
                 >
                   <img
@@ -202,7 +202,7 @@
                   <span class="flex-1 flex-center"> Thành tích</span>
                 </button>
                 <button
-                  class="button-primary flex-center w-full bg-primary-green px-5 grayscale-white button-l"
+                  class="button-primary btn-animation flex-center w-full bg-primary-green px-5 grayscale-white button-l"
                   style="height: 60px"
                 >
                   <img
@@ -468,9 +468,9 @@
             </div>
           </div>
           <div class="lesson-slide space-y-5" id="slide-3">
-            <div class="w-full flex-justify-center">
+            <div class="w-full flex-center">
               <img
-                class="select-none-img"
+                class="select-none-img zoom-in-out p-3"
                 src="public/icons/lesson-active.svg"
                 width="200"
                 height="200"
@@ -524,8 +524,9 @@
               ></div>
             </div>
             <div class="flex-justify-center">
-              <button
-                class="grayscale-white flex-center button-l button-primary bg-primary-yellow"
+              <a
+                href="/lop-hoc.html"
+                class="grayscale-white button-link-white btn-animation flex-center button-l button-primary bg-primary-yellow"
                 style="height: 100px; width: 233px"
               >
                 <img
@@ -535,7 +536,7 @@
                   alt="icon arrow"
                 />
                 <span class="ml-3">Vào lớp</span>
-              </button>
+              </a>
             </div>
           </div>
 
@@ -570,7 +571,7 @@
                 <p class="grayscale-white select-none heading-h3">I can run</p>
               </div>
               <button
-                class="grayscale-white flex-items-center caption-s px-4 button-primary bg-primary-green"
+                class="grayscale-white btn-animation flex-items-center caption-s px-4 button-primary bg-primary-green"
                 style="height: 50px"
               >
                 <img
@@ -639,7 +640,7 @@
                 </p>
               </div>
 
-             <div>
+              <div>
                 <div
                   class="w-full flex-center button-shadow bg-greenscale-light-green p-2"
                   style="flex-direction: column"
@@ -658,13 +659,13 @@
                     </div>
                   </div>
                 </div>
-             </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div id="modal-center" class="uk-flex-top " uk-modal>
+      <div id="modal-center" class="uk-flex-top" uk-modal>
         <div
           class="level-modal uk-modal-dialog space-y-10 rounded-5 uk-modal-body uk-margin-auto-vertical"
         >
@@ -686,7 +687,7 @@
             </button>
           </div>
 
-          <div class="level-modal-content" >
+          <div class="level-modal-content">
             <div class="level-modal-content-left space-y-5">
               <div class="level-modal-tags">
                 <div class="level-modal-tag">
@@ -731,7 +732,7 @@
                 </div>
               </div>
               <div
-              id="small-scroll"
+                id="small-scroll"
                 class="level-modal-content-description body-m grayscale-dark-gray"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -743,35 +744,50 @@
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </div>
             </div>
-            <div class="level-modal-content-right space-y-5 pr-3" id="small-scroll">
+            <div
+              class="level-modal-content-right space-y-5 pr-3"
+              id="small-scroll"
+            >
               <div class="level-button-unit w-full">
                 <button class="level-left-part button-s">Unit 1</button>
                 <button class="level-right-part button-l line-clamp-1">
-                  Lesson 1 he as alo 
+                  Lesson 1 he as alo
                 </button>
               </div>
               <div class="level-button-unit w-full">
                 <button class="level-left-part button-s">Unit 2</button>
                 <button class="level-right-part button-l line-clamp-1">
-                  Lesson 2 
+                  Lesson 2
                 </button>
               </div>
               <div class="level-button-unit w-full">
                 <button class="level-left-part button-s">Unit 2</button>
                 <button class="level-right-part button-l line-clamp-1">
-                  Lesson 2 
+                  Lesson 2
                 </button>
               </div>
-              
+
               <div class="button-unit w-full">
                 <button class="left-part button-s">Unit 3</button>
                 <button class="right-part button-l flex-items-center">
                   Lesson 2
                 </button>
               </div>
-              <div class="button-unit w-full" style="border: none;">
-                <button class="left-part button-s " style="background-color: #FF9800;">Exam 1</button>
-                <button class="right-part button-l flex-items-center" style="background-color: #0000000D;height: 100%;border-radius: 0 12px 12px 0;">
+              <div class="button-unit w-full" style="border: none">
+                <button
+                  class="left-part button-s"
+                  style="background-color: #ff9800"
+                >
+                  Exam 1
+                </button>
+                <button
+                  class="right-part button-l flex-items-center"
+                  style="
+                    background-color: #0000000d;
+                    height: 100%;
+                    border-radius: 0 12px 12px 0;
+                  "
+                >
                   Lesson 2
                 </button>
               </div>
@@ -779,27 +795,40 @@
                 <div class="level-button-unit w-full">
                   <button class="level-left-part button-s">Unit 1</button>
                   <button class="level-right-part button-l line-clamp-1">
-                    Lesson 2 
-                  </button>
-                </div>
-                <div class="level-button-unit w-full">
-                  <button class="level-left-part button-s">Unit 2</button>
-                  <button class="level-right-part button-l line-clamp-1">
-                    Lesson 2 
-                  </button>
-                </div>
-                <div class="level-button-unit w-full">
-                  <button class="level-left-part button-s">Unit 2</button>
-                  <button class="level-right-part button-l line-clamp-1">
-                    Lesson 2 
-                  </button>
-                </div>
-                <div class="button-unit w-full" style="border: none;">
-                  <button class="left-part button-s " style="background-color: #FF9800;">Exam 2</button>
-                  <button class="right-part button-l flex-items-center" style="background-color: #0000000D;height: 100%;border-radius: 0 12px 12px 0;">
                     Lesson 2
                   </button>
                 </div>
+                <div class="level-button-unit w-full">
+                  <button class="level-left-part button-s">Unit 2</button>
+                  <button class="level-right-part button-l line-clamp-1">
+                    Lesson 2
+                  </button>
+                </div>
+                <div class="level-button-unit w-full">
+                  <button class="level-left-part button-s">Unit 2</button>
+                  <button class="level-right-part button-l line-clamp-1">
+                    Lesson 2
+                  </button>
+                </div>
+                <div class="button-unit w-full" style="border: none">
+                  <button
+                    class="left-part button-s"
+                    style="background-color: #ff9800"
+                  >
+                    Exam 2
+                  </button>
+                  <button
+                    class="right-part button-l flex-items-center"
+                    style="
+                      background-color: #0000000d;
+                      height: 100%;
+                      border-radius: 0 12px 12px 0;
+                    "
+                  >
+                    Lesson 2
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

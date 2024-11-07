@@ -348,6 +348,30 @@ p {
   top: 1px;
 }
 
+.btn-animation {
+  transition-duration: 0.4s;
+  position: relative;
+}
+.btn-animation:hover {
+  opacity: 0.85;
+}
+.btn-animation:active:after {
+  box-shadow: 0 0 0 0 white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0s;
+}
+.btn-animation:active {
+  top: 1px;
+}
+
+.button-link-white:hover {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
 .btn.disabled {
   background-color: #e5e5e5;
   color: rgba(0, 0, 0, 0.6);
@@ -383,12 +407,10 @@ p {
 
 .zoom-in-out {
   animation: zoom-in-zoom-out 2s ease infinite;
-  border-radius: 0.5rem;
 }
 
 .zoom-in-out-with-opacity {
   animation: zoom-in-zoom-out-with-opacity 2s ease infinite;
-  border-radius: 0.5rem;
 }
 
 @keyframes zoom-in-zoom-out {
@@ -396,7 +418,7 @@ p {
     transform: scale(100%);
   }
   50% {
-    transform: scale(110%);
+    transform: scale(106%);
   }
   100% {
     transform: scale(100%);
@@ -408,7 +430,7 @@ p {
     opacity: 0;
   }
   50% {
-    transform: scale(110%);
+    transform: scale(106%);
     opacity: 1;
   }
   100% {
