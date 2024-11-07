@@ -386,10 +386,26 @@ p {
   border-radius: 0.5rem;
 }
 
+.zoom-in-out-with-opacity {
+  animation: zoom-in-zoom-out-with-opacity 2s ease infinite;
+  border-radius: 0.5rem;
+}
+
 @keyframes zoom-in-zoom-out {
   0% {
     transform: scale(100%);
-    opacity: 0.9;
+  }
+  50% {
+    transform: scale(110%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@keyframes zoom-in-zoom-out-with-opacity {
+  0% {
+    transform: scale(100%);
+    opacity: 0;
   }
   50% {
     transform: scale(110%);
@@ -397,7 +413,7 @@ p {
   }
   100% {
     transform: scale(100%);
-    opacity: 0.9;
+    opacity: 0;
   }
 }
 .class {
