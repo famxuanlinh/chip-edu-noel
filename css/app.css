@@ -333,7 +333,6 @@ p {
   transition-duration: 500ms;
 }
 .btn:hover {
-  transform: scale(1.02);
   opacity: 0.9;
 }
 

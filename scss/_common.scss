@@ -14,7 +14,8 @@
   transition-duration: 500ms;
 
   &:hover {
-    transform: scale(1.02);
+    // transform: scale(1.02);
+    // height: 65px;
     opacity: 0.9;
   }
 }
