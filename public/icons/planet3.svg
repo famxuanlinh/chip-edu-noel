@@ -292,7 +292,7 @@
     <path style="mix-blend-mode:screen" fill-rule="evenodd" clip-rule="evenodd"
         d="M107.708 228.175C107.708 228.617 107.355 228.97 106.913 228.97C106.471 228.97 106.117 228.617 106.117 228.175C106.117 227.733 106.471 227.38 106.913 227.38C107.355 227.38 107.708 227.733 107.708 228.175Z"
         fill="url(#paint33_radial_2164_295230)" />
-    <circle cx="220" cy="220" r="200" fill="url(#paint34_radial_2164_295230)" fill-opacity="0.1" />
+    <circle cx="220" cy="220" r="200" fill="url(#paint34_radial_2164_295230)" fill-opacity="0.2" />
     <defs>
         <radialGradient id="paint0_radial_2164_295230" cx="0" cy="0" r="1"
             gradientUnits="userSpaceOnUse"

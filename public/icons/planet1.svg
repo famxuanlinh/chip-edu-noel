@@ -165,7 +165,7 @@
     <path fill-rule="evenodd" clip-rule="evenodd"
         d="M294.129 407.724C294.129 407.724 298.205 404.461 302.281 406.368C302.281 406.368 299.698 408.874 294.129 407.724Z"
         fill="white" />
-    <circle cx="220" cy="220" r="200" fill="url(#paint24_radial_2164_296575)" fill-opacity="0.1" />
+    <circle cx="220" cy="220" r="200" fill="url(#paint24_radial_2164_296575)" fill-opacity="0.2" />
     <defs>
         <radialGradient id="paint0_radial_2164_296575" cx="0" cy="0" r="1"
             gradientUnits="userSpaceOnUse"
