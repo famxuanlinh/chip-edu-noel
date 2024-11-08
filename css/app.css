@@ -349,7 +349,6 @@ p {
 }
 
 .btn-animation {
-  transition-duration: 0.4s;
   position: relative;
 }
 .btn-animation:hover {
