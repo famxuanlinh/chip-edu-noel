@@ -294,19 +294,37 @@
       <div class="slider-wrapper">
         <div class="slider">
           <div class="slide" id="slide-1">
-            <img
-              class="select-none-img"
-              src="public/icons/planet1.svg"
-              width="400"
-              height="400"
-              alt="planet1"
-              style="
-                z-index: 1;
-                user-select: none;
-                position: relative;
-                user-select: none;
-              "
-            />
+            <div
+              class="uk-position-relative"
+              style="width: 400px; height: 400px"
+            >
+              <img
+                class="select-none-img zoom-in-out-with-opacity"
+                src="public/icons/planet1.svg"
+                width="400"
+                height="400"
+                alt="planet1"
+                style="
+                  z-index: 10 !important;
+                  user-select: none;
+                  user-select: none;
+                "
+              />
+              <img
+                class="select-none-img zoom-in-out"
+                src="public/icons/planet1-default.svg"
+                width="400"
+                height="400"
+                alt="planet1"
+                style="
+                  position: absolute;
+                  top: 0;
+                  z-index: 1;
+                  user-select: none;
+                  user-select: none;
+                "
+              />
+            </div>
 
             <p class="grayscale-white select-none mt-3 flex-center heading-h2">
               Level 1
