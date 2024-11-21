@@ -53,7 +53,7 @@
       <div class="dashboard-left  space-y-4">
         <div>
           <p class="button-l pl-5 pb-3 grayscale-dark-gray">Lớp học sắp tới</p>
-          <div class="parent-box bg-grayscale-white flex">
+          <div class="parent-box bg-grayscale-white flex ">
             <div class="flex-center flex-1">
               <div class="space-y-4">
                 <div class="project-card-button" style="border: 2px solid #00B26B; height: 40px">
@@ -118,7 +118,10 @@
 
         <div>
           <p class="button-l pl-5 pb-3 grayscale-dark-gray">Tiến trình</p>
-          <div class="parent-box bg-grayscale-white flex">hhh </div>
+          <div class="parent-box bg-grayscale-white dashboard-zoom">
+            <p class="caption-xs flex-center grayscale-dark-gray">Số buổi học hàng tuần</p>
+            <canvas id="myBarChart" width="400" height="50"></canvas>
+          </div>
         </div>
         <div>
           <div class="flex-items-center" style="justify-content: space-between;">
@@ -228,7 +231,7 @@
               <div class="flex-center" style="flex-direction: column">
                 <div class="avatar-bg">
                   <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
-                  <p class="avatar-label bg-greenscale-light-green">Chính</p>
+                  <p class="avatar-label bg-yellowscale-light-yellow">Phụ</p>
                 </div>
                 <p class="grayscale-dark-gray button-s mt-6">Tina</p>
                 <p class="grayscale-dark-gray button-s mt-3 body-xs"><strong>50</strong> buổi</p>
@@ -236,7 +239,7 @@
               <div class="flex-center" style="flex-direction: column">
                 <div class="avatar-bg">
                   <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
-                  <p class="avatar-label bg-greenscale-light-green">Chính</p>
+                  <p class="avatar-label bg-yellowscale-light-yellow">Phụ</p>
                 </div>
                 <p class="grayscale-dark-gray button-s mt-6">Tina</p>
                 <p class="grayscale-dark-gray button-s mt-3 body-xs"><strong>50</strong> buổi</p>
@@ -252,12 +255,71 @@
 
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
-    // Slider dragging
+    // Get the canvas element
+    const ctx = document.getElementById('myBarChart').getContext('2d');
 
+    // Define the chart data
+    const data = {
+      labels: ['02/09', '06/09', '06/09', '06/09', '06/09', "06/09", "06/09"], // Labels for the X-axis
+      datasets: [{
+        label: 'Monthly Sales ($)',
+        data: [1, 2, 3, 2, 1, 2, 2], // Y-axis values
+        backgroundColor: [
+          '#FF9800',
+
+        ],
+        borderRadius: 8, // Rounded corners
+        borderSkipped: 'bottom',
+        barThickness: 20
+        // Border thickness
+      }]
+    };
+
+    // Define the chart options
+    const options = {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: false
+        }
+      },
+      scales: {
+        x: {
+          grid: {
+            drawOnChartArea: false, // Disable grid lines
+            drawBorder: false, // Disable axis line
+            drawTicks: false // Enable tick marks
+          },
+          ticks: {
+            display: true // Show tick labels
+          }
+        },
+        y: {
+          grid: {
+            drawOnChartArea: true, // Disable grid lines
+            drawBorder: false, // Disable axis line
+            drawTicks: false // Enable tick marks
+          },
+          ticks: {
+            stepSize: 1,
+            display: true // Show tick labels
+          }
+        }
+      }
+    };
+
+    // Create the chart
+    new Chart(ctx, {
+      type: 'bar', // Chart type
+      data: data,
+      options: options
+    });
   </script>
+
 </body>
 
 </html>

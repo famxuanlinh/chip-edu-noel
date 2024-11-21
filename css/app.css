@@ -1320,6 +1320,12 @@ p {
 }
 .dashboard-left {
   flex: 1 1 0%;
+  zoom: 0.82;
+}
+@media screen and (max-width: 1600px) {
+  .dashboard-left {
+    zoom: 0.62;
+  }
 }
 .dashboard-right {
   width: 560px;

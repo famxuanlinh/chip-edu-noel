@@ -60,6 +60,11 @@
   display: flex;
   &-left {
     flex: 1 1 0%;
+    zoom: 0.82;
+
+    @include maxw {
+      zoom: 0.62;
+    }
   }
   &-right {
     width: 560px;
@@ -136,3 +141,14 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-gap: 16px;
 }
+
+// .dashboard-zoom {
+//   zoom: 0.84;
+// }
+
+// .chart-so-buoi-hoc {
+//   height: 250px !important;
+//   display: block !important;
+//   box-sizing: border-box !important;
+//   width: 100% !important;
+// }
