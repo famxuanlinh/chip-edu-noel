@@ -1018,6 +1018,9 @@
   align-items: center;
   justify-content: center;
 }
+.flex {
+  display: flex;
+}
 
 .cursor-pointer {
   cursor: pointer;

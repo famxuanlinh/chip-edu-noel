@@ -130,3 +130,9 @@
       0px 2px 2px 0px rgba(0, 0, 0, 0.25);
   }
 }
+
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 16px;
+}
