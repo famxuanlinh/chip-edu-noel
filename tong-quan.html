@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+  <div class="layout">
+    <div class="layout-sidebar">
+      <a href="#" class="layout-sidebar-item">
+        <img height="32" width="32" src="public/icons/home.svg" alt="Trang chu">
+        <p class="button-m pt-1 grayscale-dark-gray">Trang chủ</p>
+      </a>
+      <a href="#" class="layout-sidebar-item  bg-primary-green drop-shadow-button-d">
+        <img height="32" width="32" src="public/icons/common.svg" alt="Trang chu">
+        <p class="button-s pt-1 grayscale-white">Tổng quan</p>
+      </a>
+      <a href="#" class="layout-sidebar-item">
+        <img height="32" width="32" src="public/icons/class.svg" alt="Trang chu">
+        <p class="button-s pt-1 grayscale-dark-gray">Lớp học</p>
+      </a>
+      <a href="#" class="layout-sidebar-item">
+        <img height="32" width="32" src="public/icons/chat.svg" alt="Trang chu">
+        <p class="button-s pt-1 grayscale-dark-gray">Tin nhắn</p>
+      </a>
+      <a href="#" class="layout-sidebar-item">
+        <img height="32" width="32" src="public/icons/process.svg" alt="Trang chu">
+        <p class="button-s pt-1 grayscale-dark-gray">Tiến trình</p>
+      </a>
+      <a href="#" class="layout-sidebar-item">
+        <img height="32" width="32" src="public/icons/combo.svg" alt="Trang chu">
+        <p class="button-s pt-1 grayscale-dark-gray">Gói học</p>
+      </a>
+      <a href="#" class="layout-sidebar-item">
+        <img height="32" width="32" src="public/icons/share.svg" alt="Trang chu">
+        <p class="button-s pt-1 grayscale-dark-gray">Chia sẻ</p>
+      </a>
+      <a href="#" class="layout-sidebar-item">
+        <img height="32" width="32" src="public/icons/support.svg" alt="Trang chu">
+        <p class="button-s pt-1 grayscale-dark-gray">Trợ giúp</p>
+      </a>
+    </div>
+    <div class="layout-content parent-box">
+      <!-- left content -->
+      <div class="dashboard-left">
+        left
+      </div>
+
+      <!-- Right content -->
+      <div class="dashboard-right parent-box">
+        <div class="w-full flex-items-center" style="justify-content: end; cursor: pointer;">
+          <img height="32" width="32" src="public/icons/setting.svg" alt="Setting">
+        </div>
+        <div class="dashboard-right-content space-y-10">
+          <div class="flex-center" style="flex-direction: column">
+            <div class="flex-center">
+              <div class="avatar-bg" style="margin-right: -10px;">
+                <img class="rounded-full p-1" width="60" height="60" src="public/images/avatar1.png" alt="avatar" />
+              </div>
+              <div class="avatar-bg" style="z-index: 1;">
+                <img class="rounded-full p-1" width="100" height="100" src="public/images/avatar1.png" alt="avatar" />
+              </div>
+              <div class="avatar-bg" style="margin-left: -10px;">
+                <img class="rounded-full p-1" width="60" height="60" src="public/images/avatar1.png" alt="avatar" />
+              </div>
+            </div>
+            <p class="grayscale-dark-gray heading-h4 mt-4">Student’s Name</p>
+          </div>
+          <div class="flex-items-center space-x-3">
+            <div class="py-4 w-full flex-center rounded-5" style="border: 1px solid #0000001A; flex-direction: column;">
+              <p class="caption-s grayscale-dark-gray mb-1">Điểm</p>
+              <div class="flex-items-center heading-h2 primary-green">
+                200
+                <img src="public/icons/star.svg" class="ml-2" width="24" height="24" alt="" />
+              </div>
+            </div>
+            <div class="py-4 w-full flex-center rounded-5" style="border: 1px solid #0000001A; flex-direction: column;">
+              <p class="caption-s grayscale-dark-gray  mb-1">Level</p>
+              <div class="flex-items-center heading-h2 secondary-blue">
+                3
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="button-s grayscale-dark-gray mb-5 flex-justify-center mb-2">Số buổi đã học</p>
+            <div class="progress">
+              <div class="progress-active"></div>
+              <div class="progress-content">50/69</div>
+            </div>
+          </div>
+          <div class="py-10 px-4">
+            <p class="button-s grayscale-dark-gray mb-5 flex-justify-center">Giáo viên</p>
+            <div class="flex-items-center" style="justify-content: space-between;">
+              <div class="flex-center" style="flex-direction: column">
+                <div class="avatar-bg">
+                  <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
+                  <p class="avatar-label bg-greenscale-light-green">Chính</p>
+                </div>
+                <p class="grayscale-dark-gray button-s mt-6">Tina</p>
+                <p class="grayscale-dark-gray button-s mt-3 body-xs"><strong>50</strong> buổi</p>
+              </div>
+              <div class="flex-center" style="flex-direction: column">
+                <div class="avatar-bg">
+                  <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
+                  <p class="avatar-label bg-greenscale-light-green">Chính</p>
+                </div>
+                <p class="grayscale-dark-gray button-s mt-6">Tina</p>
+                <p class="grayscale-dark-gray button-s mt-3 body-xs"><strong>50</strong> buổi</p>
+              </div>
+              <div class="flex-center" style="flex-direction: column">
+                <div class="avatar-bg">
+                  <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
+                  <p class="avatar-label bg-greenscale-light-green">Chính</p>
+                </div>
+                <p class="grayscale-dark-gray button-s mt-6">Tina</p>
+                <p class="grayscale-dark-gray button-s mt-3 body-xs"><strong>50</strong> buổi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+  <script>
+    // Slider dragging
+
+  </script>
+</body>
+
+</html>
