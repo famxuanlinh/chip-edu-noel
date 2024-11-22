@@ -11,6 +11,9 @@
 .p-1 {
   padding: 4px;
 }
+.p-1_5 {
+  padding: 6px;
+}
 
 .p-2 {
   padding: 8px;
@@ -1026,6 +1029,9 @@
   cursor: pointer;
 }
 
+.space-y-1> :not(:last-child) {
+  margin-bottom: 4px;
+}
 .space-y-2> :not(:last-child) {
   margin-bottom: 8px;
 }
@@ -1334,3 +1340,4 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+

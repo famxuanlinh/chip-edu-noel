@@ -12,10 +12,34 @@
   background: var(--Grayscale-White, #fff);
   padding: 0 16px;
   line-height: 100%; /* 36px */
+  color: #252525;
 
   @include maxw() {
     height: 54px;
   }
+
+  &:focus {
+    border-color: color.$primary-green !important;
+  }
+
+  ::placeholder {
+    color: color.$grayscale-dim-dark-40;
+    opacity: 405;
+    font-weight: 300;
+  }
+}
+
+.parent-input-form {
+  height: 60px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 16px;
+  border: 2px solid color.$grayscale-dim-dark-20;
+  background: var(--Grayscale-White, #fff);
+  padding: 0 16px;
+  line-height: 100%; /* 36px */
+  color: #252525;
 
   &:focus {
     border-color: color.$primary-green !important;

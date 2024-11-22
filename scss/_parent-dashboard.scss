@@ -59,26 +59,26 @@
   display: flex;
   &-left {
     flex: 1 1 0%;
-    zoom: 0.82;
+    // zoom: 0.82;
 
-    @include maxw {
-      zoom: 0.62;
-    }
+    // @include maxw {
+    //   zoom: 0.62;
+    // }
   }
   &-right {
     width: 560px;
     border-radius: 20px;
     padding: 20px;
     background-color: white;
-    zoom: 0.9;
+    // zoom: 0.9;
 
     &-content {
       padding: 20px;
     }
 
-    @include maxw {
-      zoom: 0.7;
-    }
+    // @include maxw {
+    //   zoom: 0.7;
+    // }
   }
 }
 
@@ -151,3 +151,10 @@
 //   box-sizing: border-box !important;
 //   width: 100% !important;
 // }
+
+
+.combo-input {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 40px;
+}

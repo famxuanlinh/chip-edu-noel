@@ -43,7 +43,6 @@
         align-items: center;
         height: 100%;
         color: color.$grayscale-dark-gray;
-
         &-active {
           @extend .project-header-tab-item;
           background-color: color.$primary-green;
