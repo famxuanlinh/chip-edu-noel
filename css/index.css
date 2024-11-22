@@ -195,6 +195,10 @@
   padding-right: 0;
 }
 
+.px-1 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
 .px-2 {
   padding-left: 8px;
   padding-right: 8px;
@@ -515,6 +519,9 @@
 .mt-8 {
   margin-top: 32px;
 }
+.mt-10 {
+  margin-top: 40px;
+}
 
 /* Margin bottom utilities */
 .mb-0 {
@@ -551,6 +558,9 @@
 
 .mb-8 {
   margin-bottom: 32px;
+}
+.mb-10 {
+  margin-bottom: 40px;
 }
 
 /* Add more classes as needed */

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+  <div class="layout">
+    <div class="layout-sidebar">
+      <a href="#" class="layout-sidebar-item grayscale-dark-gray">
+        <img height="32" width="32" src="public/icons/home.svg" alt="Trang chu">
+        <p class="button-m pt-1 ">Trang chủ</p>
+      </a>
+      <a href="/tong-quan.html" class="layout-sidebar-item grayscale-dark-gray">
+        <img height="32" width="32" src="public/icons/common.svg" alt="Trang chu">
+        <p class="button-s pt-1">Tổng quan</p>
+      </a>
+      <a href="/thong-tin-lop-hoc.html" class="layout-sidebar-item bg-primary-green drop-shadow-button-d grayscale-white">
+        <img height="32" width="32" src="public/icons/class.svg" alt="Trang chu">
+        <p class="button-s pt-1 ">Lớp học</p>
+      </a>
+      <a href="/tin-nhan.html" class="layout-sidebar-item grayscale-dark-gray">
+        <img height="32" width="32" src="public/icons/chat.svg" alt="Trang chu">
+        <p class="button-s pt-1">Tin nhắn</p>
+      </a>
+      <a href="/tien-trinh.html" class="layout-sidebar-item grayscale-dark-gray">
+        <img height="32" width="32" src="public/icons/process.svg" alt="Trang chu">
+        <p class="button-s pt-1">Tiến trình</p>
+      </a>
+      <a href="/goi-hoc.html" class="layout-sidebar-item grayscale-dark-gray">
+        <img height="32" width="32" src="public/icons/combo.svg" alt="Trang chu">
+        <p class="button-s pt-1">Gói học</p>
+      </a>
+      <a href="/chia-se.html" class="layout-sidebar-item grayscale-dark-gray">
+        <img height="32" width="32" src="public/icons/share.svg" alt="Trang chu">
+        <p class="button-s pt-1">Chia sẻ</p>
+      </a>
+      <a href="/tro-giup.html" class="layout-sidebar-item grayscale-dark-gray">
+        <img height="32" width="32" src="public/icons/support.svg" alt="Trang chu">
+        <p class="button-s pt-1">Trợ giúp</p>
+      </a>
+    </div>
+    <div class="layout-content parent-box parent-zoom flex-justify-center">
+      <!-- left content -->
+     <div class="w-full bg-grayscale-dim-dark-20" style="max-width: 1080px;">
+      <div class="space-y-5">
+        <div class="flex-items-center rounded-5 bg-grayscale-white p-1_5" style="height: 60px;">
+          <div
+            class="flex-center flex-1 h-full button-m grayscale-white rounded-4 bg-primary-green drop-shadow-button-d cursor-pointer"
+            id="tab-personal-projects" onclick="switchTab('personal-projects')">
+            Sắp diễn ra
+          </div>
+          <div id="tab-security-settings" onclick="switchTab('security-settings')"
+            class="flex-center flex-1 h-full button-m grayscale-black button-link-black cursor-pointer">
+            Đã hoàn thành
+          </div>
+        </div>
+
+        <!-- Profile content -->
+        <div id="personal-projects" class="space-y-5 tab-content">
+          tab 1
+        </div>
+
+        <!-- Security content -->
+        <div id="security-settings" class="flex-justify-center tab-content hidden" style="margin-top: 100px;">
+          tab 2
+
+        </div>
+      </div>
+     </div>
+
+
+    </div>
+
+
+
+   
+
+
+
+
+
+  </div>
+  </div>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+
+
+    function switchTab(tabId) {
+      // Xóa lớp active khỏi tất cả các tab
+      document.querySelectorAll('.tab-content').forEach((tab) => tab.classList.add('hidden'));
+      document.querySelectorAll('.flex-center').forEach((tabButton) => {
+        tabButton.classList.remove('bg-primary-green', 'grayscale-white', 'drop-shadow-button-d');
+        tabButton.classList.add('grayscale-black', 'button-link-black');
+      });
+
+      // Hiển thị tab được chọn
+      document.getElementById(tabId).classList.remove('hidden');
+
+      // Cập nhật nút tab
+      const activeTabButton =
+        tabId === 'personal-projects' ? 'tab-personal-projects' : 'tab-security-settings';
+      document.getElementById(activeTabButton).classList.add('bg-primary-green', 'grayscale-white', "drop-shadow-button-d", "rounded-4");
+      document.getElementById(activeTabButton).classList.remove('grayscale-black', 'button-link-black');
+    }
+
+    // Mặc định hiển thị tab đầu tiên
+    switchTab('personal-projects');
+    // Function to handle password visibility toggle
+    function togglePasswordVisibility(passwordFieldId) {
+      var passwordInput = document.getElementById(passwordFieldId);
+      var eyeIcon;
+
+      // Xác định icon tương ứng với trường mật khẩu
+      if (passwordFieldId === "old-password") {
+        eyeIcon = document.getElementById("eye-old-password");
+      } else if (passwordFieldId === "password") {
+        eyeIcon = document.getElementById("eye-password");
+      } else if (passwordFieldId === "password-confirm") {
+        eyeIcon = document.getElementById("eye-password-confirm");
+      }
+
+      // Kiểm tra và thay đổi trạng thái mật khẩu hiển thị hoặc ẩn
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.src = "public/icon/eye-slash.svg"; // Icon cho mật khẩu hiển thị
+      } else {
+        passwordInput.type = "password";
+        eyeIcon.src = "public/icon/eye.svg"; // Icon cho mật khẩu ẩn
+      }
+    }
+
+    // Function to handle form submission
+    document
+      .getElementById("forgotPasswordForm")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+        const password = this.password.value;
+        console.log("Data:", password);
+      });
+  </script>
+</body>
+
+</html>

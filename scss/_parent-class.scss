@@ -1,0 +1,18 @@
+@use "mixin" as *;
+@use "color";
+@use "effect";
+
+.comming-class {
+  overflow-y: auto;
+  max-height: calc(100vh - 140px);
+  padding-top: 40px;
+
+  @include maxw() {
+    max-height: calc(100vh - 106px);
+    padding-top: 28px;
+  }
+}
+
+#tab-coming-content::-webkit-scrollbar {
+  display: none;
+}

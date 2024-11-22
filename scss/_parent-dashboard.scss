@@ -1,5 +1,6 @@
 @use "mixin" as *;
 @use "color";
+@use "effect";
 
 .layout {
   background-color: #d8eddd;
@@ -17,6 +18,7 @@
 
     &-item {
       text-decoration: none !important;
+      color: color.$grayscale-dark-gray;
       cursor: pointer;
       display: flex;
       justify-content: center;
@@ -24,6 +26,19 @@
       flex-direction: column;
       width: 120px;
       height: 120px;
+
+      &:hover {
+        color: color.$grayscale-dark-gray;
+      }
+
+      &.active {
+        @extend .drop-shadow-button-d;
+        color: color.$grayscale-white;
+        background-color: color.$primary-green;
+        &:hover {
+          color: color.$grayscale-white;
+        }
+      }
     }
   }
 
