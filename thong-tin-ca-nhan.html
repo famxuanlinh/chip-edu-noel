@@ -50,244 +50,287 @@
     </div>
     <div class="layout-content parent-box space-x-5 parent-zoom">
       <!-- left content -->
-      <div class="flex-1">
+      <div class="flex-1 ">
         <div class="space-y-5">
           <div class="flex-items-center rounded-5 bg-grayscale-white p-1_5" style="height: 60px;">
             <div
-              class="flex-center flex-1 h-full button-m grayscale-white rounded-4  bg-primary-green drop-shadow-button-d">
+              class="flex-center flex-1 h-full button-m grayscale-white rounded-4 bg-primary-green drop-shadow-button-d cursor-pointer"
+              id="tab-personal-projects" onclick="switchTab('personal-projects')">
               Dự án cá nhân
             </div>
-            <div class="flex-center flex-1 button-m grayscale-black">
-              Thành tích
+            <div id="tab-security-settings" onclick="switchTab('security-settings')"
+              class="flex-center flex-1 h-full button-m grayscale-black button-link-black cursor-pointer">
+              Cài đặt bảo mật
             </div>
           </div>
-          <div class="combo-input pt-5">
-            <div>
-              <label class="button-s pl-5" for="name" style="color: #4D4D4D;">Họ và tên</label>
-              <input id="name" class="uk-input mt-1 parent-input-form grayscale-dark-gray" placeholder="Student’s Name"
-                aria-label="Input" name="name" required />
-            </div>
 
-            <div>
-              <label class="button-s pl-5" for="sex" style="color: #4D4D4D;">Giới tính</label>
-              <select id="sex" class="uk-select mt-1 parent-input-form" style="height: 60px;" aria-label="Select">
-                <option>Nam</option>
-                <option>Nữ</option>
-              </select>
-            </div>
-            <div>
-              <label class="button-s pl-5" for="birthday" style="color: #4D4D4D;">Ngày sinh</label>
-              <input id="birthday" class="uk-input mt-1 parent-input-form grayscale-dark-gray" type="date"
-                placeholder="Nhập ngày sinh" aria-label="Input" name="birthday" required />
-            </div>
-          </div>
-          <div class="combo-input">
-            <div>
-              <label class="button-s pl-5" for="phone" style="color: #4D4D4D;">Số điện thoại</label>
-              <input id="phone" class="uk-input mt-1 parent-input-form grayscale-dark-gray" placeholder="Nhập số điện thoại"
-                aria-label="Input" name="phone" required />
-            </div>
+          <!-- Profile content -->
+          <div id="personal-projects" class="space-y-5 tab-content">
+            <div class="combo-input pt-5">
+              <div>
+                <label class="button-s pl-5" for="name" style="color: #4D4D4D;">Họ và tên</label>
+                <input id="name" class="uk-input mt-1 parent-input-form grayscale-dark-gray"
+                  placeholder="Student’s Name" aria-label="Input" name="name" required />
+              </div>
 
-            <div>
-              <label class="button-s pl-5" for="mail" style="color: #4D4D4D;">Email</label>
-              <input id="mail" class="uk-input mt-1 parent-input-form grayscale-dark-gray" placeholder="Nhập email"
-                aria-label="Input" name="mail" required />
+              <div>
+                <label class="button-s pl-5" for="sex" style="color: #4D4D4D;">Giới tính</label>
+                <select id="sex" class="uk-select mt-1 parent-input-form" style="height: 60px;" aria-label="Select">
+                  <option>Nam</option>
+                  <option>Nữ</option>
+                </select>
+              </div>
+              <div>
+                <label class="button-s pl-5" for="birthday" style="color: #4D4D4D;">Ngày sinh</label>
+                <input id="birthday" class="uk-input mt-1 parent-input-form grayscale-dark-gray" type="date"
+                  placeholder="Nhập ngày sinh" aria-label="Input" name="birthday" required />
+              </div>
+            </div>
+            <div class="combo-input">
+              <div>
+                <label class="button-s pl-5" for="phone" style="color: #4D4D4D;">Số điện thoại</label>
+                <input id="phone" class="uk-input mt-1 parent-input-form grayscale-dark-gray"
+                  placeholder="Nhập số điện thoại" aria-label="Input" name="phone" required />
+              </div>
+
+              <div>
+                <label class="button-s pl-5" for="mail" style="color: #4D4D4D;">Email</label>
+                <input id="mail" class="uk-input mt-1 parent-input-form grayscale-dark-gray" placeholder="Nhập email"
+                  aria-label="Input" name="mail" required />
+              </div>
+              <div>
+                <label class="button-s pl-5" for="parent-name" style="color: #4D4D4D;">Phụ huynh</label>
+                <input id="parent-name" class="uk-input mt-1 parent-input-form grayscale-dark-gray"
+                  placeholder="Nhập tên phụ huynh" aria-label="Input" name="pảent-name" required />
+              </div>
+            </div>
+            <div class="flex space-x-5" style="align-items: end;">
+              <div style="width: 180px;">
+                <label class="button-s pl-5" for="address" style="color: #4D4D4D;">Địa chỉ</label>
+                <select id="address" class="uk-select mt-1 parent-input-form" style="height: 60px;" aria-label="Select">
+                  <option>Hà Nội</option>
+                  <option>HCM</option>
+                  <option>Đà Nẵng</option>
+                </select>
+              </div>
+              <div class="flex-1">
+                <input id="address-detail" class="uk-input mt-1 parent-input-form grayscale-dark-gray"
+                  placeholder="Số nhà, ngõ, đường, phường, quận" aria-label="Input" name="address-detail" required />
+              </div>
             </div>
             <div>
-              <label class="button-s pl-5" for="parent-name" style="color: #4D4D4D;">Phụ huynh</label>
-              <input id="parent-name" class="uk-input mt-1 parent-input-form grayscale-dark-gray"
-                placeholder="Nhập tên phụ huynh" aria-label="Input" name="pảent-name" required />
+              <label class="button-s pl-5" for="introduce" style="color: #4D4D4D;">Giới thiệu bản thân</label>
+              <input id="introduce" class="uk-input mt-1 parent-input-form grayscale-dark-gray" placeholder=""
+                aria-label="Input" name="introduce" required />
+            </div>
+            <div class="flex space-x-10">
+              <div class="flex-1">
+                <label class="button-s pl-5" for="plus" style="color: #4D4D4D;">Sở trường</label>
+                <input id="plus" class="uk-input mt-1 parent-input-form grayscale-dark-gray" placeholder=""
+                  aria-label="Input" name="plus" required />
+              </div>
+              <div class="flex-1">
+                <label class="button-s pl-5" for="hobby" style="color: #4D4D4D;">Sở thích</label>
+                <input id="hobby" class="uk-input mt-1 parent-input-form grayscale-dark-gray" placeholder=""
+                  aria-label="Input" name="hobby" required />
+              </div>
+            </div>
+            <div class="flex-justify-center">
+              <button class="btn grayscale-white bg-primary-green button-m" style="margin-top: 20px; width: 540px;">
+                Lưu thay đổi
+              </button>
             </div>
           </div>
-          <div class="flex space-x-5" style="align-items: end;">
-            <div style="width: 180px;">
-              <label class="button-s pl-5" for="address" style="color: #4D4D4D;">Địa chỉ</label>
-              <select id="address" class="uk-select mt-1 parent-input-form" style="height: 60px;" aria-label="Select">
-                <option>Hà Nội</option>
-                <option>HCM</option>
-                <option>Đà Nẵng</option>
-              </select>
-            </div>
-            <div class="flex-1">
-              <input id="address-detail" class="uk-input mt-1 parent-input-form grayscale-dark-gray"
-                placeholder="Số nhà, ngõ, đường, phường, quận" aria-label="Input" name="address-detail" required />
-            </div>
-          </div>
-          <div>
-            <label class="button-s pl-5" for="introduce" style="color: #4D4D4D;">Giới thiệu bản thân</label>
-            <input id="introduce" class="uk-input mt-1 parent-input-form grayscale-dark-gray" placeholder=""
-              aria-label="Input" name="introduce" required />
-          </div>
-          <div class="flex space-x-10">
-            <div class="flex-1">
-              <label class="button-s pl-5" for="plus" style="color: #4D4D4D;">Sở trường</label>
-              <input id="plus" class="uk-input mt-1 parent-input-form grayscale-dark-gray" placeholder=""
-                aria-label="Input" name="plus" required />
-            </div>
-            <div class="flex-1">
-              <label class="button-s pl-5" for="hobby" style="color: #4D4D4D;">Sở thích</label>
-              <input id="hobby" class="uk-input mt-1 parent-input-form grayscale-dark-gray" placeholder=""
-                aria-label="Input" name="hobby" required />
-            </div>
-          </div>
-          <div class="flex-justify-center">
-            <button
-            class="btn grayscale-white bg-primary-green button-m"
-            style="margin-top: 20px; width: 540px;"
-          >
-          Lưu thay đổi
-          </button>
+
+          <!-- Security content -->
+          <div id="security-settings" class="flex-justify-center tab-content hidden" style="margin-top: 100px;">
+            <form id="forgotPasswordForm" style="width: 540px;">
+              <div class="space-y-5">
+                <div class="uk-inline" style="width: 100%">
+                  <button class="uk-form-icon uk-form-icon-flip mr-6" style="background-color: transparent"
+                    type="button" onclick="togglePasswordVisibility('old-password')">
+                    <img id="eye-old-password" src="public/icon/eye.svg" width="24" alt="toggle password visibility"
+                      class="cursor-pointer" />
+                  </button>
+
+                  <input class="uk-input auth-input" type="password" placeholder="Mật khẩu cũ" aria-label="Input"
+                    name="old-password" id="old-password" required />
+                </div>
+                <div class="uk-inline" style="width: 100%">
+                  <button class="uk-form-icon uk-form-icon-flip mr-6" style="background-color: transparent"
+                    type="button" onclick="togglePasswordVisibility('password')">
+                    <img id="eye-password" src="public/icon/eye.svg" width="24" alt="toggle password visibility"
+                      class="cursor-pointer" />
+                  </button>
+
+                  <input class="uk-input auth-input" type="password" placeholder="Đặt mật khẩu mới" aria-label="Input"
+                    name="password" id="password" required />
+                </div>
+                <div class="uk-inline" style="width: 100%">
+                  <button class="uk-form-icon uk-form-icon-flip mr-6" style="background-color: transparent"
+                    type="button" onclick="togglePasswordVisibility('password-confirm')">
+                    <img id="eye-password-confirm" src="public/icon/eye.svg" width="24" alt="toggle password visibility"
+                      class="cursor-pointer" />
+                  </button>
+
+                  <input class="uk-input auth-input" type="password" placeholder="Nhập lại mật khẩu mới"
+                    aria-label="Input" name="password-confirm" id="password-confirm" required />
+                </div>
+              </div>
+              <div class="flex-justify-center">
+                <button class="btn grayscale-white bg-primary-green button-m" style="margin-top: 20px;">
+                  Đổi mật khẩu
+                </button>
+            </form>
+
           </div>
         </div>
       </div>
-
-
-
-      <!-- Right content -->
-      <div class="dashboard-right parent-box">
-        <div class="w-full flex-items-center" style="justify-content: end; cursor: pointer;">
-          <img height="32" width="32" src="public/icons/setting.svg" alt="Setting">
-        </div>
-        <div class="dashboard-right-content space-y-10">
-          <div class="flex-center" style="flex-direction: column">
-            <div class="flex-center">
-              <div class="avatar-bg" style="margin-right: -10px;">
-                <img class="rounded-full p-1" width="60" height="60" src="public/images/avatar1.png" alt="avatar" />
-              </div>
-              <div class="avatar-bg" style="z-index: 1;">
-                <img class="rounded-full p-1" width="100" height="100" src="public/images/avatar1.png" alt="avatar" />
-              </div>
-              <div class="avatar-bg" style="margin-left: -10px;">
-                <img class="rounded-full p-1" width="60" height="60" src="public/images/avatar1.png" alt="avatar" />
-              </div>
-            </div>
-            <p class="grayscale-dark-gray heading-h4 mt-4">Student’s Name</p>
-          </div>
-          <div class="flex-items-center space-x-3">
-            <div class="py-4 w-full flex-center rounded-5" style="border: 1px solid #0000001A; flex-direction: column;">
-              <p class="caption-s grayscale-dark-gray mb-1">Điểm</p>
-              <div class="flex-items-center heading-h2 primary-green">
-                200
-                <img src="public/icons/star.svg" class="ml-2" width="24" height="24" alt="" />
-              </div>
-            </div>
-            <div class="py-4 w-full flex-center rounded-5" style="border: 1px solid #0000001A; flex-direction: column;">
-              <p class="caption-s grayscale-dark-gray  mb-1">Level</p>
-              <div class="flex-items-center heading-h2 secondary-blue">
-                3
-              </div>
-            </div>
-          </div>
-          <div>
-            <p class="button-s grayscale-dark-gray mb-5 flex-justify-center mb-2">Số buổi đã học</p>
-            <div class="progress">
-              <div class="progress-active"></div>
-              <div class="progress-content">50/69</div>
-            </div>
-          </div>
-          <div class="py-10 px-4">
-            <p class="button-s grayscale-dark-gray mb-5 flex-justify-center">Giáo viên</p>
-            <div class="flex-items-center" style="justify-content: space-between;">
-              <div class="flex-center" style="flex-direction: column">
-                <div class="avatar-bg">
-                  <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
-                  <p class="avatar-label bg-greenscale-light-green">Chính</p>
-                </div>
-                <p class="grayscale-dark-gray button-s mt-6">Tina</p>
-                <p class="grayscale-dark-gray button-s mt-3 body-xs"><strong>50</strong> buổi</p>
-              </div>
-              <div class="flex-center" style="flex-direction: column">
-                <div class="avatar-bg">
-                  <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
-                  <p class="avatar-label bg-yellowscale-light-yellow">Phụ</p>
-                </div>
-                <p class="grayscale-dark-gray button-s mt-6">Tina</p>
-                <p class="grayscale-dark-gray button-s mt-3 body-xs"><strong>50</strong> buổi</p>
-              </div>
-              <div class="flex-center" style="flex-direction: column">
-                <div class="avatar-bg">
-                  <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
-                  <p class="avatar-label bg-yellowscale-light-yellow">Phụ</p>
-                </div>
-                <p class="grayscale-dark-gray button-s mt-6">Tina</p>
-                <p class="grayscale-dark-gray button-s mt-3 body-xs"><strong>50</strong> buổi</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
 
 
     </div>
+
+
+
+    <!-- Right content -->
+    <div class="dashboard-right parent-box">
+      <div class="w-full flex-items-center" style="justify-content: end; cursor: pointer;">
+        <img height="32" width="32" src="public/icons/setting.svg" alt="Setting">
+      </div>
+      <div class="dashboard-right-content space-y-10">
+        <div class="flex-center" style="flex-direction: column">
+          <div class="flex-center">
+            <div class="avatar-bg" style="margin-right: -10px;">
+              <img class="rounded-full p-1" width="60" height="60" src="public/images/avatar1.png" alt="avatar" />
+            </div>
+            <div class="avatar-bg" style="z-index: 1;">
+              <img class="rounded-full p-1" width="100" height="100" src="public/images/avatar1.png" alt="avatar" />
+            </div>
+            <div class="avatar-bg" style="margin-left: -10px;">
+              <img class="rounded-full p-1" width="60" height="60" src="public/images/avatar1.png" alt="avatar" />
+            </div>
+          </div>
+          <p class="grayscale-dark-gray heading-h4 mt-4">Student’s Name</p>
+        </div>
+        <div class="flex-items-center space-x-3">
+          <div class="py-4 w-full flex-center rounded-5" style="border: 1px solid #0000001A; flex-direction: column;">
+            <p class="caption-s grayscale-dark-gray mb-1">Điểm</p>
+            <div class="flex-items-center heading-h2 primary-green">
+              200
+              <img src="public/icons/star.svg" class="ml-2" width="24" height="24" alt="" />
+            </div>
+          </div>
+          <div class="py-4 w-full flex-center rounded-5" style="border: 1px solid #0000001A; flex-direction: column;">
+            <p class="caption-s grayscale-dark-gray  mb-1">Level</p>
+            <div class="flex-items-center heading-h2 secondary-blue">
+              3
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="button-s grayscale-dark-gray mb-5 flex-justify-center mb-2">Số buổi đã học</p>
+          <div class="progress">
+            <div class="progress-active"></div>
+            <div class="progress-content">50/69</div>
+          </div>
+        </div>
+        <div class="py-10 px-4">
+          <p class="button-s grayscale-dark-gray mb-5 flex-justify-center">Giáo viên</p>
+          <div class="flex-items-center" style="justify-content: space-between;">
+            <div class="flex-center" style="flex-direction: column">
+              <div class="avatar-bg">
+                <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
+                <p class="avatar-label bg-greenscale-light-green">Chính</p>
+              </div>
+              <p class="grayscale-dark-gray button-s mt-6">Tina</p>
+              <p class="grayscale-dark-gray button-s mt-3 body-xs"><strong>50</strong> buổi</p>
+            </div>
+            <div class="flex-center" style="flex-direction: column">
+              <div class="avatar-bg">
+                <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
+                <p class="avatar-label bg-yellowscale-light-yellow">Phụ</p>
+              </div>
+              <p class="grayscale-dark-gray button-s mt-6">Tina</p>
+              <p class="grayscale-dark-gray button-s mt-3 body-xs"><strong>50</strong> buổi</p>
+            </div>
+            <div class="flex-center" style="flex-direction: column">
+              <div class="avatar-bg">
+                <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
+                <p class="avatar-label bg-yellowscale-light-yellow">Phụ</p>
+              </div>
+              <p class="grayscale-dark-gray button-s mt-6">Tina</p>
+              <p class="grayscale-dark-gray button-s mt-3 body-xs"><strong>50</strong> buổi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
   </div>
   <!-- <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
-    // Get the canvas element
-    const ctx = document.getElementById('myBarChart').getContext('2d');
 
-    // Define the chart data
-    const data = {
-      labels: ['02/09', '06/09', '06/09', '06/09', '06/09', "06/09", "06/09"], // Labels for the X-axis
-      datasets: [{
-        label: 'Monthly Sales ($)',
-        data: [1, 2, 3, 2, 1, 2, 2], // Y-axis values
-        backgroundColor: [
-          '#FF9800',
 
-        ],
-        borderRadius: 8, // Rounded corners
-        borderSkipped: 'bottom',
-        barThickness: 20
-        // Border thickness
-      }]
-    };
+    function switchTab(tabId) {
+      // Xóa lớp active khỏi tất cả các tab
+      document.querySelectorAll('.tab-content').forEach((tab) => tab.classList.add('hidden'));
+      document.querySelectorAll('.flex-center').forEach((tabButton) => {
+        tabButton.classList.remove('bg-primary-green', 'grayscale-white', 'drop-shadow-button-d');
+        tabButton.classList.add('grayscale-black', 'button-link-black');
+      });
 
-    // Define the chart options
-    const options = {
-      responsive: true,
-      plugins: {
-        legend: {
-          display: false
-        }
-      },
-      scales: {
-        x: {
-          grid: {
-            drawOnChartArea: false, // Disable grid lines
-            drawBorder: false, // Disable axis line
-            drawTicks: false // Enable tick marks
-          },
-          ticks: {
-            display: true // Show tick labels
-          }
-        },
-        y: {
-          grid: {
-            drawOnChartArea: true, // Disable grid lines
-            drawBorder: false, // Disable axis line
-            drawTicks: false // Enable tick marks
-          },
-          ticks: {
-            stepSize: 1,
-            display: true // Show tick labels
-          }
-        }
+      // Hiển thị tab được chọn
+      document.getElementById(tabId).classList.remove('hidden');
+
+      // Cập nhật nút tab
+      const activeTabButton =
+        tabId === 'personal-projects' ? 'tab-personal-projects' : 'tab-security-settings';
+      document.getElementById(activeTabButton).classList.add('bg-primary-green', 'grayscale-white', "drop-shadow-button-d", "rounded-4");
+      document.getElementById(activeTabButton).classList.remove('grayscale-black', 'button-link-black');
+    }
+
+    // Mặc định hiển thị tab đầu tiên
+    switchTab('personal-projects');
+    // Function to handle password visibility toggle
+    function togglePasswordVisibility(passwordFieldId) {
+      var passwordInput = document.getElementById(passwordFieldId);
+      var eyeIcon;
+
+      // Xác định icon tương ứng với trường mật khẩu
+      if (passwordFieldId === "old-password") {
+        eyeIcon = document.getElementById("eye-old-password");
+      } else if (passwordFieldId === "password") {
+        eyeIcon = document.getElementById("eye-password");
+      } else if (passwordFieldId === "password-confirm") {
+        eyeIcon = document.getElementById("eye-password-confirm");
       }
-    };
 
-    // Create the chart
-    new Chart(ctx, {
-      type: 'bar', // Chart type
-      data: data,
-      options: options
-    });
+      // Kiểm tra và thay đổi trạng thái mật khẩu hiển thị hoặc ẩn
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.src = "public/icon/eye-slash.svg"; // Icon cho mật khẩu hiển thị
+      } else {
+        passwordInput.type = "password";
+        eyeIcon.src = "public/icon/eye.svg"; // Icon cho mật khẩu ẩn
+      }
+    }
+
+    // Function to handle form submission
+    document
+      .getElementById("forgotPasswordForm")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+        const password = this.password.value;
+        console.log("Data:", password);
+      });
   </script>
-
 </body>
 
 </html>

@@ -30,7 +30,7 @@ button {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 img {
@@ -394,6 +394,11 @@ p {
   color: #FFFFFF;
 }
 
+.button-link-black:hover {
+  text-decoration: none;
+  color: #252525;
+}
+
 .btn.disabled {
   background-color: #e5e5e5;
   color: rgba(0, 0, 0, 0.6);
@@ -496,6 +501,10 @@ p {
   .parent-zoom-1 {
     zoom: 0.63;
   }
+}
+
+.hidden {
+  display: none;
 }
 
 .class {

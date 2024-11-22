@@ -64,6 +64,12 @@
     color: color.$grayscale-white;
   }
 }
+.button-link-black {
+  &:hover {
+    text-decoration: none;
+    color: color.$grayscale-dark-gray;
+  }
+}
 
 .btn.disabled {
   background-color: #e5e5e5;
@@ -172,4 +178,8 @@
   @include maxw() {
     zoom: 0.63;
   }
+}
+
+.hidden {
+  display: none;
 }
