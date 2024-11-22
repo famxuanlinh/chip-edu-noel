@@ -1,0 +1,75 @@
+@use "mixin" as *;
+@use "color";
+
+.learning-progress {
+  max-width: 1410px;
+  width: 100%;
+  height: calc(100vh - 80px);
+
+  @include maxw() {
+    zoom: 0.78;
+  }
+
+  &-summary {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-gap: 16px;
+  }
+  &-activity {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-gap: 16px;
+    border: 1px solid #0000001a;
+
+    &-first {
+      grid-column: span 2 / span 2;
+    }
+  }
+}
+
+.teacher-stats {
+  .teacher-row {
+    display: flex;
+    align-items: center;
+
+    .teacher-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    .teacher-name {
+      color: var(--Grayscale-Dark-Gray, #252525);
+      text-align: start;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      width: 76px;
+      line-height: 100%; /* 18px */
+    }
+
+    .progress-bar {
+      flex: 1;
+      height: 40px;
+      //   background: #eee;
+      border-radius: 8px;
+      position: relative;
+
+      .bar {
+        height: 100%;
+        border-radius: 10px;
+        background: #ff9900;
+        width: calc(var(--bar-value) / 20 * 100%);
+        text-align: right;
+        padding-right: 8px;
+        font-size: 12px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

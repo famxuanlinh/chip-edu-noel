@@ -1270,7 +1270,6 @@ p {
   background-color: #d8eddd;
   display: flex;
   height: 100vh;
-  overflow: hidden;
 }
 .layout-sidebar {
   width: 120px;
@@ -1388,6 +1387,71 @@ p {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-gap: 16px;
+}
+
+.learning-progress {
+  max-width: 1410px;
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+@media screen and (max-width: 1600px) {
+  .learning-progress {
+    zoom: 0.78;
+  }
+}
+.learning-progress-summary {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-gap: 16px;
+}
+.learning-progress-activity {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-gap: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+.learning-progress-activity-first {
+  grid-column: span 2/span 2;
+}
+
+.teacher-stats .teacher-row {
+  display: flex;
+  align-items: center;
+}
+.teacher-stats .teacher-row .teacher-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.teacher-stats .teacher-row .teacher-name {
+  color: var(--Grayscale-Dark-Gray, #252525);
+  text-align: start;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  width: 76px;
+  line-height: 100%; /* 18px */
+}
+.teacher-stats .teacher-row .progress-bar {
+  flex: 1;
+  height: 40px;
+  border-radius: 8px;
+  position: relative;
+}
+.teacher-stats .teacher-row .progress-bar .bar {
+  height: 100%;
+  border-radius: 10px;
+  background: #ff9900;
+  width: calc(var(--bar-value) / 20 * 100%);
+  text-align: right;
+  padding-right: 8px;
+  font-size: 12px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 html {
