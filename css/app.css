@@ -1467,6 +1467,15 @@ p {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.image-teacher {
+  height: calc(119.0476190476vh - 476px);
+}
+@media screen and (max-width: 1600px) {
+  .image-teacher {
+    height: calc(153.8461538462vh - 476px);
+  }
+}
+
 .coming-class {
   overflow-y: auto;
   max-height: calc(100vh - 128px);
