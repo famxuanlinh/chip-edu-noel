@@ -143,6 +143,11 @@
 .uk-modal-dialog {
   width: 920px !important;
   height: calc(100vh - 80px);
+
+  &.parent-class {
+    width: 830px !important;
+    height: fit-content;
+  }
 }
 
 .uk-modal-body {

@@ -266,6 +266,11 @@ p {
   font-weight: 700;
 }
 
+.caption-xxs {
+  font-size: 14px;
+  font-weight: 700;
+}
+
 .text-40 {
   font-size: 40px;
   font-weight: 400;
@@ -1266,6 +1271,10 @@ p {
   width: 920px !important;
   height: calc(100vh - 80px);
 }
+.uk-modal-dialog.parent-class {
+  width: 830px !important;
+  height: fit-content;
+}
 
 .uk-modal-body {
   padding: 40px !important;
@@ -1459,6 +1468,48 @@ p {
 #tab-completed-content::-webkit-scrollbar,
 #tab-canceled-content::-webkit-scrollbar {
   display: none;
+}
+
+.teacher-image {
+  height: fit-content;
+  width: fit-content;
+  border-radius: 16px;
+  border: 2px solid transparent; /* Move the border to the img element */
+  transition: border-color 0.3s ease;
+}
+
+.teacher-image input[type=radio] {
+  display: none;
+}
+
+.teacher-image.active {
+  border-color: #00b26b; /* Apply the border color to the img */
+}
+
+.teacher-time {
+  background-color: #E5E5E5;
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: 24px;
+  width: 76px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+}
+.teacher-time.active {
+  background-color: #00b26b; /* Apply the border color to the img */
+  color: white;
+}
+.teacher-time input[type=radio] {
+  display: none;
+}
+
+.modal-link {
+  text-decoration: underline !important;
+}
+.modal-link:hover {
+  color: #00b26b;
 }
 
 .learning-progress {
