@@ -202,3 +202,19 @@
     height: calc(100vh / 0.65 - 476px);
   }
 }
+
+
+.certificate-wrapper-image {
+  height: calc(100vh - 260px);
+
+  @include maxw() {
+    height: calc(100vh - 152px);
+  }
+}
+
+.certificate-image {
+  aspect-ratio: 843/632;
+  object-fit: cover;
+  border-radius: 18px;
+  height: 100%;
+}

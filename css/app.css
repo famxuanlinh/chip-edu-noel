@@ -1486,6 +1486,22 @@ p {
   }
 }
 
+.certificate-wrapper-image {
+  height: calc(100vh - 260px);
+}
+@media screen and (max-width: 1600px) {
+  .certificate-wrapper-image {
+    height: calc(100vh - 152px);
+  }
+}
+
+.certificate-image {
+  aspect-ratio: 843/632;
+  object-fit: cover;
+  border-radius: 18px;
+  height: 100%;
+}
+
 .coming-class {
   overflow-y: auto;
   max-height: calc(100vh - 128px);
@@ -1626,24 +1642,24 @@ html {
 }
 
 /* Scrollbar */
-#project-done {
+#project-done, #certificate {
   overflow-x: auto;
   width: 100%;
 }
-#project-done::-webkit-scrollbar {
+#project-done::-webkit-scrollbar, #certificate::-webkit-scrollbar {
   height: 16px;
   width: 100%;
 }
 @media screen and (max-width: 1600px) {
-  #project-done::-webkit-scrollbar {
+  #project-done::-webkit-scrollbar, #certificate::-webkit-scrollbar {
     height: 14px;
   }
 }
-#project-done::-webkit-scrollbar-thumb {
+#project-done::-webkit-scrollbar-thumb, #certificate::-webkit-scrollbar-thumb {
   border-radius: 20px;
   background-color: #d8eddd;
 }
-#project-done::-webkit-scrollbar-track {
+#project-done::-webkit-scrollbar-track, #certificate::-webkit-scrollbar-track {
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.0509803922);
 }

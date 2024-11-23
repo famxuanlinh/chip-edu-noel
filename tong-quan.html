@@ -68,7 +68,7 @@
                   </button>
                 </div>
                 <div class="heading-h3 grayscale-dark-gray flex-justify-center">I can run</div>
-                <a href="#modal-giaovien" uk-toggle class="flex-center" style="flex-direction: column">
+                <a href="#modal-giao-vien" uk-toggle class="flex-center" style="flex-direction: column">
                   <div class="avatar-bg">
                     <img class=" rounded-full p-1" width="100" height="100" src="public/images/avatar1.png"
                       alt="avatar" />
@@ -248,7 +248,7 @@
     </div>
   </div>
 
-  <div id="modal-giaovien" class="uk-flex-top parent-zoom" uk-modal>
+  <div id="modal-giao-vien" class="uk-flex-top parent-zoom" uk-modal>
     <div class="level-modal uk-modal-dialog modal-teacher rounded-5 uk-modal-body uk-margin-auto-vertical">
       <div class="flex" style="justify-content: space-between">
         <a class="project-header-button" href="/"><img src="/public/icons/arrow-left.svg" alt="icon arrow" /></a>
@@ -419,7 +419,7 @@
             alt="avatar" />
         </div>
         <div class="space-x-5 flex-items-center">
-          <div class="rounded-5 flex-center" style="
+          <a href="#modal-chung-chi" uk-toggle class="rounded-5 flex-center" style="
               padding: 20px 14px 24px 14px;
               min-width: 240px;
               flex-direction: column;
@@ -431,7 +431,7 @@
             <div class="heading-h2 primary-green flex-items-center">TEFL
               <img class="ml-2" src="public/icons/image-green.svg" width="24" height="24" alt="images">
             </div>
-          </div>
+          </a>
           <div class="rounded-5 flex-center" style="
               padding: 20px 14px 24px 14px;
               min-width: 240px;
@@ -612,7 +612,7 @@
               <p class="body-s grayscale-dark-gray pt-2">Lorem ipsum dolor sit amet consectetu. Mi rhoncus nulla sit
                 tincidunt accumsan montes tellus scelerisque.</p>
             </div>
-           
+
           </div>
         </div>
       </div>
@@ -620,7 +620,26 @@
     </div>
   </div>
 
-  <div id="modal-chung-chi" class="uk-flex-top parent-zoom" uk-modal>ádasd</div>
+  <div id="modal-chung-chi" class="uk-flex-top" uk-modal>
+    <div class="level-modal uk-modal-dialog modal-teacher rounded-5 uk-modal-body uk-margin-auto-vertical">
+      <div class="flex" style="justify-content: space-between">
+        <a class="project-header-button" href="/"><img src="/public/icons/arrow-left.svg" alt="icon arrow" /></a>
+        <p class="heading-h2 grayscale-dark-gray">Chứng chỉ</p>
+        <button type="button" onclick="hideModal('modal-chung-chi')" class="rounded-full flex-justify-center"
+          style="background-color: transparent">
+          <img src="public/icons/x2.svg" width="40" height="40" />
+        </button>
+      </div>
+     
+      <!-- Body -->
+      <div id="certificate" class="flex-items-center space-x-10 certificate-wrapper-image mt-10"
+        style="padding-bottom: 14px">
+        <img src="public/images/project.jpeg" class="certificate-image" alt="image-upload" />
+        <img src="public/images/project.jpeg" class="certificate-image" alt="image-upload" />
+        <img src="public/images/project.jpeg" class="certificate-image" alt="image-upload" />
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
