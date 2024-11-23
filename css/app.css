@@ -1403,6 +1403,16 @@ p {
 .dashboard-right-content {
   padding: 20px;
 }
+.dashboard-feedback {
+  width: 1280px;
+  height: calc(100vh - 420px);
+  overflow-y: auto;
+}
+@media screen and (max-width: 1600px) {
+  .dashboard-feedback {
+    height: calc(100vh - 314px);
+  }
+}
 
 .progress {
   border-radius: 20px;

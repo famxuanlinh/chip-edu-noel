@@ -95,6 +95,16 @@
     //   zoom: 0.7;
     // }
   }
+
+  &-feedback {
+    width: 1280px;
+    height: calc(100vh - 420px);
+    overflow-y: auto;
+
+    @include maxw {
+      height: calc(100vh - 314px);
+    }
+  }
 }
 
 .progress {
@@ -185,11 +195,10 @@
   }
 }
 
-
 .image-teacher {
- height: calc(100vh / 0.84 - 476px);
+  height: calc(100vh / 0.84 - 476px);
 
- @include maxw() {
-  height: calc(100vh / 0.65 - 476px);
- }
+  @include maxw() {
+    height: calc(100vh / 0.65 - 476px);
+  }
 }
