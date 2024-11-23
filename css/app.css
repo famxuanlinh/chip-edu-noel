@@ -1275,6 +1275,11 @@ p {
   width: 830px !important;
   height: fit-content;
 }
+.uk-modal-dialog.modal-teacher {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+}
 
 .uk-modal-body {
   padding: 40px !important;
@@ -1450,6 +1455,16 @@ p {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-gap: 40px;
+}
+
+.avatar-rounded {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .coming-class {
