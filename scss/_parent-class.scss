@@ -2,9 +2,9 @@
 @use "color";
 @use "effect";
 
-.comming-class {
+.coming-class {
   overflow-y: auto;
-  max-height: calc(100vh - 140px);
+  max-height: calc(100vh - 128px);
   padding-top: 40px;
 
   @include maxw() {
@@ -13,6 +13,8 @@
   }
 }
 
-#tab-coming-content::-webkit-scrollbar {
+#tab-coming-content::-webkit-scrollbar,
+#tab-completed-content::-webkit-scrollbar,
+#tab-canceled-content::-webkit-scrollbar {
   display: none;
 }

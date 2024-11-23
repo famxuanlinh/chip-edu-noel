@@ -1443,19 +1443,21 @@ p {
   grid-gap: 40px;
 }
 
-.comming-class {
+.coming-class {
   overflow-y: auto;
-  max-height: calc(100vh - 140px);
+  max-height: calc(100vh - 128px);
   padding-top: 40px;
 }
 @media screen and (max-width: 1600px) {
-  .comming-class {
+  .coming-class {
     max-height: calc(100vh - 106px);
     padding-top: 28px;
   }
 }
 
-#tab-coming-content::-webkit-scrollbar {
+#tab-coming-content::-webkit-scrollbar,
+#tab-completed-content::-webkit-scrollbar,
+#tab-canceled-content::-webkit-scrollbar {
   display: none;
 }
 
