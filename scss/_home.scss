@@ -148,10 +148,14 @@
     width: 830px !important;
     height: fit-content;
   }
+  &.parent-recommend-friend {
+    width: 830px !important;
+    height: auto;
+  }
   &.modal-teacher {
     width: 100% !important;
     height: 100% !important;
-    margin:  0 !important;
+    margin: 0 !important;
   }
 }
 

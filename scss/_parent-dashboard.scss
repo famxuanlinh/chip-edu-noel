@@ -203,7 +203,6 @@
   }
 }
 
-
 .certificate-wrapper-image {
   height: calc(100vh - 260px);
 
@@ -217,4 +216,12 @@
   object-fit: cover;
   border-radius: 18px;
   height: 100%;
+}
+
+.image-share {
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  @include maxw() {
+    aspect-ratio: auto;
+  }
 }

@@ -13,6 +13,7 @@
 @use "parent-dashboard";
 @use "parent-class";
 @use "progress";
+@use "share";
 
 html {
   scroll-behavior: smooth;
@@ -29,7 +30,8 @@ html {
 }
 
 /* Scrollbar */
-#project-done, #certificate {
+#project-done,
+#certificate {
   overflow-x: auto; // Chỉ hiển thị thanh cuộn ngang khi nội dung rộng hơn phần tử
   width: 100%;
   // Tùy chỉnh thanh cuộn

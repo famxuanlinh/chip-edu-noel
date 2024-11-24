@@ -1,0 +1,27 @@
+@use "mixin" as *;
+@use "color";
+@use "effect";
+
+.parent-recommend-friend-content {
+  height: calc(100vh - 274px);
+  overflow-y: auto;
+  @include maxw() {
+    height: calc(100vh - 174px);
+  }
+}
+
+#parent-recommend-friend-content::-webkit-scrollbar {
+  display: none;
+}
+
+.recommend-history {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: middle;
+  justify-content: space-around;
+  &-item {
+    width: calc(50% - 20px);
+  }
+}
