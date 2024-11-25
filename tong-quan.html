@@ -251,7 +251,8 @@
   <div id="modal-giao-vien" class="uk-flex-top parent-zoom" uk-modal>
     <div class="level-modal uk-modal-dialog modal-teacher rounded-5 uk-modal-body uk-margin-auto-vertical">
       <div class="flex" style="justify-content: space-between">
-        <a class="project-header-button" href="/"><img src="/public/icons/arrow-left.svg" alt="icon arrow" /></a>
+        <!-- <a class="project-header-button" href="/"><img src="/public/icons/arrow-left.svg" alt="icon arrow" /></a> -->
+         <p></p>
         <p class="heading-h2 grayscale-dark-gray">Tina</p>
         <button type="button" onclick="hideModal('modal-giao-vien')" class="rounded-full flex-justify-center"
           style="background-color: transparent">
@@ -383,13 +384,13 @@
         </div>
       </div>
       <div class="space-x-5 mt-10 flex-center">
-        <a href="#modal-huy-lich-hoc" uk-toggle
+        <a 
           class="button-primary px-10 btn-animation flex-center bg-secondary-red px-5 grayscale-white button-m"
           style="height: 56px; color: #252525; background-color: #D8EDDD;">
           <img width="32" class="mr-3" height="32" src="public/icons/share-green.svg" alt="share">
           Chia sẻ
         </a>
-        <a href="#modal-doi-lich-hoc" uk-toggle
+        <a
           class="button-primary px-10 btn-animation flex-center bg-primary-green px-5 grayscale-white button-m"
           style="height: 56px; color: white; background-color: #00B26B;">
           <img width="32" class="mr-3" height="32" src="public/icons/message.svg" alt="share">
@@ -401,7 +402,7 @@
   <div id="modal-danh-gia" class="uk-flex-top" uk-modal>
     <div class="level-modal uk-modal-dialog modal-teacher rounded-5 uk-modal-body uk-margin-auto-vertical">
       <div class="flex" style="justify-content: space-between">
-        <a class="project-header-button" href="/"><img src="/public/icons/arrow-left.svg" alt="icon arrow" /></a>
+        <a  class="project-header-button" uk-toggle href="#modal-giao-vien"><img src="/public/icons/arrow-left.svg" alt="icon arrow" /></a>
         <p class="heading-h2 grayscale-dark-gray">Đánh giá</p>
         <button type="button" onclick="hideModal('modal-danh-gia')" class="rounded-full flex-justify-center"
           style="background-color: transparent">
@@ -623,7 +624,7 @@
   <div id="modal-chung-chi" class="uk-flex-top" uk-modal>
     <div class="level-modal uk-modal-dialog modal-teacher rounded-5 uk-modal-body uk-margin-auto-vertical">
       <div class="flex" style="justify-content: space-between">
-        <a class="project-header-button" href="/"><img src="/public/icons/arrow-left.svg" alt="icon arrow" /></a>
+        <a class="project-header-button" uk-toggle href="#modal-giao-vien"><img src="/public/icons/arrow-left.svg" alt="icon arrow" /></a>
         <p class="heading-h2 grayscale-dark-gray">Chứng chỉ</p>
         <button type="button" onclick="hideModal('modal-chung-chi')" class="rounded-full flex-justify-center"
           style="background-color: transparent">
