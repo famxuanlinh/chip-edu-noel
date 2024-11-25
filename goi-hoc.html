@@ -1,154 +1,1141 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css" />
-  <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="css/app.css" />
-</head>
+  <body>
+    <div class="layout">
+      <div class="layout-sidebar">
+        <a href="#" class="layout-sidebar-item">
+          <img
+            height="32"
+            width="32"
+            src="public/icons/home.svg"
+            alt="Trang chu"
+          />
+          <p class="button-m pt-1">Trang chủ</p>
+        </a>
+        <a href="/tong-quan.html" class="layout-sidebar-item">
+          <img
+            height="32"
+            width="32"
+            src="public/icons/common.svg"
+            alt="Trang chu"
+          />
+          <p class="button-s pt-1">Tổng quan</p>
+        </a>
+        <a href="/thong-tin-lop-hoc.html" class="layout-sidebar-item active">
+          <img
+            height="32"
+            width="32"
+            src="public/icons/class.svg"
+            alt="Trang chu"
+          />
+          <p class="button-s pt-1">Lớp học</p>
+        </a>
+        <a href="/tin-nhan.html" class="layout-sidebar-item">
+          <img
+            height="32"
+            width="32"
+            src="public/icons/chat.svg"
+            alt="Trang chu"
+          />
+          <p class="button-s pt-1">Tin nhắn</p>
+        </a>
+        <a href="/tien-trinh.html" class="layout-sidebar-item">
+          <img
+            height="32"
+            width="32"
+            src="public/icons/process.svg"
+            alt="Trang chu"
+          />
+          <p class="button-s pt-1">Tiến trình</p>
+        </a>
+        <a href="/goi-hoc.html" class="layout-sidebar-item">
+          <img
+            height="32"
+            width="32"
+            src="public/icons/combo.svg"
+            alt="Trang chu"
+          />
+          <p class="button-s pt-1">Gói học</p>
+        </a>
+        <a href="/chia-se.html" class="layout-sidebar-item">
+          <img
+            height="32"
+            width="32"
+            src="public/icons/share.svg"
+            alt="Trang chu"
+          />
+          <p class="button-s pt-1">Chia sẻ</p>
+        </a>
+        <a href="/tro-giup.html" class="layout-sidebar-item">
+          <img
+            height="32"
+            width="32"
+            src="public/icons/support.svg"
+            alt="Trang chu"
+          />
+          <p class="button-s pt-1">Trợ giúp</p>
+        </a>
+      </div>
+      <div class="layout-content parent-box flex-justify-center">
+        <!-- left content -->
+        <div class="w-full" style="max-width: 1080px">
+          <div>
+            <div
+              class="flex-items-center rounded-5 bg-grayscale-white p-1_5 parent-zoom"
+              style="height: 60px"
+            >
+              <div
+                class="flex-center flex-1 h-full button-m grayscale-white rounded-4 bg-primary-green drop-shadow-button-d cursor-pointer"
+                id="tab-coming"
+                onclick="switchTab('tab-coming-content')"
+              >
+                Mua gói học
+              </div>
+              <div
+                id="tab-completed"
+                onclick="switchTab('tab-completed-content')"
+                class="flex-center flex-1 h-full button-m grayscale-black button-link-black cursor-pointer"
+              >
+                Lịch sử thanh toán
+              </div>
+            </div>
 
-<body>
-  <div class="layout">
-    <div class="layout-sidebar">
-      <a href="#" class="layout-sidebar-item grayscale-dark-gray">
-        <img height="32" width="32" src="public/icons/home.svg" alt="Trang chu">
-        <p class="button-m pt-1 ">Trang chủ</p>
-      </a>
-      <a href="/tong-quan.html" class="layout-sidebar-item grayscale-dark-gray">
-        <img height="32" width="32" src="public/icons/common.svg" alt="Trang chu">
-        <p class="button-s pt-1">Tổng quan</p>
-      </a>
-      <a href="/thong-tin-lop-hoc.html" class="layout-sidebar-item bg-primary-green drop-shadow-button-d grayscale-white">
-        <img height="32" width="32" src="public/icons/class.svg" alt="Trang chu">
-        <p class="button-s pt-1 ">Lớp học</p>
-      </a>
-      <a href="/tin-nhan.html" class="layout-sidebar-item grayscale-dark-gray">
-        <img height="32" width="32" src="public/icons/chat.svg" alt="Trang chu">
-        <p class="button-s pt-1">Tin nhắn</p>
-      </a>
-      <a href="/tien-trinh.html" class="layout-sidebar-item grayscale-dark-gray">
-        <img height="32" width="32" src="public/icons/process.svg" alt="Trang chu">
-        <p class="button-s pt-1">Tiến trình</p>
-      </a>
-      <a href="/goi-hoc.html" class="layout-sidebar-item grayscale-dark-gray">
-        <img height="32" width="32" src="public/icons/combo.svg" alt="Trang chu">
-        <p class="button-s pt-1">Gói học</p>
-      </a>
-      <a href="/chia-se.html" class="layout-sidebar-item grayscale-dark-gray">
-        <img height="32" width="32" src="public/icons/share.svg" alt="Trang chu">
-        <p class="button-s pt-1">Chia sẻ</p>
-      </a>
-      <a href="/tro-giup.html" class="layout-sidebar-item grayscale-dark-gray">
-        <img height="32" width="32" src="public/icons/support.svg" alt="Trang chu">
-        <p class="button-s pt-1">Trợ giúp</p>
-      </a>
-    </div>
-    <div class="layout-content parent-box parent-zoom flex-justify-center">
-      <!-- left content -->
-     <div class="w-full bg-grayscale-dim-dark-20" style="max-width: 1080px;">
-      <div class="space-y-5">
-        <div class="flex-items-center rounded-5 bg-grayscale-white p-1_5" style="height: 60px;">
-          <div
-            class="flex-center flex-1 h-full button-m grayscale-white rounded-4 bg-primary-green drop-shadow-button-d cursor-pointer"
-            id="tab-personal-projects" onclick="switchTab('personal-projects')">
-            Sắp diễn ra
+            <!-- Giới thiệu bạn mới và đăng ký hộ bạn bè -->
+            <div
+              id="tab-coming-content"
+              class="h-full tab-content parent-zoom grayscale-dark-gray"
+            >
+              <!-- Giới thiệu bạn mới -->
+              <div
+                id="chon-goi-hoc"
+                style="display: block"
+                class="rounded-5 grayscale-dark-gray"
+              >
+                <h4
+                  class="heading-h4 grayscale-dark-gray mb-3 mt-10"
+                  style="text-align: center"
+                >
+                  Chọn gói học
+                </h4>
+
+                <div class="study-package my-10">
+                  <div
+                    class="study-package-item active flex-items-center space-x-10 p-3 rounded-5 bg-grayscale-white"
+                  >
+                    <div
+                      class="rounded-4 h-full flex-center"
+                      style="
+                        border: 1px solid #0000001a;
+                        flex-direction: column;
+                        width: 200px;
+                      "
+                    >
+                      <p class="heading-h1 primary-green">30</p>
+                      <p class="caption-s">buổi</p>
+                    </div>
+                    <div class="grayscale-dark-gray flex-1">
+                      <div class="space-y-2 pl-9">
+                        <div class="flex-items-center space-x-2">
+                          <img
+                            src="public/icons/calendar-color.svg"
+                            width="24"
+                            height="24"
+                            alt="calendar"
+                          />
+                          <p class="body-m">
+                            Thời gian
+                            <span class="button-m primary-green">6</span> tháng
+                          </p>
+                        </div>
+                        <div class="flex-items-center space-x-2">
+                          <img
+                            src="public/icons/support-color.svg"
+                            width="24"
+                            height="24"
+                            alt="calendar"
+                          />
+                          <p class="body-m">
+                            Bù lỗi kỹ thuật
+                            <span class="button-m primary-green">2</span> buổi
+                          </p>
+                        </div>
+                      </div>
+                      <hr
+                        style="
+                          border: 1px dashed #0000001a;
+                          margin: 30px 0 20px 0;
+                        "
+                      />
+                      <div class="space-y-2 text-center">
+                        <p class="heading-h3">4,700,000đ</p>
+                        <p class="body-xs">190,000đ/buổi</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="study-package-item flex-items-center space-x-10 p-3 rounded-5 bg-grayscale-white"
+                  >
+                    <div
+                      class="rounded-4 h-full flex-center uk-position-relative"
+                      style="
+                        border: 1px solid #0000001a;
+                        flex-direction: column;
+                        width: 200px;
+                      "
+                    >
+                      <p class="heading-h1 secondary-blue">60</p>
+                      <p class="caption-s">buổi</p>
+                      <div
+                        class="bg-greenscale-light-green caption-xs grayscale-dark-gray px-5 flex-center uk-position-bottom-center"
+                        style="
+                          border-radius: 20px 20px 0px 0px;
+                          height: 34px;
+                          line-height: 1;
+                        "
+                      >
+                        Tiết kiệm 28%
+                      </div>
+                    </div>
+                    <div class="grayscale-dark-gray flex-1">
+                      <div class="space-y-2 pl-9">
+                        <div class="flex-items-center space-x-2">
+                          <img
+                            src="public/icons/calendar-color.svg"
+                            width="24"
+                            height="24"
+                            alt="calendar"
+                          />
+                          <p class="body-m">
+                            Thời gian
+                            <span class="button-m primary-green">6</span> tháng
+                          </p>
+                        </div>
+                        <div class="flex-items-center space-x-2">
+                          <img
+                            src="public/icons/support-color.svg"
+                            width="24"
+                            height="24"
+                            alt="calendar"
+                          />
+                          <p class="body-m">
+                            Bù lỗi kỹ thuật
+                            <span class="button-m primary-green">2</span> buổi
+                          </p>
+                        </div>
+                      </div>
+                      <hr
+                        style="
+                          border: 1px dashed #0000001a;
+                          margin: 30px 0 20px 0;
+                        "
+                      />
+                      <div class="space-y-2 text-center">
+                        <p class="heading-h3">8,300,000đ</p>
+                        <p class="body-xs">138,000đ/buổi</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="study-package-item flex-items-center space-x-10 p-3 rounded-5 bg-grayscale-white"
+                  >
+                    <div
+                      class="rounded-4 h-full flex-center uk-position-relative"
+                      style="
+                        border: 1px solid #0000001a;
+                        flex-direction: column;
+                        width: 200px;
+                      "
+                    >
+                      <p class="heading-h1 primary-yellow">120</p>
+                      <p class="caption-s">buổi</p>
+                      <div
+                        class="bg-greenscale-light-green caption-xs grayscale-dark-gray px-5 flex-center uk-position-bottom-center"
+                        style="
+                          border-radius: 20px 20px 0px 0px;
+                          height: 34px;
+                          line-height: 1;
+                        "
+                      >
+                        Tiết kiệm 28%
+                      </div>
+                    </div>
+                    <div class="grayscale-dark-gray flex-1">
+                      <div class="space-y-2 pl-9">
+                        <div class="flex-items-center space-x-2">
+                          <img
+                            src="public/icons/calendar-color.svg"
+                            width="24"
+                            height="24"
+                            alt="calendar"
+                          />
+                          <p class="body-m">
+                            Thời gian
+                            <span class="button-m primary-green">6</span> tháng
+                          </p>
+                        </div>
+                        <div class="flex-items-center space-x-2">
+                          <img
+                            src="public/icons/support-color.svg"
+                            width="24"
+                            height="24"
+                            alt="calendar"
+                          />
+                          <p class="body-m">
+                            Bù lỗi kỹ thuật
+                            <span class="button-m primary-green">2</span> buổi
+                          </p>
+                        </div>
+                      </div>
+                      <hr
+                        style="
+                          border: 1px dashed #0000001a;
+                          margin: 30px 0 20px 0;
+                        "
+                      />
+                      <div class="space-y-2 text-center">
+                        <p class="heading-h3">15,200,000đ</p>
+                        <p class="body-xs">126,000đ/buổi</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="study-package-item flex-items-center space-x-10 p-3 rounded-5 bg-grayscale-white"
+                  >
+                    <div
+                      class="rounded-4 h-full flex-center uk-position-relative"
+                      style="
+                        border: 1px solid #0000001a;
+                        flex-direction: column;
+                        width: 200px;
+                      "
+                    >
+                      <p class="heading-h1 secondary-red">240</p>
+                      <p class="caption-s">buổi</p>
+                      <div
+                        class="bg-greenscale-light-green caption-xs grayscale-dark-gray px-5 flex-center uk-position-bottom-center"
+                        style="
+                          border-radius: 20px 20px 0px 0px;
+                          height: 34px;
+                          line-height: 1;
+                        "
+                      >
+                        Tiết kiệm 28%
+                      </div>
+                    </div>
+                    <div class="grayscale-dark-gray flex-1">
+                      <div class="space-y-2 pl-9">
+                        <div class="flex-items-center space-x-2">
+                          <img
+                            src="public/icons/calendar-color.svg"
+                            width="24"
+                            height="24"
+                            alt="calendar"
+                          />
+                          <p class="body-m">
+                            Thời gian
+                            <span class="button-m primary-green">6</span> tháng
+                          </p>
+                        </div>
+                        <div class="flex-items-center space-x-2">
+                          <img
+                            src="public/icons/support-color.svg"
+                            width="24"
+                            height="24"
+                            alt="calendar"
+                          />
+                          <p class="body-m">
+                            Bù lỗi kỹ thuật
+                            <span class="button-m primary-green">2</span> buổi
+                          </p>
+                        </div>
+                      </div>
+                      <hr
+                        style="
+                          border: 1px dashed #0000001a;
+                          margin: 30px 0 20px 0;
+                        "
+                      />
+                      <div class="space-y-2 text-center">
+                        <p class="heading-h3">27,900,000đ</p>
+                        <p class="body-xs">116,000đ/buổi</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-center body-m">
+                  Chip Chip khuyến nghị học sinh học từ
+                  <span class="button-m">2 buổi/tuần</span> trở lên để đảm bảo
+                  hiệu quả.
+                </p>
+                <div class="flex-justify-center pay-button">
+                  <button
+                    onclick="togglePaymentProcess('chon-goi-hoc')"
+                    class="btn grayscale-white bg-primary-green button-l"
+                    style="width: 540px"
+                  >
+                    Thanh toán
+                  </button>
+                </div>
+              </div>
+
+              <!-- Phương thức thanh toán -->
+              <div
+                id="phuong-thuc-thanh-toan"
+                style="display: none"
+                class="rounded-5 modal-custom grayscale-dark-gray space-y-10"
+              >
+                <h4
+                  class="heading-h4 grayscale-dark-gray mt-10"
+                  style="text-align: center"
+                >
+                  Phương thức thanh toán
+                </h4>
+
+                <div class="space-x-10" style="display: flex">
+                  <div
+                    class="flex-1 flex"
+                    style="
+                      flex-direction: column;
+                      justify-content: space-between;
+                    "
+                  >
+                    <div class="space-y-5">
+                      <div
+                        style="min-height: 240px"
+                        class="flex-items-center space-x-10 p-3 rounded-5 bg-grayscale-white"
+                      >
+                        <div
+                          class="rounded-4 h-full flex-center uk-position-relative"
+                          style="
+                            border: 1px solid #0000001a;
+                            flex-direction: column;
+                            width: 200px;
+                            min-height: 216px;
+                          "
+                        >
+                          <p class="heading-h1 secondary-blue">60</p>
+                          <p class="caption-s">buổi</p>
+                          <div
+                            class="bg-greenscale-light-green caption-xs grayscale-dark-gray px-5 flex-center uk-position-bottom-center"
+                            style="
+                              border-radius: 20px 20px 0px 0px;
+                              height: 34px;
+                              line-height: 1;
+                            "
+                          >
+                            Tiết kiệm 28%
+                          </div>
+                        </div>
+                        <div class="grayscale-dark-gray flex-1">
+                          <div class="space-y-2 pl-9">
+                            <div class="flex-items-center space-x-2">
+                              <img
+                                src="public/icons/calendar-color.svg"
+                                width="24"
+                                height="24"
+                                alt="calendar"
+                              />
+                              <p class="body-m">
+                                Thời gian
+                                <span class="button-m primary-green">6</span>
+                                tháng
+                              </p>
+                            </div>
+                            <div class="flex-items-center space-x-2">
+                              <img
+                                src="public/icons/support-color.svg"
+                                width="24"
+                                height="24"
+                                alt="calendar"
+                              />
+                              <p class="body-m">
+                                Bù lỗi kỹ thuật
+                                <span class="button-m primary-green">2</span>
+                                buổi
+                              </p>
+                            </div>
+                          </div>
+                          <hr
+                            style="
+                              border: 1px dashed #0000001a;
+                              margin: 30px 0 20px 0;
+                            "
+                          />
+                          <div class="space-y-2 text-center">
+                            <p class="heading-h3">8,300,000đ</p>
+                            <p class="body-xs">138,000đ/buổi</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="flex-items-center"
+                        style="justify-content: space-between"
+                      >
+                        <div class="flex-items-center space-x-2">
+                          <input
+                            type="radio"
+                            id="transfer"
+                            checked
+                            name="fav_language"
+                            class="custom-radio"
+                            value="transfer"
+                          />
+                          <label
+                            for="transfer"
+                            class="flex-items-center button-s"
+                          >
+                            <img
+                              src="public/icons/transfer.svg"
+                              alt=""
+                              width="40"
+                              height="40"
+                              class="mr-2"
+                            />Chuyển khoản
+                          </label>
+                        </div>
+                        <div class="flex-items-center space-x-2">
+                          <input
+                            type="radio"
+                            id="credit-card"
+                            name="fav_language"
+                            class="custom-radio"
+                            value="credit-card"
+                          />
+                          <label
+                            for="credit-card"
+                            class="flex-items-center button-s"
+                          >
+                            <img
+                              src="public/icons/credit-card.svg"
+                              alt=""
+                              width="40"
+                              height="40"
+                              class="mr-2"
+                            />Thanh toán thẻ
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex-justify-center grayscale-dark-gray body-m mt-5"
+                    >
+                      Bạn cần hỗ trợ về quá trình thanh toán?
+                      <a href="#" class="modal-link ml-1 primary-green button-m"
+                        >Yêu cầu hỗ trợ</a
+                      >
+                    </div>
+                  </div>
+                  <div class="flex-1 bg-grayscale-white parent-box space-y-4">
+                    <div class="flex-center space-x-10">
+                      <div class="flex-items-center space-x-2">
+                        <input
+                          type="radio"
+                          checked
+                          id="radio-viettin"
+                          name="bank"
+                          class="custom-radio"
+                          value="vietinbank"
+                        />
+                        <label
+                          for="radio-viettin"
+                          class="flex-items-center button-s"
+                        >
+                          <img
+                            src="public/icons/transfer.svg"
+                            alt=""
+                            width="40"
+                            height="40"
+                            class="mr-2"
+                          />Vietinbank
+                        </label>
+                      </div>
+                      <div class="flex-items-center space-x-2">
+                        <input
+                          type="radio"
+                          id="radio-techcom"
+                          name="bank"
+                          class="custom-radio"
+                          value="techcombank"
+                        />
+                        <label
+                          for="radio-techcom"
+                          class="flex-items-center button-s"
+                        >
+                          <img
+                            src="public/icons/credit-card.svg"
+                            alt=""
+                            width="40"
+                            height="40"
+                            class="mr-2"
+                          />Techcombank thẻ
+                        </label>
+                      </div>
+                    </div>
+                    <p class="button-m text-center">Thông tin chuyển khoản</p>
+
+                    <div>
+                      <!-- Viettin bank -->
+                      <div
+                        style="display: block"
+                        class="space-y-10 bank-info viettin-info"
+                      >
+                        <div class="flex-justify-center">
+                          <img
+                            src="public/images/qr-code.png"
+                            alt=""
+                            width="200"
+                            height="40"
+                            class="mr-2"
+                          />
+                        </div>
+                        <div class="pl-10 space-y-1">
+                          <div class="body-s leading-8">
+                            Ngân hàng:
+                            <span class="button-s ml-2">Vietinbank</span>
+                          </div>
+                          <div class="body-s leading-8">
+                            Số tài khoản:
+                            <span class="button-s mx-2">109878726737</span>
+                            <button
+                              class=""
+                              onclick="copyToClipBoard('109878726737')"
+                            >
+                              <img
+                                width="16"
+                                height="16"
+                                src="public/icons/copy-gray.svg"
+                                alt="copy"
+                              />
+                            </button>
+                          </div>
+                          <div class="body-s leading-8">
+                            Chủ tài khoản:
+                            <span class="button-s ml-2">Tran Thi Thao</span>
+                          </div>
+                          <div class="body-s leading-8">
+                            Số tiền:
+                            <span class="button-s mx-2">27,900,000đ</span>
+                            <button
+                              class=""
+                              onclick="copyToClipBoard('27900000')"
+                            >
+                              <img
+                                width="16"
+                                height="16"
+                                src="public/icons/copy-gray.svg"
+                                alt="copy"
+                              />
+                            </button>
+                          </div>
+                          <div class="body-s leading-8">
+                            Chi nhánh:
+                            <span class="button-s ml-2">Đống Đa</span>
+                          </div>
+                          <div class="body-s leading-8">
+                            Nội dung:
+                            <span class="button-s mx-2"
+                              >12122024-9939 gia han</span
+                            >
+                            <button
+                              class=""
+                              onclick="copyToClipBoard('12122024-9939 gia han')"
+                            >
+                              <img
+                                width="16"
+                                height="16"
+                                src="public/icons/copy-gray.svg"
+                                alt="copy"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Techcom -->
+                      <div
+                        style="display: none"
+                        class="space-y-10 bank-info techcom-info"
+                      >
+                        <div class="flex-justify-center">
+                          <img
+                            src="public/images/qr-code.png"
+                            alt=""
+                            width="200"
+                            height="40"
+                            class="mr-2"
+                          />
+                        </div>
+                        <div class="pl-10 space-y-1">
+                          <div class="body-s leading-8">
+                            Ngân hàng:
+                            <span class="button-s ml-2">Techcombank</span>
+                          </div>
+                          <div class="body-s leading-8">
+                            Số tài khoản:
+                            <span class="button-s mx-2">109878726737</span>
+                            <button
+                              class=""
+                              onclick="copyToClipBoard('109878726737')"
+                            >
+                              <img
+                                width="16"
+                                height="16"
+                                src="public/icons/copy-gray.svg"
+                                alt="copy"
+                              />
+                            </button>
+                          </div>
+                          <div class="body-s leading-8">
+                            Chủ tài khoản:
+                            <span class="button-s ml-2">Tran Thi Thao</span>
+                          </div>
+                          <div class="body-s leading-8">
+                            Số tiền:
+                            <span class="button-s mx-2">27,900,000đ</span>
+                            <button
+                              class=""
+                              onclick="copyToClipBoard('27900000')"
+                            >
+                              <img
+                                width="16"
+                                height="16"
+                                src="public/icons/copy-gray.svg"
+                                alt="copy"
+                              />
+                            </button>
+                          </div>
+                          <div class="body-s leading-8">
+                            Chi nhánh:
+                            <span class="button-s ml-2">Đống Đa</span>
+                          </div>
+                          <div class="body-s leading-8">
+                            Nội dung:
+                            <span class="button-s mx-2"
+                              >12122024-9939 gia han</span
+                            >
+                            <button
+                              class=""
+                              onclick="copyToClipBoard('12122024-9939 gia han')"
+                            >
+                              <img
+                                width="16"
+                                height="16"
+                                src="public/icons/copy-gray.svg"
+                                alt="copy"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-justify-center pay-button space-x-10">
+                  <button
+                    onclick="togglePaymentProcess('phuong-thuc-thanh-toan', true)"
+                    class="btn grayscale-dark-gray bg-greenscale-light-green button-l"
+                    style="width: 395px"
+                  >
+                    Quay lại
+                  </button>
+                  <button
+                    onclick="togglePaymentProcess('phuong-thuc-thanh-toan')"
+                    class="btn grayscale-white bg-primary-green button-l"
+                    style="width: 395px"
+                  >
+                    Thanh toán
+                  </button>
+                </div>
+              </div>
+
+              <!-- Thanh toán thành công -->
+              <div
+                id="thanh-toan-thanh-cong"
+                style="display: none; height: 100vh"
+                class="rounded-5 modal-custom grayscale-dark-gray"
+              >
+                <div
+                  class="flex-center space-y-10 h-full"
+                  style="flex-direction: column"
+                >
+                  <div
+                    style="min-height: 240px"
+                    class="flex-items-center space-x-10 p-3 rounded-5 bg-grayscale-white"
+                  >
+                    <div
+                      class="rounded-4 h-full flex-center uk-position-relative"
+                      style="
+                        border: 1px solid #0000001a;
+                        flex-direction: column;
+                        width: 200px;
+                        min-height: 216px;
+                      "
+                    >
+                      <p class="heading-h1 secondary-blue">60</p>
+                      <p class="caption-s">buổi</p>
+                      <div
+                        class="bg-greenscale-light-green caption-xs grayscale-dark-gray px-5 flex-center uk-position-bottom-center"
+                        style="
+                          border-radius: 20px 20px 0px 0px;
+                          height: 34px;
+                          line-height: 1;
+                        "
+                      >
+                        Tiết kiệm 28%
+                      </div>
+                    </div>
+                    <div class="grayscale-dark-gray flex-1">
+                      <div class="space-y-2 pl-9">
+                        <div class="flex-items-center space-x-2">
+                          <img
+                            src="public/icons/calendar-color.svg"
+                            width="24"
+                            height="24"
+                            alt="calendar"
+                          />
+                          <p class="body-m">
+                            Thời gian
+                            <span class="button-m primary-green">6</span> tháng
+                          </p>
+                        </div>
+                        <div class="flex-items-center space-x-2">
+                          <img
+                            src="public/icons/support-color.svg"
+                            width="24"
+                            height="24"
+                            alt="calendar"
+                          />
+                          <p class="body-m">
+                            Bù lỗi kỹ thuật
+                            <span class="button-m primary-green">2</span> buổi
+                          </p>
+                        </div>
+                      </div>
+                      <hr
+                        style="
+                          border: 1px dashed #0000001a;
+                          margin: 30px 0 20px 0;
+                        "
+                      />
+                      <div class="space-y-2 text-center">
+                        <p class="heading-h3">8,300,000đ</p>
+                        <p class="body-xs">138,000đ/buổi</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="space-y-3">
+                    <p class="heading-h2 primary-green text-center">
+                      Thanh toán thành công!
+                    </p>
+                    <p class="body-m text-center">
+                      Cảm ơn ba mẹ. ChipChip sẽ kiểm tra khoản thanh toán và
+                      liên hệ lại trong thời gian sớm nhất.
+                    </p>
+                  </div>
+                  <div class="flex-justify-center">
+                    <button
+                      onclick="togglePaymentProcess('thanh-toan-thanh-cong')"
+                      class="btn grayscale-white bg-primary-green button-l"
+                      style="margin: 40px 0; width: 540px"
+                    >
+                      Xác nhận
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab lịch sử thanh toán -->
+            <div
+              id="tab-completed-content"
+              class="coming-class h-full tab-content hidden grayscale-dark-gray"
+            >
+              <div class="space-y-10 parent-zoom space-y-10">
+                <p class="heading-h4 grayscale-dark-gray flex-justify-center">
+                  Lịch sử thanh toán
+                </p>
+                <div class="space-y-7">
+                  <div class="payment-card">
+                    <div
+                      class="rounded-4 h-full flex-center"
+                      style="
+                        border: 1px solid #0000001a;
+                        flex-direction: column;
+                        height: 104px;
+                      "
+                    >
+                      <p class="heading-h2 primary-green">30</p>
+                      <p class="caption-s">buổi</p>
+                    </div>
+                    <div class="space-y-2 flex-justify-center" style="flex-direction: column; margin-left: -20px;">
+                      <p class="body-s">Ngày thanh toán</p>
+                      <p class="button-m">01/02/2024</p>
+                    </div>
+                    <div class="space-y-2 flex-justify-center" style="flex-direction: column;">
+                      <p class="body-s">Ngày đến hạn</p>
+                      <p class="button-m">01/02/2024</p>
+                    </div>
+                    <div class="space-y-2 flex-center" style="flex-direction: column;">
+                      <p class="body-s">Trạng thái</p>
+                      <p class="button-m flex-center rounded-6 bg-greenscale-light-green" style="height: 36px; width: 100%;">Chưa học</p>
+                    </div>
+                    <div class="space-y-2 flex-center" style="flex-direction: column;">
+                      <p class="heading-h4">4,700,000đ</p>
+                      <p class="button-s" style="color: #00000066;">190,000đ/buổi</p>
+                    </div>
+                  </div>
+                  <div class="payment-card">
+                    <div
+                      class="rounded-4 h-full flex-center"
+                      style="
+                        border: 1px solid #0000001a;
+                        flex-direction: column;
+                        height: 104px;
+                      "
+                    >
+                      <p class="heading-h2 secondary-red">240</p>
+                      <p class="caption-s">buổi</p>
+                    </div>
+                    <div class="space-y-2 flex-justify-center" style="flex-direction: column; margin-left: -20px;">
+                      <p class="body-s">Ngày thanh toán</p>
+                      <p class="button-m">01/02/2024</p>
+                    </div>
+                    <div class="space-y-2 flex-justify-center" style="flex-direction: column;">
+                      <p class="body-s">Ngày đến hạn</p>
+                      <p class="button-m">01/02/2024</p>
+                    </div>
+                    <div class="space-y-2 flex-center" style="flex-direction: column;">
+                      <p class="body-s">Trạng thái</p>
+                      <p class="button-m flex-center rounded-6 bg-secondary-light-gray" style="height: 36px; width: 100%;">Đã học</p>
+                    </div>
+                    <div class="space-y-2 flex-center" style="flex-direction: column;">
+                      <p class="heading-h4">4,700,000đ</p>
+                      <p class="button-s" style="color: #00000066;">190,000đ/buổi</p>
+                    </div>
+                  </div>
+                  <div class="payment-card">
+                    <div
+                      class="rounded-4 h-full flex-center"
+                      style="
+                        border: 1px solid #0000001a;
+                        flex-direction: column;
+                        height: 104px;
+                      "
+                    >
+                      <p class="heading-h2 secondary-blue">60</p>
+                      <p class="caption-s">buổi</p>
+                    </div>
+                    <div class="space-y-2 flex-justify-center" style="flex-direction: column; margin-left: -20px;">
+                      <p class="body-s">Ngày thanh toán</p>
+                      <p class="button-m">01/02/2024</p>
+                    </div>
+                    <div class="space-y-2 flex-justify-center" style="flex-direction: column;">
+                      <p class="body-s">Ngày đến hạn</p>
+                      <p class="button-m">01/02/2024</p>
+                    </div>
+                    <div class="space-y-2 flex-center" style="flex-direction: column;">
+                      <p class="body-s">Trạng thái</p>
+                      <p class="button-m flex-center rounded-6 bg-yellowscale-light-yellow-2" style="height: 36px; width: 100%;">Đang học</p>
+                    </div>
+                    <div class="space-y-2 flex-center" style="flex-direction: column;">
+                      <p class="heading-h4">4,700,000đ</p>
+                      <p class="button-s" style="color: #00000066;">190,000đ/buổi</p>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
           </div>
-          <div id="tab-security-settings" onclick="switchTab('security-settings')"
-            class="flex-center flex-1 h-full button-m grayscale-black button-link-black cursor-pointer">
-            Đã hoàn thành
-          </div>
-        </div>
-
-        <!-- Profile content -->
-        <div id="personal-projects" class="space-y-5 tab-content">
-          tab 1
-        </div>
-
-        <!-- Security content -->
-        <div id="security-settings" class="flex-justify-center tab-content hidden" style="margin-top: 100px;">
-          tab 2
-
         </div>
       </div>
-     </div>
-
-
     </div>
 
+    <div id="modal-gioi-thieu-ban-hoc" class="uk-flex-top" uk-modal>
+      <div
+        class="level-modal uk-modal-dialog parent-recommend-friend rounded-5 uk-modal-body uk-margin-auto-vertical"
+      >
+        <div class="flex" style="justify-content: space-between">
+          <p></p>
+          <button
+            type="button"
+            onclick="hideModal('modal-gioi-thieu-ban-hoc')"
+            class="rounded-full flex-justify-center"
+            style="background-color: transparent"
+          >
+            <img src="public/icons/x2.svg" width="40" height="40" />
+          </button>
+        </div>
+        <p class="text-center heading-h3 mb-10 grayscale-dark-gray">
+          Giới thiệu bạn học cùng nhận buổi học
+        </p>
+        <div
+          id="parent-recommend-friend-content"
+          class="parent-recommend-friend-content"
+        >
+          <img
+            class="w-full rounded-4"
+            style="aspect-ratio: 16/9; object-fit: cover"
+            src="public/images/project.jpeg"
+            alt="image"
+          />
+          <p class="grayscale-dark-gray my-10">
+            Lorem ipsum dolor sit amet consectetur. Mi rhoncus nulla sit
+            tincidunt accumsan montes tellus scelerisque. Bibendum massa ac in
+            dui est. Tellus imperdiet posuere sit ultrices non semper quis.
+            Etiam eget at nisi ornare auctor eu diam. Lacus lacinia risus lectus
+            amet posuere. Convallis gravida ullamcorper tortor senectus nibh
+            egestas integer vestibulum augue. Non tristique massa vitae ut
+            mauris vulputate elementum.
+          </p>
+          <img
+            class="w-full rounded-4"
+            style="aspect-ratio: 16/9; object-fit: cover"
+            src="public/images/project.jpeg"
+            alt="image"
+          />
+          <p class="grayscale-dark-gray my-10">
+            Lorem ipsum dolor sit amet consectetur. Mi rhoncus nulla sit
+            tincidunt accumsan montes tellus scelerisque. Bibendum massa ac in
+            dui est. Tellus imperdiet posuere sit ultrices non semper quis.
+            Etiam eget at nisi ornare auctor eu diam. Lacus lacinia risus lectus
+            amet posuere. Convallis gravida ullamcorper tortor senectus nibh
+            egestas integer vestibulum augue. Non tristique massa vitae ut
+            mauris vulputate elementum.
+          </p>
+        </div>
+      </div>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script>
+      const radioLabels = document.querySelectorAll(".study-package-item");
 
-   
-
-
-
-
-
-  </div>
-  </div>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-
-
-    function switchTab(tabId) {
-      // Xóa lớp active khỏi tất cả các tab
-      document.querySelectorAll('.tab-content').forEach((tab) => tab.classList.add('hidden'));
-      document.querySelectorAll('.flex-center').forEach((tabButton) => {
-        tabButton.classList.remove('bg-primary-green', 'grayscale-white', 'drop-shadow-button-d');
-        tabButton.classList.add('grayscale-black', 'button-link-black');
+      radioLabels.forEach((label) => {
+        label.addEventListener("click", () => {
+          // Remove active class from all labels
+          radioLabels.forEach((item) => item.classList.remove("active"));
+          // Add active class to the clicked label
+          label.classList.add("active");
+        });
       });
 
-      // Hiển thị tab được chọn
-      document.getElementById(tabId).classList.remove('hidden');
+      function switchTab(tabId) {
+        // Xóa lớp active khỏi tất cả các tab
+        document
+          .querySelectorAll(".tab-content")
+          .forEach((tab) => tab.classList.add("hidden"));
+        document.querySelectorAll(".flex-center").forEach((tabButton) => {
+          tabButton.classList.remove(
+            "bg-primary-green",
+            "grayscale-white",
+            "drop-shadow-button-d"
+          );
+          tabButton.classList.add("grayscale-black", "button-link-black");
+        });
 
-      // Cập nhật nút tab
-      const activeTabButton =
-        tabId === 'personal-projects' ? 'tab-personal-projects' : 'tab-security-settings';
-      document.getElementById(activeTabButton).classList.add('bg-primary-green', 'grayscale-white', "drop-shadow-button-d", "rounded-4");
-      document.getElementById(activeTabButton).classList.remove('grayscale-black', 'button-link-black');
-    }
+        // Hiển thị tab được chọn
+        document.getElementById(tabId).classList.remove("hidden");
 
-    // Mặc định hiển thị tab đầu tiên
-    switchTab('personal-projects');
-    // Function to handle password visibility toggle
-    function togglePasswordVisibility(passwordFieldId) {
-      var passwordInput = document.getElementById(passwordFieldId);
-      var eyeIcon;
+        // Cập nhật nút tab
 
-      // Xác định icon tương ứng với trường mật khẩu
-      if (passwordFieldId === "old-password") {
-        eyeIcon = document.getElementById("eye-old-password");
-      } else if (passwordFieldId === "password") {
-        eyeIcon = document.getElementById("eye-password");
-      } else if (passwordFieldId === "password-confirm") {
-        eyeIcon = document.getElementById("eye-password-confirm");
+        let activeTabButton;
+
+        if (tabId === "tab-coming-content") {
+          activeTabButton = "tab-coming";
+        } else if (tabId === "tab-completed-content") {
+          activeTabButton = "tab-completed";
+        } else {
+          activeTabButton = "tab-canceled";
+        }
+        // const activeTabButton =
+        //   tabId === 'tab-coming-content' ? 'tab-coming' : 'tab-completed';
+        document
+          .getElementById(activeTabButton)
+          .classList.add(
+            "bg-primary-green",
+            "grayscale-white",
+            "drop-shadow-button-d",
+            "rounded-4"
+          );
+        document
+          .getElementById(activeTabButton)
+          .classList.remove("grayscale-black", "button-link-black");
       }
 
-      // Kiểm tra và thay đổi trạng thái mật khẩu hiển thị hoặc ẩn
-      if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        eyeIcon.src = "public/icon/eye-slash.svg"; // Icon cho mật khẩu hiển thị
-      } else {
-        passwordInput.type = "password";
-        eyeIcon.src = "public/icon/eye.svg"; // Icon cho mật khẩu ẩn
-      }
-    }
+      // Mặc định hiển thị tab đầu tiên
+      switchTab("tab-coming-content");
+      // Function to handle password visibility toggle
+      function hideModal(modalId) {
+        const dropdownElement = document.getElementById(modalId);
 
-    // Function to handle form submission
-    document
-      .getElementById("forgotPasswordForm")
-      .addEventListener("submit", function (event) {
-        event.preventDefault();
-        const password = this.password.value;
-        console.log("Data:", password);
+        UIkit.modal(dropdownElement).hide(0);
+      }
+
+      function copyToClipBoard(textToClipboard) {
+        navigator.clipboard.writeText(textToClipboard);
+
+        // Alert the copied text
+        alert("Copied the text: " + textToClipboard);
+      }
+
+      function togglePaymentProcess(paymentProcessId, isBack) {
+        const paymentProcess = document.getElementById(paymentProcessId);
+        const choosePakage = document.getElementById("chon-goi-hoc");
+        const paymentMethod = document.getElementById("phuong-thuc-thanh-toan");
+        const paymentSuccessfull = document.getElementById(
+          "thanh-toan-thanh-cong"
+        );
+        if (paymentProcessId === "chon-goi-hoc") {
+          paymentMethod.style.display = "block";
+          choosePakage.style.display = "none";
+        } else if (paymentProcessId === "phuong-thuc-thanh-toan") {
+          console.log("phuong-thuc-thanh-toan");
+          if (isBack) {
+            console.log("🚀 ~ togglePaymentProcess ~ isBack:", isBack);
+            paymentMethod.style.display = "none";
+            choosePakage.style.display = "block";
+          } else {
+            paymentSuccessfull.style.display = "block";
+            console.log("🚀 ~ togglePaymentProcess ~ block: not usback");
+            paymentMethod.style.display = "none";
+          }
+        } else {
+          choosePakage.style.display = "block";
+          paymentSuccessfull.style.display = "none";
+        }
+      }
+
+      const radioViettin = document.getElementById("radio-viettin");
+      const radioTechcom = document.getElementById("radio-techcom");
+      const contentViettin = document.querySelector(".viettin-info");
+      const contentTechcom = document.querySelector(".techcom-info");
+
+      radioViettin.addEventListener("change", () => {
+        contentViettin.style.display = "block";
+        contentTechcom.style.display = "none";
       });
-  </script>
-</body>
 
+      radioTechcom.addEventListener("change", () => {
+        contentViettin.style.display = "none";
+        contentTechcom.style.display = "block";
+      });
+    </script>
+  </body>
 </html>

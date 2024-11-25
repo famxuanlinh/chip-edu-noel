@@ -189,6 +189,12 @@
 .pl-8 {
   padding-left: 28px;
 }
+.pl-9 {
+  padding-left: 36px;
+}
+.pl-10 {
+  padding-left: 40px;
+}
 
 /* Add more classes as needed */
 
@@ -672,6 +678,10 @@
   background-color: #373c42;
 } */
 
+.leading-8 {
+  line-height: 32px !important;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1080,6 +1090,9 @@
 
 .space-y-6 > :not(:last-child) {
   margin-bottom: 24px;
+}
+.space-y-7 > :not(:last-child) {
+  margin-bottom: 28px;
 }
 
 .space-y-8 > :not(:last-child) {

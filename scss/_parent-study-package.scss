@@ -1,0 +1,48 @@
+@use "mixin" as *;
+@use "color";
+@use "effect";
+
+.study-package {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: middle;
+  justify-content: space-around;
+  &-item {
+    width: calc(50% - 20px);
+    border: 2px solid transparent;
+    min-height: 240px;
+
+    &.active {
+      border-color: #00b26b;
+    }
+  }
+}
+
+.pay-button {
+  margin-top: 80px;
+
+  @include maxw() {
+    margin-top: 40px;
+  }
+}
+
+// #radio-viettin:checked ~ .viettin-info,
+// #radio-techcom:checked ~ .techcom-info {
+//   display: block;
+// }
+
+.custom-radio {
+  accent-color:green;
+}
+
+.payment-card {
+  display: grid;
+  grid-template-columns: 120px repeat(4, 1fr);
+  gap: 20px 40px;
+  padding: 8px;
+  background-color: white;
+  border-radius: 20px;
+
+}

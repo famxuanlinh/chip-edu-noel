@@ -1666,6 +1666,45 @@ p {
   width: calc(50% - 20px);
 }
 
+.study-package {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: middle;
+  justify-content: space-around;
+}
+.study-package-item {
+  width: calc(50% - 20px);
+  border: 2px solid transparent;
+  min-height: 240px;
+}
+.study-package-item.active {
+  border-color: #00b26b;
+}
+
+.pay-button {
+  margin-top: 80px;
+}
+@media screen and (max-width: 1600px) {
+  .pay-button {
+    margin-top: 40px;
+  }
+}
+
+.custom-radio {
+  accent-color: green;
+}
+
+.payment-card {
+  display: grid;
+  grid-template-columns: 120px repeat(4, 1fr);
+  gap: 20px 40px;
+  padding: 8px;
+  background-color: white;
+  border-radius: 20px;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: Nunito;
