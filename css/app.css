@@ -243,6 +243,11 @@ p {
   line-height: 100%;
 }
 
+.body-xxs {
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .caption-l {
   font-size: 24px;
   font-weight: 700;
@@ -1763,6 +1768,83 @@ p {
 
 #faq-height::-webkit-scrollbar {
   display: none;
+}
+
+.chat-active::after {
+  content: "";
+  width: 8px; /* Size of the green dot */
+  height: 8px; /* Size of the green dot */
+  background-color: #00B26B; /* Green color for online status */
+  border-radius: 50%; /* Makes it circular */
+  position: absolute;
+  bottom: 4px; /* Position at the bottom of the avatar */
+  right: -12px; /* Position at the right of the avatar */
+}
+
+.parent-chat {
+  max-height: calc(100vh - 120px);
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-right: 20px;
+}
+.parent-chat-sidebar {
+  width: 540px;
+}
+@media screen and (max-width: 1600px) {
+  .parent-chat-sidebar {
+    width: 380px;
+  }
+}
+.parent-chat-sidebar-user-list {
+  height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+.parent-chat-input {
+  height: 60px;
+}
+@media screen and (max-width: 1600px) {
+  .parent-chat-input {
+    height: 54px !important;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .parent-chat {
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+  }
+}
+.parent-chat-wrapper {
+  padding: 40px;
+}
+@media screen and (max-width: 1600px) {
+  .parent-chat-wrapper {
+    padding: 0px;
+  }
+}
+.parent-chat-body {
+  max-height: calc(100vh - 280px);
+  height: 100%;
+  overflow: auto;
+  padding: 20px;
+}
+@media screen and (max-width: 1600px) {
+  .parent-chat-body {
+    max-height: calc(100vh - 274px);
+  }
+}
+
+#parent-chat-sidebar-user-list::-webkit-scrollbar {
+  display: none;
+}
+
+.parent-chat-zoom {
+  zoom: 0.84;
+}
+@media screen and (max-width: 1600px) {
+  .parent-chat-zoom {
+    zoom: 0.8;
+  }
 }
 
 html {
