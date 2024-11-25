@@ -1705,6 +1705,66 @@ p {
   border-radius: 20px;
 }
 
+.support-padding {
+  padding: 40px;
+}
+@media screen and (max-width: 1600px) {
+  .support-padding {
+    padding: 26px;
+  }
+}
+
+.support-spacing > :not(:last-child) {
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1600px) {
+  .support-spacing > :not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.support-gap {
+  gap: 40px;
+}
+@media screen and (max-width: 1600px) {
+  .support-gap {
+    gap: 20px;
+  }
+}
+
+.support-zoom {
+  zoom: 0.9;
+}
+@media screen and (max-width: 1600px) {
+  .support-zoom {
+    zoom: 0.74;
+  }
+}
+
+.uk-accordion-title:before {
+  background-image: url("../public/icons/arrow-down1.svg") !important;
+}
+
+.uk-open .uk-accordion-title:before {
+  background-image: url("../public/icons/arrow-up.svg") !important;
+}
+
+.faq-height {
+  max-height: calc(100vh - 134px);
+  height: 100%;
+  overflow-y: auto;
+}
+@media screen and (max-width: 1600px) {
+  .faq-height {
+    max-height: calc(100vh + 30px);
+    height: 100%;
+  }
+}
+
+#faq-height::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: Nunito;
