@@ -179,7 +179,7 @@
         </div>
         <div class="dashboard-right-content space-y-10">
           <div class="flex-center" style="flex-direction: column">
-            <div class="flex-center">
+            <a href="#modal-doi-hoc-vien" uk-toggle class="flex-center">
               <div class="avatar-bg" style="margin-right: -10px;">
                 <img class="rounded-full p-1" width="60" height="60" src="public/images/avatar1.png" alt="avatar" />
               </div>
@@ -189,7 +189,7 @@
               <div class="avatar-bg" style="margin-left: -10px;">
                 <img class="rounded-full p-1" width="60" height="60" src="public/images/avatar1.png" alt="avatar" />
               </div>
-            </div>
+            </a>
             <p class="grayscale-dark-gray heading-h4 mt-4">Student’s Name</p>
           </div>
           <div class="flex-items-center space-x-3">
@@ -217,30 +217,30 @@
           <div class="py-10 px-4">
             <p class="button-s grayscale-dark-gray mb-5 flex-justify-center">Giáo viên</p>
             <div class="flex-items-center" style="justify-content: space-between;">
-              <div class="flex-center" style="flex-direction: column">
+              <a href="#modal-giao-vien" uk-toggle class="flex-center" style="flex-direction: column">
                 <div class="avatar-bg">
                   <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
                   <p class="avatar-label bg-greenscale-light-green">Chính</p>
                 </div>
                 <p class="grayscale-dark-gray button-s mt-6">Tina</p>
                 <p class="grayscale-dark-gray button-s mt-3 body-xs"><strong>50</strong> buổi</p>
-              </div>
-              <div class="flex-center" style="flex-direction: column">
+              </a>
+              <a href="#modal-giao-vien" uk-toggle class="flex-center" style="flex-direction: column">
                 <div class="avatar-bg">
                   <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
                   <p class="avatar-label bg-yellowscale-light-yellow">Phụ</p>
                 </div>
                 <p class="grayscale-dark-gray button-s mt-6">Tina</p>
                 <p class="grayscale-dark-gray button-s mt-3 body-xs"><strong>50</strong> buổi</p>
-              </div>
-              <div class="flex-center" style="flex-direction: column">
+              </a>
+              <a href="#modal-giao-vien" uk-toggle class="flex-center" style="flex-direction: column">
                 <div class="avatar-bg">
                   <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
                   <p class="avatar-label bg-yellowscale-light-yellow">Phụ</p>
                 </div>
                 <p class="grayscale-dark-gray button-s mt-6">Tina</p>
                 <p class="grayscale-dark-gray button-s mt-3 body-xs"><strong>50</strong> buổi</p>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -642,6 +642,39 @@
     </div>
   </div>
 
+  <div id="modal-doi-hoc-vien" class="uk-flex-top" style="zoom: 0.85;" uk-modal>
+    <div class="level-modal uk-modal-dialog parent-class space-y-10 rounded-5 uk-modal-body uk-margin-auto-vertical">
+      <div class="flex" style="justify-content: space-between">
+        <p></p>
+        <button type="button" onclick="hideModal('modal-doi-hoc-vien')" class="rounded-full flex-justify-center"
+          style="background-color: transparent">
+          <img src="public/icons/x2.svg" width="40" height="40" />
+        </button>
+      </div>
+      <p class="heading-h3 text-center grayscale-dark-gray">Chọn hồ sơ</p>
+      <div class="flex-center space-x-20" style="margin: 80px 0;">
+        <div class="flex-center avatar-wrapper" onclick="selectAvatar(this)" style="flex-direction: column">
+          <div class="avatar-bg student-avatar" style="background-color: #00B26B;">
+            <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
+          </div>
+          <p class="grayscale-dark-gray button-l mt-6">Tina</p>
+        </div>
+        <div class="flex-center avatar-wrapper" onclick="selectAvatar(this)" style="flex-direction: column">
+          <div class="avatar-bg student-avatar" style="background-color: transparent;">
+            <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
+          </div>
+          <p class="grayscale-dark-gray button-l mt-6">Tina</p>
+        </div>
+        <div class="flex-center avatar-wrapper" onclick="selectAvatar(this)" style="flex-direction: column">
+          <div class="avatar-bg student-avatar" style="background-color: transparent;">
+            <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
+          </div>
+          <p class="grayscale-dark-gray button-l mt-6">Tina</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -711,6 +744,17 @@
 
       UIkit.modal(dropdownElement).hide(0);
     }
+
+
+    function selectAvatar(selectedElement) {
+    // Reset all avatar backgrounds to transparent
+    document.querySelectorAll(".student-avatar").forEach((element) => {
+      element.style.backgroundColor = "transparent";
+    });
+
+    // Set the background color of the selected avatar
+    selectedElement.querySelector(".student-avatar").style.backgroundColor = "#00B26B";
+  }
   </script>
 
 </body>

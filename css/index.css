@@ -1144,6 +1144,9 @@
 .space-x-10 > :not(:last-child) {
   margin-right: 40px;
 }
+.space-x-20 > :not(:last-child) {
+  margin-right: 80px;
+}
 
 /* chip edu */
 

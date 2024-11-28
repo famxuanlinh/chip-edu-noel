@@ -1587,7 +1587,7 @@ p {
 }
 @media screen and (max-width: 1600px) {
   .learning-progress {
-    zoom: 0.78;
+    zoom: 0.8;
   }
 }
 .learning-progress-summary {
