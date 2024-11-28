@@ -1,762 +1,1484 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css" />
-  <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="css/app.css" />
-</head>
-
-<body>
-  <div class="layout">
-    <div class="layout-sidebar">
-      <a href="#" class="layout-sidebar-item">
-        <img height="32" width="32" src="public/icons/home.svg" alt="Trang chu">
-        <p class="button-m pt-1 ">Trang chủ</p>
-      </a>
-      <a href="/tong-quan.html" class="layout-sidebar-item active">
-        <img height="32" width="32" src="public/icons/common.svg" alt="Trang chu">
-        <p class="button-s pt-1">Tổng quan</p>
-      </a>
-      <a href="/thong-tin-lop-hoc.html" class="layout-sidebar-item ">
-        <img height="32" width="32" src="public/icons/class.svg" alt="Trang chu">
-        <p class="button-s pt-1 ">Lớp học</p>
-      </a>
-      <a href="/tin-nhan.html" class="layout-sidebar-item">
-        <img height="32" width="32" src="public/icons/chat.svg" alt="Trang chu">
-        <p class="button-s pt-1">Tin nhắn</p>
-      </a>
-      <a href="/tien-trinh.html" class="layout-sidebar-item">
-        <img height="32" width="32" src="public/icons/process.svg" alt="Trang chu">
-        <p class="button-s pt-1">Tiến trình</p>
-      </a>
-      <a href="/goi-hoc.html" class="layout-sidebar-item">
-        <img height="32" width="32" src="public/icons/combo.svg" alt="Trang chu">
-        <p class="button-s pt-1">Gói học</p>
-      </a>
-      <a href="/chia-se.html" class="layout-sidebar-item">
-        <img height="32" width="32" src="public/icons/share.svg" alt="Trang chu">
-        <p class="button-s pt-1">Chia sẻ</p>
-      </a>
-      <a href="/tro-giup.html" class="layout-sidebar-item">
-        <img height="32" width="32" src="public/icons/support.svg" alt="Trang chu">
-        <p class="button-s pt-1">Trợ giúp</p>
-      </a>
-    </div>
-    <div class="layout-content parent-box space-x-5">
-      <!-- left content -->
-      <div class="dashboard-left parent-zoom-1 space-y-4">
-        <div>
-          <p class="button-l pl-5 pb-3 grayscale-dark-gray">Lớp học sắp tới</p>
-          <div class="parent-box bg-grayscale-white flex ">
-            <div class="flex-center flex-1">
-              <div class="space-y-4">
-                <div class="project-card-button" style="border: 2px solid #00B26B; height: 40px">
-                  <button class="flex-items-center  caption-s h-full bg-primary-green grayscale-white pl-3 pr-5" style="
-                    border-top-left-radius: 8px;
-                    border-bottom-left-radius: 8px;
-                  ">
-                    Level 3
+  <body>
+    <div class="layout">
+      <div class="layout-sidebar">
+        <a href="#" class="layout-sidebar-item">
+          <img
+            height="32"
+            width="32"
+            src="public/icons/home.svg"
+            alt="Trang chu"
+          />
+          <p class="button-m pt-1">Trang chủ</p>
+        </a>
+        <a href="/tong-quan.html" class="layout-sidebar-item active">
+          <img
+            height="32"
+            width="32"
+            src="public/icons/common.svg"
+            alt="Trang chu"
+          />
+          <p class="button-s pt-1">Tổng quan</p>
+        </a>
+        <a href="/thong-tin-lop-hoc.html" class="layout-sidebar-item">
+          <img
+            height="32"
+            width="32"
+            src="public/icons/class.svg"
+            alt="Trang chu"
+          />
+          <p class="button-s pt-1">Lớp học</p>
+        </a>
+        <a href="/tin-nhan.html" class="layout-sidebar-item">
+          <img
+            height="32"
+            width="32"
+            src="public/icons/chat.svg"
+            alt="Trang chu"
+          />
+          <p class="button-s pt-1">Tin nhắn</p>
+        </a>
+        <a href="/tien-trinh.html" class="layout-sidebar-item">
+          <img
+            height="32"
+            width="32"
+            src="public/icons/process.svg"
+            alt="Trang chu"
+          />
+          <p class="button-s pt-1">Tiến trình</p>
+        </a>
+        <a href="/goi-hoc.html" class="layout-sidebar-item">
+          <img
+            height="32"
+            width="32"
+            src="public/icons/combo.svg"
+            alt="Trang chu"
+          />
+          <p class="button-s pt-1">Gói học</p>
+        </a>
+        <a href="/chia-se.html" class="layout-sidebar-item">
+          <img
+            height="32"
+            width="32"
+            src="public/icons/share.svg"
+            alt="Trang chu"
+          />
+          <p class="button-s pt-1">Chia sẻ</p>
+        </a>
+        <a href="/tro-giup.html" class="layout-sidebar-item">
+          <img
+            height="32"
+            width="32"
+            src="public/icons/support.svg"
+            alt="Trang chu"
+          />
+          <p class="button-s pt-1">Trợ giúp</p>
+        </a>
+      </div>
+      <div class="layout-content parent-box space-x-5">
+        <!-- left content -->
+        <div class="dashboard-left parent-zoom-1 space-y-4">
+          <div>
+            <p class="button-l pl-5 pb-3 grayscale-dark-gray">
+              Lớp học sắp tới
+            </p>
+            <div class="parent-box bg-grayscale-white flex">
+              <div class="flex-center flex-1">
+                <div class="space-y-4">
+                  <div
+                    class="project-card-button"
+                    style="border: 2px solid #00b26b; height: 40px"
+                  >
+                    <button
+                      class="flex-items-center caption-s h-full bg-primary-green grayscale-white pl-3 pr-5"
+                      style="
+                        border-top-left-radius: 8px;
+                        border-bottom-left-radius: 8px;
+                      "
+                    >
+                      Level 3
+                    </button>
+                    <button
+                      class="project-card-button-right-part caption-s px-3"
+                    >
+                      Unit 3 - Lesson 2
+                    </button>
+                  </div>
+                  <div
+                    class="heading-h3 grayscale-dark-gray flex-justify-center"
+                  >
+                    I can run
+                  </div>
+                  <a
+                    href="#modal-giao-vien"
+                    uk-toggle
+                    class="flex-center"
+                    style="flex-direction: column"
+                  >
+                    <div class="avatar-bg">
+                      <img
+                        class="rounded-full p-1"
+                        width="100"
+                        height="100"
+                        src="public/images/avatar1.png"
+                        alt="avatar"
+                      />
+                    </div>
+                    <p class="grayscale-dark-gray button-m mt-3">Cô Tina</p>
+                  </a>
+                </div>
+              </div>
+              <div class="space-y-3">
+                <div
+                  class="flex-center button-shadow bg-greenscale-light-green px-3 py-4 space-y-3"
+                  style="
+                    width: 350px;
+                    flex-direction: column;
+                    height: calc(100% - 68px);
+                  "
+                >
+                  <div class="flex-center">
+                    <img
+                      width="60"
+                      height="60"
+                      src="public/icons/clock-color.svg"
+                      alt="avatar"
+                    />
+                    <p class="button-l grayscale-dark-gray ml-3">2 ngày nữa</p>
+                  </div>
+                  <div
+                    class="flex-items-center w-full bg-grayscale-white inner-blur-inner-b4-20"
+                    style="
+                      padding: 10px 8px;
+                      justify-content: space-between;
+                      border-radius: 12px;
+                      border: 2px solid rgba(0, 0, 0, 0.05);
+                    "
+                  >
+                    <div class="flex-items-center button-m grayscale-dark-gray">
+                      <img
+                        width="24"
+                        height="24"
+                        class="mr-2"
+                        src="public/icons/clock.svg"
+                        alt="avatar"
+                      />04:59
+                    </div>
+                    <div
+                      class="flex-items-center caption-m grayscale-dark-gray"
+                    >
+                      <img
+                        width="24"
+                        height="24"
+                        class="mr-2"
+                        src="public/icons/calendar-gray.svg"
+                        alt="avatar"
+                      />Thứ 2 - 12/12/2024
+                    </div>
+                  </div>
+                </div>
+                <div class="space-x-3 flex-items-center">
+                  <button
+                    class="button-primary btn-animation w-full grayscale-white flex-center bg-secondary-red px-5 grayscale-white button-m"
+                    style="height: 56px"
+                  >
+                    Hủy lịch
                   </button>
-                  <button class="project-card-button-right-part  caption-s px-3">
-                    Unit 3 - Lesson 2
+                  <button
+                    class="button-primary btn-animation w-full grayscale-white flex-center bg-primary-green px-5 grayscale-white button-m"
+                    style="height: 56px"
+                  >
+                    Đổi lịch
                   </button>
                 </div>
-                <div class="heading-h3 grayscale-dark-gray flex-justify-center">I can run</div>
-                <a href="#modal-giao-vien" uk-toggle class="flex-center" style="flex-direction: column">
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p class="button-l pl-5 pb-3 grayscale-dark-gray">Tiến trình</p>
+            <div class="parent-box bg-grayscale-white dashboard-zoom">
+              <p class="caption-xs flex-center grayscale-dark-gray">
+                Số buổi học hàng tuần
+              </p>
+              <canvas id="myBarChart" width="400" height="50"></canvas>
+            </div>
+          </div>
+          <div>
+            <div
+              class="flex-items-center"
+              style="justify-content: space-between"
+            >
+              <p class="button-l pl-5 pb-3 grayscale-dark-gray">Tin nổi bật</p>
+              <button class="button-xs px-5 primary-green">Xem tất cả</button>
+            </div>
+            <div class="news-list">
+              <div class="p-2 pb-4 rounded-4 bg-grayscale-white">
+                <img
+                  class="rounded-3"
+                  src="public/course.png"
+                  alt="news"
+                  style="aspect-ratio: 262/151"
+                />
+                <p class="button-m pt-4 pb-1 px-2 grayscale-dark-gray">
+                  News’ Title
+                </p>
+                <p class="body-s line-clamp-3 px-2 grayscale-dark-gray">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Impedit esse ullam dignissimos saepe corrupti quasi, nostrum
+                  mollitia, quia natus similique necessitatibus hic quae earum
+                  reiciendis. Suscipit accusamus ipsa quis cum.
+                </p>
+              </div>
+              <div class="p-2 pb-4 rounded-4 bg-grayscale-white">
+                <img
+                  class="rounded-3"
+                  src="public/course.png"
+                  alt="news"
+                  style="aspect-ratio: 262/151"
+                />
+                <p class="button-m pt-4 pb-1 px-2 grayscale-dark-gray">
+                  News’ Title
+                </p>
+                <p class="body-s line-clamp-3 px-2 grayscale-dark-gray">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Impedit esse ullam dignissimos saepe corrupti quasi, nostrum
+                  mollitia, quia natus similique necessitatibus hic quae earum
+                  reiciendis. Suscipit accusamus ipsa quis cum.
+                </p>
+              </div>
+              <div class="p-2 pb-4 rounded-4 bg-grayscale-white">
+                <img
+                  class="rounded-3"
+                  src="public/course.png"
+                  alt="news"
+                  style="aspect-ratio: 262/151"
+                />
+                <p class="button-m pt-4 pb-1 px-2 grayscale-dark-gray">
+                  News’ Title
+                </p>
+                <p class="body-s line-clamp-3 px-2 grayscale-dark-gray">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Impedit esse ullam dignissimos saepe corrupti quasi, nostrum
+                  mollitia, quia natus similique necessitatibus hic quae earum
+                  reiciendis. Suscipit accusamus ipsa quis cum.
+                </p>
+              </div>
+              <div class="p-2 pb-4 rounded-4 bg-grayscale-white">
+                <img
+                  class="rounded-3"
+                  src="public/course.png"
+                  alt="news"
+                  style="aspect-ratio: 262/151"
+                />
+                <p class="button-m pt-4 pb-1 px-2 grayscale-dark-gray">
+                  News’ Title
+                </p>
+                <p class="body-s line-clamp-3 px-2 grayscale-dark-gray">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Impedit esse ullam dignissimos saepe corrupti quasi, nostrum
+                  mollitia, quia natus similique necessitatibus hic quae earum
+                  reiciendis. Suscipit accusamus ipsa quis cum.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Right content -->
+        <div class="dashboard-right parent-box parent-zoom">
+          <div
+            class="w-full flex-items-center"
+            style="justify-content: end; cursor: pointer"
+          >
+            <img
+              height="32"
+              width="32"
+              src="public/icons/setting.svg"
+              alt="Setting"
+            />
+          </div>
+          <div class="dashboard-right-content space-y-10">
+            <div class="flex-center" style="flex-direction: column">
+              <a href="#modal-doi-hoc-vien" uk-toggle class="flex-center">
+                <div class="avatar-bg" style="margin-right: -10px">
+                  <img
+                    class="rounded-full p-1"
+                    width="60"
+                    height="60"
+                    src="public/images/avatar1.png"
+                    alt="avatar"
+                  />
+                </div>
+                <div class="avatar-bg" style="z-index: 1">
+                  <img
+                    class="rounded-full p-1"
+                    width="100"
+                    height="100"
+                    src="public/images/avatar1.png"
+                    alt="avatar"
+                  />
+                </div>
+                <div class="avatar-bg" style="margin-left: -10px">
+                  <img
+                    class="rounded-full p-1"
+                    width="60"
+                    height="60"
+                    src="public/images/avatar1.png"
+                    alt="avatar"
+                  />
+                </div>
+              </a>
+              <p class="grayscale-dark-gray heading-h4 mt-4">Student’s Name</p>
+            </div>
+            <div class="flex-items-center space-x-3">
+              <div
+                class="py-4 w-full flex-center rounded-5"
+                style="border: 1px solid #0000001a; flex-direction: column"
+              >
+                <p class="caption-s grayscale-dark-gray mb-1">Điểm</p>
+                <div class="flex-items-center heading-h2 primary-green">
+                  200
+                  <img
+                    src="public/icons/star.svg"
+                    class="ml-2"
+                    width="24"
+                    height="24"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div
+                class="py-4 w-full flex-center rounded-5"
+                style="border: 1px solid #0000001a; flex-direction: column"
+              >
+                <p class="caption-s grayscale-dark-gray mb-1">Level</p>
+                <div class="flex-items-center heading-h2 secondary-blue">3</div>
+              </div>
+            </div>
+            <div>
+              <p
+                class="button-s grayscale-dark-gray mb-5 flex-justify-center mb-2"
+              >
+                Số buổi đã học
+              </p>
+              <div class="progress">
+                <div class="progress-active"></div>
+                <div class="progress-content">50/69</div>
+              </div>
+            </div>
+            <div class="py-10 px-4">
+              <p class="button-s grayscale-dark-gray mb-5 flex-justify-center">
+                Giáo viên
+              </p>
+              <div
+                class="flex-items-center"
+                style="justify-content: space-between"
+              >
+                <a
+                  href="#modal-giao-vien"
+                  uk-toggle
+                  class="flex-center"
+                  style="flex-direction: column"
+                >
                   <div class="avatar-bg">
-                    <img class=" rounded-full p-1" width="100" height="100" src="public/images/avatar1.png"
-                      alt="avatar" />
+                    <img
+                      class="rounded-full p-1"
+                      width="120"
+                      height="120"
+                      src="public/images/avatar1.png"
+                      alt="avatar"
+                    />
+                    <p class="avatar-label bg-greenscale-light-green">Chính</p>
                   </div>
-                  <p class="grayscale-dark-gray button-m mt-3">Cô Tina</p>
+                  <p class="grayscale-dark-gray button-s mt-6">Tina</p>
+                  <p class="grayscale-dark-gray button-s mt-3 body-xs">
+                    <strong>50</strong> buổi
+                  </p>
+                </a>
+                <a
+                  href="#modal-giao-vien"
+                  uk-toggle
+                  class="flex-center"
+                  style="flex-direction: column"
+                >
+                  <div class="avatar-bg">
+                    <img
+                      class="rounded-full p-1"
+                      width="120"
+                      height="120"
+                      src="public/images/avatar1.png"
+                      alt="avatar"
+                    />
+                    <p class="avatar-label bg-yellowscale-light-yellow">Phụ</p>
+                  </div>
+                  <p class="grayscale-dark-gray button-s mt-6">Tina</p>
+                  <p class="grayscale-dark-gray button-s mt-3 body-xs">
+                    <strong>50</strong> buổi
+                  </p>
+                </a>
+                <a
+                  href="#modal-giao-vien"
+                  uk-toggle
+                  class="flex-center"
+                  style="flex-direction: column"
+                >
+                  <div class="avatar-bg">
+                    <img
+                      class="rounded-full p-1"
+                      width="120"
+                      height="120"
+                      src="public/images/avatar1.png"
+                      alt="avatar"
+                    />
+                    <p class="avatar-label bg-yellowscale-light-yellow">Phụ</p>
+                  </div>
+                  <p class="grayscale-dark-gray button-s mt-6">Tina</p>
+                  <p class="grayscale-dark-gray button-s mt-3 body-xs">
+                    <strong>50</strong> buổi
+                  </p>
                 </a>
               </div>
-
-            </div>
-            <div class="space-y-3">
-              <div class="flex-center button-shadow bg-greenscale-light-green px-3 py-4 space-y-3"
-                style="width: 350px; flex-direction: column; height: calc(100% - 68px)">
-                <div class="flex-center">
-                  <img width="60" height="60" src="public/icons/clock-color.svg" alt="avatar" />
-                  <p class="button-l grayscale-dark-gray ml-3">2 ngày nữa</p>
-                </div>
-                <div class="flex-items-center w-full bg-grayscale-white inner-blur-inner-b4-20" style="
-                  padding: 10px 8px;
-                  justify-content: space-between;
-                  border-radius: 12px;
-                  border: 2px solid rgba(0, 0, 0, 0.05);
-                ">
-                  <div class="flex-items-center button-m grayscale-dark-gray">
-                    <img width="24" height="24" class="mr-2" src="public/icons/clock.svg" alt="avatar" />04:59
-                  </div>
-                  <div class="flex-items-center caption-m grayscale-dark-gray">
-                    <img width="24" height="24" class="mr-2" src="public/icons/calendar-gray.svg" alt="avatar" />Thứ 2 -
-                    12/12/2024
-                  </div>
-                </div>
-              </div>
-              <div class="space-x-3 flex-items-center">
-                <button
-                  class="button-primary btn-animation w-full grayscale-white flex-center bg-secondary-red px-5 grayscale-white button-m"
-                  style="height: 56px">
-                  Hủy lịch
-                </button>
-                <button
-                  class="button-primary btn-animation w-full grayscale-white flex-center bg-primary-green px-5 grayscale-white button-m"
-                  style="height: 56px">
-                  Đổi lịch
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <p class="button-l pl-5 pb-3 grayscale-dark-gray">Tiến trình</p>
-          <div class="parent-box bg-grayscale-white dashboard-zoom">
-            <p class="caption-xs flex-center grayscale-dark-gray">Số buổi học hàng tuần</p>
-            <canvas id="myBarChart" width="400" height="50"></canvas>
-          </div>
-        </div>
-        <div>
-          <div class="flex-items-center" style="justify-content: space-between;">
-            <p class="button-l pl-5 pb-3 grayscale-dark-gray">Tin nổi bật</p>
-            <button class="button-xs px-5 primary-green">Xem tất cả</button>
-          </div>
-          <div class="news-list ">
-            <div class="p-2 pb-4 rounded-4 bg-grayscale-white">
-              <img class="rounded-3" src="public/course.png" alt="news" style="aspect-ratio: 262/151;">
-              <p class="button-m pt-4 pb-1 px-2 grayscale-dark-gray">News’ Title</p>
-              <p class="body-s line-clamp-3 px-2 grayscale-dark-gray">Lorem ipsum dolor, sit amet consectetur
-                adipisicing
-                elit. Impedit esse
-                ullam dignissimos
-                saepe corrupti quasi, nostrum mollitia, quia natus similique necessitatibus hic quae earum reiciendis.
-                Suscipit accusamus ipsa quis cum.</p>
-            </div>
-            <div class="p-2 pb-4 rounded-4 bg-grayscale-white">
-              <img class="rounded-3" src="public/course.png" alt="news" style="aspect-ratio: 262/151;">
-              <p class="button-m pt-4 pb-1 px-2 grayscale-dark-gray">News’ Title</p>
-              <p class="body-s line-clamp-3 px-2 grayscale-dark-gray">Lorem ipsum dolor, sit amet consectetur
-                adipisicing
-                elit. Impedit esse
-                ullam dignissimos
-                saepe corrupti quasi, nostrum mollitia, quia natus similique necessitatibus hic quae earum reiciendis.
-                Suscipit accusamus ipsa quis cum.</p>
-            </div>
-            <div class="p-2 pb-4 rounded-4 bg-grayscale-white">
-              <img class="rounded-3" src="public/course.png" alt="news" style="aspect-ratio: 262/151;">
-              <p class="button-m pt-4 pb-1 px-2 grayscale-dark-gray">News’ Title</p>
-              <p class="body-s line-clamp-3 px-2 grayscale-dark-gray">Lorem ipsum dolor, sit amet consectetur
-                adipisicing
-                elit. Impedit esse
-                ullam dignissimos
-                saepe corrupti quasi, nostrum mollitia, quia natus similique necessitatibus hic quae earum reiciendis.
-                Suscipit accusamus ipsa quis cum.</p>
-            </div>
-            <div class="p-2 pb-4 rounded-4 bg-grayscale-white">
-              <img class="rounded-3" src="public/course.png" alt="news" style="aspect-ratio: 262/151;">
-              <p class="button-m pt-4 pb-1 px-2 grayscale-dark-gray">News’ Title</p>
-              <p class="body-s line-clamp-3 px-2 grayscale-dark-gray">Lorem ipsum dolor, sit amet consectetur
-                adipisicing
-                elit. Impedit esse
-                ullam dignissimos
-                saepe corrupti quasi, nostrum mollitia, quia natus similique necessitatibus hic quae earum reiciendis.
-                Suscipit accusamus ipsa quis cum.</p>
             </div>
           </div>
         </div>
       </div>
-      <!-- Right content -->
-      <div class="dashboard-right parent-box parent-zoom">
-        <div class="w-full flex-items-center" style="justify-content: end; cursor: pointer;">
-          <img height="32" width="32" src="public/icons/setting.svg" alt="Setting">
+    </div>
+
+    <div id="modal-giao-vien" class="uk-flex-top parent-zoom" uk-modal>
+      <div
+        class="level-modal uk-modal-dialog modal-teacher rounded-5 uk-modal-body uk-margin-auto-vertical"
+      >
+        <div class="flex" style="justify-content: space-between">
+          <!-- <a class="project-header-button" href="/"><img src="/public/icons/arrow-left.svg" alt="icon arrow" /></a> -->
+          <p></p>
+          <p class="heading-h2 grayscale-dark-gray">Tina</p>
+          <button
+            type="button"
+            onclick="hideModal('modal-giao-vien')"
+            class="rounded-full flex-justify-center"
+            style="background-color: transparent"
+          >
+            <img src="public/icons/x2.svg" width="40" height="40" />
+          </button>
         </div>
-        <div class="dashboard-right-content space-y-10">
-          <div class="flex-center" style="flex-direction: column">
-            <a href="#modal-doi-hoc-vien" uk-toggle class="flex-center">
-              <div class="avatar-bg" style="margin-right: -10px;">
-                <img class="rounded-full p-1" width="60" height="60" src="public/images/avatar1.png" alt="avatar" />
-              </div>
-              <div class="avatar-bg" style="z-index: 1;">
-                <img class="rounded-full p-1" width="100" height="100" src="public/images/avatar1.png" alt="avatar" />
-              </div>
-              <div class="avatar-bg" style="margin-left: -10px;">
-                <img class="rounded-full p-1" width="60" height="60" src="public/images/avatar1.png" alt="avatar" />
+        <div class="flex-center space-x-10">
+          <div
+            class="rounded-full mr-4"
+            style="
+              background-color: white;
+              width: fit-content;
+              height: fit-content;
+              box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            "
+          >
+            <img
+              class="rounded-full p-1"
+              width="160"
+              style="flex: 1 1 0%"
+              height="160"
+              src="public/images/avatar1.png"
+              alt="avatar"
+            />
+          </div>
+          <div class="space-x-5 flex-items-center">
+            <a
+              href="#modal-chung-chi"
+              uk-toggle
+              class="rounded-5 flex-center"
+              style="
+                padding: 20px 14px 24px 14px;
+                min-width: 240px;
+                flex-direction: column;
+                border: 1px solid #0000001a;
+              "
+            >
+              <p
+                class="caption-l grayscale-dark-gray"
+                style="line-height: 29px"
+              >
+                Chứng chỉ
+              </p>
+              <div class="heading-h2 primary-green flex-items-center">
+                TEFL
+                <img
+                  class="ml-2"
+                  src="public/icons/image-green.svg"
+                  width="24"
+                  height="24"
+                  alt="images"
+                />
               </div>
             </a>
-            <p class="grayscale-dark-gray heading-h4 mt-4">Student’s Name</p>
-          </div>
-          <div class="flex-items-center space-x-3">
-            <div class="py-4 w-full flex-center rounded-5" style="border: 1px solid #0000001A; flex-direction: column;">
-              <p class="caption-s grayscale-dark-gray mb-1">Điểm</p>
-              <div class="flex-items-center heading-h2 primary-green">
-                200
-                <img src="public/icons/star.svg" class="ml-2" width="24" height="24" alt="" />
-              </div>
+            <div
+              class="rounded-5 flex-center"
+              style="
+                padding: 20px 14px 24px 14px;
+                min-width: 240px;
+                flex-direction: column;
+                border: 1px solid #0000001a;
+              "
+            >
+              <p
+                class="caption-l grayscale-dark-gray"
+                style="line-height: 29px"
+              >
+                Chuyên cần
+              </p>
+              <p class="heading-h2 primary-green">100%</p>
             </div>
-            <div class="py-4 w-full flex-center rounded-5" style="border: 1px solid #0000001A; flex-direction: column;">
-              <p class="caption-s grayscale-dark-gray  mb-1">Level</p>
-              <div class="flex-items-center heading-h2 secondary-blue">
-                3
-              </div>
-            </div>
-          </div>
-          <div>
-            <p class="button-s grayscale-dark-gray mb-5 flex-justify-center mb-2">Số buổi đã học</p>
-            <div class="progress">
-              <div class="progress-active"></div>
-              <div class="progress-content">50/69</div>
-            </div>
-          </div>
-          <div class="py-10 px-4">
-            <p class="button-s grayscale-dark-gray mb-5 flex-justify-center">Giáo viên</p>
-            <div class="flex-items-center" style="justify-content: space-between;">
-              <a href="#modal-giao-vien" uk-toggle class="flex-center" style="flex-direction: column">
-                <div class="avatar-bg">
-                  <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
-                  <p class="avatar-label bg-greenscale-light-green">Chính</p>
-                </div>
-                <p class="grayscale-dark-gray button-s mt-6">Tina</p>
-                <p class="grayscale-dark-gray button-s mt-3 body-xs"><strong>50</strong> buổi</p>
-              </a>
-              <a href="#modal-giao-vien" uk-toggle class="flex-center" style="flex-direction: column">
-                <div class="avatar-bg">
-                  <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
-                  <p class="avatar-label bg-yellowscale-light-yellow">Phụ</p>
-                </div>
-                <p class="grayscale-dark-gray button-s mt-6">Tina</p>
-                <p class="grayscale-dark-gray button-s mt-3 body-xs"><strong>50</strong> buổi</p>
-              </a>
-              <a href="#modal-giao-vien" uk-toggle class="flex-center" style="flex-direction: column">
-                <div class="avatar-bg">
-                  <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
-                  <p class="avatar-label bg-yellowscale-light-yellow">Phụ</p>
-                </div>
-                <p class="grayscale-dark-gray button-s mt-6">Tina</p>
-                <p class="grayscale-dark-gray button-s mt-3 body-xs"><strong>50</strong> buổi</p>
-              </a>
+            <div
+              class="rounded-5 flex-center"
+              style="
+                padding: 20px 14px 24px 14px;
+                min-width: 240px;
+                flex-direction: column;
+                border: 1px solid #0000001a;
+              "
+            >
+              <p
+                class="caption-l grayscale-dark-gray"
+                style="line-height: 29px"
+              >
+                Kinh nghiệm
+              </p>
+              <p class="heading-h2 primary-green">1-3 năm</p>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal-giao-vien" class="uk-flex-top parent-zoom" uk-modal>
-    <div class="level-modal uk-modal-dialog modal-teacher rounded-5 uk-modal-body uk-margin-auto-vertical">
-      <div class="flex" style="justify-content: space-between">
-        <!-- <a class="project-header-button" href="/"><img src="/public/icons/arrow-left.svg" alt="icon arrow" /></a> -->
-         <p></p>
-        <p class="heading-h2 grayscale-dark-gray">Tina</p>
-        <button type="button" onclick="hideModal('modal-giao-vien')" class="rounded-full flex-justify-center"
-          style="background-color: transparent">
-          <img src="public/icons/x2.svg" width="40" height="40" />
-        </button>
-      </div>
-      <div class="flex-center space-x-10">
-        <div class="rounded-full mr-4" style="
-            background-color: white;
-            width: fit-content;
-            height: fit-content;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-          ">
-          <img class="rounded-full p-1" width="160" style="flex: 1 1 0%" height="160" src="public/images/avatar1.png"
-            alt="avatar" />
-        </div>
-        <div class="space-x-5 flex-items-center">
-          <a href="#modal-chung-chi" uk-toggle class="rounded-5 flex-center" style="
-              padding: 20px 14px 24px 14px;
-              min-width: 240px;
-              flex-direction: column;
-              border: 1px solid #0000001a;
-            ">
-            <p class="caption-l grayscale-dark-gray" style="line-height: 29px">
-              Chứng chỉ
-            </p>
-            <div class="heading-h2 primary-green flex-items-center">TEFL
-              <img class="ml-2" src="public/icons/image-green.svg" width="24" height="24" alt="images">
-            </div>
-          </a>
-          <div class="rounded-5 flex-center" style="
-              padding: 20px 14px 24px 14px;
-              min-width: 240px;
-              flex-direction: column;
-              border: 1px solid #0000001a;
-            ">
-            <p class="caption-l grayscale-dark-gray" style="line-height: 29px">
-              Chuyên cần
-            </p>
-            <p class="heading-h2 primary-green">100%</p>
-          </div>
-          <div class="rounded-5 flex-center" style="
-              padding: 20px 14px 24px 14px;
-              min-width: 240px;
-              flex-direction: column;
-              border: 1px solid #0000001a;
-            ">
-            <p class="caption-l grayscale-dark-gray" style="line-height: 29px">
-              Kinh nghiệm
-            </p>
-            <p class="heading-h2 primary-green">1-3 năm</p>
-          </div>
-        </div>
-      </div>
-      <!-- Body -->
-      <div class="flex space-x-10">
-        <div class="teacher-left space-y-5">
-          <p class="pl-3 button-l grayscale-dark-gray">Giới thiệu</p>
-          <div class="flex-items-center space-x-3">
-            <p class="px-4 flex-center rounded-5 caption-m grayscale-dark-gray bg-greenscale-light-green"
-              style="height: 32px; line-height: 1;">
-              Thân thiện
-            </p>
-            <p class="px-4 flex-center rounded-5 caption-m grayscale-dark-gray bg-greenscale-light-green"
-              style="height: 32px; line-height: 1;">
-              Tập trung kết quả
-            </p>
-            <p class="px-4 flex-center rounded-5 caption-m grayscale-dark-gray bg-greenscale-light-green"
-              style="height: 32px; line-height: 1;">
-              Dễ hiểu
-            </p>
-          </div>
-          <div id="small-scroll" class="body-m grayscale-dark-gray pt-5"
-            style="overflow-y: auto;height: fit-content; max-height: 186px; line-height: 160%;">
-            Lorem ipsum dolor sit amet consectetur. Mi rhoncus nulla sit
-            tincidunt accumsan montes tellus scelerisque. Bibendum massa ac
-            in dui est. Tellus imperdiet posuere sit ultrices non semper
-            quis. Etiam eget at nisi ornare auctor eu diam. Lacus lacinia
-            risus lectus amet posuere. Convallis gravida ullamcorper tortor
-            senectus nibh egestas integer vestibulum augue. Non tristique
-            massa vitae ut mauris vulputate elementum. Ut cras augue sem
-            diam. Blandit laoreet aliquam congue tortor amet feugiat. Dui
-            nec semper lectus nisl amet mauris vitae sagittis hendrerit.
-            Cras et nibh molestie neque ut risus eget. Lorem ipsum dolor sit
-          </div>
-          <p class="pl-3 button-l grayscale-dark-gray">Đánh giá</p>
-          <div class="flex-items-center" style="justify-content: space-between;">
-            <div class="flex-items-center space-x-2">
-              <div class="flex-items-center">
-                <div class="bg-primary-green rounded-full drop-shadow-button-d flex-center button-l grayscale-white"
-                  style="width: 60px;height: 60px; z-index: 1;">4.5</div>
-                <div class="space-x-2 flex-items-center rounded-6 pr-3 py-1_5 bg-grayscale-white"
-                  style="border: 1px solid #0000001A; width: fit-content; padding-left: 60px; margin-left: -50px;">
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-half-teacher.svg" alt="star" width="16" height="16" />
-                </div>
-              </div>
-              <p class="body-s grayscale-dark-gray">20 đánh giá</p>
-            </div>
-            <a href="#modal-danh-gia" uk-toggle class="modal-link ml-1 primary-green button-m">Xem chi tiết</a>
-          </div>
-          <div>
-            <div class="flex-items-center" style="justify-content: space-between;">
-              <div class="space-x-3 flex-items-center">
-                <div class="avatar-rounded">
-                  <img class=" rounded-full" width="100" height="100" src="public/images/avatar1.png" alt="avatar" />
-                </div>
-                <p class="caption-m grayscale-dark-gray">Customer</p>
-              </div>
-              <div class="space-x-2 flex-items-center">
-                <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                <img src="public/icons/star-half-teacher.svg" alt="star" width="16" height="16" />
-              </div>
-            </div>
-            <p class="body-s grayscale-dark-gray pt-2">Lorem ipsum dolor sit amet consectetu. Mi rhoncus nulla sit
-              tincidunt accumsan montes tellus scelerisque.</p>
-          </div>
-        </div>
-        <div class="teacher-right">
-          <div class="image-teacher rounded-5 flex-center w-full" style="background-color: #00000033; ">
-            <img width="60" height="60" style="object-fit: cover" src="/public/icons/play-solid.svg" alt="iamge" />
-          </div>
-        </div>
-      </div>
-      <div class="space-x-5 mt-10 flex-center">
-        <a 
-          class="button-primary px-10 btn-animation flex-center bg-secondary-red px-5 grayscale-white button-m"
-          style="height: 56px; color: #252525; background-color: #D8EDDD;">
-          <img width="32" class="mr-3" height="32" src="public/icons/share-green.svg" alt="share">
-          Chia sẻ
-        </a>
-        <a
-          class="button-primary px-10 btn-animation flex-center bg-primary-green px-5 grayscale-white button-m"
-          style="height: 56px; color: white; background-color: #00B26B;">
-          <img width="32" class="mr-3" height="32" src="public/icons/message.svg" alt="share">
-          Nhắn tin
-        </a>
-      </div>
-    </div>
-  </div>
-  <div id="modal-danh-gia" class="uk-flex-top" uk-modal>
-    <div class="level-modal uk-modal-dialog modal-teacher rounded-5 uk-modal-body uk-margin-auto-vertical">
-      <div class="flex" style="justify-content: space-between">
-        <a  class="project-header-button" uk-toggle href="#modal-giao-vien"><img src="/public/icons/arrow-left.svg" alt="icon arrow" /></a>
-        <p class="heading-h2 grayscale-dark-gray">Đánh giá</p>
-        <button type="button" onclick="hideModal('modal-danh-gia')" class="rounded-full flex-justify-center"
-          style="background-color: transparent">
-          <img src="public/icons/x2.svg" width="40" height="40" />
-        </button>
-      </div>
-      <div class="flex-center space-x-10">
-        <div class="rounded-full mr-4" style="
-            background-color: white;
-            width: fit-content;
-            height: fit-content;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-          ">
-          <img class="rounded-full p-1" width="160" style="flex: 1 1 0%" height="160" src="public/images/avatar1.png"
-            alt="avatar" />
-        </div>
-        <div class="space-x-5 flex-items-center">
-          <a href="#modal-chung-chi" uk-toggle class="rounded-5 flex-center" style="
-              padding: 20px 14px 24px 14px;
-              min-width: 240px;
-              flex-direction: column;
-              border: 1px solid #0000001a;
-            ">
-            <p class="caption-l grayscale-dark-gray" style="line-height: 29px">
-              Chứng chỉ
-            </p>
-            <div class="heading-h2 primary-green flex-items-center">TEFL
-              <img class="ml-2" src="public/icons/image-green.svg" width="24" height="24" alt="images">
-            </div>
-          </a>
-          <div class="rounded-5 flex-center" style="
-              padding: 20px 14px 24px 14px;
-              min-width: 240px;
-              flex-direction: column;
-              border: 1px solid #0000001a;
-            ">
-            <p class="caption-l grayscale-dark-gray" style="line-height: 29px">
-              Chuyên cần
-            </p>
-            <p class="heading-h2 primary-green">100%</p>
-          </div>
-          <div class="rounded-5 flex-center" style="
-              padding: 20px 14px 24px 14px;
-              min-width: 240px;
-              flex-direction: column;
-              border: 1px solid #0000001a;
-            ">
-            <p class="caption-l grayscale-dark-gray" style="line-height: 29px">
-              Kinh nghiệm
-            </p>
-            <p class="heading-h2 primary-green">1-3 năm</p>
-          </div>
-        </div>
-      </div>
-      <!-- Body -->
-      <div class="flex-justify-center mt-10">
-        <div class="dashboard-feedback flex space-x-10">
+        <!-- Body -->
+        <div class="flex space-x-10">
           <div class="teacher-left space-y-5">
-            <div class="flex-items-center" style="justify-content: space-between;">
+            <p class="pl-3 button-l grayscale-dark-gray">Giới thiệu</p>
+            <div class="flex-items-center space-x-3">
+              <p
+                class="px-4 flex-center rounded-5 caption-m grayscale-dark-gray bg-greenscale-light-green"
+                style="height: 32px; line-height: 1"
+              >
+                Thân thiện
+              </p>
+              <p
+                class="px-4 flex-center rounded-5 caption-m grayscale-dark-gray bg-greenscale-light-green"
+                style="height: 32px; line-height: 1"
+              >
+                Tập trung kết quả
+              </p>
+              <p
+                class="px-4 flex-center rounded-5 caption-m grayscale-dark-gray bg-greenscale-light-green"
+                style="height: 32px; line-height: 1"
+              >
+                Dễ hiểu
+              </p>
+            </div>
+            <div
+              id="small-scroll"
+              class="body-m grayscale-dark-gray pt-5"
+              style="
+                overflow-y: auto;
+                height: fit-content;
+                max-height: 186px;
+                line-height: 160%;
+              "
+            >
+              Lorem ipsum dolor sit amet consectetur. Mi rhoncus nulla sit
+              tincidunt accumsan montes tellus scelerisque. Bibendum massa ac in
+              dui est. Tellus imperdiet posuere sit ultrices non semper quis.
+              Etiam eget at nisi ornare auctor eu diam. Lacus lacinia risus
+              lectus amet posuere. Convallis gravida ullamcorper tortor senectus
+              nibh egestas integer vestibulum augue. Non tristique massa vitae
+              ut mauris vulputate elementum. Ut cras augue sem diam. Blandit
+              laoreet aliquam congue tortor amet feugiat. Dui nec semper lectus
+              nisl amet mauris vitae sagittis hendrerit. Cras et nibh molestie
+              neque ut risus eget. Lorem ipsum dolor sit
+            </div>
+            <p class="pl-3 button-l grayscale-dark-gray">Đánh giá</p>
+            <div
+              class="flex-items-center"
+              style="justify-content: space-between"
+            >
               <div class="flex-items-center space-x-2">
                 <div class="flex-items-center">
-                  <div class="bg-primary-green rounded-full drop-shadow-button-d flex-center button-l grayscale-white"
-                    style="width: 60px;height: 60px; z-index: 1;">4.5</div>
-                  <div class="space-x-2 flex-items-center rounded-6 pr-3 py-1_5 bg-grayscale-white"
-                    style="border: 1px solid #0000001A; width: fit-content; padding-left: 60px; margin-left: -50px;">
-                    <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                    <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                    <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                    <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                    <img src="public/icons/star-half-teacher.svg" alt="star" width="16" height="16" />
+                  <div
+                    class="bg-primary-green rounded-full drop-shadow-button-d flex-center button-l grayscale-white"
+                    style="width: 60px; height: 60px; z-index: 1"
+                  >
+                    4.5
+                  </div>
+                  <div
+                    class="space-x-2 flex-items-center rounded-6 pr-3 py-1_5 bg-grayscale-white"
+                    style="
+                      border: 1px solid #0000001a;
+                      width: fit-content;
+                      padding-left: 60px;
+                      margin-left: -50px;
+                    "
+                  >
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-half-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
                   </div>
                 </div>
                 <p class="body-s grayscale-dark-gray">20 đánh giá</p>
               </div>
+              <a
+                href="#modal-danh-gia"
+                uk-toggle
+                class="modal-link ml-1 primary-green button-m"
+                >Xem chi tiết</a
+              >
             </div>
             <div>
-              <div class="flex-items-center" style="justify-content: space-between;">
+              <div
+                class="flex-items-center"
+                style="justify-content: space-between"
+              >
                 <div class="space-x-3 flex-items-center">
                   <div class="avatar-rounded">
-                    <img class=" rounded-full" width="100" height="100" src="public/images/avatar1.png" alt="avatar" />
+                    <img
+                      class="rounded-full"
+                      width="100"
+                      height="100"
+                      src="public/images/avatar1.png"
+                      alt="avatar"
+                    />
                   </div>
                   <p class="caption-m grayscale-dark-gray">Customer</p>
                 </div>
                 <div class="space-x-2 flex-items-center">
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-half-teacher.svg" alt="star" width="16" height="16" />
+                  <img
+                    src="public/icons/star-teacher.svg"
+                    alt="star"
+                    width="16"
+                    height="16"
+                  />
+                  <img
+                    src="public/icons/star-teacher.svg"
+                    alt="star"
+                    width="16"
+                    height="16"
+                  />
+                  <img
+                    src="public/icons/star-teacher.svg"
+                    alt="star"
+                    width="16"
+                    height="16"
+                  />
+                  <img
+                    src="public/icons/star-teacher.svg"
+                    alt="star"
+                    width="16"
+                    height="16"
+                  />
+                  <img
+                    src="public/icons/star-half-teacher.svg"
+                    alt="star"
+                    width="16"
+                    height="16"
+                  />
                 </div>
               </div>
-              <p class="body-s grayscale-dark-gray pt-2">Lorem ipsum dolor sit amet consectetu. Mi rhoncus nulla sit
-                tincidunt accumsan montes tellus scelerisque.</p>
-            </div>
-            <div>
-              <div class="flex-items-center" style="justify-content: space-between;">
-                <div class="space-x-3 flex-items-center">
-                  <div class="avatar-rounded">
-                    <img class=" rounded-full" width="100" height="100" src="public/images/avatar1.png" alt="avatar" />
-                  </div>
-                  <p class="caption-m grayscale-dark-gray">Customer</p>
-                </div>
-                <div class="space-x-2 flex-items-center">
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-half-teacher.svg" alt="star" width="16" height="16" />
-                </div>
-              </div>
-              <p class="body-s grayscale-dark-gray pt-2">Lorem ipsum dolor sit amet consectetu. Mi rhoncus nulla sit
-                tincidunt accumsan montes tellus scelerisque.</p>
-            </div>
-            <div>
-              <div class="flex-items-center" style="justify-content: space-between;">
-                <div class="space-x-3 flex-items-center">
-                  <div class="avatar-rounded">
-                    <img class=" rounded-full" width="100" height="100" src="public/images/avatar1.png" alt="avatar" />
-                  </div>
-                  <p class="caption-m grayscale-dark-gray">Customer</p>
-                </div>
-                <div class="space-x-2 flex-items-center">
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-half-teacher.svg" alt="star" width="16" height="16" />
-                </div>
-              </div>
-              <p class="body-s grayscale-dark-gray pt-2">Lorem ipsum dolor sit amet consectetu. Mi rhoncus nulla sit
-                tincidunt accumsan montes tellus scelerisque.</p>
+              <p class="body-s grayscale-dark-gray pt-2">
+                Lorem ipsum dolor sit amet consectetu. Mi rhoncus nulla sit
+                tincidunt accumsan montes tellus scelerisque.
+              </p>
             </div>
           </div>
-          <div class="teacher-right space-y-5">
-            <div>
-              <div class="flex-items-center" style="justify-content: space-between;">
-                <div class="space-x-3 flex-items-center">
-                  <div class="avatar-rounded">
-                    <img class=" rounded-full" width="100" height="100" src="public/images/avatar1.png" alt="avatar" />
-                  </div>
-                  <p class="caption-m grayscale-dark-gray">Customer</p>
-                </div>
-                <div class="space-x-2 flex-items-center">
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-half-teacher.svg" alt="star" width="16" height="16" />
-                </div>
-              </div>
-              <p class="body-s grayscale-dark-gray pt-2">Lorem ipsum dolor sit amet consectetu. Mi rhoncus nulla sit
-                tincidunt accumsan montes tellus scelerisque.</p>
+          <div class="teacher-right">
+            <div
+              class="image-teacher rounded-5 flex-center w-full"
+              style="background-color: #00000033"
+            >
+              <img
+                width="60"
+                height="60"
+                style="object-fit: cover"
+                src="/public/icons/play-solid.svg"
+                alt="iamge"
+              />
             </div>
-            <div>
-              <div class="flex-items-center" style="justify-content: space-between;">
-                <div class="space-x-3 flex-items-center">
-                  <div class="avatar-rounded">
-                    <img class=" rounded-full" width="100" height="100" src="public/images/avatar1.png" alt="avatar" />
-                  </div>
-                  <p class="caption-m grayscale-dark-gray">Customer</p>
-                </div>
-                <div class="space-x-2 flex-items-center">
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-half-teacher.svg" alt="star" width="16" height="16" />
-                </div>
-              </div>
-              <p class="body-s grayscale-dark-gray pt-2">Lorem ipsum dolor sit amet consectetu. Mi rhoncus nulla sit
-                tincidunt accumsan montes tellus scelerisque.</p>
-            </div>
-            <div>
-              <div class="flex-items-center" style="justify-content: space-between;">
-                <div class="space-x-3 flex-items-center">
-                  <div class="avatar-rounded">
-                    <img class=" rounded-full" width="100" height="100" src="public/images/avatar1.png" alt="avatar" />
-                  </div>
-                  <p class="caption-m grayscale-dark-gray">Customer</p>
-                </div>
-                <div class="space-x-2 flex-items-center">
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-half-teacher.svg" alt="star" width="16" height="16" />
-                </div>
-              </div>
-              <p class="body-s grayscale-dark-gray pt-2">Lorem ipsum dolor sit amet consectetu. Mi rhoncus nulla sit
-                tincidunt accumsan montes tellus scelerisque.</p>
-            </div>
-            <div>
-              <div class="flex-items-center" style="justify-content: space-between;">
-                <div class="space-x-3 flex-items-center">
-                  <div class="avatar-rounded">
-                    <img class=" rounded-full" width="100" height="100" src="public/images/avatar1.png" alt="avatar" />
-                  </div>
-                  <p class="caption-m grayscale-dark-gray">Customer</p>
-                </div>
-                <div class="space-x-2 flex-items-center">
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-teacher.svg" alt="star" width="16" height="16" />
-                  <img src="public/icons/star-half-teacher.svg" alt="star" width="16" height="16" />
-                </div>
-              </div>
-              <p class="body-s grayscale-dark-gray pt-2">Lorem ipsum dolor sit amet consectetu. Mi rhoncus nulla sit
-                tincidunt accumsan montes tellus scelerisque.</p>
-            </div>
-
           </div>
         </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div id="modal-chung-chi" class="uk-flex-top" uk-modal>
-    <div class="level-modal uk-modal-dialog modal-teacher rounded-5 uk-modal-body uk-margin-auto-vertical">
-      <div class="flex" style="justify-content: space-between">
-        <a class="project-header-button" uk-toggle href="#modal-giao-vien"><img src="/public/icons/arrow-left.svg" alt="icon arrow" /></a>
-        <p class="heading-h2 grayscale-dark-gray">Chứng chỉ</p>
-        <button type="button" onclick="hideModal('modal-chung-chi')" class="rounded-full flex-justify-center"
-          style="background-color: transparent">
-          <img src="public/icons/x2.svg" width="40" height="40" />
-        </button>
-      </div>
-     
-      <!-- Body -->
-      <div id="certificate" class="flex-items-center space-x-10 certificate-wrapper-image mt-10"
-        style="padding-bottom: 14px">
-        <img src="public/images/project.jpeg" class="certificate-image" alt="image-upload" />
-        <img src="public/images/project.jpeg" class="certificate-image" alt="image-upload" />
-        <img src="public/images/project.jpeg" class="certificate-image" alt="image-upload" />
-      </div>
-    </div>
-  </div>
-
-  <div id="modal-doi-hoc-vien" class="uk-flex-top" style="zoom: 0.85;" uk-modal>
-    <div class="level-modal uk-modal-dialog parent-class space-y-10 rounded-5 uk-modal-body uk-margin-auto-vertical">
-      <div class="flex" style="justify-content: space-between">
-        <p></p>
-        <button type="button" onclick="hideModal('modal-doi-hoc-vien')" class="rounded-full flex-justify-center"
-          style="background-color: transparent">
-          <img src="public/icons/x2.svg" width="40" height="40" />
-        </button>
-      </div>
-      <p class="heading-h3 text-center grayscale-dark-gray">Chọn hồ sơ</p>
-      <div class="flex-center space-x-20" style="margin: 80px 0;">
-        <div class="flex-center avatar-wrapper" onclick="selectAvatar(this)" style="flex-direction: column">
-          <div class="avatar-bg student-avatar" style="background-color: #00B26B;">
-            <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
-          </div>
-          <p class="grayscale-dark-gray button-l mt-6">Tina</p>
-        </div>
-        <div class="flex-center avatar-wrapper" onclick="selectAvatar(this)" style="flex-direction: column">
-          <div class="avatar-bg student-avatar" style="background-color: transparent;">
-            <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
-          </div>
-          <p class="grayscale-dark-gray button-l mt-6">Tina</p>
-        </div>
-        <div class="flex-center avatar-wrapper" onclick="selectAvatar(this)" style="flex-direction: column">
-          <div class="avatar-bg student-avatar" style="background-color: transparent;">
-            <img class="rounded-full p-1" width="120" height="120" src="public/images/avatar1.png" alt="avatar" />
-          </div>
-          <p class="grayscale-dark-gray button-l mt-6">Tina</p>
+        <div class="space-x-5 mt-10 flex-center">
+          <a
+            class="button-primary px-10 btn-animation flex-center bg-secondary-red px-5 grayscale-white button-m"
+            style="height: 56px; color: #252525; background-color: #d8eddd"
+          >
+            <img
+              width="32"
+              class="mr-3"
+              height="32"
+              src="public/icons/share-green.svg"
+              alt="share"
+            />
+            Chia sẻ
+          </a>
+          <a
+            class="button-primary px-10 btn-animation flex-center bg-primary-green px-5 grayscale-white button-m"
+            style="height: 56px; color: white; background-color: #00b26b"
+          >
+            <img
+              width="32"
+              class="mr-3"
+              height="32"
+              src="public/icons/message.svg"
+              alt="share"
+            />
+            Nhắn tin
+          </a>
         </div>
       </div>
     </div>
-  </div>
+    <div id="modal-danh-gia" class="uk-flex-top" uk-modal>
+      <div
+        class="level-modal uk-modal-dialog modal-teacher rounded-5 uk-modal-body uk-margin-auto-vertical"
+      >
+        <div class="flex" style="justify-content: space-between">
+          <a class="project-header-button" uk-toggle href="#modal-giao-vien"
+            ><img src="/public/icons/arrow-left.svg" alt="icon arrow"
+          /></a>
+          <p class="heading-h2 grayscale-dark-gray">Đánh giá</p>
+          <button
+            type="button"
+            onclick="hideModal('modal-danh-gia')"
+            class="rounded-full flex-justify-center"
+            style="background-color: transparent"
+          >
+            <img src="public/icons/x2.svg" width="40" height="40" />
+          </button>
+        </div>
+        <div class="flex-center space-x-10">
+          <div
+            class="rounded-full mr-4"
+            style="
+              background-color: white;
+              width: fit-content;
+              height: fit-content;
+              box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            "
+          >
+            <img
+              class="rounded-full p-1"
+              width="160"
+              style="flex: 1 1 0%"
+              height="160"
+              src="public/images/avatar1.png"
+              alt="avatar"
+            />
+          </div>
+          <div class="space-x-5 flex-items-center">
+            <a
+              href="#modal-chung-chi"
+              uk-toggle
+              class="rounded-5 flex-center"
+              style="
+                padding: 20px 14px 24px 14px;
+                min-width: 240px;
+                flex-direction: column;
+                border: 1px solid #0000001a;
+              "
+            >
+              <p
+                class="caption-l grayscale-dark-gray"
+                style="line-height: 29px"
+              >
+                Chứng chỉ
+              </p>
+              <div class="heading-h2 primary-green flex-items-center">
+                TEFL
+                <img
+                  class="ml-2"
+                  src="public/icons/image-green.svg"
+                  width="24"
+                  height="24"
+                  alt="images"
+                />
+              </div>
+            </a>
+            <div
+              class="rounded-5 flex-center"
+              style="
+                padding: 20px 14px 24px 14px;
+                min-width: 240px;
+                flex-direction: column;
+                border: 1px solid #0000001a;
+              "
+            >
+              <p
+                class="caption-l grayscale-dark-gray"
+                style="line-height: 29px"
+              >
+                Chuyên cần
+              </p>
+              <p class="heading-h2 primary-green">100%</p>
+            </div>
+            <div
+              class="rounded-5 flex-center"
+              style="
+                padding: 20px 14px 24px 14px;
+                min-width: 240px;
+                flex-direction: column;
+                border: 1px solid #0000001a;
+              "
+            >
+              <p
+                class="caption-l grayscale-dark-gray"
+                style="line-height: 29px"
+              >
+                Kinh nghiệm
+              </p>
+              <p class="heading-h2 primary-green">1-3 năm</p>
+            </div>
+          </div>
+        </div>
+        <!-- Body -->
+        <div class="flex-justify-center mt-10">
+          <div class="dashboard-feedback">
+            <div
+              id="dashboard-feedback"
+              class="dashboard-feedback-layout"
+            >
+              <div
+                class="flex-items-center"
+                style="grid-column: span 2 / span 2"
+              >
+                <div class="flex-items-center space-x-2">
+                  <div class="flex-items-center">
+                    <div
+                      class="bg-primary-green rounded-full drop-shadow-button-d flex-center button-l grayscale-white"
+                      style="width: 60px; height: 60px; z-index: 1"
+                    >
+                      4.5
+                    </div>
+                    <div
+                      class="space-x-2 flex-items-center rounded-6 pr-3 py-1_5 bg-grayscale-white"
+                      style="
+                        border: 1px solid #0000001a;
+                        width: fit-content;
+                        padding-left: 60px;
+                        margin-left: -50px;
+                      "
+                    >
+                      <img
+                        src="public/icons/star-teacher.svg"
+                        alt="star"
+                        width="16"
+                        height="16"
+                      />
+                      <img
+                        src="public/icons/star-teacher.svg"
+                        alt="star"
+                        width="16"
+                        height="16"
+                      />
+                      <img
+                        src="public/icons/star-teacher.svg"
+                        alt="star"
+                        width="16"
+                        height="16"
+                      />
+                      <img
+                        src="public/icons/star-teacher.svg"
+                        alt="star"
+                        width="16"
+                        height="16"
+                      />
+                      <img
+                        src="public/icons/star-half-teacher.svg"
+                        alt="star"
+                        width="16"
+                        height="16"
+                      />
+                    </div>
+                  </div>
+                  <p class="body-s grayscale-dark-gray">20 đánh giá</p>
+                </div>
+              </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    // Get the canvas element
-    const ctx = document.getElementById('myBarChart').getContext('2d');
+              <div>
+                <div
+                  class="flex-items-center"
+                  style="justify-content: space-between"
+                >
+                  <div class="space-x-3 flex-items-center">
+                    <div class="avatar-rounded">
+                      <img
+                        class="rounded-full"
+                        width="100"
+                        height="100"
+                        src="public/images/avatar1.png"
+                        alt="avatar"
+                      />
+                    </div>
+                    <p class="caption-m grayscale-dark-gray">Customer</p>
+                  </div>
+                  <div class="space-x-2 flex-items-center">
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-half-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                  </div>
+                </div>
+                <p class="body-s grayscale-dark-gray pt-2">
+                  Lorem ipsum dolor sit amet consectetu. Mi rhoncus nulla sit
+                  tincidunt accumsan montes tellus scelerisque.
+                </p>
+              </div>
+              <div>
+                <div
+                  class="flex-items-center"
+                  style="justify-content: space-between"
+                >
+                  <div class="space-x-3 flex-items-center">
+                    <div class="avatar-rounded">
+                      <img
+                        class="rounded-full"
+                        width="100"
+                        height="100"
+                        src="public/images/avatar1.png"
+                        alt="avatar"
+                      />
+                    </div>
+                    <p class="caption-m grayscale-dark-gray">Customer</p>
+                  </div>
+                  <div class="space-x-2 flex-items-center">
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-half-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                  </div>
+                </div>
+                <p class="body-s grayscale-dark-gray pt-2">
+                  Lorem ipsum dolor sit amet consectetu. Mi rhoncus nulla sit
+                  tincidunt accumsan montes tellus scelerisque.
+                </p>
+              </div>
+              <div>
+                <div
+                  class="flex-items-center"
+                  style="justify-content: space-between"
+                >
+                  <div class="space-x-3 flex-items-center">
+                    <div class="avatar-rounded">
+                      <img
+                        class="rounded-full"
+                        width="100"
+                        height="100"
+                        src="public/images/avatar1.png"
+                        alt="avatar"
+                      />
+                    </div>
+                    <p class="caption-m grayscale-dark-gray">Customer</p>
+                  </div>
+                  <div class="space-x-2 flex-items-center">
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-half-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                  </div>
+                </div>
+                <p class="body-s grayscale-dark-gray pt-2">
+                  Lorem ipsum dolor sit amet consectetu. Mi rhoncus nulla sit
+                  tincidunt accumsan montes tellus scelerisque.
+                </p>
+              </div>
+              <div>
+                <div
+                  class="flex-items-center"
+                  style="justify-content: space-between"
+                >
+                  <div class="space-x-3 flex-items-center">
+                    <div class="avatar-rounded">
+                      <img
+                        class="rounded-full"
+                        width="100"
+                        height="100"
+                        src="public/images/avatar1.png"
+                        alt="avatar"
+                      />
+                    </div>
+                    <p class="caption-m grayscale-dark-gray">Customer</p>
+                  </div>
+                  <div class="space-x-2 flex-items-center">
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-half-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                  </div>
+                </div>
+                <p class="body-s grayscale-dark-gray pt-2">
+                  Lorem ipsum dolor sit amet consectetu. Mi rhoncus nulla sit
+                  tincidunt accumsan montes tellus scelerisque.
+                </p>
+              </div>
+              <div>
+                <div
+                  class="flex-items-center"
+                  style="justify-content: space-between"
+                >
+                  <div class="space-x-3 flex-items-center">
+                    <div class="avatar-rounded">
+                      <img
+                        class="rounded-full"
+                        width="100"
+                        height="100"
+                        src="public/images/avatar1.png"
+                        alt="avatar"
+                      />
+                    </div>
+                    <p class="caption-m grayscale-dark-gray">Customer</p>
+                  </div>
+                  <div class="space-x-2 flex-items-center">
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-half-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                  </div>
+                </div>
+                <p class="body-s grayscale-dark-gray pt-2">
+                  Lorem ipsum dolor sit amet consectetu. Mi rhoncus nulla sit
+                  tincidunt accumsan montes tellus scelerisque.
+                </p>
+              </div>
+              <div>
+                <div
+                  class="flex-items-center"
+                  style="justify-content: space-between"
+                >
+                  <div class="space-x-3 flex-items-center">
+                    <div class="avatar-rounded">
+                      <img
+                        class="rounded-full"
+                        width="100"
+                        height="100"
+                        src="public/images/avatar1.png"
+                        alt="avatar"
+                      />
+                    </div>
+                    <p class="caption-m grayscale-dark-gray">Customer</p>
+                  </div>
+                  <div class="space-x-2 flex-items-center">
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                    <img
+                      src="public/icons/star-half-teacher.svg"
+                      alt="star"
+                      width="16"
+                      height="16"
+                    />
+                  </div>
+                </div>
+                <p class="body-s grayscale-dark-gray pt-2">
+                  Lorem ipsum dolor sit amet consectetu. Mi rhoncus nulla sit
+                  tincidunt accumsan montes tellus scelerisque.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    // Define the chart data
-    const data = {
-      labels: ['02/09', '06/09', '06/09', '06/09', '06/09', "06/09", "06/09"], // Labels for the X-axis
-      datasets: [{
-        label: 'Monthly Sales ($)',
-        data: [1, 2, 3, 2, 1, 2, 2], // Y-axis values
-        backgroundColor: [
-          '#FF9800',
+    <div id="modal-chung-chi" class="uk-flex-top" uk-modal>
+      <div
+        class="level-modal uk-modal-dialog modal-teacher rounded-5 uk-modal-body uk-margin-auto-vertical"
+      >
+        <div class="flex" style="justify-content: space-between">
+          <a class="project-header-button" uk-toggle href="#modal-giao-vien"
+            ><img src="/public/icons/arrow-left.svg" alt="icon arrow"
+          /></a>
+          <p class="heading-h2 grayscale-dark-gray">Chứng chỉ</p>
+          <button
+            type="button"
+            onclick="hideModal('modal-chung-chi')"
+            class="rounded-full flex-justify-center"
+            style="background-color: transparent"
+          >
+            <img src="public/icons/x2.svg" width="40" height="40" />
+          </button>
+        </div>
 
+        <!-- Body -->
+        <div
+          id="certificate"
+          class="flex-items-center space-x-10 certificate-wrapper-image mt-10"
+          style="padding-bottom: 14px"
+        >
+          <img
+            src="public/images/project.jpeg"
+            class="certificate-image"
+            alt="image-upload"
+          />
+          <img
+            src="public/images/project.jpeg"
+            class="certificate-image"
+            alt="image-upload"
+          />
+          <img
+            src="public/images/project.jpeg"
+            class="certificate-image"
+            alt="image-upload"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal-doi-hoc-vien"
+      class="uk-flex-top"
+      style="zoom: 0.85"
+      uk-modal
+    >
+      <div
+        class="level-modal uk-modal-dialog parent-class space-y-10 rounded-5 uk-modal-body uk-margin-auto-vertical"
+      >
+        <div class="flex" style="justify-content: space-between">
+          <p></p>
+          <button
+            type="button"
+            onclick="hideModal('modal-doi-hoc-vien')"
+            class="rounded-full flex-justify-center"
+            style="background-color: transparent"
+          >
+            <img src="public/icons/x2.svg" width="40" height="40" />
+          </button>
+        </div>
+        <p class="heading-h3 text-center grayscale-dark-gray">Chọn hồ sơ</p>
+        <div class="flex-center space-x-20" style="margin: 80px 0">
+          <div
+            class="flex-center avatar-wrapper"
+            onclick="selectAvatar(this)"
+            style="flex-direction: column"
+          >
+            <div
+              class="avatar-bg student-avatar"
+              style="background-color: #00b26b"
+            >
+              <img
+                class="rounded-full p-1"
+                width="120"
+                height="120"
+                src="public/images/avatar1.png"
+                alt="avatar"
+              />
+            </div>
+            <p class="grayscale-dark-gray button-l mt-6">Tina</p>
+          </div>
+          <div
+            class="flex-center avatar-wrapper"
+            onclick="selectAvatar(this)"
+            style="flex-direction: column"
+          >
+            <div
+              class="avatar-bg student-avatar"
+              style="background-color: transparent"
+            >
+              <img
+                class="rounded-full p-1"
+                width="120"
+                height="120"
+                src="public/images/avatar1.png"
+                alt="avatar"
+              />
+            </div>
+            <p class="grayscale-dark-gray button-l mt-6">Tina</p>
+          </div>
+          <div
+            class="flex-center avatar-wrapper"
+            onclick="selectAvatar(this)"
+            style="flex-direction: column"
+          >
+            <div
+              class="avatar-bg student-avatar"
+              style="background-color: transparent"
+            >
+              <img
+                class="rounded-full p-1"
+                width="120"
+                height="120"
+                src="public/images/avatar1.png"
+                alt="avatar"
+              />
+            </div>
+            <p class="grayscale-dark-gray button-l mt-6">Tina</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      // Get the canvas element
+      const ctx = document.getElementById("myBarChart").getContext("2d");
+
+      // Define the chart data
+      const data = {
+        labels: ["02/09", "06/09", "06/09", "06/09", "06/09", "06/09", "06/09"], // Labels for the X-axis
+        datasets: [
+          {
+            label: "Monthly Sales ($)",
+            data: [1, 2, 3, 2, 1, 2, 2], // Y-axis values
+            backgroundColor: ["#FF9800"],
+            borderRadius: 8, // Rounded corners
+            borderSkipped: "bottom",
+            barThickness: 20,
+            // Border thickness
+          },
         ],
-        borderRadius: 8, // Rounded corners
-        borderSkipped: 'bottom',
-        barThickness: 20
-        // Border thickness
-      }]
-    };
+      };
 
-    // Define the chart options
-    const options = {
-      responsive: true,
-      plugins: {
-        legend: {
-          display: false
-        }
-      },
-      scales: {
-        x: {
-          grid: {
-            drawOnChartArea: false, // Disable grid lines
-            drawBorder: false, // Disable axis line
-            drawTicks: false // Enable tick marks
+      // Define the chart options
+      const options = {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false,
           },
-          ticks: {
-            display: true // Show tick labels
-          }
         },
-        y: {
-          grid: {
-            drawOnChartArea: true, // Disable grid lines
-            drawBorder: false, // Disable axis line
-            drawTicks: false // Enable tick marks
+        scales: {
+          x: {
+            grid: {
+              drawOnChartArea: false, // Disable grid lines
+              drawBorder: false, // Disable axis line
+              drawTicks: false, // Enable tick marks
+            },
+            ticks: {
+              display: true, // Show tick labels
+            },
           },
-          ticks: {
-            stepSize: 1,
-            display: true // Show tick labels
-          }
-        }
+          y: {
+            grid: {
+              drawOnChartArea: true, // Disable grid lines
+              drawBorder: false, // Disable axis line
+              drawTicks: false, // Enable tick marks
+            },
+            ticks: {
+              stepSize: 1,
+              display: true, // Show tick labels
+            },
+          },
+        },
+      };
+
+      // Create the chart
+      new Chart(ctx, {
+        type: "bar", // Chart type
+        data: data,
+        options: options,
+      });
+
+      function hideModal(modalId) {
+        const dropdownElement = document.getElementById(modalId);
+
+        UIkit.modal(dropdownElement).hide(0);
       }
-    };
 
-    // Create the chart
-    new Chart(ctx, {
-      type: 'bar', // Chart type
-      data: data,
-      options: options
-    });
+      function selectAvatar(selectedElement) {
+        // Reset all avatar backgrounds to transparent
+        document.querySelectorAll(".student-avatar").forEach((element) => {
+          element.style.backgroundColor = "transparent";
+        });
 
-    function hideModal(modalId) {
-      const dropdownElement = document.getElementById(modalId);
-
-      UIkit.modal(dropdownElement).hide(0);
-    }
-
-
-    function selectAvatar(selectedElement) {
-    // Reset all avatar backgrounds to transparent
-    document.querySelectorAll(".student-avatar").forEach((element) => {
-      element.style.backgroundColor = "transparent";
-    });
-
-    // Set the background color of the selected avatar
-    selectedElement.querySelector(".student-avatar").style.backgroundColor = "#00B26B";
-  }
-  </script>
-
-</body>
-
+        // Set the background color of the selected avatar
+        selectedElement.querySelector(".student-avatar").style.backgroundColor =
+          "#00B26B";
+      }
+    </script>
+  </body>
 </html>

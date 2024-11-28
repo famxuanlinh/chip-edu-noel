@@ -1413,13 +1413,21 @@ p {
 }
 .dashboard-feedback {
   width: 1280px;
-  height: calc(100vh - 420px);
+  max-height: calc(100vh - 420px);
+  height: 100%;
   overflow-y: auto;
 }
 @media screen and (max-width: 1600px) {
   .dashboard-feedback {
-    height: calc(100vh - 314px);
+    max-height: calc(100vh - 314px);
+    height: 100%;
   }
+}
+.dashboard-feedback-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 40px;
+  row-gap: 20px;
 }
 
 .progress {
@@ -1520,6 +1528,10 @@ p {
   }
 }
 
+#scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+
 .coming-class {
   overflow-y: auto;
   max-height: calc(100vh - 128px);
@@ -1534,6 +1546,7 @@ p {
 
 #tab-coming-content::-webkit-scrollbar,
 #tab-completed-content::-webkit-scrollbar,
+#dashboard-feedback::-webkit-scrollbar,
 #tab-canceled-content::-webkit-scrollbar {
   display: none;
 }
