@@ -19,7 +19,7 @@
   <body>
     <div class="layout">
       <div class="layout-sidebar">
-        <a href="#" class="layout-sidebar-item">
+        <a href="#" class="layout-sidebar-item pt-2 mb-5" style="justify-content: start;">
           <img
             height="32"
             width="32"
@@ -137,13 +137,13 @@
                   </p>
                 </div>
 
-                <button
+                <!-- <button
                   onclick="toggleShowRegisterForFriends()"
                   class="btn rounded-6 grayscale-white bg-primary-green button-s"
                   style="height: 40px; width: 160px"
                 >
                   Gọi Hotline
-                </button>
+                </button> -->
               </div>
             </div>
             <div class="bg-grayscale-white rounded-5 flex-1 support-padding support-zoom">
@@ -188,7 +188,7 @@
                   ><input
                     class="uk-checkbox mr-2 rounded-sm"
                     type="checkbox"
-                    checked
+                    id="toggleAnotherFeedback"
                   />Ý kiến khác</label
                 >
                 <textarea
@@ -196,6 +196,7 @@
                   rows="5"
                   placeholder="Nhập nội dung"
                   aria-label="Textarea"
+                  id="anotherFeedback"
                   style="padding: 14px 20px; height: 100px;width: calc(100% - 20px);"
                 ></textarea>
 
@@ -283,6 +284,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
-    <script></script>
+    <script>
+      const checkbox = document.getElementById('toggleAnotherFeedback');
+  const textarea = document.getElementById('anotherFeedback');
+
+  checkbox.addEventListener('change', () => {
+    textarea.style.display = checkbox.checked ? 'block' : 'none';
+  });
+
+  // Set initial state
+  textarea.style.display = checkbox.checked ? 'block' : 'none';
+    </script>
   </body>
 </html>
