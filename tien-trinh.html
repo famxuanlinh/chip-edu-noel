@@ -53,10 +53,10 @@
         <p class="button-s pt-1">Trợ giúp</p>
       </a>
     </div>
-    <div class="layout-content parent-box space-x-5 flex-justify-center">
-      <div class="learning-progress space-y-5">
-
-        <div class="learning-progress-summary">
+    <div class="layout-content parent-box flex-justify-center">
+      <div class="learning-progress ">
+        <p class="heading-h4 grayscale-dark-gray text-center pb-3">Tiến trình học tập</p>
+        <div class="learning-progress-summary learning-progress-zoom">
           <div class="py-4 w-full flex-center rounded-5 bg-grayscale-white bg-grayscale-white"
             style="border: 1px solid #0000001A;position: relative; flex-direction: column;">
             <p class="caption-s grayscale-dark-gray mb-1">Đã học</p>
@@ -105,7 +105,7 @@
               class="ml-1" src="public/icons/info1.svg" alt="star">
           </div>
         </div>
-        <div class="learning-progress-activity p-4 w-full rounded-5 bg-grayscale-white">
+        <div class="learning-progress-activity p-4 w-full rounded-5 bg-grayscale-white learning-progress-zoom">
           <div class="flex-items-center learning-progress-activity-first">
             <p class="caption-s grayscale-dark-gray mb-1">Hoạt động luyện tập ngoài lớp</p>
 
@@ -132,7 +132,7 @@
           </div>
         </div>
 
-        <div class="flex space-x-5">
+        <div class="flex space-x-5 learning-progress-zoom">
           <div class="flex-1 parent-box bg-grayscale-white">
             <p class="caption-m flex-center grayscale-dark-gray">Số buổi học hàng tuần</p>
             <div class="h-full flex-items-center"> <canvas id="myBarChart" width="400px" height="120px"></canvas>
@@ -166,7 +166,7 @@
           </div>
 
         </div>
-        <div class="flex space-x-5">
+        <div class="flex space-x-5 learning-progress-zoom">
           <!-- Doughnut Chart -->
           <div class="parent-box bg-grayscale-white flex-1">
             <p class="caption-m flex-center grayscale-dark-gray mb-5 ">Thống kê tỉ lệ lớp thành công, hủy</p>
@@ -212,7 +212,7 @@
             <p class="caption-m flex-center grayscale-dark-gray" style="z-index: 1;">Năng lực
               học tập</p>
             <div class="flex-justify-center h-full mt-2" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-              <div class="flex-justify-center w-full" style="position: relative; width: 300px; height:300px;">
+              <div class="flex-justify-center w-full" style="position: relative; width: 270px; height:270px;">
                 <canvas id="radarChart"></canvas>
               </div>
             </div>

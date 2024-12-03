@@ -1598,9 +1598,15 @@ p {
   width: 100%;
   height: calc(100vh - 80px);
 }
+.learning-progress > :not(:last-child) {
+  margin-bottom: 20px;
+}
 @media screen and (max-width: 1600px) {
   .learning-progress {
     zoom: 0.8;
+  }
+  .learning-progress > :not(:last-child) {
+    margin-bottom: 12px;
   }
 }
 .learning-progress-summary {
@@ -1616,6 +1622,15 @@ p {
 }
 .learning-progress-activity-first {
   grid-column: span 2/span 2;
+}
+
+.learning-progress-zoom {
+  zoom: 0.91;
+}
+@media screen and (max-width: 1600px) {
+  .learning-progress-zoom {
+    zoom: 0.92;
+  }
 }
 
 .teacher-stats .teacher-row {

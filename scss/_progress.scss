@@ -6,10 +6,18 @@
   width: 100%;
   height: calc(100vh - 80px);
 
-  @include maxw() {
-    zoom: 0.8;
+  & > :not(:last-child) {
+    margin-bottom: 20px;
   }
 
+  @include maxw() {
+    zoom: 0.8;
+    & > :not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+ 
   &-summary {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -24,6 +32,13 @@
     &-first {
       grid-column: span 2 / span 2;
     }
+  }
+}
+
+.learning-progress-zoom {
+  zoom: 0.91;
+  @include maxw() {
+    zoom: 0.92;
   }
 }
 
