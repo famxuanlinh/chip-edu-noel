@@ -401,6 +401,12 @@
 .rounded-5 {
   border-radius: 20px;
 }
+.rounded-8 {
+  border-radius: 28px;
+}
+.rounded-10 {
+  border-radius: 40px;
+}
 .rounded-6 {
   border-radius: 24px;
 }

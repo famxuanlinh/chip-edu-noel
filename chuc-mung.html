@@ -107,7 +107,9 @@
             >
               Quay lại
             </button>
-            <button
+            <a
+              href="#lesson-modal"
+              uk-toggle
               class="button-primary btn-animation w-full flex-center bg-primary-green px-5 grayscale-white button-m"
               style="
                 height: 56px;
@@ -117,13 +119,69 @@
               "
             >
               Xem đánh giá chi tiết
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div id="lesson-modal" class="uk-flex-top" uk-modal>
+        <div
+          class="lesson-modal uk-modal-dialog space-y-10 rounded-5 uk-modal-body uk-margin-auto-vertical uk-position-relative"
+        >
+          <div class="flex-items-center" style="justify-content: space-between">
+            <p></p>
+            <p class="heading-h3 grayscale-dark-gray">Lesson’s Name</p>
+            <button
+              type="button"
+              onclick="hideModal('lesson-modal')"
+              class="rounded-full flex-justify-center"
+              style="background-color: transparent"
+            >
+              <img src="public/icons/x2.svg" width="40" height="40" />
             </button>
           </div>
+          <main>
+            <div>
+              <h1>Smooth Scrolling Sticky ScrollSpy Navigation</h1>
+              <section id="introduction">
+                <h2>Introduction</h2>
+                <p>…</p>
+              </section>
+              <section id="request-response">
+                <h2>Request &amp; Response</h2>
+                <p>…</p>
+              </section>
+              <section id="authentication">
+                <h2>Authentication</h2>
+                <p>…</p>
+              </section>
+
+              <section id="links">
+                <h2>Links</h2>
+                <p>…</p>
+              </section>
+            </div>
+            <nav class="section-nav">
+              <ol>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#request-response">Request &amp; Response</a></li>
+                <li><a href="#authentication">Authentication</a></li>
+
+                <li class=""><a href="#links">Links</a></li>
+              </ol>
+            </nav>
+          </main>
         </div>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
-    <script></script>
+    <script>
+      function hideModal(modalId) {
+        const dropdownElement = document.getElementById(modalId);
+
+        UIkit.modal(dropdownElement).hide(0);
+      }
+    </script>
   </body>
 </html>

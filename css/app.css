@@ -2001,6 +2001,133 @@ p {
   }
 }
 
+.result-scroller section {
+  min-height: 100%;
+  padding: 10px;
+}
+
+.result-scroller section:nth-child(odd) {
+  background-color: #ccc;
+}
+
+.result-scroller {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.result-scroller section {
+  scroll-snap-align: start;
+}
+
+.vocab-tag {
+  color: #454575;
+  text-align: center;
+  padding: 0 20px;
+  height: 44px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 28.8px */
+  box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.0509803922);
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+}
+
+.goal-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 20px;
+}
+.goal-grid-item-3 {
+  grid-column: span 3/span 3;
+}
+.goal-grid-item-2 {
+  grid-column: span 2/span 2;
+}
+
+.goal-content-width {
+  width: 670px;
+}
+@media screen and (max-width: 1600px) {
+  .goal-content-width {
+    width: 540px;
+  }
+}
+
+.result-sidebar {
+  border-right: 1px solid rgba(0, 0, 0, 0.1019607843);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.result-sidebar a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  color: #252525;
+  font-size: 20px;
+  padding: 0 40px;
+  height: 80px;
+  width: 100%;
+  display: flex;
+}
+.result-sidebar a > img {
+  display: none;
+}
+
+.border-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+
+.result-sidebar {
+  width: 451px;
+  height: 100vh;
+}
+.result-content {
+  overflow-y: scroll;
+  width: 100%;
+  max-height: 100vh;
+  height: 100%;
+  scroll-snap-type: y mandatory;
+}
+.result-content-1 {
+  height: 3000px;
+  padding: 40px;
+  background-color: 0;
+}
+.result-content-1 section {
+  scroll-snap-align: start;
+}
+.result-envelop {
+  left: -22%;
+  max-width: 100%;
+}
+@media screen and (max-width: 1600px) {
+  .result-envelop {
+    left: -5%;
+  }
+}
+
+.result-active-link {
+  font-weight: 800 !important;
+  background: rgba(0, 0, 0, 0.05);
+}
+.result-active-link > img {
+  display: block !important;
+}
+
+.try-study-result {
+  margin-top: 120px;
+}
+@media screen and (max-width: 1600px) {
+  .try-study-result {
+    margin-top: 40px;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   font-family: Nunito;
@@ -2013,6 +2140,14 @@ html {
   font-size: 100%;
   box-sizing: border-box;
   font-family: Nunito;
+  scroll-behavior: smooth;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Scrollbar */
