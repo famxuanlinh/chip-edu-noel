@@ -108,7 +108,7 @@
               Quay lại
             </button>
             <a
-              href="#lesson-modal"
+              href="#congrats-modal"
               uk-toggle
               class="button-primary btn-animation w-full flex-center bg-primary-green px-5 grayscale-white button-m"
               style="
@@ -124,53 +124,38 @@
         </div>
       </div>
 
-      <div id="lesson-modal" class="uk-flex-top" uk-modal>
+      <div
+        id="congrats-modal"
+        class="uk-flex-top congrats-modal-wrapper"
+        uk-modal
+      >
         <div
-          class="lesson-modal uk-modal-dialog space-y-10 rounded-5 uk-modal-body uk-margin-auto-vertical uk-position-relative"
+          style="padding: 0 !important; margin-top: 0 !important"
+          class="congrats-modal uk-modal-dialog rounded-5 uk-modal-body uk-margin-auto-vertical uk-position-relative p-0 m-0"
         >
-          <div class="flex-items-center" style="justify-content: space-between">
+          <div
+            class="flex-items-center result-embed-header"
+            style="
+              justify-content: space-between;
+              border-bottom: 1px solid #0000001a;
+            "
+          >
             <p></p>
-            <p class="heading-h3 grayscale-dark-gray">Lesson’s Name</p>
+
             <button
               type="button"
-              onclick="hideModal('lesson-modal')"
+              onclick="hideModal('congrats-modal')"
               class="rounded-full flex-justify-center"
               style="background-color: transparent"
             >
               <img src="public/icons/x2.svg" width="40" height="40" />
             </button>
           </div>
-          <main>
-            <div>
-              <h1>Smooth Scrolling Sticky ScrollSpy Navigation</h1>
-              <section id="introduction">
-                <h2>Introduction</h2>
-                <p>…</p>
-              </section>
-              <section id="request-response">
-                <h2>Request &amp; Response</h2>
-                <p>…</p>
-              </section>
-              <section id="authentication">
-                <h2>Authentication</h2>
-                <p>…</p>
-              </section>
-
-              <section id="links">
-                <h2>Links</h2>
-                <p>…</p>
-              </section>
-            </div>
-            <nav class="section-nav">
-              <ol>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#request-response">Request &amp; Response</a></li>
-                <li><a href="#authentication">Authentication</a></li>
-
-                <li class=""><a href="#links">Links</a></li>
-              </ol>
-            </nav>
-          </main>
+          <embed
+            type="text/html"
+            src="/ket-qua-hoc-thu.html"
+            class="w-full h-full rounded-b-5 result-embed"
+          />
         </div>
       </div>
     </div>

@@ -22,6 +22,22 @@
   width: calc(100vw - 80px) !important;
 }
 
+.congrats-modal {
+  height: calc(100vh - 200px);
+  width: calc(100vw - 80px) !important;
+
+  @include maxw() {
+    height: calc(100vh - 120px);
+    width: calc(100vw - 40px) !important;
+  }
+
+  &-wrapper {
+    @include maxw() {
+      padding: 20px !important;
+    }
+  }
+}
+
 /* Slideshow container */
 .slideshow-container {
   height: calc(100vh - 240px);
@@ -147,5 +163,17 @@
 
   @include maxw() {
     width: 540px;
+  }
+}
+
+.result-embed {
+  @include maxw() {
+    zoom: 0.8;
+  }
+  &-header {
+    padding: 40px;
+    @include maxw() {
+      padding: 20px;
+    }
   }
 }

@@ -197,7 +197,9 @@
           </section>
           <!-- Tổng quan -->
           <section id="try-study-overal" class="pb-10">
-            <img src="public/images/header-overal.png" alt="" />
+            <div class="flex-justify-center">
+              <img src="public/images/header-overal.png" alt="" />
+            </div>
             <div class="flex mt-10 space-x-10 grayscale-dark-gray">
               <div class="space-y-5" style="width: 488px">
                 <div
@@ -346,7 +348,9 @@
           </section>
           <!-- Đánh giá -->
           <section id="try-study-feedback">
-            <img src="public/images/header-overal.png" alt="" />
+            <div class="flex-justify-center">
+              <img src="public/images/header-feedback.png" alt="" />
+            </div>
             <div
               class="uk-position-relative flex mt-10 space-x-10 grayscale-dark-gray pb-10"
             >
@@ -429,7 +433,9 @@
           </section>
           <!-- Định hướng học tập -->
           <section id="try-study-goal" class="pb-16">
-            <img src="public/images/header-overal.png" alt="" />
+            <div class="flex-justify-center">
+              <img src="public/images/header-goal.png" alt="" />
+            </div>
             <div class="flex mt-10 space-x-10 grayscale-dark-gray">
               <div class="space-y-5 goal-content-width">
                 <div
@@ -558,29 +564,79 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script>
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   const sections = document.querySelectorAll("section");
+      //   const links = document.querySelectorAll(".result-sidebar a");
+
+      //   const observer = new IntersectionObserver(
+      //     (entries) => {
+      //       entries.forEach((entry) => {
+      //         const link = document.querySelector(
+      //           `.result-sidebar a[href="#${entry.target.id}"]`
+      //         );
+      //         if (entry.isIntersecting) {
+      //           links.forEach((link) =>
+      //             link.classList.remove("result-active-link")
+      //           );
+      //           link.classList.add("result-active-link");
+      //         }
+      //       });
+      //     },
+      //     {
+      //       root: null,
+      //       rootMargin: "0px",
+      //       threshold: 0.6, // Adjusts when a section is considered "in view"
+      //     }
+      //   );
+
+      //   sections.forEach((section) => observer.observe(section));
+      // });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const navLinks = document.querySelectorAll(".result-sidebar a");
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (event) => {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+            const targetId = link.getAttribute("href").substring(1); // Lấy id từ href
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+              targetSection.scrollIntoView({
+                behavior: "smooth", // Cuộn mượt
+                block: "start", // Đưa phần tử lên đầu viewport
+              });
+            }
+          });
+        });
+      });
+
       document.addEventListener("DOMContentLoaded", () => {
         const sections = document.querySelectorAll("section");
-        const links = document.querySelectorAll(".result-sidebar a");
+        const navLinks = document.querySelectorAll(".result-sidebar a");
+
+        const observerOptions = {
+          root: null, // Sử dụng viewport hiện tại
+          rootMargin: "0px",
+          threshold: 0.5, // Kích hoạt khi 50% của section xuất hiện trong viewport
+        };
+
+        const observerCallback = (entries) => {
+          entries.forEach((entry) => {
+            const link = document.querySelector(
+              `.result-sidebar a[href="#${entry.target.id}"]`
+            );
+            if (entry.isIntersecting) {
+              link.classList.add("result-active-link");
+            } else {
+              link.classList.remove("result-active-link");
+            }
+          });
+        };
 
         const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              const link = document.querySelector(
-                `.result-sidebar a[href="#${entry.target.id}"]`
-              );
-              if (entry.isIntersecting) {
-                links.forEach((link) =>
-                  link.classList.remove("result-active-link")
-                );
-                link.classList.add("result-active-link");
-              }
-            });
-          },
-          {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.6, // Adjusts when a section is considered "in view"
-          }
+          observerCallback,
+          observerOptions
         );
 
         sections.forEach((section) => observer.observe(section));
