@@ -1568,6 +1568,18 @@ p {
   }
 }
 
+.choose-package {
+  overflow-y: auto;
+  max-height: 100vh;
+  padding-top: 40px;
+}
+@media screen and (max-width: 1600px) {
+  .choose-package {
+    max-height: calc(100vh + 86px);
+    padding-top: 28px;
+  }
+}
+
 #tab-coming-content::-webkit-scrollbar,
 #tab-completed-content::-webkit-scrollbar,
 #dashboard-feedback::-webkit-scrollbar,
@@ -1615,6 +1627,10 @@ p {
 }
 .modal-link:hover {
   color: #00b26b;
+}
+
+#chon-goi-hoc::-webkit-scrollbar {
+  display: none;
 }
 
 .learning-progress {

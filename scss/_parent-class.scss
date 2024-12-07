@@ -13,6 +13,17 @@
   }
 }
 
+.choose-package {
+  overflow-y: auto;
+  max-height: 100vh;
+  padding-top: 40px;
+
+  @include maxw() {
+    max-height: calc(100vh + 86px);
+    padding-top: 28px;
+  }
+}
+
 #tab-coming-content::-webkit-scrollbar,
 #tab-completed-content::-webkit-scrollbar,
 #dashboard-feedback::-webkit-scrollbar,
@@ -63,4 +74,8 @@
   &:hover {
     color: #00b26b;
   }
+}
+
+#chon-goi-hoc::-webkit-scrollbar {
+  display: none;
 }
