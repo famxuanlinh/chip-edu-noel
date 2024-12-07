@@ -292,6 +292,13 @@ p {
   line-height: 100%; /* 80px */
 }
 
+.game-sb-xxs {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+}
+
 /* Drop Shadows */
 .drop-shadow-button-l {
   box-shadow: -2px 2px 0 rgba(0, 0, 0, 0.25), inset 0px -4px 0 rgba(0, 0, 0, 0.1);
@@ -1149,6 +1156,18 @@ p {
   }
 }
 
+.slider-wrapper-try-study {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  zoom: 0.85;
+}
+@media screen and (max-width: 1600px) {
+  .slider-wrapper-try-study {
+    zoom: 0.75;
+  }
+}
+
 .slider {
   display: flex;
   cursor: grab;
@@ -1222,7 +1241,7 @@ p {
     zoom: 0.75;
   }
 }
-.home-header-info-box {
+.home-header-info-box, .home-header-dropdown-try-study {
   display: flex;
   justify-content: end;
   background-color: transparent;
@@ -1237,6 +1256,11 @@ p {
 @media screen and (max-width: 1600px) {
   .home-header-dropdown {
     left: -682px !important;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .home-header-dropdown-try-study {
+    left: -732px !important;
   }
 }
 .home-header-dropdown-avatars {
@@ -1872,6 +1896,92 @@ p {
 @media screen and (max-width: 1600px) {
   .parent-chat-zoom {
     zoom: 0.8;
+  }
+}
+
+.try-learning {
+  background-image: url(/public/images/try-learning.svg);
+  height: 100vh;
+  position: relative;
+}
+
+.device-box {
+  margin-bottom: 0;
+}
+.device-box.hidden {
+  display: none;
+}
+
+.lesson-modal {
+  height: calc(100vh - 80px);
+  width: calc(100vw - 80px) !important;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  height: calc(100vh - 240px);
+  position: relative;
+  margin: auto;
+}
+
+.lesson-slice {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  height: calc(100vh - 240px);
+  border-radius: 24px;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+.congrats {
+  background-image: url(/public/images/try-learning.svg);
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  padding: 100px 120px 0 0;
+  overflow: hidden;
+  background-position: center;
+}
+@media screen and (max-width: 1600px) {
+  .congrats {
+    padding: 40px 70px 0 0;
+  }
+}
+.congrats-letter {
+  width: fit-content;
+  zoom: 0.82;
+}
+@media screen and (max-width: 1600px) {
+  .congrats-letter {
+    zoom: 0.7;
+  }
+}
+.congrats-letter-content {
+  padding-top: 200px;
+}
+@media screen and (max-width: 1600px) {
+  .congrats-letter-content {
+    padding-top: 170px;
   }
 }
 

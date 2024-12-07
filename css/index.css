@@ -155,6 +155,9 @@
 .pb-10 {
   padding-bottom: 28px;
 }
+.pb-16 {
+  padding-bottom: 64px;
+}
 
 /* Padding left utilities */
 .pl-0 {
@@ -384,7 +387,7 @@
 }
 
 .rounded-full {
-  border-radius: 100%;
+  border-radius: 100% !important;
 }
 
 .rounded-3 {

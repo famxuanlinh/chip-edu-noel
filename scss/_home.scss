@@ -11,6 +11,16 @@
   }
 }
 
+.slider-wrapper-try-study {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  zoom: 0.85;
+  @include maxw() {
+    zoom: 0.75;
+  }
+}
+
 .slider {
   display: flex;
   cursor: grab;
@@ -103,6 +113,13 @@
       // display: flex;
       @include maxw() {
         left: -682px !important;
+      }
+
+      &-try-study {
+        @extend .home-header-info-box;
+        @include maxw() {
+          left: -732px !important;
+        }
       }
 
       &-avatars {

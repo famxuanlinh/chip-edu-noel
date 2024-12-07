@@ -1,0 +1,92 @@
+@use "color";
+@use "typography";
+@use "effect";
+@use "mixin" as *;
+
+.try-learning {
+  background-image: url(/public/images/try-learning.svg);
+  height: 100vh;
+  position: relative;
+}
+
+.device-box {
+  margin-bottom: 0;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.lesson-modal {
+  height: calc(100vh - 80px);
+  width: calc(100vw - 80px) !important;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  height: calc(100vh - 240px);
+  position: relative;
+  margin: auto;
+}
+
+.lesson-slice {
+  aspect-ratio: 16/9;
+  // width: 100%;
+  object-fit: cover;
+  height: calc(100vh - 240px);
+  border-radius: 24px;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+.congrats {
+  background-image: url(/public/images/try-learning.svg);
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  padding: 100px 120px 0 0;
+  overflow: hidden;
+  background-position: center;
+
+  @include maxw() {
+    padding: 40px 70px 0 0;
+  }
+
+  &-letter {
+    width: fit-content;
+    zoom: 0.82;
+
+    @include maxw() {
+      zoom: 0.7;
+    }
+
+    &-content {
+      padding-top: 200px;
+      @include maxw() {
+        padding-top: 170px;
+      }
+    }
+  }
+}
