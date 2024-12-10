@@ -118,9 +118,9 @@
         </div>
       </div>
       <div class="slider-wrapper-try-study" style="margin-top: 120px">
-        <div class="slider">
+        <div class="slider" style="cursor: default">
           <div class="lesson-slide space-y-5" id="slide-1">
-            <div class="w-full flex-justify-center">
+            <div class="w-full flex-justify-center cursor-pointer">
               <div class="uk-position-relative">
                 <img
                   class="select-none-img"
@@ -161,7 +161,7 @@
           >
             <div class="space-y-5 pb-16">
               <div class="w-full flex-justify-center">
-                <div class="uk-position-relative">
+                <a href="#lesson-modal" uk-toggle class="uk-position-relative">
                   <img
                     class="select-none-img"
                     src="public/icons/try-learning2.svg"
@@ -183,7 +183,7 @@
                     alt="lesson icon"
                     style="z-index: 1; user-select: none"
                   />
-                </div>
+                </a>
               </div>
               <p class="heading-h3 select-none text-center grayscale-white">
                 Nội dung bài học
@@ -198,7 +198,7 @@
           </div>
           <div class="lesson-slide space-y-5" id="slide-3">
             <div class="w-full flex-center">
-              <div class="uk-position-relative zoom-in-out">
+              <div class="uk-position-relative zoom-in-out cursor-pointer">
                 <img
                   class="select-none-img p-3"
                   src="public/icons/try-learning3.svg"
@@ -222,7 +222,7 @@
               Lớp học
             </p>
 
-            <a href="#lesson-modal" uk-toggle class="flex-justify-center">
+            <div class="flex-justify-center">
               <div
                 class="flex-center button-shadow bg-primary-yellow px-3 py-4 space-y-3"
                 style="flex-direction: column; width: 240px"
@@ -255,7 +255,7 @@
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
 
           <div
@@ -264,7 +264,7 @@
             style="align-items: end"
           >
             <div class="space-y-5 pb-16">
-              <div class="w-full flex-justify-center">
+              <div class="w-full flex-justify-center cursor-pointer">
                 <div class="uk-position-relative">
                   <img
                     class="select-none-img"
@@ -281,13 +281,15 @@
                   />
                 </div>
               </div>
-              <p class="heading-h3 select-none text-center grayscale-white">
+              <p
+                class="heading-h3 select-none mb-5 text-center grayscale-white"
+              >
                 Kết quả học thử
               </p>
             </div>
           </div>
           <div class="lesson-slide space-y-5" id="slide-5">
-            <div class="w-full flex-justify-center">
+            <div class="w-full flex-justify-center cursor-pointer">
               <div class="uk-position-relative">
                 <img
                   class="select-none-img"

@@ -106,7 +106,7 @@
           <section
             id="try-study-result"
             class="flex pb-10"
-            style="justify-content: end"
+            style="justify-content: end; scroll-snap-align: start"
           >
             <div class="uk-position-relative congrats-letter try-study-result">
               <img
@@ -127,8 +127,8 @@
                   <div class="avatar-bg">
                     <img
                       class="rounded-full p-1"
-                      width="120"
-                      height="120"
+                      width="160"
+                      height="160"
                       src="public/images/avatar1.png"
                       alt="avatar"
                     />
@@ -152,7 +152,9 @@
                     7 tuổi
                   </div>
                 </div>
-                <p class="heading-h3 primary-green text-center">Chúc mừng!</p>
+                <p class="heading-h3 primary-green text-center">
+                  Bé đã làm rất tốt!
+                </p>
                 <p class="body-l text-center grayscale-dark-gray mt-2 mb-5">
                   Kết quả đánh giá toàn diện của bé
                 </p>
@@ -171,7 +173,12 @@
                       width="100"
                       height="100"
                     />
-                    <p class="game-sb-xxs primary-yellow">Level 3</p>
+                    <p
+                      class="game-sb-xxs primary-yellow"
+                      style="font-weight: 800"
+                    >
+                      Level 3
+                    </p>
                   </div>
                   <div
                     class="flex-center bg-grayscale-white rounded-5 p-5"
@@ -182,343 +189,201 @@
                     "
                   >
                     <p class="body-m grayscale-dark-gray">
-                      Tỉ lệ học sinh cùng level bé đã vượt qua
+                      Bé đã nằm trong top
                     </p>
                     <p
                       class="game-sb-xxs primary-green"
-                      style="font-size: 100px; font-weight: 800"
+                      style="
+                        font-size: 80px;
+                        font-weight: 800;
+                        line-height: 128px;
+                      "
                     >
-                      90%
+                      5%
+                    </p>
+                    <p class="body-m grayscale-dark-gray">
+                      học sinh có kết quả cao nhất
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-          <!-- Tổng quan -->
-          <section id="try-study-overal" class="pb-10">
-            <div class="flex-justify-center">
-              <img src="public/images/header-overal.png" alt="" />
-            </div>
-            <div class="flex mt-10 space-x-10 grayscale-dark-gray">
-              <div class="space-y-5" style="width: 488px">
-                <div
-                  class="flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
-                  style="flex-direction: column; border: 2px solid #0000001a"
-                >
-                  <p
-                    class="caption-m grayscale-dark-gray"
-                    style="line-height: 32px"
+          <div style="scroll-snap-align: start">
+            <!-- Tổng quan -->
+            <section id="try-study-overal" class="pb-10">
+              <div class="flex-justify-center">
+                <img src="public/images/header-overal.png" alt="" />
+              </div>
+              <div class="flex mt-10 space-x-10 grayscale-dark-gray">
+                <div class="space-y-5" style="width: 488px">
+                  <div
+                    class="flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
+                    style="flex-direction: column; border: 2px solid #0000001a"
                   >
-                    Thời gian tương tác
-                  </p>
-                  <div class="heading-h3 primary-green flex-center">
-                    <img
-                      class="mr-3"
-                      width="32"
-                      height="32"
-                      src="public/icons/clock-green.svg"
-                      alt=""
-                    />25 phút
-                  </div>
-                </div>
-                <div
-                  class="flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
-                  style="flex-direction: column; border: 2px solid #0000001a"
-                >
-                  <p
-                    class="caption-m grayscale-dark-gray"
-                    style="line-height: 32px"
-                  >
-                    Đánh giá
-                  </p>
-                  <div class="flex-center space-x-3">
-                    <img
-                      src="public/icons/star.svg"
-                      width="32"
-                      height="32"
-                      alt=""
-                    />
-                    <img
-                      src="public/icons/star.svg"
-                      width="32"
-                      height="32"
-                      alt=""
-                    />
-                    <img
-                      src="public/icons/star.svg"
-                      width="32"
-                      height="32"
-                      alt=""
-                    />
-                    <img
-                      src="public/icons/star.svg"
-                      width="32"
-                      height="32"
-                      alt=""
-                    />
-                    <img
-                      src="public/icons/star.svg"
-                      width="32"
-                      height="32"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="">
-                  <div class="flex-items-center space-x-3 mb-3">
-                    <img
-                      src="public/images/avatar1.png"
-                      height="60"
-                      width="60"
-                      class="rounded-full"
-                      alt=""
-                    />
-                    <p class="button-l grayscale-dark-gray">
-                      Nhận xét của cô Tina
+                    <p
+                      class="caption-m grayscale-dark-gray"
+                      style="line-height: 32px"
+                    >
+                      Thời gian tương tác
                     </p>
+                    <div class="heading-h3 primary-green flex-center">
+                      <img
+                        class="mr-3"
+                        width="32"
+                        height="32"
+                        src="public/icons/clock-green.svg"
+                        alt=""
+                      />25 phút
+                    </div>
                   </div>
+                  <div
+                    class="flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
+                    style="flex-direction: column; border: 2px solid #0000001a"
+                  >
+                    <p
+                      class="caption-m grayscale-dark-gray"
+                      style="line-height: 32px"
+                    >
+                      Đánh giá
+                    </p>
+                    <div class="flex-center space-x-3">
+                      <img
+                        src="public/icons/star.svg"
+                        width="32"
+                        height="32"
+                        alt=""
+                      />
+                      <img
+                        src="public/icons/star.svg"
+                        width="32"
+                        height="32"
+                        alt=""
+                      />
+                      <img
+                        src="public/icons/star.svg"
+                        width="32"
+                        height="32"
+                        alt=""
+                      />
+                      <img
+                        src="public/icons/star.svg"
+                        width="32"
+                        height="32"
+                        alt=""
+                      />
+                      <img
+                        src="public/icons/star.svg"
+                        width="32"
+                        height="32"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="flex-items-center space-x-3 mb-3">
+                      <img
+                        src="public/images/avatar1.png"
+                        height="60"
+                        width="60"
+                        class="rounded-full"
+                        alt=""
+                      />
+                      <p class="button-l grayscale-dark-gray">
+                        Nhận xét của cô Tina
+                      </p>
+                    </div>
 
-                  <div
-                    class="flex-center py-3 px-5 w-full grayscale-dark-gray rounded-5 p-5"
-                    style="
-                      flex-direction: column;
-                      border: 2px solid #0000001a;
-                      background-color: #0000000d;
-                    "
-                  >
-                    He loves to participate when he knows the answer. He always
-                    works very diligently when he is focused. I see him use new
-                    words he has learned in his work constantly. As long as he
-                    is not shy to speak English, his speaking skills will
-                    continue to grow and improve as an English student. When he
-                    practices his reading, he shows a better understanding of
-                    the material.I am excited about his potential and I can't
-                    wait to see how he will grow in the future.
+                    <div
+                      class="flex-center py-3 px-5 w-full grayscale-dark-gray rounded-5 p-5"
+                      style="
+                        flex-direction: column;
+                        border: 2px solid #0000001a;
+                        background-color: #0000000d;
+                      "
+                    >
+                      He loves to participate when he knows the answer. He
+                      always works very diligently when he is focused. I see him
+                      use new words he has learned in his work constantly. As
+                      long as he is not shy to speak English, his speaking
+                      skills will continue to grow and improve as an English
+                      student. When he practices his reading, he shows a better
+                      understanding of the material.I am excited about his
+                      potential and I can't wait to see how he will grow in the
+                      future.
+                    </div>
+                    <button
+                      class="body-xs flex mt-1 w-full"
+                      style="
+                        justify-content: end;
+                        color: #00000099;
+                        background-color: transparent;
+                      "
+                    >
+                      Dịch tiếng Việt
+                    </button>
                   </div>
-                  <button
-                    class="body-xs flex mt-1 w-full"
-                    style="
-                      justify-content: end;
-                      color: #00000099;
-                      background-color: transparent;
-                    "
+                </div>
+                <div class="flex-1 space-y-5">
+                  <img
+                    class="rounded-4 w-full"
+                    style="aspect-ratio: 700/525"
+                    src="public/images/project.jpeg"
+                    style="object-fit: cover"
+                    alt="avatar"
+                  />
+                  <p class="text-center button-l">Từ vựng đã học</p>
+                  <div
+                    class="flex-items-center space-x-3"
+                    style="flex-wrap: wrap"
                   >
-                    Dịch tiếng Việt
-                  </button>
+                    <p class="vocab-tag">cat</p>
+                    <p class="vocab-tag">dog</p>
+                    <p class="vocab-tag">duck</p>
+                    <p class="vocab-tag">tiger</p>
+                    <p class="vocab-tag">monkey</p>
+                    <p class="vocab-tag">bird</p>
+                    <p class="vocab-tag">dog</p>
+                    <p class="vocab-tag">tiger</p>
+                    <p class="vocab-tag">monkey</p>
+                  </div>
+                  <p class="text-center button-l">Cấu trúc câu</p>
+                  <div class="space-y-3">
+                    <p
+                      class="vocab-tag text-center"
+                      style="justify-content: center"
+                    >
+                      What is it? - It's a cat.
+                    </p>
+                    <p class="vocab-tag" style="justify-content: center">
+                      Lorem Ipsum? - Dolor Sit Amet
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div class="flex-1 space-y-5">
+            </section>
+            <!-- Đánh giá -->
+            <section id="try-study-feedback">
+              <div class="flex-justify-center">
+                <img src="public/images/header-feedback.png" alt="" />
+              </div>
+              <div
+                class="uk-position-relative flex mt-10 space-x-10 grayscale-dark-gray pb-10"
+              >
                 <img
-                  class="rounded-4 w-full"
-                  style="aspect-ratio: 700/525"
-                  src="public/images/project.jpeg"
-                  style="object-fit: cover"
-                  alt="avatar"
+                  class="uk-position-bottom-right"
+                  src="public/images/feedback-bg.png"
+                  alt=""
+                  style="margin-right: 0 !important; z-index: -1"
                 />
-                <p class="text-center button-l">Từ vựng đã học</p>
-                <div
-                  class="flex-items-center space-x-3"
-                  style="flex-wrap: wrap"
-                >
-                  <p class="vocab-tag">cat</p>
-                  <p class="vocab-tag">dog</p>
-                  <p class="vocab-tag">duck</p>
-                  <p class="vocab-tag">tiger</p>
-                  <p class="vocab-tag">monkey</p>
-                  <p class="vocab-tag">bird</p>
-                  <p class="vocab-tag">dog</p>
-                  <p class="vocab-tag">tiger</p>
-                  <p class="vocab-tag">monkey</p>
-                </div>
-                <p class="text-center button-l">Cấu trúc câu</p>
-                <div class="space-y-3">
-                  <p
-                    class="vocab-tag text-center"
-                    style="justify-content: center"
-                  >
-                    What is it? - It's a cat.
-                  </p>
-                  <p class="vocab-tag" style="justify-content: center">
-                    Lorem Ipsum? - Dolor Sit Amet
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- Đánh giá -->
-          <section id="try-study-feedback">
-            <div class="flex-justify-center">
-              <img src="public/images/header-feedback.png" alt="" />
-            </div>
-            <div
-              class="uk-position-relative flex mt-10 space-x-10 grayscale-dark-gray pb-10"
-            >
-              <img
-                class="uk-position-bottom-right"
-                src="public/images/feedback-bg.png"
-                alt=""
-                style="margin-right: 0 !important; z-index: -1"
-              />
-              <div class="space-y-5" style="width: 534px">
-                <div
-                  class="px-3 py-5 rounded-10 drop-shadow-button-d bg-greenscale-light-green"
-                >
-                  <p class="heading-h4 mb-5 text-center">Điểm mạnh</p>
-                  <ul
-                    style="list-style: disc; line-height: 160%"
-                    class="body-m p-10 rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
-                  >
-                    <li>
-                      Trong suốt buổi học, con tập trung và tích cực làm theo
-                      hướng dẫn của giáo viên trong lớp.
-                    </li>
-                    <li>
-                      Con có thể phát âm tốt các từ sau đây khi được giáo viên
-                      hướng dẫn (có thể bật âm đuôi của các từ một cách rõ ràng,
-                      phát âm đúng trọng âm của từ)
-                      <p>- Scales</p>
-                      <p>- Gills</p>
-                    </li>
-                    <li>Con có ngữ điệu thoải mái, tự nhiên khi nói.</li>
-                    <li>
-                      Con đã có khả năng sử dụng nhiều câu ghép/câu phức khi
-                      tương tác.
-                    </li>
-                    <li>
-                      Con hiểu được phần lớn những yêu cầu/ câu hỏi của giáo
-                      viên.
-                    </li>
-                    <li>
-                      Con có thể trả lời được các câu hỏi của giáo viên, tuy
-                      nhiên con chưa mở rộng được ý tưởng của mình.
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  class="px-3 py-5 rounded-10 drop-shadow-button-d bg-yellowscale-light-yellow-2"
-                >
-                  <p class="heading-h4 mb-5 text-center">Điểm cần cải thiện</p>
-                  <ul
-                    style="list-style: disc; line-height: 160%"
-                    class="body-m p-10 rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
-                  >
-                    <li>
-                      Con đã nhớ được một số từ vựng được dạy, tuy nhiên con
-                      chưa sử dụng được chúng khi tương tác.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="flex-1">
-                <div
-                  class="px-3 py-5 rounded-10 drop-shadow-button-d bg-secondary-light-gray"
-                >
-                  <p class="heading-h4 mb-5 text-center">Năng lực học tập</p>
+                <div class="space-y-5" style="width: 534px">
                   <div
-                    class="uk-position-relative rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
+                    class="px-3 py-5 rounded-10 drop-shadow-button-d bg-greenscale-light-green"
                   >
-                    <div class="flex-justify-center h-full mt-2">
-                      <div
-                        class="flex-justify-center w-full"
-                        style="position: relative; width: 270px; height: 270px"
-                      >
-                        <canvas id="radarChart"></canvas>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- Định hướng học tập -->
-          <section id="try-study-goal" class="pb-16">
-            <div class="flex-justify-center">
-              <img src="public/images/header-goal.png" alt="" />
-            </div>
-            <div class="flex mt-10 space-x-10 grayscale-dark-gray">
-              <div class="space-y-5 goal-content-width">
-                <div
-                  class="px-3 py-5 rounded-10 drop-shadow-button-d bg-greenscale-light-green"
-                >
-                  <div
-                    class="p-10 rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
-                  >
-                    <div class="goal-grid">
-                      <div
-                        class="goal-grid-item-3 flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
-                        style="
-                          flex-direction: column;
-                          border: 2px solid #0000001a;
-                        "
-                      >
-                        <p class="caption-xs grayscale-dark-gray mb-2">
-                          Lộ trình ChipChip
-                        </p>
-                        <div class="heading-h4 primary-yellow flex-center">
-                          Level 3B-4B
-                        </div>
-                      </div>
-                      <div
-                        class="goal-grid-item-3 flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
-                        style="
-                          flex-direction: column;
-                          border: 2px solid #0000001a;
-                        "
-                      >
-                        <p class="caption-xs grayscale-dark-gray mb-2">
-                          Trình độ tương đương
-                        </p>
-                        <div class="heading-h4 primary-green flex-center">
-                          A2 (KET)
-                        </div>
-                      </div>
-                      <div
-                        class="goal-grid-item-2 flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
-                        style="
-                          flex-direction: column;
-                          border: 2px solid #0000001a;
-                        "
-                      >
-                        <p class="caption-xs grayscale-dark-gray mb-2">
-                          Từ vựng
-                        </p>
-                        <div class="heading-h4 primary-green flex-center">
-                          600+
-                        </div>
-                      </div>
-                      <div
-                        class="goal-grid-item-2 flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
-                        style="
-                          flex-direction: column;
-                          border: 2px solid #0000001a;
-                        "
-                      >
-                        <p class="caption-xs grayscale-dark-gray mb-2">
-                          Dự án cá nhân
-                        </p>
-                        <div class="heading-h4 secondary-blue flex-center">
-                          8
-                        </div>
-                      </div>
-                      <div
-                        class="goal-grid-item-2 flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
-                        style="
-                          flex-direction: column;
-                          border: 2px solid #0000001a;
-                        "
-                      >
-                        <p class="caption-xs grayscale-dark-gray mb-2">
-                          Chủ đề từ vựng
-                        </p>
-                        <div class="heading-h4 secondary-orange flex-center">
-                          20
-                        </div>
-                      </div>
-                    </div>
+                    <p class="heading-h4 mb-5 text-center">Điểm mạnh</p>
                     <ul
                       style="list-style: disc; line-height: 160%"
-                      class="body-m"
+                      class="body-m p-10 rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
                     >
                       <li>
                         Trong suốt buổi học, con tập trung và tích cực làm theo
@@ -546,16 +411,174 @@
                       </li>
                     </ul>
                   </div>
+                  <div
+                    class="px-3 py-5 rounded-10 drop-shadow-button-d bg-yellowscale-light-yellow-2"
+                  >
+                    <p class="heading-h4 mb-5 text-center">
+                      Điểm cần cải thiện
+                    </p>
+                    <ul
+                      style="list-style: disc; line-height: 160%"
+                      class="body-m p-10 rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
+                    >
+                      <li>
+                        Con đã nhớ được một số từ vựng được dạy, tuy nhiên con
+                        chưa sử dụng được chúng khi tương tác.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div
+                    class="px-3 py-5 rounded-10 drop-shadow-button-d bg-secondary-light-gray"
+                  >
+                    <p class="heading-h4 mb-5 text-center">Năng lực học tập</p>
+                    <div
+                      class="uk-position-relative rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
+                    >
+                      <div class="flex-justify-center h-full mt-2">
+                        <div
+                          class="flex-justify-center w-full"
+                          style="
+                            position: relative;
+                            width: 270px;
+                            height: 270px;
+                          "
+                        >
+                          <canvas id="radarChart"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="flex-1 flex-center" style="flex-direction: column">
-                <p class="button-l grayscale-dark-gray py-5">
-                  Lộ trình học tập đề xuất
-                </p>
-                <img src="public/images/0A.png" alt="" />
+            </section>
+            <!-- Định hướng học tập -->
+            <section id="try-study-goal" class="pb-16">
+              <div class="flex-justify-center">
+                <img src="public/images/header-goal.png" alt="" />
               </div>
-            </div>
-          </section>
+              <div class="flex mt-10 space-x-10 grayscale-dark-gray">
+                <div class="space-y-5 goal-content-width">
+                  <div
+                    class="px-3 py-5 rounded-10 drop-shadow-button-d bg-greenscale-light-green"
+                  >
+                    <div
+                      class="p-10 rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
+                    >
+                      <div class="goal-grid">
+                        <div
+                          class="goal-grid-item-3 flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
+                          style="
+                            flex-direction: column;
+                            border: 2px solid #0000001a;
+                          "
+                        >
+                          <p class="caption-xs grayscale-dark-gray mb-2">
+                            Lộ trình ChipChip
+                          </p>
+                          <div class="heading-h4 primary-yellow flex-center">
+                            Level 3B-4B
+                          </div>
+                        </div>
+                        <div
+                          class="goal-grid-item-3 flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
+                          style="
+                            flex-direction: column;
+                            border: 2px solid #0000001a;
+                          "
+                        >
+                          <p class="caption-xs grayscale-dark-gray mb-2">
+                            Trình độ tương đương
+                          </p>
+                          <div class="heading-h4 primary-green flex-center">
+                            A2 (KET)
+                          </div>
+                        </div>
+                        <div
+                          class="goal-grid-item-2 flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
+                          style="
+                            flex-direction: column;
+                            border: 2px solid #0000001a;
+                          "
+                        >
+                          <p class="caption-xs grayscale-dark-gray mb-2">
+                            Từ vựng
+                          </p>
+                          <div class="heading-h4 primary-green flex-center">
+                            600+
+                          </div>
+                        </div>
+                        <div
+                          class="goal-grid-item-2 flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
+                          style="
+                            flex-direction: column;
+                            border: 2px solid #0000001a;
+                          "
+                        >
+                          <p class="caption-xs grayscale-dark-gray mb-2">
+                            Dự án cá nhân
+                          </p>
+                          <div class="heading-h4 secondary-blue flex-center">
+                            8
+                          </div>
+                        </div>
+                        <div
+                          class="goal-grid-item-2 flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
+                          style="
+                            flex-direction: column;
+                            border: 2px solid #0000001a;
+                          "
+                        >
+                          <p class="caption-xs grayscale-dark-gray mb-2">
+                            Chủ đề từ vựng
+                          </p>
+                          <div class="heading-h4 secondary-orange flex-center">
+                            20
+                          </div>
+                        </div>
+                      </div>
+                      <ul
+                        style="list-style: disc; line-height: 160%"
+                        class="body-m"
+                      >
+                        <li>
+                          Trong suốt buổi học, con tập trung và tích cực làm
+                          theo hướng dẫn của giáo viên trong lớp.
+                        </li>
+                        <li>
+                          Con có thể phát âm tốt các từ sau đây khi được giáo
+                          viên hướng dẫn (có thể bật âm đuôi của các từ một cách
+                          rõ ràng, phát âm đúng trọng âm của từ)
+                          <p>- Scales</p>
+                          <p>- Gills</p>
+                        </li>
+                        <li>Con có ngữ điệu thoải mái, tự nhiên khi nói.</li>
+                        <li>
+                          Con đã có khả năng sử dụng nhiều câu ghép/câu phức khi
+                          tương tác.
+                        </li>
+                        <li>
+                          Con hiểu được phần lớn những yêu cầu/ câu hỏi của giáo
+                          viên.
+                        </li>
+                        <li>
+                          Con có thể trả lời được các câu hỏi của giáo viên, tuy
+                          nhiên con chưa mở rộng được ý tưởng của mình.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1 flex-center" style="flex-direction: column">
+                  <p class="button-l grayscale-dark-gray py-5">
+                    Lộ trình học tập đề xuất
+                  </p>
+                  <img src="public/images/0A.png" alt="" />
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </div>
@@ -564,34 +587,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script>
-      // document.addEventListener("DOMContentLoaded", () => {
-      //   const sections = document.querySelectorAll("section");
-      //   const links = document.querySelectorAll(".result-sidebar a");
-
-      //   const observer = new IntersectionObserver(
-      //     (entries) => {
-      //       entries.forEach((entry) => {
-      //         const link = document.querySelector(
-      //           `.result-sidebar a[href="#${entry.target.id}"]`
-      //         );
-      //         if (entry.isIntersecting) {
-      //           links.forEach((link) =>
-      //             link.classList.remove("result-active-link")
-      //           );
-      //           link.classList.add("result-active-link");
-      //         }
-      //       });
-      //     },
-      //     {
-      //       root: null,
-      //       rootMargin: "0px",
-      //       threshold: 0.6, // Adjusts when a section is considered "in view"
-      //     }
-      //   );
-
-      //   sections.forEach((section) => observer.observe(section));
-      // });
-
       document.addEventListener("DOMContentLoaded", () => {
         const navLinks = document.querySelectorAll(".result-sidebar a");
 

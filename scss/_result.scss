@@ -54,9 +54,9 @@
       padding: 40px;
       background-color: green($color: #000000);
 
-      & section {
-        scroll-snap-align: start;
-      }
+      // & section {
+      //   scroll-snap-align: start;
+      // }
     }
   }
 
