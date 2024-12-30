@@ -1574,13 +1574,12 @@ p {
 
 .choose-package {
   overflow-y: auto;
-  max-height: 100vh;
   padding-top: 40px;
   max-height: calc(100vh - 78px);
 }
 @media screen and (max-width: 1600px) {
   .choose-package {
-    max-height: calc(100vh + 56px);
+    max-height: 100vh;
     padding-top: 28px;
   }
 }
