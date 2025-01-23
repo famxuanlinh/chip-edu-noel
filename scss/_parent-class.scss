@@ -15,11 +15,11 @@
 
 .choose-package {
   overflow-y: auto;
-  max-height: 100vh;
   padding-top: 40px;
+  max-height: calc(100vh - 78px);
 
   @include maxw() {
-    max-height: calc(100vh + 86px);
+    max-height: 100vh;
     padding-top: 28px;
   }
 }
