@@ -2229,4 +2229,21 @@ ol {
   display: none;
 }
 
+#small-scroll-exception {
+  overflow-y: auto;
+}
+#small-scroll-exception::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+#small-scroll-exception::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #d8eddd;
+}
+#small-scroll-exception::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.0509803922);
+  margin: 12px 0;
+}
+
 /*# sourceMappingURL=app.css.map */
