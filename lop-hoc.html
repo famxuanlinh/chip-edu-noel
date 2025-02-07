@@ -42,6 +42,8 @@
         </div>
 
         <div class="uk-flex space-x-11">
+          <a href="#class-non-start" uk-toggle class=""> Modal 1 </a>
+          <a href="#class-finished" uk-toggle class=""> Modal 2 </a>
           <button
             id="btn-chat-box"
             onclick="toggleVisibility('chat-box')"
@@ -370,6 +372,121 @@
             </form>
           </div>
         </div> -->
+      </div>
+    </div>
+
+    <div id="class-finished" class="uk-flex-top" uk-modal>
+      <div
+        style="height: fit-content; width: 860px !important"
+        class="level-modal uk-modal-dialog space-y-10 rounded-5 uk-modal-body uk-margin-auto-vertical"
+      >
+        <div class="flex-items-center" style="justify-content: space-between">
+          <p></p>
+          <p class="heading-h3 grayscale-dark-gray">Lớp học đã kết thúc!</p>
+          <button
+            type="button"
+            onclick="hideModal('class-finished')"
+            class="rounded-full flex-justify-center"
+            style="background-color: transparent"
+          >
+            <img src="public/icons/x2.svg" width="40" height="40" />
+          </button>
+        </div>
+        <!-- Camera -->
+        <div id="device-box-camera" class="device-box">
+          <div class="space-y-10" style="margin-top: 70px">
+            <div
+              class="body-m grayscale-dark-gray text-center"
+              style="line-height: 160%"
+            >
+              Chúc mừng con đã hoàn thành buổi học! <br />
+              Chip Chip sẽ liên hệ với ba mẹ trong thời gian sớm nhất để trao
+              đổi về kết quả buổi học thử và tư vấn lộ trình tiếp theo.
+            </div>
+            <div class="space-y-10" style="padding: 0 136px">
+              <div class="space-x-3 flex-items-center">
+                <button
+                  type="button"
+                  onclick="moveToNext('device-box-camera')"
+                  class="button-primary btn-animation w-full flex-center bg-greenscale-light-green px-5 grayscale-dark-gray button-m"
+                  style="height: 56px; width: 244px"
+                >
+                  Về trang chủ
+                </button>
+                <button
+                  type="button"
+                  onclick="moveToNext('device-box-camera')"
+                  class="button-primary btn-animation w-full flex-center bg-primary-green px-5 grayscale-white button-m"
+                  style="
+                    height: 56px;
+                    width: 244px;
+                    color: white;
+                    background-color: #00b26b;
+                  "
+                >
+                  Luyện tập ngay
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="class-non-start" class="uk-flex-top" uk-modal>
+      <div
+        style="height: fit-content; width: 860px !important"
+        class="level-modal uk-modal-dialog space-y-10 rounded-5 uk-modal-body uk-margin-auto-vertical"
+      >
+        <div class="flex-items-center" style="justify-content: space-between">
+          <p></p>
+          <p class="heading-h3 grayscale-dark-gray">Lớp học chưa bắt đầu</p>
+          <button
+            type="button"
+            onclick="hideModal('class-non-start')"
+            class="rounded-full flex-justify-center"
+            style="background-color: transparent"
+          >
+            <img src="public/icons/x2.svg" width="40" height="40" />
+          </button>
+        </div>
+        <!-- Camera -->
+        <div id="device-box-camera" class="device-box">
+          <div class="space-y-10" style="margin-top: 70px">
+            <div
+              class="body-m grayscale-dark-gray text-center"
+              style="line-height: 160%"
+            >
+              Trong thời gian chờ với giáo viên, con có thể xem trước bài học
+              hoặc luyện tập thêm nhé.
+            </div>
+            <div class="space-y-10" style="padding: 0 136px">
+              <div class="space-x-3 flex-items-center">
+                <button
+                  type="button"
+                  onclick="moveToNext('device-box-camera')"
+                  class="button-primary btn-animation w-full flex-center bg-greenscale-light-green px-5 grayscale-dark-gray button-m"
+                  style="height: 56px; width: 244px"
+                >
+                  Xem trước bài học
+                </button>
+                <button
+                  type="button"
+                  onclick="moveToNext('device-box-camera')"
+                  class="button-primary btn-animation w-full flex-center bg-primary-green px-5 grayscale-white button-m"
+                  style="
+                    height: 56px;
+                    width: 244px;
+                    color: white;
+                    background-color: #00b26b;
+                  "
+                >
+                  Luyện tập ngay
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

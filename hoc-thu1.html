@@ -118,8 +118,8 @@
         </div>
       </div>
       <div class="slider-wrapper-try-study" style="margin-top: 120px">
-        <div class="slider space-x-10" style="cursor: default">
-          <div style="width: 320px" class="space-y-5" id="slide-1">
+        <div class="slider" style="cursor: default">
+          <div class="lesson-slide space-y-5" id="slide-1">
             <div class="w-full flex-justify-center cursor-pointer">
               <div class="uk-position-relative">
                 <img
@@ -148,13 +148,17 @@
             <p class="heading-h3 select-none text-center grayscale-white">
               Kiểm tra năng lực
             </p>
-            <div class="space-x-2">
-              <a href="#device-failed" uk-toggle class="">Lỗi </a>
-              <a href="#device-successful" uk-toggle class=""> Thành công </a>
-              <a href="#class-finished" uk-toggle class=""> Lop hoc </a>
-            </div>
+            <img
+              class="select-none-img lesson-line-to-bottom"
+              src="public/icons/lesson-line-to-bottom.png"
+              alt="planet1"
+            />
           </div>
-          <div class="flex-justify-center" id="slide-2" style="width: 320px">
+          <div
+            class="lesson-slide flex-justify-center"
+            id="slide-2"
+            style="align-items: end"
+          >
             <div class="space-y-5 pb-16">
               <div class="w-full flex-justify-center">
                 <a href="#lesson-modal" uk-toggle class="uk-position-relative">
@@ -184,9 +188,15 @@
               <p class="heading-h3 select-none text-center grayscale-white">
                 Nội dung bài học
               </p>
+
+              <img
+                class="select-none-img lesson-line-to-bottom"
+                src="public/icons/lesson-line-to-top.png"
+                alt="planet1"
+              />
             </div>
           </div>
-          <div style="width: 320px" class="space-y-5" id="slide-3">
+          <div class="lesson-slide space-y-5" id="slide-3">
             <div class="w-full flex-center">
               <div class="uk-position-relative zoom-in-out cursor-pointer">
                 <img
@@ -248,7 +258,37 @@
             </div>
           </div>
 
-          <div style="width: 320px" class="space-y-5" id="slide-5">
+          <div
+            class="lesson-slide flex-justify-center"
+            id="slide-3"
+            style="align-items: end"
+          >
+            <div class="space-y-5 pb-16">
+              <div class="w-full flex-justify-center cursor-pointer">
+                <div class="uk-position-relative">
+                  <img
+                    class="select-none-img"
+                    src="public/icons/try-learning4.svg"
+                    width="200"
+                    height="200"
+                    alt="lesson icon"
+                    style="
+                      z-index: 1;
+                      user-select: none;
+                      position: relative;
+                      user-select: none;
+                    "
+                  />
+                </div>
+              </div>
+              <p
+                class="heading-h3 select-none mb-5 text-center grayscale-white"
+              >
+                Kết quả học thử
+              </p>
+            </div>
+          </div>
+          <div class="lesson-slide space-y-5" id="slide-5">
             <div class="w-full flex-justify-center cursor-pointer">
               <div class="uk-position-relative">
                 <img
@@ -820,151 +860,6 @@
               style="transform: rotate(180deg)"
             />
           </a>
-        </div>
-      </div>
-    </div>
-
-    <div id="device-failed" class="uk-flex-top" uk-modal>
-      <div
-        style="height: fit-content; width: 860px !important"
-        class="level-modal uk-modal-dialog space-y-10 rounded-5 uk-modal-body uk-margin-auto-vertical"
-      >
-        <div class="flex-items-center" style="justify-content: space-between">
-          <p></p>
-          <p class="heading-h3 grayscale-dark-gray">Lỗi thiết bị</p>
-          <p></p>
-        </div>
-        <!-- Camera -->
-        <div class="device-box">
-          <div class="space-y-10" style="margin-top: 70px">
-            <div
-              class="body-m grayscale-dark-gray text-center"
-              style="line-height: 160%; margin-bottom: 120px"
-            >
-              Có vẻ như thiết bị của con gặp vấn đề. <br />
-              Nhấn nút <strong>“Báo lỗi”</strong> để Chip Chip hỗ trợ hoặc
-              <strong>“Làm lại”</strong> để kiểm tra lại thiết bị nhé!
-            </div>
-            <div class="space-y-10" style="padding: 0 136px">
-              <div class="space-x-3 flex-items-center">
-                <button
-                  type="button"
-                  onclick="moveToNext('device-box-camera')"
-                  class="button-primary btn-animation w-full flex-center bg-secondary-red px-5 grayscale-white button-m"
-                  style="height: 56px; width: 244px; color: white"
-                >
-                  Báo lỗi
-                </button>
-                <button
-                  type="button"
-                  onclick="moveToNext('device-box-camera')"
-                  class="button-primary btn-animation w-full flex-center bg-primary-green px-5 grayscale-white button-m"
-                  style="
-                    height: 56px;
-                    width: 244px;
-                    color: white;
-                    background-color: #00b26b;
-                  "
-                >
-                  Làm lại
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="class-finished" class="uk-flex-top" uk-modal>
-      <div
-        style="height: fit-content; width: 860px !important"
-        class="level-modal uk-modal-dialog space-y-10 rounded-5 uk-modal-body uk-margin-auto-vertical"
-      >
-        <div class="flex-items-center" style="justify-content: space-between">
-          <p></p>
-          <p></p>
-          <button
-            type="button"
-            onclick="hideModal('class-finished')"
-            class="rounded-full flex-justify-center"
-            style="background-color: transparent"
-          >
-            <img src="public/icons/x2.svg" width="40" height="40" />
-          </button>
-        </div>
-        <!-- Camera -->
-        <div id="device-box-camera" class="device-box">
-          <div class="space-y-10" style="margin-top: 70px">
-            <div class="flex-justify-center">
-              <p
-                class="heading-h3 grayscale-dark-gray"
-                style="margin: 40px 0 80px 0"
-              >
-                Lớp học đã kết thúc!
-              </p>
-            </div>
-            <div class="space-y-10" style="padding: 0 136px">
-              <div class="space-x-3 flex-items-center">
-                <button
-                  type="button"
-                  onclick="moveToNext('device-box-camera')"
-                  class="button-primary btn-animation w-full flex-center bg-greenscale-light-green px-5 grayscale-dark-gray button-m"
-                  style="height: 56px; width: 244px"
-                >
-                  Tải Worksheet
-                </button>
-                <button
-                  type="button"
-                  onclick="moveToNext('device-box-camera')"
-                  class="button-primary btn-animation w-full flex-center bg-primary-green px-5 grayscale-white button-m"
-                  style="
-                    height: 56px;
-                    width: 244px;
-                    color: white;
-                    background-color: #00b26b;
-                  "
-                >
-                  Luyện tập thêm
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="device-successful" class="uk-flex-top" uk-modal>
-      <div
-        style="height: fit-content; width: 860px !important"
-        class="level-modal uk-modal-dialog space-y-10 rounded-5 uk-modal-body uk-margin-auto-vertical"
-      >
-        <div class="flex-items-center" style="justify-content: space-between">
-          <p></p>
-
-          <p></p>
-        </div>
-        <!-- Camera -->
-        <div class="device-box">
-          <div class="space-y-10" style="margin-top: 70px">
-            <div class="flex-justify-center">
-              <p class="heading-h3 grayscale-dark-gray" style="margin: 80px 0">
-                Kiểm tra thiết bị thành công!
-              </p>
-            </div>
-            <div class="flex-center">
-              <button
-                type="button"
-                onclick="hideModal('device-successful')"
-                class="button-primary btn-animation w-full flex-center bg-primary-green px-5 grayscale-white button-m"
-                style="
-                  height: 56px;
-                  max-width: 244px;
-                  color: white;
-                  background-color: #00b26b;
-                "
-              >
-                Hoàn thành
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </div>
