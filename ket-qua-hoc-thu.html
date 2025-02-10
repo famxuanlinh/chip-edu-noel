@@ -17,6 +17,14 @@
     <style></style>
   </head>
   <body>
+    <div class="result-header-1">Kết quả học thử</div>
+    <div class="flex-justify-center">
+      <img
+        class="header-img top"
+        src="public/images/header-result.png"
+        alt=""
+      />
+    </div>
     <div class="flex">
       <div class="result-sidebar grayscale-dark-gray">
         <div>
@@ -101,28 +109,30 @@
         </div>
       </div>
       <div class="result-content">
-        <div class="result-content-1 p-10">
+        <div class="result-content-1">
           <!-- Kết quả -->
           <section
             id="try-study-result"
-            class="flex pb-10"
+            class="flex pb-10 congrats-letter-wrapper"
             style="justify-content: end; scroll-snap-align: start"
           >
             <div class="uk-position-relative congrats-letter try-study-result">
               <img
-                class="uk-position-bottom-center result-envelop"
+                class="uk-position-bottom-center result-envelop result-desktop"
                 src="public/images/envelop.svg"
                 alt="envelop"
               />
               <img
-                class="uk-position-relative"
+                class="uk-position-relative result-desktop"
                 src="public/images/letter.png"
                 alt="letter"
               />
-              <div
-                style="margin-top: 80px"
-                class="uk-position-top-center congrats-letter-content"
-              >
+              <!-- <img
+                class="uk-position-relative w-full result-mobile"
+                src="public/images/result1-bg-mobile.svg"
+                alt="letter"
+              /> -->
+              <div style="margin-top: 80px" class="congrats-letter-content">
                 <div class="flex-justify-center">
                   <div class="avatar-bg">
                     <img
@@ -158,14 +168,10 @@
                 <p class="body-l text-center grayscale-dark-gray mt-2 mb-5">
                   Kết quả đánh giá toàn diện của bé
                 </p>
-                <div class="flex space-x-5">
+                <div class="congrats-letter-tags">
                   <div
-                    class="flex-center bg-grayscale-white rounded-5 p-5"
-                    style="
-                      flex-direction: column;
-                      min-width: 256px;
-                      border: 2px solid #0000001a;
-                    "
+                    class="flex-center uk-flex-column@s bg-grayscale-white rounded-5 p-5"
+                    style="min-width: 256px; border: 2px solid #0000001a"
                   >
                     <img
                       src="public/icons/medal.svg"
@@ -213,71 +219,85 @@
             <!-- Tổng quan -->
             <section id="try-study-overal" class="pb-10">
               <div class="flex-justify-center">
-                <img src="public/images/header-overal.png" alt="" />
+                <img
+                  class="header-img"
+                  src="public/images/header-overal.png"
+                  alt=""
+                />
               </div>
-              <div class="flex mt-10 space-x-10 grayscale-dark-gray">
-                <div class="space-y-5" style="width: 488px">
-                  <div
-                    class="flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
-                    style="flex-direction: column; border: 2px solid #0000001a"
-                  >
-                    <p
-                      class="caption-m grayscale-dark-gray"
-                      style="line-height: 32px"
+              <div
+                class="result-overal uk-flex uk-flex-column uk-flex-row@s mt-10 space-x-10 grayscale-dark-gray"
+              >
+                <div class="result-overal-left">
+                  <div class="result-overal-left-item">
+                    <div
+                      class="flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
+                      style="
+                        flex-direction: column;
+                        border: 2px solid #0000001a;
+                      "
                     >
-                      Thời gian tương tác
-                    </p>
-                    <div class="heading-h3 primary-green flex-center">
-                      <img
-                        class="mr-3"
-                        width="32"
-                        height="32"
-                        src="public/icons/clock-green.svg"
-                        alt=""
-                      />25 phút
+                      <p
+                        class="caption-m grayscale-dark-gray"
+                        style="line-height: 32px"
+                      >
+                        Thời gian tương tác
+                      </p>
+                      <div class="heading-h3 primary-green flex-center">
+                        <img
+                          class="mr-3"
+                          width="32"
+                          height="32"
+                          src="public/icons/clock-green.svg"
+                          alt=""
+                        />25 phút
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    class="flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
-                    style="flex-direction: column; border: 2px solid #0000001a"
-                  >
-                    <p
-                      class="caption-m grayscale-dark-gray"
-                      style="line-height: 32px"
+                    <div
+                      class="flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
+                      style="
+                        flex-direction: column;
+                        border: 2px solid #0000001a;
+                      "
                     >
-                      Đánh giá
-                    </p>
-                    <div class="flex-center space-x-3">
-                      <img
-                        src="public/icons/star.svg"
-                        width="32"
-                        height="32"
-                        alt=""
-                      />
-                      <img
-                        src="public/icons/star.svg"
-                        width="32"
-                        height="32"
-                        alt=""
-                      />
-                      <img
-                        src="public/icons/star.svg"
-                        width="32"
-                        height="32"
-                        alt=""
-                      />
-                      <img
-                        src="public/icons/star.svg"
-                        width="32"
-                        height="32"
-                        alt=""
-                      />
-                      <img
-                        src="public/icons/star.svg"
-                        width="32"
-                        height="32"
-                        alt=""
-                      />
+                      <p
+                        class="caption-m grayscale-dark-gray"
+                        style="line-height: 32px"
+                      >
+                        Đánh giá
+                      </p>
+                      <div class="flex-center space-x-3">
+                        <img
+                          src="public/icons/star.svg"
+                          width="32"
+                          height="32"
+                          alt=""
+                        />
+                        <img
+                          src="public/icons/star.svg"
+                          width="32"
+                          height="32"
+                          alt=""
+                        />
+                        <img
+                          src="public/icons/star.svg"
+                          width="32"
+                          height="32"
+                          alt=""
+                        />
+                        <img
+                          src="public/icons/star.svg"
+                          width="32"
+                          height="32"
+                          alt=""
+                        />
+                        <img
+                          src="public/icons/star.svg"
+                          width="32"
+                          height="32"
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                   <div class="">
@@ -327,7 +347,6 @@
                 <div class="flex-1 space-y-5">
                   <img
                     class="rounded-4 w-full"
-                    style="aspect-ratio: 700/525"
                     src="public/images/project.jpeg"
                     style="object-fit: cover"
                     alt="avatar"
@@ -365,25 +384,29 @@
             <!-- Đánh giá -->
             <section id="try-study-feedback">
               <div class="flex-justify-center">
-                <img src="public/images/header-feedback.png" alt="" />
+                <img
+                  class="header-img"
+                  src="public/images/header-feedback.png"
+                  alt=""
+                />
               </div>
               <div
-                class="uk-position-relative flex mt-10 space-x-10 grayscale-dark-gray pb-10"
+                class="uk-position-relative uk-flex uk-flex-column uk-flex-row@m mt-10 result-feedback grayscale-dark-gray pb-10"
               >
                 <img
-                  class="uk-position-bottom-right"
+                  class="uk-position-bottom-right result-desktop"
                   src="public/images/feedback-bg.png"
                   alt=""
                   style="margin-right: 0 !important; z-index: -1"
                 />
-                <div class="space-y-5" style="width: 534px">
+                <div class="space-y-5" style="max-width: 534px">
                   <div
                     class="px-3 py-5 rounded-10 drop-shadow-button-d bg-greenscale-light-green"
                   >
                     <p class="heading-h4 mb-5 text-center">Điểm mạnh</p>
                     <ul
                       style="list-style: disc; line-height: 160%"
-                      class="body-m p-10 rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
+                      class="body-m p-10 result-card result-list-2 rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
                     >
                       <li>
                         Trong suốt buổi học, con tập trung và tích cực làm theo
@@ -412,14 +435,14 @@
                     </ul>
                   </div>
                   <div
-                    class="px-3 py-5 rounded-10 drop-shadow-button-d bg-yellowscale-light-yellow-2"
+                    class="px-3 result-card py-5 rounded-10 drop-shadow-button-d bg-yellowscale-light-yellow-2"
                   >
                     <p class="heading-h4 mb-5 text-center">
                       Điểm cần cải thiện
                     </p>
                     <ul
                       style="list-style: disc; line-height: 160%"
-                      class="body-m p-10 rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
+                      class="body-m p-10 result-list-2 result-card rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
                     >
                       <li>
                         Con đã nhớ được một số từ vựng được dạy, tuy nhiên con
@@ -484,17 +507,23 @@
             <!-- Định hướng học tập -->
             <section id="try-study-goal" class="pb-16">
               <div class="flex-justify-center">
-                <img src="public/images/header-goal.png" alt="" />
+                <img
+                  class="header-img"
+                  src="public/images/header-goal.png"
+                  alt=""
+                />
               </div>
-              <div class="flex mt-10 space-x-10 grayscale-dark-gray">
+              <div
+                class="uk-flex result-goal uk-flex-column uk-flex-row@m mt-10 space-x-10 grayscale-dark-gray"
+              >
                 <div class="space-y-5 goal-content-width">
                   <div
                     class="px-3 py-5 rounded-10 drop-shadow-button-d bg-greenscale-light-green"
                   >
                     <div
-                      class="p-10 rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
+                      class="p-10 result-card rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
                     >
-                      <div class="goal-grid">
+                      <div class="goal-grid result-goal-zoom">
                         <div
                           class="goal-grid-item-3 flex-center py-4 w-full bg-grayscale-white rounded-5 p-5"
                           style="
@@ -502,10 +531,14 @@
                             border: 2px solid #0000001a;
                           "
                         >
-                          <p class="caption-xs grayscale-dark-gray mb-2">
+                          <p
+                            class="caption-xs grayscale-dark-gray text-center mb-2"
+                          >
                             Lộ trình ChipChip
                           </p>
-                          <div class="heading-h4 primary-yellow flex-center">
+                          <div
+                            class="heading-h4 text-center primary-yellow flex-center"
+                          >
                             Level 3B-4B
                           </div>
                         </div>
@@ -516,10 +549,14 @@
                             border: 2px solid #0000001a;
                           "
                         >
-                          <p class="caption-xs grayscale-dark-gray mb-2">
+                          <p
+                            class="caption-xs text-center grayscale-dark-gray mb-2"
+                          >
                             Trình độ tương đương
                           </p>
-                          <div class="heading-h4 primary-green flex-center">
+                          <div
+                            class="heading-h4 text-center primary-green flex-center"
+                          >
                             A2 (KET)
                           </div>
                         </div>
@@ -530,10 +567,14 @@
                             border: 2px solid #0000001a;
                           "
                         >
-                          <p class="caption-xs grayscale-dark-gray mb-2">
+                          <p
+                            class="caption-xs text-center grayscale-dark-gray mb-2"
+                          >
                             Từ vựng
                           </p>
-                          <div class="heading-h4 primary-green flex-center">
+                          <div
+                            class="heading-h4 text-center primary-green flex-center"
+                          >
                             600+
                           </div>
                         </div>
@@ -544,10 +585,14 @@
                             border: 2px solid #0000001a;
                           "
                         >
-                          <p class="caption-xs grayscale-dark-gray mb-2">
+                          <p
+                            class="caption-xs text-center grayscale-dark-gray mb-2"
+                          >
                             Dự án cá nhân
                           </p>
-                          <div class="heading-h4 secondary-blue flex-center">
+                          <div
+                            class="heading-h4 text-center secondary-blue flex-center"
+                          >
                             8
                           </div>
                         </div>
@@ -558,17 +603,21 @@
                             border: 2px solid #0000001a;
                           "
                         >
-                          <p class="caption-xs grayscale-dark-gray mb-2">
+                          <p
+                            class="caption-xs text-center grayscale-dark-gray mb-2"
+                          >
                             Chủ đề từ vựng
                           </p>
-                          <div class="heading-h4 secondary-orange flex-center">
+                          <div
+                            class="heading-h4 text-center secondary-orange flex-center"
+                          >
                             20
                           </div>
                         </div>
                       </div>
                       <ul
                         style="list-style: disc; line-height: 160%"
-                        class="body-m"
+                        class="body-m result-list"
                       >
                         <li>
                           Trong suốt buổi học, con tập trung và tích cực làm
@@ -598,7 +647,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="flex-1 flex-center" style="flex-direction: column">
+                <div
+                  class="flex-1 flex-center mt-5"
+                  style="flex-direction: column"
+                >
                   <p class="button-l grayscale-dark-gray py-5">
                     Lộ trình học tập đề xuất
                   </p>

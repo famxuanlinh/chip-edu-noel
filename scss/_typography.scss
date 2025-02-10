@@ -1,3 +1,5 @@
+@use "mixin" as *;
+
 .heading-h0 {
   font-size: 160px;
   font-weight: 900;
@@ -69,6 +71,12 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 100%;
+
+  @include maxw(780) {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 100%;
+  }
 }
 
 .body-s {
