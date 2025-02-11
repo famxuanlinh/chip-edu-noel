@@ -136,7 +136,7 @@
     &-left {
       width: 488px;
       & > :not(:last-child) {
-        margin-right: 20px;
+        margin-bottom: 20px;
       }
 
       @include maxw(768) {

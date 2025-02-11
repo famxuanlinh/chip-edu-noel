@@ -2278,7 +2278,7 @@ p {
   width: 488px;
 }
 .result-overal-left > :not(:last-child) {
-  margin-right: 20px;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 768px) {
   .result-overal-left {
