@@ -2111,7 +2111,7 @@ p {
   align-items: center;
   margin: 4px 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
   .vocab-tag {
     font-size: 16px;
   }
@@ -2145,12 +2145,13 @@ p {
 }
 @media screen and (max-width: 1600px) {
   .goal-content-width {
-    width: 540px;
+    max-width: 540px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
   .goal-content-width {
     width: 100%;
+    margin: 0;
   }
 }
 
@@ -2174,7 +2175,7 @@ p {
   justify-content: space-between;
   flex-direction: column;
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1180px) {
   .result-sidebar {
     display: none;
   }
@@ -2257,13 +2258,18 @@ p {
   height: 3000px;
   padding: 40px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
   .result-content-1 {
     padding: 0;
   }
 }
 .result-overal > :not(:last-child) {
   margin-right: 20px;
+}
+@media screen and (max-width: 1080px) {
+  .result-overal {
+    padding: 0 16px;
+  }
 }
 @media screen and (max-width: 768px) {
   .result-overal {
@@ -2385,10 +2391,18 @@ p {
     display: none;
   }
 }
+.result-feedback {
+  display: flex;
+}
 .result-feedback > :not(:last-child) {
   margin-right: 20px;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 768px) {
+  .result-feedback {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1080px) {
   .result-feedback {
     padding: 0 24px;
     margin-bottom: 20px;
@@ -2398,9 +2412,26 @@ p {
     margin-bottom: 20px;
   }
 }
-@media screen and (max-width: 780px) {
+@media screen and (min-width: 1080px) {
+  .result-feedback-item {
+    max-width: 534px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .result-feedback-item {
+    width: 50%;
+    margin-right: 24px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .result-feedback-item {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1080px) {
   .result-goal {
     padding: 0 24px;
+    padding-bottom: 32px;
   }
 }
 @media screen and (max-width: 780px) {

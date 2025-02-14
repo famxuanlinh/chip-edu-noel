@@ -195,7 +195,7 @@
   align-items: center;
   margin: 4px 0;
 
-  @include maxw(768) {
+  @include maxw(1080) {
     font-size: 16px;
   }
 }
@@ -230,11 +230,12 @@
   width: 670px;
 
   @include maxw() {
-    width: 540px;
+    max-width: 540px;
   }
 
-  @include maxw(768) {
+  @include maxw(1080) {
     width: 100%;
+    margin: 0;
   }
 }
 
