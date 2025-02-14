@@ -2263,17 +2263,29 @@ p {
     padding: 0;
   }
 }
-.result-overal > :not(:last-child) {
-  margin-right: 20px;
+.result-overal {
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .result-overal > :not(:last-child) {
+    margin-right: 20px;
+  }
 }
 @media screen and (max-width: 1080px) {
   .result-overal {
     padding: 0 16px;
   }
+  .result-overal > div {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 768px) {
   .result-overal {
     padding: 0 16px;
+    display: block;
+  }
+  .result-overal > div {
+    width: 100%;
   }
   .result-overal > :not(:last-child) {
     margin-right: 0px;
@@ -2428,10 +2440,19 @@ p {
     width: 100%;
   }
 }
+@media screen and (min-width: 1080px) {
+  .result-goal {
+    display: flex;
+  }
+}
 @media screen and (max-width: 1080px) {
   .result-goal {
     padding: 0 24px;
     padding-bottom: 32px;
+  }
+  .result-goal > div {
+    width: 100% !important;
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 780px) {
