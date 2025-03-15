@@ -19,6 +19,7 @@
 @use "parent-chat";
 @use "try-learning";
 @use "result";
+@use "exam";
 
 html {
   scroll-behavior: smooth;
@@ -26,10 +27,10 @@ html {
 }
 
 * {
-  margin: 0;
-  padding: 0;
+  // margin: 0;
+  // padding: 0;
   border: 0;
-  font-size: 100%;
+  // font-size: 100%;
   box-sizing: border-box;
   font-family: Nunito;
   scroll-behavior: smooth;

@@ -2,11 +2,6 @@ html {
   box-sizing: border-box;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 *,
 *:before,
 *:after {
@@ -2492,16 +2487,191 @@ p {
   }
 }
 
+.exam {
+  background-image: url(/public/exam/bg2.webp);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.exam-content {
+  padding-top: 136px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 100px;
+  overflow: hidden;
+  justify-content: center;
+}
+@media screen and (max-width: 1600px) {
+  .exam-content {
+    gap: 60px;
+    padding-top: 123px;
+  }
+}
+.exam-left {
+  margin-top: 80px;
+  max-width: 422px;
+}
+.exam-left-content {
+  color: #454575;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 32px */
+  padding: 32px;
+  gap: 24px;
+  border-radius: 16px;
+  background: #d9d9d9;
+  position: relative;
+}
+.exam-left-content ul {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+.exam-center {
+  max-width: 502px;
+}
+.exam-center-content {
+  display: inline-flex;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  fill: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(48px);
+  border: 2px solid #f9e022;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.exam-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 381px;
+}
+.exam-right-content {
+  display: inline-flex;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  fill: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 63.66%);
+  backdrop-filter: blur(48px);
+  stroke-width: 1.8px;
+  border-top-left-radius: 20px;
+  border: 1.8px solid rgba(213, 34, 249, 0.3529411765);
+  border-bottom-right-radius: 20px;
+}
+
+.exam1-header {
+  height: 108px;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.exam1-footer {
+  height: 128px;
+  padding: 0 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.exam1-footer-num {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 24px */
+  border-radius: 30px;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+.exam1-footer-num:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+.exam1-footer-num.done {
+  background: #ff9800;
+  border-color: transparent;
+  color: white;
+}
+.exam1-footer-num.done:hover {
+  color: white;
+}
+.exam1-footer-num.active {
+  border: 2px solid #ff9800;
+  background: rgba(255, 152, 0, 0.1);
+  color: #ff9800;
+}
+.exam1-footer-num.active:hover {
+  color: #ff9800;
+}
+
+.exam2 {
+  background-image: url(/public/exam/bg1.webp);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.exam2-wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(0.85);
+}
+@media screen and (max-width: 1600px) {
+  .exam2-wrapper {
+    transform: scale(0.75);
+  }
+}
+
+.exam3 {
+  background-image: url(/public/exam/bg2.webp);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.exam3-content {
+  padding-top: 136px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 100px;
+  overflow: hidden;
+  justify-content: center;
+}
+@media screen and (max-width: 1600px) {
+  .exam3-content {
+    gap: 60px;
+    padding-top: 123px;
+  }
+}
+.exam3-center {
+  max-width: 470px;
+}
+.exam3-center-content {
+  display: inline-flex;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  fill: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(48px);
+  border: 2px solid #f9e022;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: Nunito;
 }
 
 * {
-  margin: 0;
-  padding: 0;
   border: 0;
-  font-size: 100%;
   box-sizing: border-box;
   font-family: Nunito;
   scroll-behavior: smooth;
