@@ -25,11 +25,12 @@
           </p>
         </div>
         <div class="relative flex items-center w-fit">
-          <img src="/public/exam/timmer.svg" alt="" />
+          <img id="timer-img" src="/public/exam/timer1.png" alt="Timer" />
           <p
+            id="timer-text"
             class="text-[28px] font-extrabold text-[#006638] absolute top-1/2 left-[43%] transform -translate-y-1/2"
           >
-            29:10
+            00:00
           </p>
         </div>
 
@@ -43,11 +44,11 @@
       </div>
       <div class="exam1-content flex items-center gap-8 px-8">
         <button
-          class="button-primary btn-animation size-16 flex justify-center items-center button-m bg-[#00b26b]"
+          class="button-primary btn-animation size-16 flex justify-center items-center button-m bg-[#A9A9A9]"
           style="border-radius: 100%"
         >
           <img
-            class="size-8 rotate-180"
+            class="w-6 mr-1.5 rotate-180"
             src="/public/exam/icons/play-solid.svg"
             alt=""
           />
@@ -59,7 +60,11 @@
           class="button-primary btn-animation size-16 flex justify-center items-center button-m bg-[#00b26b]"
           style="border-radius: 100%"
         >
-          <img class="size-8" src="/public/exam/icons/play-solid.svg" alt="" />
+          <img
+            class="size-6 ml-1.5"
+            src="/public/exam/icons/play-solid.svg"
+            alt=""
+          />
         </button>
       </div>
       <div class="exam1-footer">
@@ -334,6 +339,39 @@
       // Lắng nghe sự kiện mở modal từ UIkit
       UIkit.util.on("#exam-done", "shown", startCountdown);
       UIkit.util.on("#exam-done", "hidden", stopCountdown);
+    </script>
+    <script>
+      function startCountdown(durationInSeconds) {
+        let timerElement = document.getElementById("timer-text");
+        let timerImage = document.getElementById("timer-img");
+        let remainingTime = durationInSeconds;
+
+        function updateTimer() {
+          let minutes = Math.floor(remainingTime / 60);
+          let seconds = remainingTime % 60;
+
+          // Định dạng số giây thành 2 chữ số (ví dụ: 09 thay vì 9)
+          let formattedTime = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+          timerElement.textContent = formattedTime;
+
+          // Thay đổi hình ảnh nếu thời gian còn dưới 1 phút
+          if (remainingTime < 60) {
+            timerImage.src = "/public/exam/timer2.png";
+          }
+
+          if (remainingTime > 0) {
+            remainingTime--;
+            setTimeout(updateTimer, 1000);
+          }
+        }
+
+        updateTimer();
+      }
+
+      // Bắt đầu đếm ngược từ 29 phút 10 giây (tổng cộng 1750 giây)
+      window.onload = function () {
+        startCountdown(65);
+      };
     </script>
   </body>
 </html>

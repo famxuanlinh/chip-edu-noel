@@ -188,8 +188,9 @@
   }
 
   &-center {
-    max-width: 470px;
+    max-width: 520px;
     &-content {
+      width: 100%;
       display: inline-flex;
       padding: 32px;
       flex-direction: column;
