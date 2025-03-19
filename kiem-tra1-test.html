@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiểm tra đầu vào</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/output.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      .name-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .draggable {
+        padding: 10px 15px;
+        width: 150px;
+        background: #007bff;
+        color: white;
+        cursor: grab;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .draggable:active {
+        cursor: grabbing;
+      }
+
+      .drop-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .drop-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .drop-label {
+        font-weight: bold;
+        width: 40px;
+        text-align: right;
+      }
+
+      .drop-zone {
+        width: 150px;
+        height: 40px;
+        background: #ddd;
+        border: 2px dashed #bbb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .drop-zone:hover {
+        background: #f0f0f0;
+      }
+
+      .drop-zone.dragover {
+        border-color: #007bff;
+        background: #cce5ff;
+      }
+
+      /* Thanh phát audio giả lập */
+      .audio-player {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .audio-player input[type="range"] {
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="exam1">
+      <div class="exam1-header">
+        <div class="flex items-center">
+          <img class="mr-2" src="/public/exam/icons/arrow-back.svg" alt="" />
+          <p class="text-[28px] font-extrabold text-[#006638]">
+            Bài kiểm tra Nghe hiểu
+          </p>
+        </div>
+        <div class="relative flex items-center w-fit">
+          <img id="timer-img" src="/public/exam/timer1.png" alt="Timer" />
+          <p
+            id="timer-text"
+            class="text-[28px] font-extrabold text-[#006638] absolute top-1/2 left-[43%] transform -translate-y-1/2"
+          >
+            00:00
+          </p>
+        </div>
+
+        <a class="w-fit flex" href="/kiem-tra.html">
+          <img
+            class="absolute top-12 right-12"
+            src="/public/exam/icons/x-gray.svg"
+            alt="x"
+          />
+        </a>
+      </div>
+      <div class="exam1-content flex items-center gap-8 px-8">
+        <button
+          class="button-primary btn-animation size-16 flex justify-center items-center button-m bg-[#A9A9A9]"
+          style="border-radius: 100%"
+        >
+          <img
+            class="w-6 mr-1.5 rotate-180"
+            src="/public/exam/icons/play-solid.svg"
+            alt=""
+          />
+        </button>
+        <div
+          class="flex-1 h-[calc(100vh-236px)] w-full bg-[#F2F2F2] rounded-2xl"
+        >
+          <div class="container">
+            <h2>Please drag the words into the correct box</h2>
+
+            <!-- Danh sách các tên -->
+            <div class="name-list">
+              <div class="draggable" draggable="true" id="Anna">Anna</div>
+              <div class="draggable" draggable="true" id="Tony">Tony</div>
+              <div class="draggable" draggable="true" id="Victor">Victor</div>
+              <div class="draggable" draggable="true" id="Lisa">Lisa</div>
+              <div class="draggable" draggable="true" id="Harry">Harry</div>
+              <div class="draggable" draggable="true" id="Paul">Paul</div>
+              <div class="draggable" draggable="true" id="Isabela">Isabela</div>
+            </div>
+
+            <!-- Khu vực điền câu trả lời -->
+            <div class="drop-container">
+              <div class="drop-row">
+                <div class="drop-label">1 -</div>
+                <div class="drop-zone" data-index="1"></div>
+              </div>
+              <div class="drop-row">
+                <div class="drop-label">2 -</div>
+                <div class="drop-zone" data-index="2"></div>
+              </div>
+              <div class="drop-row">
+                <div class="drop-label">3 -</div>
+                <div class="drop-zone" data-index="3"></div>
+              </div>
+              <div class="drop-row">
+                <div class="drop-label">
+                  Jane loves reading about different animals in her school
+                </div>
+                <div class="drop-zone" data-index="4"></div>
+              </div>
+              <div class="drop-row">
+                <div class="drop-label">5 -</div>
+                <div class="drop-zone" data-index="5"></div>
+              </div>
+              <div class="drop-row">
+                <div class="drop-label">
+                  I told you about yesterday,’ she said.
+                </div>
+                <div class="drop-zone" data-index="6"></div>
+              </div>
+              <div class="drop-row">
+                <div class="drop-label">7 -</div>
+                <div class="drop-zone" data-index="7"></div>
+              </div>
+            </div>
+
+            <!-- Thanh phát audio (giả lập) -->
+            <div class="audio-player">
+              <span>🔊 Audio:</span>
+              <input type="range" min="0" max="100" value="0" />
+              <span>03:21</span>
+            </div>
+          </div>
+        </div>
+        <button
+          class="button-primary btn-animation size-16 flex justify-center items-center button-m bg-[#00b26b]"
+          style="border-radius: 100%"
+        >
+          <img
+            class="size-6 ml-1.5"
+            src="/public/exam/icons/play-solid.svg"
+            alt=""
+          />
+        </button>
+      </div>
+      <div class="exam1-footer">
+        <div class="flex items-center gap-2">
+          <a href="#" class="exam1-footer-num done">1</a>
+          <a href="#" class="exam1-footer-num active">2</a>
+          <a href="#exam-unfinished" uk-toggle class="exam1-footer-num">3</a>
+          <a href="#exam-submit-early" uk-toggle class="exam1-footer-num">4</a>
+          <a href="#exam-done" uk-toggle class="exam1-footer-num">5</a>
+          <a href="#" class="exam1-footer-num">6</a>
+          <a href="#" class="exam1-footer-num">7</a>
+        </div>
+        <!-- <a
+          href="#exam-exit"
+          uk-toggle
+          class="button-primary btn-animation w-fit flex justify-center items-center px-5 button-m bg-[#00b26b]"
+          style="height: 56px; color: white"
+        >
+          Nộp bài
+        </a> -->
+        <button
+          id="checkResults"
+          class="button-primary btn-animation w-fit flex justify-center items-center px-5 button-m bg-[#00b26b]"
+          style="height: 56px; color: white"
+        >
+          Nộp bài
+        </button>
+      </div>
+    </div>
+
+    <div id="exam-done" class="uk-flex-top" uk-modal>
+      <div
+        style="
+          height: fit-content;
+          width: 760px !important;
+          border-radius: 20px;
+        "
+        class="level-modal uk-modal-dialog space-y-10 uk-modal-body uk-margin-auto-vertical"
+      >
+        <div class="flex justify-between items-center">
+          <p></p>
+          <p class="heading-h2 text-[#252525]">Tuyệt vời!</p>
+          <button
+            type="button"
+            onclick="hideModal('exam-done')"
+            class="rounded-full flex-justify-center"
+            style="background-color: transparent"
+          >
+            <img src="public/icons/x2.svg" width="40" height="40" />
+          </button>
+        </div>
+        <div>
+          <div class="rounded-3xl" style="margin-top: 70px">
+            <div class="pb-10 flex-justify-center">
+              <p class="my-6 text-center text-[#252525] text-2xl">
+                Bạn đã hoàn thành bài Nghe.
+              </p>
+            </div>
+            <div class="flex justify-center">
+              <a
+                href="kiem-tra2.html"
+                class="button-primary btn-animation flex items-center justify-center !w-60 bg-primary-green px-5 grayscale-white button-m"
+                style="height: 56px; color: white; background-color: #00b26b"
+              >
+                Tiếp tục
+              </a>
+            </div>
+            <p class="pt-4 text-center text-lg text-[#252525]/40">
+              Tự động chuyển sau <span id="countdown">5</span>s
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="exam-submit-early" class="uk-flex-top" uk-modal>
+      <div
+        style="
+          height: fit-content;
+          width: 760px !important;
+          border-radius: 20px;
+        "
+        class="level-modal uk-modal-dialog space-y-10 uk-modal-body uk-margin-auto-vertical"
+      >
+        <div class="flex justify-between items-center">
+          <p></p>
+          <p class="heading-h2 text-[#252525]">Nộp bài sớm</p>
+          <button
+            type="button"
+            onclick="hideModal('exam-submit-early')"
+            class="rounded-full flex-justify-center"
+            style="background-color: transparent"
+          >
+            <img src="public/icons/x2.svg" width="40" height="40" />
+          </button>
+        </div>
+        <div>
+          <div class="space-y-10 rounded-3xl" style="margin-top: 70px">
+            <div class="flex-justify-center">
+              <p class="pb-6 text-center text-black text-[28px] font-extrabold">
+                Thời gian còn lại: 12 phút 40 giây
+              </p>
+              <p class="my-6 text-center text-[#252525] text-2xl">
+                Vẫn còn thời gian để kiểm tra lại trước khi nộp bài.
+                <br />
+                Bạn có chắc muốn nộp bài sớm không?
+              </p>
+            </div>
+            <div class="space-y-10">
+              <div class="space-x-3 flex items-center">
+                <button
+                  onclick="hideModal('exam-submit-early')"
+                  class="button-primary btn-animation flex-1 w-full flex justify-center items-center px-5 button-m text-black bg-[#D8EDDD]"
+                  style="height: 56px"
+                >
+                  Bài kiểm tra lại bài
+                </button>
+                <button
+                  type="button"
+                  uk-toggle="target: #exam-done"
+                  class="button-primary flex-1 btn-animation w-full flex-center bg-primary-green px-5 grayscale-white button-m"
+                  style="height: 56px; color: white; background-color: #00b26b"
+                >
+                  Nộp bài
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="exam-unfinished" class="uk-flex-top" uk-modal>
+      <div
+        style="
+          height: fit-content;
+          width: 760px !important;
+          border-radius: 20px;
+        "
+        class="level-modal uk-modal-dialog space-y-10 uk-modal-body uk-margin-auto-vertical"
+      >
+        <div class="flex justify-between items-center">
+          <p></p>
+          <p class="heading-h2 text-[#252525]">Chưa hoàn thành</p>
+          <button
+            type="button"
+            onclick="hideModal('exam-unfinished')"
+            class="rounded-full flex-justify-center"
+            style="background-color: transparent"
+          >
+            <img src="public/icons/x2.svg" width="40" height="40" />
+          </button>
+        </div>
+        <div>
+          <div class="space-y-10 rounded-3xl" style="margin-top: 70px">
+            <div class="flex-justify-center">
+              <p class="pb-6 text-center text-black text-[28px] font-extrabold">
+                Thời gian còn lại: 12 phút 40 giây
+              </p>
+              <p class="my-6 text-center text-[#252525] text-2xl">
+                Bạn chưa hoàn thành hết bài kiểm tra.
+                <br />
+                Bạn có chắc muốn nộp bài sớm không?
+              </p>
+            </div>
+            <div class="space-y-10">
+              <div class="space-x-3 flex items-center">
+                <button
+                  onclick="hideModal('exam-unfinished')"
+                  class="button-primary btn-animation flex-1 w-full flex justify-center items-center px-5 button-m text-black bg-[#D8EDDD]"
+                  style="height: 56px"
+                >
+                  Tiếp tục làm bài
+                </button>
+                <button
+                  type="button"
+                  uk-toggle="target: #exam-done"
+                  class="button-primary flex-1 btn-animation w-full flex-center bg-primary-green px-5 grayscale-white button-m"
+                  style="height: 56px; color: white; background-color: #00b26b"
+                >
+                  Nộp bài
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="exam-exit" class="uk-flex-top" uk-modal>
+      <div
+        style="
+          height: fit-content;
+          width: 760px !important;
+          border-radius: 20px;
+        "
+        class="level-modal uk-modal-dialog space-y-10 uk-modal-body uk-margin-auto-vertical"
+      >
+        <div class="flex justify-between items-center">
+          <p></p>
+          <p class="heading-h2 text-[#252525]">Thoát Bài kiểm tra</p>
+          <button
+            type="button"
+            onclick="hideModal('exam-exit')"
+            class="rounded-full flex-justify-center"
+            style="background-color: transparent"
+          >
+            <img src="public/icons/x2.svg" width="40" height="40" />
+          </button>
+        </div>
+        <div>
+          <div class="space-y-10 rounded-3xl" style="margin-top: 70px">
+            <div class="flex-justify-center">
+              <p class="my-6 text-center text-[#252525] text-2xl">
+                Sắp hoàn thành rồi bạn ơi! Nếu thoát bây giờ lần tới sẽ phải làm
+                lại bài kiểm tra lại từ đầu đó.
+              </p>
+            </div>
+            <div class="space-y-10">
+              <div class="space-x-3 flex items-center">
+                <a
+                  href="/kiem-tra.html"
+                  class="button-primary btn-animation flex-1 w-full flex justify-center items-center px-5 button-m bg-[#FF6047]"
+                  style="height: 56px; color: white"
+                >
+                  Vẫn thoát
+                </a>
+                <button
+                  type="button"
+                  onclick="hideModal('exam-exit')"
+                  class="button-primary flex-1 btn-animation w-full flex-center bg-primary-green px-5 grayscale-white button-m"
+                  style="height: 56px; color: white; background-color: #00b26b"
+                >
+                  Ở lại
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script>
+      function hideModal(modalId) {
+        const dropdownElement = document.getElementById(modalId);
+
+        UIkit.modal(dropdownElement).hide(0);
+      }
+
+      function startCountdown() {
+        let timeLeft = 5;
+        const countdownElement = document.getElementById("countdown");
+
+        countdownElement.textContent = timeLeft; // Cập nhật lần đầu
+
+        const countdownInterval = setInterval(() => {
+          timeLeft--;
+          countdownElement.textContent = timeLeft;
+
+          if (timeLeft <= 0) {
+            clearInterval(countdownInterval);
+            window.location.href = "kiem-tra2.html";
+          }
+        }, 1000);
+
+        // Lưu interval vào modal để có thể dừng lại khi modal đóng
+        document.getElementById("exam-done").dataset.countdown =
+          countdownInterval;
+      }
+
+      function stopCountdown() {
+        const countdownInterval =
+          document.getElementById("exam-done").dataset.countdown;
+        if (countdownInterval) {
+          clearInterval(countdownInterval);
+        }
+      }
+
+      // Lắng nghe sự kiện mở modal từ UIkit
+      UIkit.util.on("#exam-done", "shown", startCountdown);
+      UIkit.util.on("#exam-done", "hidden", stopCountdown);
+    </script>
+    <script>
+      function startCountdown(durationInSeconds) {
+        let timerElement = document.getElementById("timer-text");
+        let timerImage = document.getElementById("timer-img");
+        let remainingTime = durationInSeconds;
+
+        function updateTimer() {
+          let minutes = Math.floor(remainingTime / 60);
+          let seconds = remainingTime % 60;
+
+          // Định dạng số giây thành 2 chữ số (ví dụ: 09 thay vì 9)
+          let formattedTime = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+          timerElement.textContent = formattedTime;
+
+          // Thay đổi hình ảnh nếu thời gian còn dưới 1 phút
+          if (remainingTime < 60) {
+            timerImage.src = "/public/exam/timer2.png";
+            timerElement.style.color = "#A21600";
+          }
+
+          if (remainingTime > 0) {
+            remainingTime--;
+            setTimeout(updateTimer, 1000);
+          }
+        }
+
+        updateTimer();
+      }
+
+      // Bắt đầu đếm ngược từ 29 phút 10 giây (tổng cộng 1750 giây)
+      window.onload = function () {
+        startCountdown(65);
+      };
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
