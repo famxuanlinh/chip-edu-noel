@@ -15,21 +15,6 @@
     <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="css/output.css" />
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: #f4f4f4;
-      }
-
-      .container {
-        max-width: 600px;
-        margin: 20px auto;
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-
       h2 {
         margin-bottom: 20px;
       }
@@ -139,12 +124,8 @@
           </p>
         </div>
 
-        <a class="w-fit flex" href="/kiem-tra.html">
-          <img
-            class="absolute top-12 right-12"
-            src="/public/exam/icons/x-gray.svg"
-            alt="x"
-          />
+        <a class="w-full justify-end flex" href="/kiem-tra.html">
+          <img width="24" src="/public/exam/icons/x-gray.svg" alt="x" />
         </a>
       </div>
       <div class="flex items-center gap-8 px-8">
@@ -158,65 +139,77 @@
             alt=""
           />
         </button>
-        <div class="flex-1 exam1-content w-full bg-[#F2F2F2] rounded-2xl">
-          <div class="container">
-            <h2>Please drag the words into the correct box</h2>
-
-            <!-- Danh sách các tên -->
-            <div class="name-list">
-              <div class="draggable" draggable="true" id="Anna">Anna</div>
-              <div class="draggable" draggable="true" id="Tony">Tony</div>
-              <div class="draggable" draggable="true" id="Victor">Victor</div>
-              <div class="draggable" draggable="true" id="Lisa">Lisa</div>
-              <div class="draggable" draggable="true" id="Harry">Harry</div>
-              <div class="draggable" draggable="true" id="Paul">Paul</div>
-              <div class="draggable" draggable="true" id="Isabela">Isabela</div>
+        <div class="flex-1 exam1-content w-full rounded-2xl">
+          <!-- Start content 1 -->
+          <div class="flex">
+            <div class="relative exam1-height w-155">
+              <img
+                src="public/exam1/image 11.png"
+                class="w-full object-contain"
+                style="height: 100%"
+                alt=""
+              />
             </div>
-
-            <!-- Khu vực điền câu trả lời -->
-            <div class="drop-container">
-              <div class="drop-row">
-                <div class="drop-label">1 -</div>
-                <div class="drop-zone" data-index="1"></div>
-              </div>
-              <div class="drop-row">
-                <div class="drop-label">2 -</div>
-                <div class="drop-zone" data-index="2"></div>
-              </div>
-              <div class="drop-row">
-                <div class="drop-label">3 -</div>
-                <div class="drop-zone" data-index="3"></div>
-              </div>
-              <div class="drop-row">
-                <div class="drop-label">
-                  Jane loves reading about different animals in her school
+            <div class="exam1-content1 flex-1 exam1-height">
+              <div class="name-list">
+                <div class="draggable" draggable="true" id="Anna">Anna</div>
+                <div class="draggable" draggable="true" id="Tony">Tony</div>
+                <div class="draggable" draggable="true" id="Victor">Victor</div>
+                <div class="draggable" draggable="true" id="Lisa">Lisa</div>
+                <div class="draggable" draggable="true" id="Harry">Harry</div>
+                <div class="draggable" draggable="true" id="Paul">Paul</div>
+                <div class="draggable" draggable="true" id="Isabela">
+                  Isabela
                 </div>
-                <div class="drop-zone" data-index="4"></div>
               </div>
-              <div class="drop-row">
-                <div class="drop-label">5 -</div>
-                <div class="drop-zone" data-index="5"></div>
-              </div>
-              <div class="drop-row">
-                <div class="drop-label">
-                  I told you about yesterday,’ she said.
-                </div>
-                <div class="drop-zone" data-index="6"></div>
-              </div>
-              <div class="drop-row">
-                <div class="drop-label">7 -</div>
-                <div class="drop-zone" data-index="7"></div>
-              </div>
-            </div>
 
-            <!-- Thanh phát audio (giả lập) -->
-            <div class="audio-player">
-              <span>🔊 Audio:</span>
-              <input type="range" min="0" max="100" value="0" />
-              <span>03:21</span>
+              <!-- Khu vực điền câu trả lời -->
+              <div class="drop-container">
+                <div class="drop-row">
+                  <div class="drop-label">1 -</div>
+                  <div class="drop-zone" data-index="1"></div>
+                </div>
+                <div class="drop-row">
+                  <div class="drop-label">2 -</div>
+                  <div class="drop-zone" data-index="2"></div>
+                </div>
+                <div class="drop-row">
+                  <div class="drop-label">3 -</div>
+                  <div class="drop-zone" data-index="3"></div>
+                </div>
+                <div class="drop-row">
+                  <div class="drop-label">
+                    Jane loves reading about different animals in her school
+                  </div>
+                  <div class="drop-zone" data-index="4"></div>
+                </div>
+                <div class="drop-row">
+                  <div class="drop-label">5 -</div>
+                  <div class="drop-zone" data-index="5"></div>
+                </div>
+                <div class="drop-row">
+                  <div class="drop-label">
+                    I told you about yesterday,’ she said.
+                  </div>
+                  <div class="drop-zone" data-index="6"></div>
+                </div>
+                <div class="drop-row">
+                  <div class="drop-label">7 -</div>
+                  <div class="drop-zone" data-index="7"></div>
+                </div>
+              </div>
+
+              <!-- Thanh phát audio (giả lập) -->
+              <div class="audio-player">
+                <span>🔊 Audio:</span>
+                <input type="range" min="0" max="100" value="0" />
+                <span>03:21</span>
+              </div>
             </div>
           </div>
+          <!-- End content 1 -->
         </div>
+
         <button
           class="button-primary btn-animation size-16 flex justify-center items-center button-m bg-[#00b26b]"
           style="border-radius: 100%"
@@ -230,29 +223,26 @@
       </div>
       <div class="exam1-footer">
         <div class="flex items-center gap-2">
-          <a href="#" class="exam1-footer-num done">1</a>
-          <a href="#" class="exam1-footer-num active">2</a>
-          <a href="#exam-unfinished" uk-toggle class="exam1-footer-num">3</a>
-          <a href="#exam-submit-early" uk-toggle class="exam1-footer-num">4</a>
-          <a href="#exam-done" uk-toggle class="exam1-footer-num">5</a>
-          <a href="#" class="exam1-footer-num">6</a>
-          <a href="#" class="exam1-footer-num">7</a>
+          <a href="#" class="exam1-footer-num done">Part 1</a>
+          <a href="#" class="exam1-footer-num active">Part 2</a>
+          <a href="#exam-unfinished" uk-toggle class="exam1-footer-num"
+            >Part 3</a
+          >
+          <a href="#exam-submit-early" uk-toggle class="exam1-footer-num"
+            >Part 4</a
+          >
+          <a href="#exam-done" uk-toggle class="exam1-footer-num">Part 5</a>
+          <a href="#" class="exam1-footer-num">Part 6</a>
+          <a href="#" class="exam1-footer-num">Part 7</a>
         </div>
-        <!-- <a
+        <a
           href="#exam-exit"
           uk-toggle
           class="button-primary btn-animation w-fit flex justify-center items-center px-5 button-m bg-[#00b26b]"
           style="height: 56px; color: white"
         >
           Nộp bài
-        </a> -->
-        <button
-          id="checkResults"
-          class="button-primary btn-animation w-fit flex justify-center items-center px-5 button-m bg-[#00b26b]"
-          style="height: 56px; color: white"
-        >
-          Nộp bài
-        </button>
+        </a>
       </div>
     </div>
 

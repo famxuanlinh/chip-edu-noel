@@ -2632,10 +2632,14 @@ p {
 }
 .exam1-content {
   height: calc(100vh - 236px);
+  padding: 32px 54px;
+  overflow-y: hidden;
+  background-image: url("public/exam1/bg.webp");
 }
 @media screen and (max-width: 1600px) {
   .exam1-content {
     height: calc(100vh - 176px);
+    padding: 24px 46px;
   }
 }
 .exam1-footer {
@@ -2685,6 +2689,18 @@ p {
 }
 .exam1-footer-num.active:hover {
   color: #ff9800;
+}
+
+.exam1-height {
+  max-height: calc(100vh - 236px - 64px);
+}
+@media screen and (max-width: 1600px) {
+  .exam1-height {
+    max-height: calc(100vh - 176px - 48px);
+  }
+}
+.exam1-content1 {
+  overflow-y: auto;
 }
 
 html {

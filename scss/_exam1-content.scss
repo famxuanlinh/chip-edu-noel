@@ -1,0 +1,17 @@
+@use "color";
+@use "typography";
+@use "effect";
+@use "mixin" as *;
+
+.exam1 {
+  &-height {
+    max-height: calc(100vh - 236px - 64px);
+
+    @include maxw(1600) {
+      max-height: calc(100vh - 176px - 48px);
+    }
+  }
+  &-content1 {
+    overflow-y: auto;
+  }
+}

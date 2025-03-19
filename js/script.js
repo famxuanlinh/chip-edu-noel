@@ -1,32 +1,48 @@
-// Lấy danh sách tất cả các phần tử có thể kéo
 const draggables = document.querySelectorAll(".draggable");
 const dropZones = document.querySelectorAll(".drop-zone");
+const nameList = document.querySelector(".name-list");
 
-// Xử lý sự kiện khi bắt đầu kéo
+// Xử lý khi bắt đầu kéo
 draggables.forEach((draggable) => {
   draggable.addEventListener("dragstart", (e) => {
     e.dataTransfer.setData("text", e.target.id);
+    draggable.classList.add("dragging");
   });
-});
 
-document.getElementById("checkResults").addEventListener("click", () => {
-  let results = [];
+  draggable.addEventListener("dragend", () => {
+    draggable.classList.remove("dragging");
+  });
 
-  // Lặp qua tất cả các ô drop-zone
-  dropZones.forEach((zone) => {
-    // Kiểm tra xem trong ô có phần tử không
-    if (zone.hasChildNodes()) {
-      results.push(zone.firstChild.textContent);
-    } else {
-      results.push("EMPTY"); // Nếu ô trống
+  // Xử lý khi nhấp vào từ đã thả, nó bay về vị trí cuối danh sách
+  draggable.addEventListener("click", (e) => {
+    const word = e.target;
+
+    if (word.parentElement.classList.contains("drop-zone")) {
+      // Lấy vị trí hiện tại của từ
+      const rect = word.getBoundingClientRect();
+      
+      // Lấy vị trí cuối của danh sách
+      const lastItem = nameList.lastElementChild;
+      const lastItemRect = lastItem ? lastItem.getBoundingClientRect() : nameList.getBoundingClientRect();
+      
+      // Tính khoảng cách cần di chuyển
+      const offsetX = lastItemRect.left - rect.left;
+      const offsetY = lastItemRect.bottom - rect.top + 10; // Cách một chút để đẹp hơn
+
+      // Áp dụng animation
+      word.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+      word.style.transition = "transform 0.5s ease-in-out";
+
+      setTimeout(() => {
+        word.style.transition = "";
+        word.style.transform = "";
+        nameList.appendChild(word); // Đưa về cuối danh sách
+      }, 500);
     }
   });
-
-  // Hiển thị kết quả trong console
-  console.log("Danh sách các giá trị đã nhập:", results);
 });
 
-// Xử lý sự kiện khi phần tử được kéo vào vùng thả
+// Xử lý sự kiện kéo thả
 dropZones.forEach((zone) => {
   zone.addEventListener("dragover", (e) => {
     e.preventDefault();
@@ -41,11 +57,9 @@ dropZones.forEach((zone) => {
     e.preventDefault();
     zone.classList.remove("dragover");
 
-    // Lấy ID của phần tử đang được kéo
     const draggedId = e.dataTransfer.getData("text");
     const draggedElement = document.getElementById(draggedId);
 
-    // Kiểm tra nếu ô đã có dữ liệu thì không cho thả nữa
     if (!zone.hasChildNodes()) {
       zone.textContent = "";
       zone.appendChild(draggedElement);
