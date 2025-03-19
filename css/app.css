@@ -2563,56 +2563,6 @@ p {
   border-bottom-right-radius: 20px;
 }
 
-.exam1-header {
-  height: 108px;
-  padding: 0 48px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-.exam1-footer {
-  height: 128px;
-  padding: 0 120px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.exam1-footer-num {
-  display: flex;
-  width: 56px;
-  height: 56px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
-  text-align: center;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 24px */
-  border-radius: 30px;
-  border: 2px solid rgba(0, 0, 0, 0.4);
-  color: rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-}
-.exam1-footer-num:hover {
-  color: rgba(0, 0, 0, 0.6);
-}
-.exam1-footer-num.done {
-  background: #ff9800;
-  border-color: transparent;
-  color: white;
-}
-.exam1-footer-num.done:hover {
-  color: white;
-}
-.exam1-footer-num.active {
-  border: 2px solid #ff9800;
-  background: rgba(255, 152, 0, 0.1);
-  color: #ff9800;
-}
-.exam1-footer-num.active:hover {
-  color: #ff9800;
-}
-
 .exam2 {
   background-image: url(/public/exam/bg1.webp);
   height: 100vh;
@@ -2667,6 +2617,74 @@ p {
   border: 2px solid #f9e022;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+.exam1-header {
+  height: 108px;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+@media screen and (max-width: 1600px) {
+  .exam1-header {
+    height: 88px;
+  }
+}
+.exam1-content {
+  height: calc(100vh - 236px);
+}
+@media screen and (max-width: 1600px) {
+  .exam1-content {
+    height: calc(100vh - 176px);
+  }
+}
+.exam1-footer {
+  height: 128px;
+  padding: 0 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 1600px) {
+  .exam1-footer {
+    height: 88px;
+  }
+}
+.exam1-footer-num {
+  display: flex;
+  padding: 0 16px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 24px */
+  border-radius: 30px;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+.exam1-footer-num:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+.exam1-footer-num.done {
+  background: #ff9800;
+  border-color: transparent;
+  color: white;
+}
+.exam1-footer-num.done:hover {
+  color: white;
+}
+.exam1-footer-num.active {
+  border: 2px solid #ff9800;
+  background: rgba(255, 152, 0, 0.1);
+  color: #ff9800;
+}
+.exam1-footer-num.active:hover {
+  color: #ff9800;
 }
 
 html {

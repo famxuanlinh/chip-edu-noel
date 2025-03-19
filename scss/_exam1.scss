@@ -1,0 +1,80 @@
+@use "color";
+@use "typography";
+@use "effect";
+@use "mixin" as *;
+
+.exam1 {
+  &-header {
+    height: 108px;
+    padding: 0 48px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    @include maxw(1600) {
+      height: 88px;
+    }
+  }
+
+  &-content {
+    // h-[calc(100vh-236px)]
+    height: calc(100vh - 236px);
+
+    @include maxw(1600) {
+      height: calc(100vh - 176px);
+    }
+  }
+
+  &-footer {
+    height: 128px;
+    padding: 0 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include maxw(1600) {
+      height: 88px;
+    }
+
+    &-num {
+      display: flex;
+      padding: 0 16px;
+      height: 48px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+
+      text-align: center;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%; /* 24px */
+      border-radius: 30px;
+      border: 2px solid rgba(0, 0, 0, 0.4);
+      color: rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+
+      &:hover {
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      &.done {
+        background: #ff9800;
+        border-color: transparent;
+        color: white;
+
+        &:hover {
+          color: white;
+        }
+      }
+      &.active {
+        border: 2px solid #ff9800;
+        background: rgba(255, 152, 0, 0.1);
+        color: #ff9800;
+
+        &:hover {
+          color: #ff9800;
+        }
+      }
+    }
+  }
+}
