@@ -52,7 +52,6 @@
           />
         </button>
         <div class="flex-1 exam1-content w-full rounded-2xl">
-          <!-- Start content 1 -->
           <div class="test1 flex gap-10">
             <div class="relative exam1-height w-[45%]">
               <img
@@ -62,15 +61,14 @@
                 alt=""
               />
             </div>
-            <div class="exam1-content1 w-[55%] exam1-height">
+            <div class="exam1-content7 w-[55%] exam1-height">
               <div class="exam1-zoom flex flex-col h-full">
                 <div>
                   <div class="flex items-start gap-6 toggle-trans-container">
                     <div
                       class="text-[32px] font-extrabold text-[#3A3335] flex-1"
                     >
-                      Please drag the words into the corresponding box according
-                      to what you hear in the lesson.
+                      Insert the words into the following paragraph.
                     </div>
                     <div
                       class="toggle-trans flex flex-none cursor-pointer gap-2 w-fit items-center rounded-4xl border justify-center border-[#000000]/20 py-1 pr-1 pl-3"
@@ -90,8 +88,7 @@
                     <div
                       class="text-[32px] font-extrabold text-[#3A3335] flex-1"
                     >
-                      Vui lòng kéo các từ vào ô tương ứng theo những gì bạn nghe
-                      trong đoạn hội thoại.
+                      Insert the words into the following paragraph vietnamese.
                     </div>
                     <div
                       class="toggle-trans flex flex-none cursor-pointer gap-2 w-fit items-center rounded-4xl border justify-center border-[#000000]/20 py-1 pl-1 pr-3"
@@ -105,121 +102,103 @@
                     </div>
                   </div>
                 </div>
-                <div class="pt-6 pb-10">
-                  <audio id="audio" src="public/audio/ManhBa.mp3"></audio>
-                  <div class="audio-player">
-                    <img
-                      class="size-9 mx-3"
-                      src="public/exam1/icons/play-orange.svg"
-                      id="playPauseBtn"
-                    />
-                    <input
-                      type="range"
-                      id="progressBar"
-                      min="0"
-                      max="100"
-                      value="0"
-                    />
-                    <span id="timeDisplay" class="pr-3">00:00</span>
+                <!-- <div class="name-list pt-6 grid grid-cols-4 gap-8">
+                  <div class="draggable" draggable="true" id="Anna">Anna</div>
+                  <div class="draggable" draggable="true" id="Tony">Tony</div>
+                  <div class="draggable" draggable="true" id="Victor">
+                    Victor
                   </div>
-                </div>
-                <div class="flex-1 overflow-y-auto">
-                  <!-- <div class="flex flex-col gap-10">
-                    <div class="name-list grid grid-cols-4 gap-8">
-                      <div class="draggable" draggable="true" id="Anna">
-                        Anna
-                      </div>
-                      <div class="draggable" draggable="true" id="Tony">
-                        Tony
-                      </div>
-                      <div class="draggable" draggable="true" id="Victor">
-                        Victor
-                      </div>
-                      <div class="draggable" draggable="true" id="Lisa">
-                        Lisa
-                      </div>
-                      <div class="draggable" draggable="true" id="Harry">
-                        Harry
-                      </div>
-                      <div class="draggable" draggable="true" id="Paul">
-                        Paul
-                      </div>
-                      <div class="draggable" draggable="true" id="Isabela">
-                        Isabela
-                      </div>
-                    </div>
-                    <div
-                      class="drop-container grid grid-cols-3 gap-y-8 gap-x-16"
-                    >
+                  <div class="draggable" draggable="true" id="Lisa">Lisa</div>
+                  <div class="draggable" draggable="true" id="Harry">Harry</div>
+                </div> -->
+                <div class="flex-1 mt-10 overflow-y-auto">
+                  <div class="flex flex-col gap-10">
+                    <!-- <div class="drop-container space-y-6">
                       <div class="drop-row">
-                        <div class="drop-label">1 -</div>
+                        <div class="drop-label">
+                          1. This person helps people who aren’t well in
+                          hospital.
+                        </div>
                         <div class="drop-zone" data-index="1"></div>
                       </div>
                       <div class="drop-row">
-                        <div class="drop-label">2 -</div>
+                        <div class="drop-label">
+                          2. Some people put milk or lemon in this drink.
+                        </div>
                         <div class="drop-zone" data-index="2"></div>
                       </div>
                       <div class="drop-row">
-                        <div class="drop-label">3 -</div>
+                        <div class="drop-label">
+                          3. A bustling place with many high-rise buildings.
+                        </div>
                         <div class="drop-zone" data-index="3"></div>
                       </div>
                       <div class="drop-row">
-                        <div class="drop-label">4 -</div>
+                        <div class="drop-label">
+                          4. A group of people making sounds with various
+                          musical instruments
+                        </div>
                         <div class="drop-zone" data-index="4"></div>
                       </div>
                       <div class="drop-row">
-                        <div class="drop-label">5 -</div>
+                        <div class="drop-label">
+                          5. A group of people making sounds with various
+                          musical instruments
+                        </div>
                         <div class="drop-zone" data-index="5"></div>
                       </div>
+                    </div> -->
+                    <div class="drop-container space-y-6">
                       <div class="drop-row">
-                        <div class="drop-label">6 -</div>
-                        <div class="drop-zone" data-index="6"></div>
+                        <div class="drop-label">
+                          1. This person helps people who aren’t well in
+                          hospital.
+                        </div>
+                        <div class="drop-zone" data-index="1">
+                          <div class="draggable true" id="Anna">Anna</div>
+                        </div>
                       </div>
                       <div class="drop-row">
-                        <div class="drop-label">7 -</div>
-                        <div class="drop-zone" data-index="7"></div>
+                        <div class="drop-label">
+                          2. Some people put milk or lemon in this drink.
+                        </div>
+                        <div class="drop-zone" data-index="2">
+                          <div class="draggable fail" id="Tony">Tony</div>
+                        </div>
+                      </div>
+                      <div class="drop-row">
+                        <div class="drop-label">
+                          3. A bustling place with many high-rise buildings.
+                        </div>
+                        <div class="drop-zone" data-index="3">
+                          <div class="draggable true" id="Victor">Victor</div>
+                        </div>
+                      </div>
+                      <div class="drop-row">
+                        <div class="drop-label">
+                          4. A group of people making sounds with various
+                          musical instruments
+                        </div>
+                        <div class="drop-zone" data-index="4">
+                          <!-- <div class="draggable true" id="Lisa">Lisa</div> -->
+                        </div>
+                      </div>
+                      <div class="drop-row">
+                        <div class="drop-label">
+                          5. A group of people making sounds with various
+                          musical instruments
+                        </div>
+                        <div class="drop-zone" data-index="5">
+                          <div class="draggable fail" id="Harry">Harry</div>
+                        </div>
                       </div>
                     </div>
-                  </div> -->
-                  <!-- Result -->
-                  <div class="flex flex-col mt-6 gap-10">
-                    <div
-                      class="drop-container grid grid-cols-3 gap-y-8 gap-x-16"
-                    >
-                      <div class="drop-row">
-                        <div class="drop-label">1 -</div>
-                        <div class="draggable true" id="Anna">Anna</div>
-                      </div>
-                      <div class="drop-row">
-                        <div class="drop-label">1 -</div>
-                        <div class="draggable fail" id="Tony">Tony</div>
-                      </div>
-
-                      <div class="drop-row">
-                        <div class="drop-label">3 -</div>
-                        <div class="drop-zone"></div>
-                      </div>
-                      <div class="drop-row">
-                        <div class="drop-label">4 -</div>
-                        <div class="draggable" id="Victor">Victor</div>
-                      </div>
-                      <div class="drop-row">
-                        <div class="drop-label">5 -</div>
-                        <div class="draggable" id="Harry">Harry</div>
-                      </div>
-                      <div class="drop-row">
-                        <div class="drop-label">6 -</div>
-                        <div class="drop-zone"></div>
-                      </div>
-                      <div class="drop-row">
-                        <div class="drop-label">7 -</div>
-                        <div class="draggable" id="Isabela">Isabela</div>
-                      </div>
-                    </div>
-
                     <div class="exam1-result">
                       <div class="exam1-result-title">Correct Answer:</div>
-                      <div class="exam1-result-content">5. Lisa</div>
+                      <div class="exam1-result-content">
+                        <div>2. Harry</div>
+                        <div>5. Lisa</div>
+                      </div>
                     </div>
                   </div>
                 </div>

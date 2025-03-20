@@ -2705,6 +2705,130 @@ p {
     height: calc(100vh - 176px - 48px);
   }
 }
+.exam1-content8 {
+  overflow-y: auto;
+}
+.exam1-content8-sentence {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-right: 4px;
+}
+.exam1-content8-answer {
+  color: var(--Secondary-Purple, #454575);
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 42px */
+  flex: 1 1 0%;
+}
+.exam1-content8-question {
+  width: 480px;
+  height: 64px;
+  border-radius: 12px;
+  border: 4px solid #e4e4e4;
+  background-color: white;
+  padding: 0 20px;
+  color: var(--Secondary-Purple, #454575);
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%; /* 28px */
+}
+.exam1-content8-question:focus {
+  stroke-width: 4px;
+  border: 4px solid #454575;
+  stroke: rgba(42, 80, 202, 0.15);
+  caret-color: #454575;
+  outline: 2px solid #7582f0;
+}
+.exam1-content8-question:focus-visible {
+  outline: 4px solid #7582f0;
+}
+.exam1-content8-question:not(:placeholder-shown) {
+  border: 4px solid #c8d5f1;
+  background-color: #ebf8ff;
+}
+.exam1-content8-question.true {
+  border: 4px solid #b6efaf;
+  background-color: #ecfbe5;
+  color: #00b26b;
+}
+.exam1-content8-question.fail {
+  color: #e44825;
+  border: 4px solid #f0b4ab;
+  background-color: #fbe7e5;
+}
+.exam1-content7 .draggable {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: #fff;
+  height: 70px;
+  width: 100%;
+  box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  color: var(--Secondary-Purple, #454575);
+  text-align: center;
+  font-family: Nunito;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%; /* 24px */
+  transition: transform 0.2s ease-out;
+}
+.exam1-content7 .draggable.true {
+  color: var(--Primary-Green, #00b26b);
+  background: #ecfbe5;
+  box-shadow: 0px -4px 0px 0px rgba(21, 156, 0, 0.1) inset, 0px 2px 2px 0px rgba(21, 156, 0, 0.3);
+}
+.exam1-content7 .draggable.fail {
+  box-shadow: 0px -4px 0px 0px rgba(213, 28, 0, 0.1) inset, 0px 2px 2px 0px rgba(213, 28, 0, 0.3);
+  background: #fbe7e5;
+  color: #e44825;
+}
+.exam1-content7 .draggable:active {
+  transform: rotate(0deg);
+  border-radius: 12px;
+}
+.exam1-content7 .draggable:active {
+  cursor: grabbing;
+}
+.exam1-content7 .drop-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.exam1-content7 .drop-label {
+  color: var(--Secondary-Purple, #454575);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 32px */
+}
+.exam1-content7 .drop-zone {
+  width: calc((100% - 96px) / 4);
+  height: 70px;
+  flex: none;
+  border-radius: 12px;
+  background: #eaeaea;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1) inset;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.exam1-content7 .drop-zone:hover {
+  background: #f0f0f0;
+}
+.exam1-content7 .drop-zone.dragover {
+  background-color: #f0f0f0;
+}
+.exam1-content7 .draggable.dragging {
+  background: #ebf8ff;
+  opacity: 0.4;
+}
 .exam1-content5 {
   overflow-y: auto;
 }
@@ -2776,7 +2900,6 @@ p {
 }
 .exam1-result-title {
   color: #3a3335;
-  text-align: center;
   font-size: 24px;
   font-style: normal;
   font-weight: 800;
@@ -2784,11 +2907,10 @@ p {
 }
 .exam1-result-content {
   color: #00b26b;
-  text-align: center;
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
-  line-height: 100%; /* 28px */
+  line-height: 150%; /* 28px */
 }
 .exam1-content1 .draggable {
   display: flex;
