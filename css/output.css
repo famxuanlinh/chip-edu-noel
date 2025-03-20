@@ -327,6 +327,9 @@
   .\!h-63 {
     height: calc(var(--spacing) * 63) !important;
   }
+  .\!h-\[235px\] {
+    height: 235px !important;
+  }
   .h-62 {
     height: calc(var(--spacing) * 62);
   }
@@ -341,6 +344,9 @@
   }
   .h-full {
     height: 100%;
+  }
+  .\!w-10 {
+    width: calc(var(--spacing) * 10) !important;
   }
   .\!w-60 {
     width: calc(var(--spacing) * 60) !important;
@@ -359,6 +365,9 @@
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
   }
   .w-100 {
     width: calc(var(--spacing) * 100);
@@ -395,6 +404,9 @@
   }
   .flex-shrink {
     flex-shrink: 1;
+  }
+  .grow {
+    flex-grow: 1;
   }
   .-translate-y-1\/2 {
     --tw-translate-y: calc(calc(1/2 * 100%) * -1);
