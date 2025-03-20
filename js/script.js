@@ -20,11 +20,13 @@ draggables.forEach((draggable) => {
     if (word.parentElement.classList.contains("drop-zone")) {
       // Lấy vị trí hiện tại của từ
       const rect = word.getBoundingClientRect();
-      
+
       // Lấy vị trí cuối của danh sách
       const lastItem = nameList.lastElementChild;
-      const lastItemRect = lastItem ? lastItem.getBoundingClientRect() : nameList.getBoundingClientRect();
-      
+      const lastItemRect = lastItem
+        ? lastItem.getBoundingClientRect()
+        : nameList.getBoundingClientRect();
+
       // Tính khoảng cách cần di chuyển
       const offsetX = lastItemRect.left - rect.left;
       const offsetY = lastItemRect.bottom - rect.top + 10; // Cách một chút để đẹp hơn
@@ -64,5 +66,15 @@ dropZones.forEach((zone) => {
       zone.textContent = "";
       zone.appendChild(draggedElement);
     }
+  });
+});
+
+document.querySelectorAll(".draggable").forEach((item) => {
+  item.addEventListener("dragstart", () => {
+    item.classList.add("dragging");
+  });
+
+  item.addEventListener("dragend", () => {
+    item.classList.remove("dragging");
   });
 });

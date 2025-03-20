@@ -19,7 +19,7 @@
     height: calc(100vh - 236px);
     padding: 32px 54px;
     overflow-y: hidden;
-    background-image: url("public/exam1/bg.webp");
+    background-image: url("/public/exam1/bg.webp");
 
     @include maxw(1600) {
       height: calc(100vh - 176px);
