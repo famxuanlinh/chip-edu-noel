@@ -78,3 +78,63 @@ document.querySelectorAll(".draggable").forEach((item) => {
     item.classList.remove("dragging");
   });
 });
+
+document.querySelectorAll(".toggle-trans").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.stopPropagation(); // Ngăn sự kiện lan ra ngoài
+    document
+      .querySelectorAll(".toggle-trans-container")
+      .forEach((container) => {
+        container.classList.toggle("hidden");
+      });
+  });
+});
+
+const audio = document.getElementById("audio");
+const playPauseBtn = document.getElementById("playPauseBtn");
+const progressBar = document.getElementById("progressBar");
+const timeDisplay = document.getElementById("timeDisplay");
+
+let isPlaying = false;
+
+// Toggle play/pause when clicking the icon
+playPauseBtn.addEventListener("click", () => {
+  if (isPlaying) {
+    audio.pause();
+  } else {
+    audio.play();
+  }
+});
+
+// When audio plays
+audio.addEventListener("play", () => {
+  isPlaying = true;
+  playPauseBtn.src = "public/exam1/icons/pause-green.svg"; // Change icon
+  progressBar.style.background = "blue"; // Change background color
+});
+
+// When audio pauses
+audio.addEventListener("pause", () => {
+  isPlaying = false;
+  playPauseBtn.src = "public/exam1/icons/play-orange.svg"; // Change icon
+  progressBar.style.background = "orange"; // Change background color
+});
+
+// Update progress bar and time
+audio.addEventListener("timeupdate", () => {
+  const progress = (audio.currentTime / audio.duration) * 100;
+  progressBar.value = progress;
+
+  // Update time display
+  const minutes = Math.floor(audio.currentTime / 60);
+  const seconds = Math.floor(audio.currentTime % 60);
+  timeDisplay.textContent = `${String(minutes).padStart(2, "0")}:${String(
+    seconds
+  ).padStart(2, "0")}`;
+});
+
+// Allow seeking using the progress bar
+progressBar.addEventListener("input", (e) => {
+  const seekTime = (e.target.value / 100) * audio.duration;
+  audio.currentTime = seekTime;
+});

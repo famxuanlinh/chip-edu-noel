@@ -53,24 +53,15 @@
         </button>
         <div class="flex-1 exam1-content w-full rounded-2xl">
           <!-- Start content 2 -->
-          <div class="test2 flex gap-10">
-            <div class="relative exam1-height w-[45%]">
-              <img
-                src="public/exam1/image 11.png"
-                class="w-full object-contain"
-                style="height: 100%"
-                alt=""
-              />
-            </div>
-            <div class="exam1-content2 w-[55%] exam1-height">
+          <div class="test3 flex justify-center">
+            <div class="exam1-content3 w-200 exam1-height">
               <div class="exam1-zoom flex flex-col h-full">
                 <div>
                   <div class="flex items-start gap-6 toggle-trans-container">
                     <div
                       class="text-[32px] font-extrabold text-[#3A3335] flex-1"
                     >
-                      Please drag the words into the corresponding box according
-                      to what you hear in the lesson.
+                      Listen and select the image. There is one sample.
                     </div>
                     <div
                       class="toggle-trans flex flex-none cursor-pointer gap-2 w-fit items-center rounded-4xl border justify-center border-[#000000]/20 py-1 pr-1 pl-3"
@@ -90,8 +81,8 @@
                     <div
                       class="text-[32px] font-extrabold text-[#3A3335] flex-1"
                     >
-                      Vui lòng kéo các từ vào ô tương ứng theo những gì bạn nghe
-                      trong đoạn hội thoại.
+                      Listen and select the image. There is one sample
+                      vietnamese.
                     </div>
                     <div
                       class="toggle-trans flex flex-none cursor-pointer gap-2 w-fit items-center rounded-4xl border justify-center border-[#000000]/20 py-1 pl-1 pr-3"
@@ -123,86 +114,91 @@
                     <span id="timeDisplay" class="pr-3">00:00</span>
                   </div>
                 </div>
-                <div class="flex-1 overflow-y-auto">
+                <div class="flex-1 pb-1 overflow-y-auto">
                   <div class="flex flex-col mt-6 gap-10">
-                    <div class="exam1-content2-sentence">
-                      <p class="exam1-content2-answer">1. I am a __________</p>
-                      <input
-                        class="exam1-content2-question"
-                        placeholder=""
-                        type="text"
-                        name=""
-                        id=""
-                      />
-                    </div>
-                    <div class="exam1-content2-sentence">
-                      <p class="exam1-content2-answer">
-                        2. What is Kim’s family name?
+                    <div class="exam1-content3-sentence">
+                      <p class="exam1-content3-answer">
+                        1. What animal has Alex got in his bedroom?
                       </p>
-                      <input
-                        class="exam1-content2-question"
-                        placeholder=""
-                        type="text"
-                        name=""
-                        id=""
-                      />
+                      <div class="grid grid-cols-3 gap-8">
+                        <div class="exam1-content3-img-wrapper">
+                          <img
+                            class="exam1-content3-img"
+                            src="public/exam1/3.2.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="exam1-content3-img-wrapper">
+                          <img
+                            class="exam1-content3-img"
+                            src="public/exam1/3.3.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="exam1-content3-img-wrapper">
+                          <img
+                            class="exam1-content3-img"
+                            src="public/exam1/3.2.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
                     </div>
-                    <div class="exam1-content2-sentence">
-                      <p class="exam1-content2-answer">
-                        3. What did Kim's dad ask about? <br />
-                        He asked about __________
+                    <div class="exam1-content3-sentence">
+                      <p class="exam1-content3-answer">
+                        2. What animal has Sam got in his bedroom?
                       </p>
-                      <input
-                        class="exam1-content2-question"
-                        placeholder=""
-                        type="text"
-                        name=""
-                        id=""
-                      />
+                      <div class="grid grid-cols-3 gap-8">
+                        <div class="exam1-content3-img-wrapper">
+                          <img
+                            class="exam1-content3-img"
+                            src="public/exam1/3.2.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="exam1-content3-img-wrapper">
+                          <img
+                            class="exam1-content3-img"
+                            src="public/exam1/3.3.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="exam1-content3-img-wrapper">
+                          <img
+                            class="exam1-content3-img"
+                            src="public/exam1/3.2.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
                     </div>
-                    <div class="exam1-content2-sentence">
-                      <p class="exam1-content2-answer">
-                        4. What time did Kim come home from school?
+                    <div class="exam1-content3-sentence result">
+                      <p class="exam1-content3-answer">
+                        3. What animal has Alex got in his bedroom?
                       </p>
-                      <input
-                        class="exam1-content2-question"
-                        placeholder=""
-                        type="text"
-                        name=""
-                        id=""
-                      />
-                    </div>
-                    <div class="exam1-content2-sentence">
-                      <p class="exam1-content2-answer">
-                        5. What will Kim's mom prepare for dinner?
-                      </p>
-                      <input
-                        class="exam1-content2-question fail"
-                        placeholder=""
-                        disabled
-                        value="Fail value"
-                        type="text"
-                        name=""
-                        id=""
-                      />
-                    </div>
-                    <div class="exam1-content2-sentence">
-                      <p class="exam1-content2-answer">
-                        6. What is their plan after dinner?
-                      </p>
-                      <input
-                        class="exam1-content2-question true"
-                        disabled
-                        type="text"
-                        name=""
-                        value="True value"
-                        placeholder=""
-                        id=""
-                      />
-                    </div>
-                    <div class="exam1-result">
-                      <div class="exam1-result-title">Correct Answer:</div>
-                      <div class="exam1-result-content">5. Smith</div>
+                      <div class="grid grid-cols-3 gap-8">
+                        <div class="exam1-content3-img-wrapper true">
+                          <img
+                            class="exam1-content3-img"
+                            src="public/exam1/3.2.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="exam1-content3-img-wrapper fail">
+                          <img
+                            class="exam1-content3-img"
+                            src="public/exam1/3.3.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="exam1-content3-img-wrapper">
+                          <img
+                            class="exam1-content3-img"
+                            src="public/exam1/3.2.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -526,65 +522,31 @@
     </script>
     <script src="js/script.js"></script>
     <script>
-      document.querySelectorAll(".toggle-trans").forEach((button) => {
-        button.addEventListener("click", (event) => {
-          event.stopPropagation(); // Ngăn sự kiện lan ra ngoài
-          document
-            .querySelectorAll(".toggle-trans-container")
-            .forEach((container) => {
-              container.classList.toggle("hidden");
+      document
+        .querySelectorAll(".exam1-content3-sentence")
+        .forEach((sentence) => {
+          // Skip if the sentence has 'result' class
+          if (sentence.classList.contains("result")) return;
+
+          sentence
+            .querySelectorAll(".exam1-content3-img-wrapper")
+            .forEach((item) => {
+              item.addEventListener("click", function () {
+                // If this item is already active, remove the class
+                if (this.classList.contains("active")) {
+                  this.classList.remove("active");
+                } else {
+                  // Remove 'active' class only inside the current sentence
+                  sentence
+                    .querySelectorAll(".exam1-content3-img-wrapper")
+                    .forEach((el) => el.classList.remove("active"));
+
+                  // Add 'active' class to the clicked one
+                  this.classList.add("active");
+                }
+              });
             });
         });
-      });
-
-      const audio = document.getElementById("audio");
-      const playPauseBtn = document.getElementById("playPauseBtn");
-      const progressBar = document.getElementById("progressBar");
-      const timeDisplay = document.getElementById("timeDisplay");
-
-      let isPlaying = false;
-
-      // Toggle play/pause when clicking the icon
-      playPauseBtn.addEventListener("click", () => {
-        if (isPlaying) {
-          audio.pause();
-        } else {
-          audio.play();
-        }
-      });
-
-      // When audio plays
-      audio.addEventListener("play", () => {
-        isPlaying = true;
-        playPauseBtn.src = "public/exam1/icons/pause-green.svg"; // Change icon
-        progressBar.style.background = "blue"; // Change background color
-      });
-
-      // When audio pauses
-      audio.addEventListener("pause", () => {
-        isPlaying = false;
-        playPauseBtn.src = "public/exam1/icons/play-orange.svg"; // Change icon
-        progressBar.style.background = "orange"; // Change background color
-      });
-
-      // Update progress bar and time
-      audio.addEventListener("timeupdate", () => {
-        const progress = (audio.currentTime / audio.duration) * 100;
-        progressBar.value = progress;
-
-        // Update time display
-        const minutes = Math.floor(audio.currentTime / 60);
-        const seconds = Math.floor(audio.currentTime % 60);
-        timeDisplay.textContent = `${String(minutes).padStart(2, "0")}:${String(
-          seconds
-        ).padStart(2, "0")}`;
-      });
-
-      // Allow seeking using the progress bar
-      progressBar.addEventListener("input", (e) => {
-        const seekTime = (e.target.value / 100) * audio.duration;
-        audio.currentTime = seekTime;
-      });
     </script>
   </body>
 </html>

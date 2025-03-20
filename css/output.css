@@ -339,6 +339,9 @@
   .w-100 {
     width: calc(var(--spacing) * 100);
   }
+  .w-200 {
+    width: calc(var(--spacing) * 200);
+  }
   .w-\[45\%\] {
     width: 45%;
   }
@@ -353,6 +356,9 @@
   }
   .w-full {
     width: 100%;
+  }
+  .max-w-200 {
+    max-width: calc(var(--spacing) * 200);
   }
   .flex-1 {
     flex: 1;
@@ -520,6 +526,9 @@
   }
   .pr-3 {
     padding-right: calc(var(--spacing) * 3);
+  }
+  .pb-1 {
+    padding-bottom: calc(var(--spacing) * 1);
   }
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
