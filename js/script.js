@@ -1,3 +1,83 @@
+// const draggables = document.querySelectorAll(".draggable");
+// const dropZones = document.querySelectorAll(".drop-zone");
+// const nameList = document.querySelector(".name-list");
+
+// // Xử lý khi bắt đầu kéo
+// draggables.forEach((draggable) => {
+//   draggable.addEventListener("dragstart", (e) => {
+//     e.dataTransfer.setData("text", e.target.id);
+//     draggable.classList.add("dragging");
+//   });
+
+//   draggable.addEventListener("dragend", () => {
+//     draggable.classList.remove("dragging");
+//   });
+
+//   // Xử lý khi nhấp vào từ đã thả, nó bay về vị trí cuối danh sách
+//   draggable.addEventListener("click", (e) => {
+//     const word = e.target;
+
+//     if (word.parentElement.classList.contains("drop-zone")) {
+//       // Lấy vị trí hiện tại của từ
+//       const rect = word.getBoundingClientRect();
+
+//       // Lấy vị trí cuối của danh sách
+//       const lastItem = nameList.lastElementChild;
+//       const lastItemRect = lastItem
+//         ? lastItem.getBoundingClientRect()
+//         : nameList.getBoundingClientRect();
+
+//       // Tính khoảng cách cần di chuyển
+//       const offsetX = lastItemRect.left - rect.left;
+//       const offsetY = lastItemRect.bottom - rect.top + 10; // Cách một chút để đẹp hơn
+
+//       // Áp dụng animation
+//       word.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+//       word.style.transition = "transform 0.5s ease-in-out";
+
+//       setTimeout(() => {
+//         word.style.transition = "";
+//         word.style.transform = "";
+//         nameList.appendChild(word); // Đưa về cuối danh sách
+//       }, 500);
+//     }
+//   });
+// });
+
+// // Xử lý sự kiện kéo thả
+// dropZones.forEach((zone) => {
+//   zone.addEventListener("dragover", (e) => {
+//     e.preventDefault();
+//     zone.classList.add("dragover");
+//   });
+
+//   zone.addEventListener("dragleave", () => {
+//     zone.classList.remove("dragover");
+//   });
+
+//   zone.addEventListener("drop", (e) => {
+//     e.preventDefault();
+//     zone.classList.remove("dragover");
+
+//     const draggedId = e.dataTransfer.getData("text");
+//     const draggedElement = document.getElementById(draggedId);
+
+//     if (!zone.hasChildNodes()) {
+//       zone.textContent = "";
+//       zone.appendChild(draggedElement);
+//     }
+//   });
+// });
+
+// document.querySelectorAll(".draggable").forEach((item) => {
+//   item.addEventListener("dragstart", () => {
+//     item.classList.add("dragging");
+//   });
+
+//   item.addEventListener("dragend", () => {
+//     item.classList.remove("dragging");
+//   });
+// });
 const draggables = document.querySelectorAll(".draggable");
 const dropZones = document.querySelectorAll(".drop-zone");
 const nameList = document.querySelector(".name-list");
@@ -5,40 +85,60 @@ const nameList = document.querySelector(".name-list");
 // Xử lý khi bắt đầu kéo
 draggables.forEach((draggable) => {
   draggable.addEventListener("dragstart", (e) => {
-    e.dataTransfer.setData("text", e.target.id);
-    draggable.classList.add("dragging");
+    const target = e.target.closest(".draggable"); // Đảm bảo kéo cả wrapper
+    if (target) {
+      e.dataTransfer.setData("text", target.id);
+
+      // Tránh opacity bị mờ khi kéo
+      setTimeout(() => target.classList.add("dragging"), 0);
+    }
   });
 
-  draggable.addEventListener("dragend", () => {
-    draggable.classList.remove("dragging");
+  draggable.addEventListener("dragend", (e) => {
+    e.target.classList.remove("dragging");
   });
 
-  // Xử lý khi nhấp vào từ đã thả, nó bay về vị trí cuối danh sách
+  // Xử lý khi click để quay về danh sách gốc với animation mượt mà
   draggable.addEventListener("click", (e) => {
-    const word = e.target;
+    const wrapper = e.target.closest(".draggable");
+    if (!wrapper) return;
 
-    if (word.parentElement.classList.contains("drop-zone")) {
-      // Lấy vị trí hiện tại của từ
-      const rect = word.getBoundingClientRect();
+    const parentZone = wrapper.parentElement;
 
-      // Lấy vị trí cuối của danh sách
+    // Chỉ xử lý nếu phần tử đang nằm trong `.drop-zone`
+    if (parentZone.classList.contains("drop-zone")) {
+      // Lấy vị trí hiện tại của phần tử
+      const rect = wrapper.getBoundingClientRect();
+
+      // Lấy vị trí cuối danh sách
       const lastItem = nameList.lastElementChild;
       const lastItemRect = lastItem
         ? lastItem.getBoundingClientRect()
         : nameList.getBoundingClientRect();
 
-      // Tính khoảng cách cần di chuyển
+      // Tạo phần tử placeholder để giữ chỗ (tránh nhảy danh sách)
+      const placeholder = document.createElement("div");
+      placeholder.style.width = `${rect.width}px`;
+      placeholder.style.height = `${rect.height}px`;
+      placeholder.classList.add("placeholder");
+      parentZone.appendChild(placeholder);
+
+      // ✅ Fix: Thêm 20px sau item cuối
       const offsetX = lastItemRect.left - rect.left;
-      const offsetY = lastItemRect.bottom - rect.top + 10; // Cách một chút để đẹp hơn
+      const offsetY = lastItemRect.bottom - rect.top; // Thêm 20px khoảng cách
 
       // Áp dụng animation
-      word.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-      word.style.transition = "transform 0.5s ease-in-out";
+      wrapper.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+      wrapper.style.transition = "transform 0.5s ease-in-out";
 
+      // Sau khi animation kết thúc, reset lại transform và đưa về danh sách gốc
       setTimeout(() => {
-        word.style.transition = "";
-        word.style.transform = "";
-        nameList.appendChild(word); // Đưa về cuối danh sách
+        wrapper.style.transition = "";
+        wrapper.style.transform = "";
+        nameList.appendChild(wrapper);
+
+        // Xóa placeholder để tránh giật khung hình
+        placeholder.remove();
       }, 500);
     }
   });
@@ -62,23 +162,43 @@ dropZones.forEach((zone) => {
     const draggedId = e.dataTransfer.getData("text");
     const draggedElement = document.getElementById(draggedId);
 
+    if (!draggedElement) return;
+
+    // Đảm bảo chỉ có một phần tử trong mỗi drop-zone
     if (!zone.hasChildNodes()) {
-      zone.textContent = "";
       zone.appendChild(draggedElement);
     }
   });
 });
 
-document.querySelectorAll(".draggable").forEach((item) => {
-  item.addEventListener("dragstart", () => {
-    item.classList.add("dragging");
+// Xử lý sự kiện kéo thả
+dropZones.forEach((zone) => {
+  zone.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    zone.classList.add("dragover");
   });
 
-  item.addEventListener("dragend", () => {
-    item.classList.remove("dragging");
+  zone.addEventListener("dragleave", () => {
+    zone.classList.remove("dragover");
+  });
+
+  zone.addEventListener("drop", (e) => {
+    e.preventDefault();
+    zone.classList.remove("dragover");
+
+    const draggedId = e.dataTransfer.getData("text");
+    const draggedElement = document.getElementById(draggedId);
+
+    if (!draggedElement) return;
+
+    // Đảm bảo chỉ có một phần tử trong mỗi drop-zone
+    if (!zone.hasChildNodes()) {
+      zone.appendChild(draggedElement);
+    }
   });
 });
 
+// Translate
 document.querySelectorAll(".toggle-trans").forEach((button) => {
   button.addEventListener("click", (event) => {
     event.stopPropagation(); // Ngăn sự kiện lan ra ngoài
@@ -90,6 +210,7 @@ document.querySelectorAll(".toggle-trans").forEach((button) => {
   });
 });
 
+// Audio player
 const audio = document.getElementById("audio");
 const playPauseBtn = document.getElementById("playPauseBtn");
 const progressBar = document.getElementById("progressBar");
@@ -138,3 +259,36 @@ progressBar.addEventListener("input", (e) => {
   const seekTime = (e.target.value / 100) * audio.duration;
   audio.currentTime = seekTime;
 });
+
+function startCountdown(durationInSeconds) {
+  let timerElement = document.getElementById("timer-text");
+  let timerImage = document.getElementById("timer-img");
+  let remainingTime = durationInSeconds;
+
+  function updateTimer() {
+    let minutes = Math.floor(remainingTime / 60);
+    let seconds = remainingTime % 60;
+
+    // Định dạng số giây thành 2 chữ số (ví dụ: 09 thay vì 9)
+    let formattedTime = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+    timerElement.textContent = formattedTime;
+
+    // Thay đổi hình ảnh nếu thời gian còn dưới 1 phút
+    if (remainingTime < 60) {
+      timerImage.src = "/public/exam/timer2.png";
+      timerElement.style.color = "#A21600";
+    }
+
+    if (remainingTime > 0) {
+      remainingTime--;
+      setTimeout(updateTimer, 1000);
+    }
+  }
+
+  updateTimer();
+}
+
+// Bắt đầu đếm ngược từ 29 phút 10 giây (tổng cộng 1750 giây)
+window.onload = function () {
+  startCountdown(65);
+};
