@@ -2691,6 +2691,35 @@ p {
   color: #ff9800;
 }
 
+#exam-scroll {
+  position: relative;
+  overflow-y: auto;
+  padding-right: 12px;
+}
+#exam-scroll::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: transparent;
+}
+#exam-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+#exam-scroll::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#exam-scroll::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background-color: transparent;
+  margin: 0 10px;
+}
+
 @media screen and (max-width: 1600px) {
   .exam1-zoom {
     zoom: 0.85;

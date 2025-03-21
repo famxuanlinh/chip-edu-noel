@@ -81,3 +81,36 @@
     }
   }
 }
+
+#exam-scroll {
+  position: relative;
+  overflow-y: auto;
+  padding-right: 12px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 12px; // Tạo khoảng cách giữa nội dung và thanh cuộn
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: transparent;
+  }
+  // Tùy chỉnh thanh cuộn
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background-color: transparent;
+    margin: 0 10px;
+  }
+}
