@@ -3159,7 +3159,7 @@ p {
   line-height: 100%; /* 32px */
 }
 .exam1-content1 .drop-zone {
-  width: calc((300% + 128px - 96px) / 4);
+  width: 75%;
   height: 70px;
   border-radius: 12px;
   background: #eaeaea;
