@@ -188,7 +188,6 @@ p {
   font-size: 28px;
   font-weight: 800;
   line-height: 100%;
-  font-family: Nunito;
 }
 
 .button-l, .lesson-practice-left-table-row, .lesson-practice-left-table-right-row, .lesson-practice-right-table-row {
@@ -2754,7 +2753,6 @@ p {
   width: fit-content;
   box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
   color: var(--Secondary-Purple, #454575);
-  font-family: Nunito;
   font-size: 24px;
   font-style: normal;
   font-weight: 800;
@@ -2845,7 +2843,6 @@ p {
   box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
   color: var(--Secondary-Purple, #454575);
   text-align: center;
-  font-family: Nunito;
   font-size: 24px;
   font-style: normal;
   font-weight: 800;
@@ -2887,7 +2884,7 @@ p {
   line-height: 150%; /* 42px */
   flex: 1 1 0%;
 }
-.exam1-content7 .draggable {
+.exam1-content7b .draggable {
   display: flex;
   padding: 20px;
   justify-content: center;
@@ -2901,43 +2898,113 @@ p {
   box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
   color: var(--Secondary-Purple, #454575);
   text-align: center;
-  font-family: Nunito;
   font-size: 24px;
   font-style: normal;
   font-weight: 800;
   line-height: 100%; /* 24px */
   transition: transform 0.2s ease-out;
 }
-.exam1-content7 .draggable.true {
+.exam1-content7b .draggable.true {
   color: var(--Primary-Green, #00b26b);
   background: #ecfbe5;
   box-shadow: 0px -4px 0px 0px rgba(21, 156, 0, 0.1) inset, 0px 2px 2px 0px rgba(21, 156, 0, 0.3);
 }
-.exam1-content7 .draggable.fail {
+.exam1-content7b .draggable.fail {
   box-shadow: 0px -4px 0px 0px rgba(213, 28, 0, 0.1) inset, 0px 2px 2px 0px rgba(213, 28, 0, 0.3);
   background: #fbe7e5;
   color: #e44825;
 }
-.exam1-content7 .draggable:active {
+.exam1-content7b .draggable:active {
   transform: rotate(0deg);
   border-radius: 12px;
 }
-.exam1-content7 .draggable:active {
+.exam1-content7b .draggable:active {
   cursor: grabbing;
 }
-.exam1-content7 .drop-row {
+.exam1-content7b .drop-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.exam1-content7b .drop-container {
+  color: var(--Secondary-Purple, #454575);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 200%; /* 32px */
+}
+.exam1-content7b .drop-zone {
+  width: calc((100% - 96px) / 4);
+  height: 64px;
+  vertical-align: text-bottom;
+  border-radius: 12px;
+  background: #eaeaea;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1) inset;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  display: inline-block;
+}
+.exam1-content7b .drop-zone:hover {
+  background: #f0f0f0;
+}
+.exam1-content7b .drop-zone.dragover {
+  background-color: #f0f0f0;
+}
+.exam1-content7b .draggable.dragging {
+  background: #ebf8ff;
+  opacity: 0.4;
+}
+.exam1-content7a .draggable {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: #fff;
+  height: 70px;
+  width: 100%;
+  box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  color: var(--Secondary-Purple, #454575);
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%; /* 24px */
+  transition: transform 0.2s ease-out;
+}
+.exam1-content7a .draggable.true {
+  color: var(--Primary-Green, #00b26b);
+  background: #ecfbe5;
+  box-shadow: 0px -4px 0px 0px rgba(21, 156, 0, 0.1) inset, 0px 2px 2px 0px rgba(21, 156, 0, 0.3);
+}
+.exam1-content7a .draggable.fail {
+  box-shadow: 0px -4px 0px 0px rgba(213, 28, 0, 0.1) inset, 0px 2px 2px 0px rgba(213, 28, 0, 0.3);
+  background: #fbe7e5;
+  color: #e44825;
+}
+.exam1-content7a .draggable:active {
+  transform: rotate(0deg);
+  border-radius: 12px;
+}
+.exam1-content7a .draggable:active {
+  cursor: grabbing;
+}
+.exam1-content7a .drop-row {
   display: flex;
   align-items: center;
   gap: 24px;
 }
-.exam1-content7 .drop-label {
+.exam1-content7a .drop-label {
   color: var(--Secondary-Purple, #454575);
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%; /* 32px */
 }
-.exam1-content7 .drop-zone {
+.exam1-content7a .drop-zone {
   width: calc((100% - 96px) / 4);
   height: 70px;
   flex: none;
@@ -2947,13 +3014,13 @@ p {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-.exam1-content7 .drop-zone:hover {
+.exam1-content7a .drop-zone:hover {
   background: #f0f0f0;
 }
-.exam1-content7 .drop-zone.dragover {
+.exam1-content7a .drop-zone.dragover {
   background-color: #f0f0f0;
 }
-.exam1-content7 .draggable.dragging {
+.exam1-content7a .draggable.dragging {
   background: #ebf8ff;
   opacity: 0.4;
 }
@@ -2986,7 +3053,6 @@ p {
   box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
   color: var(--Secondary-Purple, #454575);
   text-align: center;
-  font-family: Nunito;
   font-size: 24px;
   font-style: normal;
   font-weight: 800;
@@ -3054,7 +3120,6 @@ p {
   box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
   color: var(--Secondary-Purple, #454575);
   text-align: center;
-  font-family: Nunito;
   font-size: 24px;
   font-style: normal;
   font-weight: 800;
@@ -3271,7 +3336,6 @@ p {
 .exam1-content4 .drop-label {
   color: var(--Secondary-Purple, #454575);
   text-align: center;
-  font-family: Nunito;
   font-size: 24px;
   font-style: normal;
   font-weight: 800;

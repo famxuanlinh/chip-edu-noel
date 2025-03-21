@@ -75,7 +75,6 @@
         0px 2px 2px 0px rgba(0, 0, 0, 0.25);
 
       color: var(--Secondary-Purple, #454575);
-      font-family: Nunito;
       font-size: 24px;
       font-style: normal;
       font-weight: 800;
@@ -190,7 +189,6 @@
 
       color: var(--Secondary-Purple, #454575);
       text-align: center;
-      font-family: Nunito;
       font-size: 24px;
       font-style: normal;
       font-weight: 800;
@@ -242,7 +240,7 @@
     }
   }
 
-  &-content7 {
+  &-content7b {
     & .draggable {
       display: flex;
       padding: 20px;
@@ -259,7 +257,94 @@
 
       color: var(--Secondary-Purple, #454575);
       text-align: center;
-      font-family: Nunito;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 100%; /* 24px */
+
+      transition: transform 0.2s ease-out;
+
+      &.true {
+        color: var(--Primary-Green, #00b26b);
+        background: #ecfbe5;
+        box-shadow: 0px -4px 0px 0px rgba(21, 156, 0, 0.1) inset,
+          0px 2px 2px 0px rgba(21, 156, 0, 0.3);
+      }
+      &.fail {
+        box-shadow: 0px -4px 0px 0px rgba(213, 28, 0, 0.1) inset,
+          0px 2px 2px 0px rgba(213, 28, 0, 0.3);
+        background: #fbe7e5;
+        color: #e44825;
+      }
+
+      &:active {
+        transform: rotate(0deg);
+        border-radius: 12px;
+      }
+    }
+
+    & .draggable:active {
+      cursor: grabbing;
+    }
+
+    & .drop-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    & .drop-container {
+      color: var(--Secondary-Purple, #454575);
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 200%; /* 32px */
+    }
+
+    & .drop-zone {
+      width: calc((100% - 96px) / 4);
+      height: 64px;
+      vertical-align: text-bottom;
+      border-radius: 12px;
+      background: #eaeaea;
+      box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1) inset;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+      display: inline-block;
+    }
+
+    & .drop-zone:hover {
+      background: #f0f0f0;
+    }
+
+    & .drop-zone.dragover {
+      background-color: #f0f0f0;
+    }
+
+    & .draggable.dragging {
+      background: #ebf8ff;
+      opacity: 0.4;
+    }
+  }
+
+  &-content7a {
+    & .draggable {
+      display: flex;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 12px;
+      background: #fff;
+      height: 70px;
+      width: 100%;
+      box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset,
+        0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+
+      color: var(--Secondary-Purple, #454575);
+      text-align: center;
       font-size: 24px;
       font-style: normal;
       font-weight: 800;
@@ -362,7 +447,6 @@
 
       color: var(--Secondary-Purple, #454575);
       text-align: center;
-      font-family: Nunito;
       font-size: 24px;
       font-style: normal;
       font-weight: 800;
@@ -442,7 +526,6 @@
 
       color: var(--Secondary-Purple, #454575);
       text-align: center;
-      font-family: Nunito;
       font-size: 24px;
       font-style: normal;
       font-weight: 800;
@@ -704,7 +787,6 @@
     & .drop-label {
       color: var(--Secondary-Purple, #454575);
       text-align: center;
-      font-family: Nunito;
       font-size: 24px;
       font-style: normal;
       font-weight: 800;
