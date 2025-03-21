@@ -2803,8 +2803,8 @@ p {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-.exam1-content10 .drop-zone:has(.draggable) {
-  width: fit-content;
+.exam1-content10 .drop-zone .draggable {
+  width: 100%;
 }
 .exam1-content10 .drop-zone:hover {
   background: #f0f0f0;
