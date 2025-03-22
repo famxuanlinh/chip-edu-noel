@@ -11,12 +11,12 @@
   }
 
   &-input {
-    width: 480px;
     height: 64px;
     border-radius: 12px;
     border: 4px solid #e4e4e4;
     background-color: white;
     padding: 0 20px;
+    transition: transform 0.2s ease-out;
 
     color: var(--Secondary-Purple, #454575);
     font-size: 28px;
@@ -24,22 +24,29 @@
     font-weight: 800;
     line-height: 100%; /* 28px */
 
+    &-wrapper {
+      display: inline-block;
+      position: relative;
+
+      &:not(:focus-within) .exam1-input:not(:placeholder-shown) {
+        border: 4px solid #c8d5f1;
+        background-color: #ebf8ff;
+      }
+    }
+
     &:focus {
       stroke-width: 4px;
-      border: 4px solid #454575;
-      stroke: rgba(42, 80, 202, 0.15);
+      border: 4px solid #7581ef;
+      stroke: red;
       caret-color: #454575;
-      outline: 2px solid #7582f0;
+      // outline: 2px solid #d9dff2;
+      outline: 4px solid #d9dff2;
     }
 
     &:focus-visible {
-      outline: 4px solid #7582f0;
+      outline: 4px solid #d9dff2;
     }
 
-    &:not(:placeholder-shown) {
-      border: 4px solid #c8d5f1;
-      background-color: #ebf8ff;
-    }
     &.true {
       border: 4px solid #b6efaf;
       background-color: #ecfbe5;
@@ -225,7 +232,7 @@
       gap: 24px;
       padding-right: 4px;
 
-      & > input[type="text"] {
+      & input[type="text"] {
         width: 480px;
       }
     }
@@ -606,8 +613,8 @@
       gap: 24px;
       padding-right: 4px;
 
-      & > input[type="text"] {
-        width: 240px;
+      & input[type="text"] {
+        width: 240px !important;
       }
     }
 
@@ -850,57 +857,89 @@
   background: #fff;
   gap: 12px;
   height: 72px;
-}
-input[type="range"] {
-  flex: 1;
-  appearance: none;
-  height: 6px;
-  border-radius: 5px;
-  outline: none;
-  transition: 0.3s;
-}
 
-/* Default (Paused) - Orange */
-input[type="range"]::-webkit-slider-runnable-track {
-  background: orange;
-  height: 6px;
-  border-radius: 5px;
-}
-input[type="range"]::-moz-range-track {
-  background: orange;
-  height: 6px;
-  border-radius: 5px;
-}
+  &.playing {
+    --color-player: #00b26b;
+  }
 
-.playing input[type="range"]::-moz-range-track {
-  background: green !important;
-}
+  &.paused {
+    --color-player: #ff9800;
+  }
 
-/* Thumb (Handle) */
-input[type="range"]::-webkit-slider-thumb {
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  background: white;
-  border: 3px solid orange;
-  border-radius: 50%;
-  cursor: pointer;
-  margin-top: -5px;
-}
+  & input {
+    --_c: color-mix(in srgb, var(--color-player), #000 var(--p, 0%));
 
-input[type="range"]::-moz-range-thumb {
-  width: 32px;
-  height: 32px;
-  background: white;
-  border: 3px solid orange;
-  border-radius: 50%;
-  cursor: pointer;
-}
+    width: 100%;
+    height: 32px; /* needed for Firefox*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
+  }
 
-input[type="range"].playing::-webkit-slider-thumb {
-  border-color: green !important;
-}
+  & input[type="range" i] {
+    position: relative;
+    width: 100%;
+    height: 32px;
+    appearance: none;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
 
-input[type="range"].playing::-moz-range-thumb {
-  border-color: green !important;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: var(--progress, 0%);
+      height: 12px;
+      background: var(--_c); /* Màu progress */
+      border-radius: 16px;
+      transform: translateY(-50%);
+      z-index: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: var(--progress, 0%);
+      width: calc(100% - var(--progress, 0%));
+      height: 12px;
+      background: #d9d9d9; /* Màu chưa phát */
+      border-radius: 16px;
+      transform: translateY(-50%);
+      z-index: 0;
+    }
+  }
+
+  & input[type="range" i]::-webkit-slider-thumb {
+    position: relative;
+    height: 32px;
+    width: 48px;
+    border-radius: 16px;
+    background: var(--_c);
+    -webkit-appearance: none;
+    appearance: none;
+    transition: 0.3s;
+    z-index: 1;
+  }
+  /* Firefox */
+  & input[type="range"]::-moz-range-thumb {
+    height: 32px;
+    width: 12px;
+    background: var(--_c);
+    // border-image: linear-gradient(90deg, var(--_c) 50%, #d9d9d9 0) 0 1 /
+    //   calc(50% - 8px / 2) 100vw/0 100vw;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: 0.3s;
+  }
+  @supports not (color: color-mix(in srgb, red, red)) {
+    & input {
+      --_c: #ff9800;
+    }
+  }
 }

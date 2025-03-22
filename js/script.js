@@ -215,6 +215,7 @@ const audio = document.getElementById("audio");
 const playPauseBtn = document.getElementById("playPauseBtn");
 const progressBar = document.getElementById("progressBar");
 const timeDisplay = document.getElementById("timeDisplay");
+const audioPlayer = document.querySelector(".audio-player");
 
 let isPlaying = false;
 
@@ -230,20 +231,22 @@ playPauseBtn.addEventListener("click", () => {
 // When audio plays
 audio.addEventListener("play", () => {
   isPlaying = true;
-  playPauseBtn.src = "public/exam1/icons/pause-green.svg"; // Change icon
-  progressBar.style.background = "blue"; // Change background color
+  playPauseBtn.src = "public/exam1/icons/pause-green.svg";
+  audioPlayer.classList.add("playing");
+  audioPlayer.classList.remove("paused");
 });
 
 // When audio pauses
 audio.addEventListener("pause", () => {
   isPlaying = false;
-  playPauseBtn.src = "public/exam1/icons/play-orange.svg"; // Change icon
-  progressBar.style.background = "orange"; // Change background color
+  playPauseBtn.src = "public/exam1/icons/play-orange.svg";
+  audioPlayer.classList.add("paused");
+  audioPlayer.classList.remove("playing");
 });
-
 // Update progress bar and time
 audio.addEventListener("timeupdate", () => {
   const progress = (audio.currentTime / audio.duration) * 100;
+  progressBar.style.setProperty("--progress", `${progress + 1}%`);
   progressBar.value = progress;
 
   // Update time display
@@ -290,5 +293,5 @@ function startCountdown(durationInSeconds) {
 
 // Bắt đầu đếm ngược từ 29 phút 10 giây (tổng cộng 1750 giây)
 window.onload = function () {
-  startCountdown(65);
+  startCountdown(1750);
 };
