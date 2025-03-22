@@ -420,6 +420,93 @@
     }
   }
 
+  &-content6 {
+    overflow-y: auto;
+
+    &-sentence {
+      display: flex;
+      gap: 24px;
+    }
+
+    &-answer {
+      color: var(--Secondary-Purple, #454575);
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%; /* 42px */
+      flex: 1 1 0%;
+    }
+
+    &-result {
+      display: flex;
+      flex-direction: row;
+      min-height: 86px;
+      min-width: 100%;
+      padding: 8px;
+      gap: 8px;
+      flex-wrap: wrap;
+      border-radius: 16px;
+      align-items: center;
+      background: #d9d9d9;
+      overflow-x: auto;
+      flex-grow: 1;
+      width: 100%;
+      margin-top: 24px;
+
+      & .exam1-content6-variant {
+        color: #454575;
+        background: #ebf8ff;
+        box-shadow: 0px -4px 0px 0px #cbdcff inset, 0px 2px 2px 0px #cbdcff;
+      }
+    }
+
+    &-variant {
+      display: flex;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 12px;
+      background: #fff;
+      height: 70px;
+      width: fit-content;
+      box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset,
+        0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+
+      color: var(--Secondary-Purple, #454575);
+      text-align: center;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 100%; /* 24px */
+
+      transition: transform 0.2s ease-out, height 0.2s ease-out;
+
+      &.true {
+        color: var(--Primary-Green, #00b26b);
+        background: #ecfbe5;
+        box-shadow: 0px -4px 0px 0px rgba(21, 156, 0, 0.1) inset,
+          0px 2px 2px 0px rgba(21, 156, 0, 0.3);
+      }
+      &.fail {
+        box-shadow: 0px -4px 0px 0px rgba(213, 28, 0, 0.1) inset,
+          0px 2px 2px 0px rgba(213, 28, 0, 0.3);
+        background: #fbe7e5;
+        color: #e44825;
+      }
+    }
+
+    &-img {
+      flex: 1 0 0;
+      width: 340px;
+      height: 340px;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      border-radius: 16px;
+    }
+  }
+
   &-content5 {
     overflow-y: auto;
 
