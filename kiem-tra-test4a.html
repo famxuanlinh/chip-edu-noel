@@ -21,10 +21,10 @@
         <div class="flex items-center">
           <img class="mr-2" src="/public/exam/icons/arrow-back.svg" alt="" />
           <p class="text-[28px] font-extrabold text-[#006638]">
-            Bài kiểm tra Đọc - Viết
+            Bài kiểm tra Nghe hiểu
           </p>
         </div>
-        <div class="relative flex items-center w-fit">
+        <!-- <div class="relative flex items-center w-fit">
           <img id="timer-img" src="/public/exam/timer1.png" alt="Timer" />
           <p
             id="timer-text"
@@ -32,8 +32,12 @@
           >
             00:00
           </p>
+        </div> -->
+        <div
+          class="text-[32px] flex items-center font-extrabold text-[#FF9800]"
+        >
+          Thời gian làm: 12:22
         </div>
-
         <div class="w-full justify-end flex items-center h-full">
           <a class="w-fit" href="/kiem-tra.html">
             <img width="24" src="/public/exam/icons/x-gray.svg" alt="x" />
@@ -53,17 +57,15 @@
         </button>
         <div class="flex-1 exam1-content w-full rounded-2xl">
           <!-- Start content 2 -->
-          <div class="test9 flex gap-10">
-            <div class="exam1-content9 w-full exam1-height">
-              <div class="exam1-zoom flex flex-col h-full">
-                <div>
+          <div class="test3 flex justify-center">
+            <div class="exam1-content4 exam1-height w-full">
+              <div class="exam1-zoom flex flex-col items-center w-full h-full">
+                <div class="w-200">
                   <div class="flex items-start gap-6 toggle-trans-container">
                     <div
                       class="text-[32px] font-extrabold text-[#3A3335] flex-1"
                     >
-                      Look at the pictures and read the story. Write some words
-                      to complete the sentences about the story. You can use 1,
-                      2 or 3 words.
+                      Listen and matching image.
                     </div>
                     <div
                       class="toggle-trans flex flex-none cursor-pointer gap-2 w-fit items-center rounded-4xl border justify-center border-[#000000]/20 py-1 pr-1 pl-3"
@@ -83,9 +85,7 @@
                     <div
                       class="text-[32px] font-extrabold text-[#3A3335] flex-1"
                     >
-                      Look at the pictures and read the story. Write some words
-                      to complete the sentences about the story. You can use 1,
-                      2 or 3 words vietnam.
+                      Listen and matching image vietnamese.
                     </div>
                     <div
                       class="toggle-trans flex flex-none cursor-pointer gap-2 w-fit items-center rounded-4xl border justify-center border-[#000000]/20 py-1 pl-1 pr-3"
@@ -99,119 +99,226 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="flex grow-1 overflow-hidden mt-10 gap-10">
-                  <div id="exam-scroll" class="flex-1 h-full overflow-y-auto">
-                    <div class="flex flex-col gap-6">
-                      <div class="flex justify-center">
+                <div class="pt-6 pb-10 w-200">
+                  <audio id="audio" src="public/audio/ManhBa.mp3"></audio>
+                  <div class="audio-player paused">
+                    <img
+                      class="size-9 mx-3"
+                      src="public/exam1/icons/play-orange.svg"
+                      id="playPauseBtn"
+                    />
+                    <input
+                      type="range"
+                      id="progressBar"
+                      min="0"
+                      max="100"
+                      value="0"
+                    />
+                    <span id="timeDisplay" class="pr-3">00:00</span>
+                  </div>
+                </div>
+                <div
+                  id="exam-scroll"
+                  class="flex-1 pb-1 overflow-y-auto w-full"
+                >
+                  <div class="flex flex-col items-center gap-10">
+                    <div class="drop-container flex gap-10">
+                      <div class="drop-row true">
                         <img
-                          src="public/exam1/image 11.png"
-                          class="!h-[235px] aspect-video object-cover rounded-[20px] flex-none"
+                          class="drop-img"
+                          src="public/exam1/3.2.png"
+                          class=""
+                          alt=""
+                        />
+                        <div class="drop-label">Her parents</div>
+                        <div class="drop-zone" data-index="1">
+                          <img src="public/exam1/3.2.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="drop-row fail">
+                        <img
+                          class="drop-img"
+                          src="public/exam1/3.2.png"
+                          class=""
+                          alt=""
+                        />
+                        <div class="drop-label">Her parents</div>
+                        <div class="drop-zone" data-index="1">
+                          <img src="public/exam1/3.2.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="drop-row true">
+                        <img
+                          class="drop-img"
+                          src="public/exam1/3.2.png"
+                          class=""
+                          alt=""
+                        />
+                        <div class="drop-label">Her parents</div>
+                        <div class="drop-zone" data-index="1">
+                          <img src="public/exam1/3.2.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="drop-row true">
+                        <img
+                          class="drop-img"
+                          src="public/exam1/3.2.png"
+                          class=""
+                          alt=""
+                        />
+                        <div class="drop-label">Her parents</div>
+                        <div class="drop-zone" data-index="1">
+                          <img src="public/exam1/3.2.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- <div class="drop-container flex gap-10">
+                      <div class="drop-row">
+                        <img
+                          class="drop-img"
+                          src="public/exam1/3.2.png"
+                          class=""
+                          alt=""
+                        />
+                        <div class="drop-label">Her parents</div>
+                        <div class="drop-zone" data-index="1"></div>
+                      </div>
+                      <div class="drop-row">
+                        <img
+                          class="drop-img"
+                          src="public/exam1/3.2.png"
+                          class=""
+                          alt=""
+                        />
+                        <div class="drop-label">Her parents</div>
+                        <div class="drop-zone" data-index="1"></div>
+                      </div>
+                      <div class="drop-row">
+                        <img
+                          class="drop-img"
+                          src="public/exam1/3.2.png"
+                          class=""
+                          alt=""
+                        />
+                        <div class="drop-label">Her parents</div>
+                        <div class="drop-zone" data-index="1"></div>
+                      </div>
+                      <div class="drop-row">
+                        <img
+                          class="drop-img"
+                          src="public/exam1/3.2.png"
+                          class=""
+                          alt=""
+                        />
+                        <div class="drop-label">Her parents</div>
+                        <div class="drop-zone" data-index="1"></div>
+                      </div>
+                      <div class="drop-row">
+                        <img
+                          class="drop-img"
+                          src="public/exam1/3.2.png"
+                          class=""
+                          alt=""
+                        />
+                        <div class="drop-label">Her parents</div>
+                        <div class="drop-zone" data-index="1"></div>
+                      </div>
+                      <div class="drop-row">
+                        <img
+                          class="drop-img"
+                          src="public/exam1/3.2.png"
+                          class=""
+                          alt=""
+                        />
+                        <div class="drop-label">Her parents</div>
+                        <div class="drop-zone" data-index="1"></div>
+                      </div>
+                    </div>
+                    <div class="name-list flex gap-6">
+                      <div
+                        class="draggable exam1-content4-img-wrapper"
+                        draggable="true"
+                        id="1"
+                      >
+                        <img
+                          class="exam1-content4-img"
+                          src="public/exam1/3.2.png"
                           alt=""
                         />
                       </div>
                       <div
-                        class="text-[28px] font-bold leading-[150%] text-[#3A3335]"
+                        class="draggable exam1-content4-img-wrapper"
+                        draggable="true"
+                        id="2"
                       >
-                        In many ......(1)....... countries there are four
-                        seasons in the year. These are called spring, summer,
-                        autumn and winter. ......(2)...... season is about three
-                        months long and then a new season comes. In the north of
-                        our planet summer usually ....(3)... in June. It is the
-                        warmest time of the year and it sometimes does not get
-                        dark ......(4)...... 10 o’clock at night. In September
-                        it gets colder and the trees .......(5).... their
-                        leaves. This season is called autumn. Winter comes in
-                        December .....(6).... it is usually very cold and a lot
-                        of countries have snow. On some winter days, it gets
-                        dark at about 4 o’clock .....(7)...... the afternoon so
-                        the days are very ......(8)....... and the nights are
-                        long. In March the weather gets warmer and plants and
-                        flowers start to grow ......(9)....... . This season is
-                        called spring. In the south of the planet the countries
-                        have the ....(10)...... seasons, but they happen at
-                        different times ...................... the year. They
-                        have summer in December and winter in June.
+                        <img
+                          class="exam1-content4-img"
+                          src="public/exam1/3.2.png"
+                          alt=""
+                        />
                       </div>
-                    </div>
+                      <div
+                        class="draggable exam1-content4-img-wrapper"
+                        draggable="true"
+                        id="3"
+                      >
+                        <img
+                          class="exam1-content4-img"
+                          src="public/exam1/3.2.png"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="draggable exam1-content4-img-wrapper"
+                        draggable="true"
+                        id="4"
+                      >
+                        <img
+                          class="exam1-content4-img"
+                          src="public/exam1/3.2.png"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="draggable exam1-content4-img-wrapper"
+                        draggable="true"
+                        id="5"
+                      >
+                        <img
+                          class="exam1-content4-img"
+                          src="public/exam1/3.2.png"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="draggable exam1-content4-img-wrapper"
+                        draggable="true"
+                        id="6"
+                      >
+                        <img
+                          class="exam1-content4-img"
+                          src="public/exam1/3.2.png"
+                          alt=""
+                        />
+                      </div>
+                    </div> -->
                   </div>
-                  <div
-                    id="exam-scroll"
-                    class="flex-1 h-full pb-2 overflow-y-auto"
-                  >
-                    <div class="flex gap-4 flex-col">
-                      <div class="exam1-content9-sentence gap-6">
-                        <div class="exam1-content9-answer">1</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant">temperate</div>
-                          <div class="exam1-content9-variant">temperated</div>
-                          <div class="exam1-content9-variant">temperature</div>
+                  <div class="exam1-result mt-10">
+                    <div class="exam1-result-title">Correct Answer:</div>
+                    <div class="exam1-result-content">
+                      <div class="flex gap-4 flex-col true">
+                        <img
+                          class="drop-img"
+                          src="public/exam1/3.2.png"
+                          class=""
+                          alt=""
+                        />
+                        <div class="drop-label !text-[#00B26B]">
+                          Her parents
                         </div>
-                      </div>
-                      <div class="exam1-content9-sentence gap-6">
-                        <div class="exam1-content9-answer">2</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant">only</div>
-                          <div class="exam1-content9-variant">each</div>
-                          <div class="exam1-content9-variant">can</div>
-                        </div>
-                      </div>
-                      <div class="exam1-content9-sentence gap-6">
-                        <div class="exam1-content9-answer">3</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant">began</div>
-                          <div class="exam1-content9-variant">begin</div>
-                          <div class="exam1-content9-variant">begins</div>
-                        </div>
-                      </div>
-                      <div class="exam1-content9-sentence gap-6">
-                        <div class="exam1-content9-answer">4</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant">temperate</div>
-                          <div class="exam1-content9-variant">temperated</div>
-                          <div class="exam1-content9-variant">temperature</div>
-                        </div>
-                      </div>
-                      <div class="exam1-content9-sentence gap-6">
-                        <div class="exam1-content9-answer">5</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant">only</div>
-                          <div class="exam1-content9-variant">each</div>
-                          <div class="exam1-content9-variant">can</div>
-                        </div>
-                      </div>
-                      <div class="exam1-content9-sentence gap-6">
-                        <div class="exam1-content9-answer">6</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant">began</div>
-                          <div class="exam1-content9-variant">begin</div>
-                          <div class="exam1-content9-variant">begins</div>
-                        </div>
-                      </div>
-                      <div class="exam1-content9-sentence gap-6 result">
-                        <div class="exam1-content9-answer">7</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant">temperate</div>
-                          <div class="exam1-content9-variant true">
-                            temperated
-                          </div>
-                          <div class="exam1-content9-variant">temperature</div>
-                        </div>
-                      </div>
-                      <div class="exam1-content9-sentence gap-6 result">
-                        <div class="exam1-content9-answer">8</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant">only</div>
-                          <div class="exam1-content9-variant fail">each</div>
-                          <div class="exam1-content9-variant">can</div>
-                        </div>
-                      </div>
-                      <div class="exam1-content9-sentence gap-6 result">
-                        <div class="exam1-content9-answer">9</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant true">began</div>
-                          <div class="exam1-content9-variant">begin</div>
-                          <div class="exam1-content9-variant">begins</div>
+                        <div class="drop-zone" data-index="1">
+                          <img src="public/exam1/3.2.png" alt="" />
                         </div>
                       </div>
                     </div>
@@ -236,17 +343,17 @@
 
       <div class="exam1-footer">
         <div class="flex items-center gap-2">
-          <a href="/kiem-tra-test1.html" class="exam1-footer-num done"
+          <a href="/kiem-tra-test1.html" class="exam1-footer-num fail"
             >Part 1</a
           >
-          <a href="/kiem-tra-test2.html" class="exam1-footer-num active"
+          <a href="/kiem-tra-test2.html" class="exam1-footer-num true"
             >Part 2</a
           >
-          <a href="/kiem-tra-test3.html" uk-toggle class="exam1-footer-num"
+          <a href="/kiem-tra-test3.html" uk-toggle class="exam1-footer-num true"
             >Part 3</a
           >
           <a
-            href="/kiem-tra-test4.html"
+            href="/kiem-tra-test4a.html"
             uk-toggle
             class="exam1-footer-num fail current"
             >Part 4
@@ -254,24 +361,33 @@
           <a href="/kiem-tra-test5.html" uk-toggle class="exam1-footer-num true"
             >Part 5
           </a>
-          <a href="/kiem-tra-test6.html" class="exam1-footer-num">6</a>
-          <a href="/kiem-tra-test7.1.html" class="exam1-footer-num">7.1</a>
-          <a href="/kiem-tra-test7.2.html" class="exam1-footer-num">7.2</a>
-          <a href="/kiem-tra-test8.html" class="exam1-footer-num">8</a>
-          <a href="/kiem-tra-test9.html" class="exam1-footer-num">9</a>
-          <a href="/kiem-tra-test10.html" class="exam1-footer-num">10</a>
-          <a href="#exam-unfinished" uk-toggle class="">p</a>
+          <a href="/kiem-tra-test6.html" class="exam1-footer-num true">6</a>
+          <a href="/kiem-tra-test7.1a.html" class="exam1-footer-num true"
+            >7.1</a
+          >
+          <a href="/kiem-tra-test7.2a.html" class="exam1-footer-num true"
+            >7.2</a
+          >
+          <a href="/kiem-tra-test8.html" class="exam1-footer-num true">8</a>
+          <a href="/kiem-tra-test9.html" class="exam1-footer-num true">9</a>
+          <a href="/kiem-tra-test10a.html" class="exam1-footer-num true">10</a>
+          <!-- <a href="#exam-unfinished" uk-toggle class="">p</a>
           <a href="#exam-submit-early" uk-toggle class="">o</a>
-          <a href="#exam-done" uk-toggle class="">p</a>
+          <a href="#exam-done" uk-toggle class="">p</a> -->
         </div>
-        <a
+        <!-- <a
           href="#exam-exit"
           uk-toggle
           class="button-primary btn-animation w-fit flex justify-center items-center px-5 button-m bg-[#00b26b]"
           style="height: 56px; color: white"
         >
           Nộp bài
-        </a>
+        </a> -->
+        <div
+          class="text-[32px] flex items-center font-extrabold text-[#00B26B]"
+        >
+          Điểm: 40/50
+        </div>
       </div>
     </div>
 
@@ -527,129 +643,7 @@
       UIkit.util.on("#exam-done", "shown", startCountdown);
       UIkit.util.on("#exam-done", "hidden", stopCountdown);
     </script>
-    <script>
-      function startCountdown(durationInSeconds) {
-        let timerElement = document.getElementById("timer-text");
-        let timerImage = document.getElementById("timer-img");
-        let remainingTime = durationInSeconds;
 
-        function updateTimer() {
-          let minutes = Math.floor(remainingTime / 60);
-          let seconds = remainingTime % 60;
-
-          // Định dạng số giây thành 2 chữ số (ví dụ: 09 thay vì 9)
-          let formattedTime = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-          timerElement.textContent = formattedTime;
-
-          // Thay đổi hình ảnh nếu thời gian còn dưới 1 phút
-          if (remainingTime < 60) {
-            timerImage.src = "/public/exam/timer2.png";
-            timerElement.style.color = "#A21600";
-          }
-
-          if (remainingTime > 0) {
-            remainingTime--;
-            setTimeout(updateTimer, 1000);
-          }
-        }
-
-        updateTimer();
-      }
-
-      // Bắt đầu đếm ngược từ 29 phút 10 giây (tổng cộng 1750 giây)
-      window.onload = function () {
-        startCountdown(65);
-      };
-    </script>
     <script src="js/script.js"></script>
-    <script>
-      document.querySelectorAll(".toggle-trans").forEach((button) => {
-        button.addEventListener("click", (event) => {
-          event.stopPropagation(); // Ngăn sự kiện lan ra ngoài
-          document
-            .querySelectorAll(".toggle-trans-container")
-            .forEach((container) => {
-              container.classList.toggle("hidden");
-            });
-        });
-      });
-
-      const audio = document.getElementById("audio");
-      const playPauseBtn = document.getElementById("playPauseBtn");
-      const progressBar = document.getElementById("progressBar");
-      const timeDisplay = document.getElementById("timeDisplay");
-
-      let isPlaying = false;
-
-      // Toggle play/pause when clicking the icon
-      playPauseBtn.addEventListener("click", () => {
-        if (isPlaying) {
-          audio.pause();
-        } else {
-          audio.play();
-        }
-      });
-
-      // When audio plays
-      audio.addEventListener("play", () => {
-        isPlaying = true;
-        playPauseBtn.src = "public/exam1/icons/pause-green.svg"; // Change icon
-        progressBar.style.background = "blue"; // Change background color
-      });
-
-      // When audio pauses
-      audio.addEventListener("pause", () => {
-        isPlaying = false;
-        playPauseBtn.src = "public/exam1/icons/play-orange.svg"; // Change icon
-        progressBar.style.background = "orange"; // Change background color
-      });
-
-      // Update progress bar and time
-      audio.addEventListener("timeupdate", () => {
-        const progress = (audio.currentTime / audio.duration) * 100;
-        progressBar.value = progress;
-
-        // Update time display
-        const minutes = Math.floor(audio.currentTime / 60);
-        const seconds = Math.floor(audio.currentTime % 60);
-        timeDisplay.textContent = `${String(minutes).padStart(2, "0")}:${String(
-          seconds
-        ).padStart(2, "0")}`;
-      });
-
-      // Allow seeking using the progress bar
-      progressBar.addEventListener("input", (e) => {
-        const seekTime = (e.target.value / 100) * audio.duration;
-        audio.currentTime = seekTime;
-      });
-    </script>
-    <script>
-      document
-        .querySelectorAll(".exam1-content9-sentence")
-        .forEach((sentence) => {
-          // Skip nếu có class 'result'
-          if (sentence.classList.contains("result")) return;
-
-          // Xử lý khi click vào các variants
-          sentence
-            .querySelectorAll(".exam1-content9-variant")
-            .forEach((variant) => {
-              variant.addEventListener("click", function () {
-                // Nếu variant đã active => bỏ active
-                if (this.classList.contains("active")) {
-                  this.classList.remove("active");
-                } else {
-                  // Xóa active khỏi tất cả variants trong cùng câu
-                  sentence
-                    .querySelectorAll(".exam1-content9-variant")
-                    .forEach((v) => v.classList.remove("active"));
-
-                  // Thêm active vào variant được click
-                  this.classList.add("active");
-                }
-              });
-            });
-        });
-    </script>
   </body>
 </html>

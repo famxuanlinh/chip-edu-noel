@@ -722,6 +722,9 @@
   .\!text-\[\#00B26B\] {
     color: #00B26B !important;
   }
+  .text-\[\#00B26B\] {
+    color: #00B26B;
+  }
   .text-\[\#3A3335\] {
     color: #3A3335;
   }
@@ -736,6 +739,9 @@
   }
   .text-\[\#252525\]\/40 {
     color: color-mix(in oklab, #252525 40%, transparent);
+  }
+  .text-\[\#FF9800\] {
+    color: #FF9800;
   }
   .text-black {
     color: var(--color-black);

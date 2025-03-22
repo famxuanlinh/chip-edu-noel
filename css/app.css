@@ -2826,14 +2826,14 @@ p {
   transition: transform 0.2s ease-out;
 }
 .exam1-content10 .draggable.true {
-  color: var(--Primary-Green, #00b26b);
-  background: #ecfbe5;
-  box-shadow: 0px -4px 0px 0px rgba(21, 156, 0, 0.1) inset, 0px 2px 2px 0px rgba(21, 156, 0, 0.3);
+  color: var(--Primary-Green, #00b26b) !important;
+  background: #ecfbe5 !important;
+  box-shadow: 0px -4px 0px 0px rgba(21, 156, 0, 0.1) inset, 0px 2px 2px 0px rgba(21, 156, 0, 0.3) !important;
 }
 .exam1-content10 .draggable.fail {
-  box-shadow: 0px -4px 0px 0px rgba(213, 28, 0, 0.1) inset, 0px 2px 2px 0px rgba(213, 28, 0, 0.3);
-  background: #fbe7e5;
-  color: #e44825;
+  box-shadow: 0px -4px 0px 0px rgba(213, 28, 0, 0.1) inset, 0px 2px 2px 0px rgba(213, 28, 0, 0.3) !important;
+  background: #fbe7e5 !important;
+  color: #e44825 !important;
 }
 .exam1-content10 .draggable:active {
   transform: rotate(0deg);

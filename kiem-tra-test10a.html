@@ -24,7 +24,7 @@
             Bài kiểm tra Đọc - Viết
           </p>
         </div>
-        <div class="relative flex items-center w-fit">
+        <!-- <div class="relative flex items-center w-fit">
           <img id="timer-img" src="/public/exam/timer1.png" alt="Timer" />
           <p
             id="timer-text"
@@ -32,8 +32,12 @@
           >
             00:00
           </p>
+        </div> -->
+        <div
+          class="text-[32px] flex items-center font-extrabold text-[#FF9800]"
+        >
+          Thời gian làm: 12:22
         </div>
-
         <div class="w-full justify-end flex items-center h-full">
           <a class="w-fit" href="/kiem-tra.html">
             <img width="24" src="/public/exam/icons/x-gray.svg" alt="x" />
@@ -52,18 +56,17 @@
           />
         </button>
         <div class="flex-1 exam1-content w-full rounded-2xl">
-          <!-- Start content 2 -->
-          <div class="test9 flex gap-10">
-            <div class="exam1-content9 w-full exam1-height">
+          <!-- Start content 1 -->
+          <div class="test1 flex gap-10">
+            <div class="exam1-content10 w-full exam1-height">
               <div class="exam1-zoom flex flex-col h-full">
                 <div>
                   <div class="flex items-start gap-6 toggle-trans-container">
                     <div
                       class="text-[32px] font-extrabold text-[#3A3335] flex-1"
                     >
-                      Look at the pictures and read the story. Write some words
-                      to complete the sentences about the story. You can use 1,
-                      2 or 3 words.
+                      Please drag the words into the corresponding box according
+                      to what you hear in the lesson.
                     </div>
                     <div
                       class="toggle-trans flex flex-none cursor-pointer gap-2 w-fit items-center rounded-4xl border justify-center border-[#000000]/20 py-1 pr-1 pl-3"
@@ -83,9 +86,8 @@
                     <div
                       class="text-[32px] font-extrabold text-[#3A3335] flex-1"
                     >
-                      Look at the pictures and read the story. Write some words
-                      to complete the sentences about the story. You can use 1,
-                      2 or 3 words vietnam.
+                      Vui lòng kéo các từ vào ô tương ứng theo những gì bạn nghe
+                      trong đoạn hội thoại.
                     </div>
                     <div
                       class="toggle-trans flex flex-none cursor-pointer gap-2 w-fit items-center rounded-4xl border justify-center border-[#000000]/20 py-1 pl-1 pr-3"
@@ -100,118 +102,226 @@
                   </div>
                 </div>
 
-                <div class="flex grow-1 overflow-hidden mt-10 gap-10">
-                  <div id="exam-scroll" class="flex-1 h-full overflow-y-auto">
-                    <div class="flex flex-col gap-6">
-                      <div class="flex justify-center">
-                        <img
-                          src="public/exam1/image 11.png"
-                          class="!h-[235px] aspect-video object-cover rounded-[20px] flex-none"
-                          alt=""
-                        />
-                      </div>
-                      <div
-                        class="text-[28px] font-bold leading-[150%] text-[#3A3335]"
-                      >
-                        In many ......(1)....... countries there are four
-                        seasons in the year. These are called spring, summer,
-                        autumn and winter. ......(2)...... season is about three
-                        months long and then a new season comes. In the north of
-                        our planet summer usually ....(3)... in June. It is the
-                        warmest time of the year and it sometimes does not get
-                        dark ......(4)...... 10 o’clock at night. In September
-                        it gets colder and the trees .......(5).... their
-                        leaves. This season is called autumn. Winter comes in
-                        December .....(6).... it is usually very cold and a lot
-                        of countries have snow. On some winter days, it gets
-                        dark at about 4 o’clock .....(7)...... the afternoon so
-                        the days are very ......(8)....... and the nights are
-                        long. In March the weather gets warmer and plants and
-                        flowers start to grow ......(9)....... . This season is
-                        called spring. In the south of the planet the countries
-                        have the ....(10)...... seasons, but they happen at
-                        different times ...................... the year. They
-                        have summer in December and winter in June.
-                      </div>
+                <div class="flex py-10 gap-6">
+                  <img
+                    src="public/exam1/image 11.png"
+                    class="w-120 !h-50 object-cover rounded-[20px] flex-none"
+                    alt=""
+                  />
+                  <div
+                    id="exam-scroll"
+                    class="text-[28px] h-50 overflow-y-auto font-bold leading-[150%] text-[#3A3335]"
+                  >
+                    Katy is going to go with her Aunt Emma to her office today.
+                    Katy is asking Emma some questions about her work. What does
+                    Emma say?
+                  </div>
+                </div>
+
+                <!-- <div class="flex grow-1 overflow-hidden gap-10">
+                  <div
+                    id="exam-scroll"
+                    class="name-list flex-1 pb-1 h-full overflow-y-auto space-y-6"
+                  >
+                    <div class="draggable" draggable="true" id="1">
+                      Sometimes I sit at my desk and sometimes I go out.
+                    </div>
+                    <div class="draggable" draggable="true" id="2">
+                      Yes, everyone did this time.
+                    </div>
+                    <div class="draggable" draggable="true" id="3">
+                      OK, but only when I am in a meeting.
+                    </div>
+                    <div class="draggable" draggable="true" id="4">
+                      No, there aren’t many cafés near the office.
+                    </div>
+                    <div class="draggable" draggable="true" id="5">
+                      Usually when I’ve finished everything that I’ve got to do.
+                    </div>
+                    <div class="draggable" draggable="true" id="6">
+                      Yes, everyone did this time.
+                    </div>
+                    <div class="draggable" draggable="true" id="7">
+                      Usually when I’ve finished everything that I’ve got to do.
                     </div>
                   </div>
                   <div
                     id="exam-scroll"
-                    class="flex-1 h-full pb-2 overflow-y-auto"
+                    class="drop-container flex-1 h-full overflow-y-auto space-y-6"
                   >
-                    <div class="flex gap-4 flex-col">
-                      <div class="exam1-content9-sentence gap-6">
-                        <div class="exam1-content9-answer">1</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant">temperate</div>
-                          <div class="exam1-content9-variant">temperated</div>
-                          <div class="exam1-content9-variant">temperature</div>
-                        </div>
-                      </div>
-                      <div class="exam1-content9-sentence gap-6">
-                        <div class="exam1-content9-answer">2</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant">only</div>
-                          <div class="exam1-content9-variant">each</div>
-                          <div class="exam1-content9-variant">can</div>
-                        </div>
-                      </div>
-                      <div class="exam1-content9-sentence gap-6">
-                        <div class="exam1-content9-answer">3</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant">began</div>
-                          <div class="exam1-content9-variant">begin</div>
-                          <div class="exam1-content9-variant">begins</div>
-                        </div>
-                      </div>
-                      <div class="exam1-content9-sentence gap-6">
-                        <div class="exam1-content9-answer">4</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant">temperate</div>
-                          <div class="exam1-content9-variant">temperated</div>
-                          <div class="exam1-content9-variant">temperature</div>
-                        </div>
-                      </div>
-                      <div class="exam1-content9-sentence gap-6">
-                        <div class="exam1-content9-answer">5</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant">only</div>
-                          <div class="exam1-content9-variant">each</div>
-                          <div class="exam1-content9-variant">can</div>
-                        </div>
-                      </div>
-                      <div class="exam1-content9-sentence gap-6">
-                        <div class="exam1-content9-answer">6</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant">began</div>
-                          <div class="exam1-content9-variant">begin</div>
-                          <div class="exam1-content9-variant">begins</div>
-                        </div>
-                      </div>
-                      <div class="exam1-content9-sentence gap-6 result">
-                        <div class="exam1-content9-answer">7</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant">temperate</div>
-                          <div class="exam1-content9-variant true">
-                            temperated
+                    <div class="drop-row">
+                      <div class="w-[34px]">1</div>
+                      <div class="w-full space-y-4">
+                        <div class="flex">
+                          <p class="w-30 flex-none">Katy:</p>
+                          <div class="drop-label">
+                            Do you always walk to work?
                           </div>
-                          <div class="exam1-content9-variant">temperature</div>
+                        </div>
+                        <div class="flex items-center">
+                          <p class="w-30 flex-none">Emma:</p>
+                          <div class="drop-zone" data-index="1"></div>
                         </div>
                       </div>
-                      <div class="exam1-content9-sentence gap-6 result">
-                        <div class="exam1-content9-answer">8</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant">only</div>
-                          <div class="exam1-content9-variant fail">each</div>
-                          <div class="exam1-content9-variant">can</div>
+                    </div>
+                    <div class="drop-row">
+                      <div class="w-[34px]">2</div>
+                      <div class="w-full space-y-4">
+                        <div class="flex">
+                          <p class="w-30 flex-none">Katy:</p>
+                          <div class="drop-label">
+                            How many people work there?
+                          </div>
+                        </div>
+                        <div class="flex items-center">
+                          <p class="w-30 flex-none">Emma:</p>
+                          <div class="drop-zone" data-index="2"></div>
                         </div>
                       </div>
-                      <div class="exam1-content9-sentence gap-6 result">
-                        <div class="exam1-content9-answer">9</div>
-                        <div class="grid grid-cols-3 w-full gap-6 flex-1">
-                          <div class="exam1-content9-variant true">began</div>
-                          <div class="exam1-content9-variant">begin</div>
-                          <div class="exam1-content9-variant">begins</div>
+                    </div>
+                    <div class="drop-row">
+                      <div class="w-[34px]">3</div>
+                      <div class="w-full space-y-4">
+                        <div class="flex">
+                          <p class="w-30 flex-none">Katy:</p>
+                          <div class="drop-label">
+                            Can I play on the computer in your office?
+                          </div>
+                        </div>
+                        <div class="flex items-center">
+                          <p class="w-30 flex-none">Emma:</p>
+                          <div class="drop-zone" data-index="3"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="drop-row">
+                      <div class="w-[34px]">4</div>
+                      <div class="w-full space-y-4">
+                        <div class="flex">
+                          <p class="w-30 flex-none">Katy:</p>
+                          <div class="drop-label">
+                            How many people work there?
+                          </div>
+                        </div>
+                        <div class="flex items-center">
+                          <p class="w-30 flex-none">Emma:</p>
+                          <div class="drop-zone" data-index="4"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="drop-row">
+                      <div class="w-[34px]">5</div>
+                      <div class="w-full space-y-4">
+                        <div class="flex">
+                          <p class="w-30 flex-none">Katy:</p>
+                          <div class="drop-label">
+                            Can I play on the computer in your office?
+                          </div>
+                        </div>
+                        <div class="flex items-center">
+                          <p class="w-30 flex-none">Emma:</p>
+                          <div class="drop-zone" data-index="5"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="drop-row">
+                      <div class="w-[34px]">6</div>
+                      <div class="w-full space-y-4">
+                        <div class="flex">
+                          <p class="w-30 flex-none">Katy:</p>
+                          <div class="drop-label">
+                            Where do you eat your lanch?
+                          </div>
+                        </div>
+                        <div class="flex items-center">
+                          <p class="w-30 flex-none">Emma:</p>
+                          <div class="drop-zone" data-index="6"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+                <div
+                  class="drop-container flex-1 h-full overflow-y-auto space-y-6"
+                >
+                  <div class="drop-row">
+                    <div class="w-[34px]">1</div>
+                    <div class="w-full space-y-4">
+                      <div class="flex">
+                        <p class="w-30 flex-none">Katy:</p>
+                        <div class="drop-label">
+                          Do you always walk to work?
+                        </div>
+                      </div>
+                      <div class="flex items-center">
+                        <p class="w-30 flex-none">Emma:</p>
+                        <div class="drop-zone" data-index="1">
+                          <div class="draggable fail" id="2">
+                            Yes, everyone did this time.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-col mt-6 gap-10">
+                        <div class="exam1-result">
+                          <div class="exam1-result-title">Correct Answer:</div>
+                          <div class="exam1-result-content">
+                            Yes, everyone did this time.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="drop-row">
+                    <div class="w-[34px]">2</div>
+                    <div class="w-full space-y-4">
+                      <div class="flex">
+                        <p class="w-30 flex-none">Katy:</p>
+                        <div class="drop-label">
+                          How many people work there?
+                        </div>
+                      </div>
+                      <div class="flex items-center">
+                        <p class="w-30 flex-none">Emma:</p>
+                        <div class="drop-zone" data-index="2">
+                          <div class="draggable true" id="5">
+                            Usually when I’ve finished everything that I’ve got
+                            to do.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="drop-row">
+                    <div class="w-[34px]">3</div>
+                    <div class="w-full space-y-4">
+                      <div class="flex">
+                        <p class="w-30 flex-none">Katy:</p>
+                        <div class="drop-label">
+                          Can I play on the computer in your office?
+                        </div>
+                      </div>
+                      <div class="flex items-center">
+                        <p class="w-30 flex-none">Emma:</p>
+                        <div class="drop-zone" data-index="3"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="drop-row">
+                    <div class="w-[34px]">4</div>
+                    <div class="w-full space-y-4">
+                      <div class="flex">
+                        <p class="w-30 flex-none">Katy:</p>
+                        <div class="drop-label">
+                          How many people work there?
+                        </div>
+                      </div>
+                      <div class="flex items-center">
+                        <p class="w-30 flex-none">Emma:</p>
+                        <div class="drop-zone" data-index="4">
+                          <div class="draggable true" id="5">
+                            Usually when I’ve finished everything that I’ve got
+                            to do.
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -220,8 +330,9 @@
               </div>
             </div>
           </div>
-          <!-- End content 2 -->
+          <!-- End content 1 -->
         </div>
+
         <button
           class="button-primary btn-animation size-16 flex justify-center items-center button-m bg-[#00b26b]"
           style="border-radius: 100%"
@@ -233,45 +344,55 @@
           />
         </button>
       </div>
-
       <div class="exam1-footer">
         <div class="flex items-center gap-2">
-          <a href="/kiem-tra-test1.html" class="exam1-footer-num done"
+          <a href="/kiem-tra-test1.html" class="exam1-footer-num fail"
             >Part 1</a
           >
-          <a href="/kiem-tra-test2.html" class="exam1-footer-num active"
+          <a href="/kiem-tra-test2.html" class="exam1-footer-num true"
             >Part 2</a
           >
-          <a href="/kiem-tra-test3.html" uk-toggle class="exam1-footer-num"
+          <a href="/kiem-tra-test3.html" uk-toggle class="exam1-footer-num true"
             >Part 3</a
           >
           <a
-            href="/kiem-tra-test4.html"
+            href="/kiem-tra-test4a.html"
             uk-toggle
-            class="exam1-footer-num fail current"
+            class="exam1-footer-num fail"
             >Part 4
           </a>
           <a href="/kiem-tra-test5.html" uk-toggle class="exam1-footer-num true"
             >Part 5
           </a>
-          <a href="/kiem-tra-test6.html" class="exam1-footer-num">6</a>
-          <a href="/kiem-tra-test7.1.html" class="exam1-footer-num">7.1</a>
-          <a href="/kiem-tra-test7.2.html" class="exam1-footer-num">7.2</a>
-          <a href="/kiem-tra-test8.html" class="exam1-footer-num">8</a>
-          <a href="/kiem-tra-test9.html" class="exam1-footer-num">9</a>
-          <a href="/kiem-tra-test10.html" class="exam1-footer-num">10</a>
-          <a href="#exam-unfinished" uk-toggle class="">p</a>
+          <a href="/kiem-tra-test6.html" class="exam1-footer-num true">6</a>
+          <a href="/kiem-tra-test7.1a.html" class="exam1-footer-num true"
+            >7.1</a
+          >
+          <a href="/kiem-tra-test7.2a.html" class="exam1-footer-num true"
+            >7.2</a
+          >
+          <a href="/kiem-tra-test8.html" class="exam1-footer-num true">8</a>
+          <a href="/kiem-tra-test9.html" class="exam1-footer-num true">9</a>
+          <a href="/kiem-tra-test10a.html" class="exam1-footer-num true current"
+            >10</a
+          >
+          <!-- <a href="#exam-unfinished" uk-toggle class="">p</a>
           <a href="#exam-submit-early" uk-toggle class="">o</a>
-          <a href="#exam-done" uk-toggle class="">p</a>
+          <a href="#exam-done" uk-toggle class="">p</a> -->
         </div>
-        <a
+        <!-- <a
           href="#exam-exit"
           uk-toggle
           class="button-primary btn-animation w-fit flex justify-center items-center px-5 button-m bg-[#00b26b]"
           style="height: 56px; color: white"
         >
           Nộp bài
-        </a>
+        </a> -->
+        <div
+          class="text-[32px] flex items-center font-extrabold text-[#00B26B]"
+        >
+          Điểm: 40/50
+        </div>
       </div>
     </div>
 
@@ -622,34 +743,6 @@
         const seekTime = (e.target.value / 100) * audio.duration;
         audio.currentTime = seekTime;
       });
-    </script>
-    <script>
-      document
-        .querySelectorAll(".exam1-content9-sentence")
-        .forEach((sentence) => {
-          // Skip nếu có class 'result'
-          if (sentence.classList.contains("result")) return;
-
-          // Xử lý khi click vào các variants
-          sentence
-            .querySelectorAll(".exam1-content9-variant")
-            .forEach((variant) => {
-              variant.addEventListener("click", function () {
-                // Nếu variant đã active => bỏ active
-                if (this.classList.contains("active")) {
-                  this.classList.remove("active");
-                } else {
-                  // Xóa active khỏi tất cả variants trong cùng câu
-                  sentence
-                    .querySelectorAll(".exam1-content9-variant")
-                    .forEach((v) => v.classList.remove("active"));
-
-                  // Thêm active vào variant được click
-                  this.classList.add("active");
-                }
-              });
-            });
-        });
     </script>
   </body>
 </html>
