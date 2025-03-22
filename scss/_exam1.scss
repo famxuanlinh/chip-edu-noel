@@ -45,6 +45,7 @@
       justify-content: center;
       align-items: center;
       border-radius: 30px;
+      position: relative;
 
       text-align: center;
       font-size: 24px;
@@ -77,6 +78,53 @@
         &:hover {
           color: #ff9800;
         }
+      }
+
+      &.true {
+        background: #00b26b;
+        border: 3px solid transparent;
+        color: white;
+
+        &::after {
+          content: "";
+          background: url("/public/exam1/icons/true.png");
+          width: 24px; /* Điều chỉnh kích thước */
+          background-size: contain;
+          height: 24px;
+          position: absolute;
+          bottom: -1px;
+          border-radius: 100%;
+          right: -1px;
+        }
+
+        &:hover {
+          color: white;
+        }
+      }
+      &.fail {
+        background: #ff6047;
+        border: 3px solid transparent;
+        color: white;
+
+        &::after {
+          content: "";
+          background: url("/public/exam1/icons/fail.png");
+          width: 24px; /* Điều chỉnh kích thước */
+          background-size: contain;
+          height: 24px;
+          position: absolute;
+          bottom: -1px;
+          border-radius: 100%;
+          right: -1px;
+        }
+
+        &:hover {
+          color: white;
+        }
+      }
+      &.current {
+        border: 3px solid white;
+        outline: 2px solid #ff9800;
       }
     }
   }
