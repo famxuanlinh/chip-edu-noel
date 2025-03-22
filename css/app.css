@@ -2696,16 +2696,6 @@ p {
   overflow-y: auto;
   padding-right: 12px;
 }
-#exam-scroll::before {
-  content: "";
-  display: block;
-  width: 12px;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: transparent;
-}
 #exam-scroll::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -2858,7 +2848,6 @@ p {
   font-style: normal;
   font-weight: 700;
   line-height: 150%; /* 42px */
-  flex: 1 1 0%;
   width: 40px;
 }
 .exam1-content9-variant {
