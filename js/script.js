@@ -246,7 +246,10 @@ audio.addEventListener("pause", () => {
 // Update progress bar and time
 audio.addEventListener("timeupdate", () => {
   const progress = (audio.currentTime / audio.duration) * 100;
-  progressBar.style.setProperty("--progress", `${progress + 1}%`);
+  progressBar.style.setProperty(
+    "--progress",
+    `${progress + (progress < 20 ? 2 : progress > 70 ? -2 : 1)}%`
+  );
   progressBar.value = progress;
 
   // Update time display

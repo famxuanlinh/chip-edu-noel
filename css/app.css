@@ -2753,9 +2753,12 @@ p {
   margin: 0 10px;
 }
 
+.exam1-zoom {
+  zoom: 0.85;
+}
 @media screen and (max-width: 1600px) {
   .exam1-zoom {
-    zoom: 0.85;
+    zoom: 0.75;
   }
 }
 .exam1-input {
@@ -3555,7 +3558,8 @@ p {
   width: var(--progress, 0%);
   height: 12px;
   background: var(--_c); /* Màu progress */
-  border-radius: 16px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
   transform: translateY(-50%);
   z-index: 0;
 }
@@ -3567,7 +3571,8 @@ p {
   width: calc(100% - var(--progress, 0%));
   height: 12px;
   background: #d9d9d9; /* Màu chưa phát */
-  border-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
   transform: translateY(-50%);
   z-index: 0;
 }
@@ -3579,16 +3584,14 @@ p {
   background: var(--_c);
   -webkit-appearance: none;
   appearance: none;
-  transition: 0.3s;
   z-index: 1;
 }
 .audio-player input[type=range]::-moz-range-thumb {
   height: 32px;
-  width: 12px;
+  width: 48px;
   background: var(--_c);
   -webkit-appearance: none;
   appearance: none;
-  transition: 0.3s;
 }
 @supports not (color: color-mix(in srgb, red, red)) {
   .audio-player input {

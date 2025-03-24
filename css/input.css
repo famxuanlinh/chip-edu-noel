@@ -1,4 +1,20 @@
 @import "tailwindcss" source(none);
 
+@source "../kiem-tra-test1.html";
+@source "../kiem-tra-test1a.html";
+@source "../kiem-tra-test2.html";
+@source "../kiem-tra-test3.html";
+@source "../kiem-tra-test4.html";
+@source "../kiem-tra-test4a.html";
+@source "../kiem-tra-test5.html";
+@source "../kiem-tra-test6.html";
+@source "../kiem-tra-test7.1.html";
+@source "../kiem-tra-test7.1a.html";
+@source "../kiem-tra-test7.2.html";
+@source "../kiem-tra-test7.2a.html";
+@source "../kiem-tra-test8.html";
+@source "../kiem-tra-test9.html";
+@source "../kiem-tra-test10.html";
+@source "../kiem-tra-test10a.html";
 @source "../kiem-tra.html";
 @source "../kiem-tra1.html";
