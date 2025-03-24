@@ -3504,11 +3504,17 @@ p {
   border-radius: 12px;
   border: 2px solid #4f7cfa;
 }
+.exam1-content4 .drop-zone .dragging {
+  opacity: 1 !important;
+}
 .exam1-content4 .drop-zone:hover {
   background: #f0f0f0;
 }
 .exam1-content4 .drop-zone.dragover {
   background-color: #f0f0f0;
+}
+.exam1-content4 .draggable.dragging {
+  opacity: 0.4;
 }
 
 /* Thanh phát audio giả lập */
