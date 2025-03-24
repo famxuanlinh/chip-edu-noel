@@ -6,7 +6,7 @@
 .exam1 {
   &-zoom {
     @include maxw(1600) {
-      zoom: 0.85;
+      zoom: 0.75;
     }
   }
 
