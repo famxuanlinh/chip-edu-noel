@@ -659,10 +659,10 @@
       gap: 10px;
 
       & .draggable.true {
-        width: calc((200% - 40px) / 4);
+        width: calc((200%) / 5);
       }
       & .draggable.fail {
-        width: calc((200% - 40px) / 4);
+        width: calc((200%) / 5);
       }
     }
 
@@ -687,7 +687,7 @@
     }
 
     & .drop-zone {
-      width: calc((200% - 40px) / 4);
+      width: calc((200%) / 5);
       height: 70px;
       border-radius: 12px;
       background: #eaeaea;

@@ -3292,10 +3292,10 @@ p {
   gap: 10px;
 }
 .exam1-content1 .drop-row .draggable.true {
-  width: calc((200% - 40px) / 4);
+  width: 40%;
 }
 .exam1-content1 .drop-row .draggable.fail {
-  width: calc((200% - 40px) / 4);
+  width: 40%;
 }
 .exam1-content1 .drop-label {
   color: var(--Secondary-Purple, #454575);
@@ -3316,7 +3316,7 @@ p {
   margin-right: 8px;
 }
 .exam1-content1 .drop-zone {
-  width: calc((200% - 40px) / 4);
+  width: 40%;
   height: 70px;
   border-radius: 12px;
   background: #eaeaea;
