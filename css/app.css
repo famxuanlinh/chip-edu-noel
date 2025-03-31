@@ -3256,7 +3256,6 @@ p {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  align-self: stretch;
   border-radius: 12px;
   background: #fff;
   height: 70px;
@@ -3290,8 +3289,13 @@ p {
 .exam1-content1 .drop-row {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
+}
+.exam1-content1 .drop-row .draggable.true {
+  width: calc((200% - 40px) / 4);
+}
+.exam1-content1 .drop-row .draggable.fail {
+  width: calc((200% - 40px) / 4);
 }
 .exam1-content1 .drop-label {
   color: var(--Secondary-Purple, #454575);
@@ -3301,9 +3305,18 @@ p {
   font-weight: 700;
   flex: none;
   line-height: 100%; /* 32px */
+  display: flex;
+  align-items: center;
+}
+.exam1-content1 .drop-label > img {
+  width: 110px;
+  height: 110px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-right: 8px;
 }
 .exam1-content1 .drop-zone {
-  width: 75%;
+  width: calc((200% - 40px) / 4);
   height: 70px;
   border-radius: 12px;
   background: #eaeaea;
