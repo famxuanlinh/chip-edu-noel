@@ -3291,6 +3291,9 @@ p {
   align-items: center;
   gap: 10px;
 }
+.exam1-content1 .drop-row:nth-child(even) {
+  justify-content: end;
+}
 .exam1-content1 .drop-row .draggable.true {
   width: 40%;
 }

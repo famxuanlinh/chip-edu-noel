@@ -658,6 +658,10 @@
       // justify-content: center;
       gap: 10px;
 
+      &:nth-child(even) {
+        justify-content: end;
+      }
+
       & .draggable.true {
         width: calc((200%) / 5);
       }
