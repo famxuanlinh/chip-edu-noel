@@ -339,105 +339,169 @@
         </div>
       </div>
       <div class="slider-wrapper uk-position-relative" style="margin-top: 78px">
-        <!-- <img
-          src="/public/icons/exam-line.png"
-          alt=""
-          class="uk-position-absolute w-full"
-          style="top: 100px"
-        /> -->
-        <div class="slider">
+        <div class="flex items-stretch gap-10">
+          <!-- Cột trái -->
           <div
-            class="lesson-slide !h-full border-2 pt-0 p-5 rounded-2xl bg-white border-black/10 flex justify-center"
+            class="flex-1 border-2 !pt-0 p-5 rounded-2xl bg-white border-black/10 flex justify-center"
             style="width: 540px"
             id="slide-1"
           >
-            <div class="space-y-5" style="flex-direction: column">
-              <div class="flex items-center">
-                <img
-                  class="rounded-full -ml-5"
-                  width="100"
-                  height="100"
-                  src="public/exam2/mic.png"
-                  alt="avatar"
-                />
-                <p class="button-l text-black">Kỹ năng Nói</p>
-              </div>
-              <a
-                uk-toggle=""
-                class="flex-center"
-                style="flex-direction: column"
-                role="button"
-              >
-                <div class="avatar-bg">
+            <div class="flex flex-col justify-between w-full">
+              <div class="space-y-5">
+                <div class="flex items-center">
                   <img
-                    class="rounded-full p-1"
-                    width="160"
-                    height="160"
-                    src="public/images/avatar1.png"
+                    class="rounded-full -ml-5"
+                    width="100"
+                    height="100"
+                    src="public/exam2/mic.png"
                     alt="avatar"
                   />
+                  <p class="button-l text-black">Kỹ năng Nói</p>
                 </div>
-                <p class="grayscale-dark-gray button-l mt-5">Cô Tina</p>
-              </a>
-              <div class="body-m !leading-[160%] text-[#252525]">
-                Bạn sẽ vào lớp học online trả lời câu hỏi của Giáo viên và được
-                chấm điểm. Nhớ khi đến giờ, bấm <strong>"Vào lớp"</strong> để
-                bắt đầu nhé!
-              </div>
 
-              <div>
-                <div
-                  class="w-full flex-center button-shadow bg-greenscale-light-green px-2 py-3 space-y-3"
-                  style="flex-direction: column"
-                >
-                  <div class="flex-center">
+                <div class="flex flex-col items-center">
+                  <div class="avatar-bg">
                     <img
-                      width="32"
-                      height="32"
-                      src="public/icons/clock-color.svg"
+                      class="rounded-full p-1"
+                      width="160"
+                      height="160"
+                      src="public/images/avatar1.png"
                       alt="avatar"
                     />
-                    <p class="button-l grayscale-dark-gray ml-3">2 ngày nữa</p>
                   </div>
+                  <p class="grayscale-dark-gray button-l mt-5">Cô Tina</p>
+                </div>
 
+                <div class="body-m !leading-[160%] text-[#252525]">
+                  Bạn sẽ vào lớp học online trả lời câu hỏi của Giáo viên và
+                  được chấm điểm. Nhớ khi đến giờ, bấm
+                  <strong>"Vào lớp"</strong> để bắt đầu nhé!
+                </div>
+
+                <div>
                   <div
-                    class="flex-items-center w-full bg-grayscale-white inner-blur-inner-b4-20"
-                    style="
-                      padding: 10px 8px;
-                      justify-content: space-between;
-                      border-radius: 12px;
-                      border: 2px solid rgba(0, 0, 0, 0.05);
-                    "
+                    class="w-full flex flex-col items-center button-shadow bg-greenscale-light-green px-2 py-3 space-y-3"
                   >
-                    <div class="flex-items-center button-m grayscale-dark-gray">
+                    <div class="flex items-center">
                       <img
-                        width="24"
-                        height="24"
-                        class="mr-2"
-                        src="public/icons/clock.svg"
+                        width="32"
+                        height="32"
+                        src="public/icons/clock-color.svg"
+                        alt="clock"
+                      />
+                      <p class="button-l grayscale-dark-gray ml-3">
+                        2 ngày nữa
+                      </p>
+                    </div>
+
+                    <div
+                      class="flex items-center w-full bg-grayscale-white inner-blur-inner-b4-20 justify-between"
+                      style="
+                        padding: 10px 8px;
+                        border-radius: 12px;
+                        border: 2px solid rgba(0, 0, 0, 0.05);
+                      "
+                    >
+                      <div
+                        class="flex items-center button-m grayscale-dark-gray"
+                      >
+                        <img
+                          width="24"
+                          height="24"
+                          class="mr-2"
+                          src="public/icons/clock.svg"
+                          alt="clock"
+                        />04:59
+                      </div>
+                      <div
+                        class="flex items-center caption-m grayscale-dark-gray"
+                      >
+                        <img
+                          width="24"
+                          height="24"
+                          class="mr-2"
+                          src="public/icons/calendar-gray.svg"
+                          alt="calendar"
+                        />Thứ 2 - 12/12/2024
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div
+                    class="w-full flex-center button-shadow bg-greenscale-light-green p-2"
+                    style="flex-direction: column"
+                  >
+                    <div
+                      class="flex justify-center items-center w-full bg-grayscale-white inner-blur-inner-b4-20"
+                      style="
+                        padding: 10px 8px;
+                        border-radius: 12px;
+                        border: 2px solid rgba(0, 0, 0, 0.05);
+                      "
+                    >
+                      <div class="flex-center caption-s grayscale-dark-gray">
+                        20:00 - Thứ 2 12/12/2024
+                      </div>
+                    </div>
+                  </div> -->
+                  <!-- <div
+                    class="flex-center button-shadow bg-primary-yellow px-3 py-4 space-y-3"
+                    style="flex-direction: column"
+                  >
+                    <div class="flex-center">
+                      <img
+                        width="60"
+                        height="60"
+                        src="public/icons/rocket.svg"
                         alt="avatar"
-                      />04:59
+                      />
+                      <p class="button-l grayscale-white ml-3">Vào lớp</p>
                     </div>
                     <div
-                      class="flex-items-center caption-m grayscale-dark-gray"
+                      class="flex-items-center w-full bg-grayscale-white inner-blur-inner-b4-20"
+                      style="
+                        padding: 10px 8px;
+                        justify-content: space-between;
+                        border-radius: 12px;
+                        border: 2px solid rgba(0, 0, 0, 0.05);
+                      "
                     >
-                      <img
-                        width="24"
-                        height="24"
-                        class="mr-2"
-                        src="public/icons/calendar-gray.svg"
-                        alt="avatar"
-                      />Thứ 2 - 12/12/2024
+                      <div
+                        class="flex-items-center button-m grayscale-dark-gray"
+                      >
+                        <img
+                          width="24"
+                          height="24"
+                          class="mr-2"
+                          src="public/icons/clock.svg"
+                          alt="avatar"
+                        />04:59
+                      </div>
+                      <div
+                        class="flex-items-center caption-m grayscale-dark-gray"
+                      >
+                        <img
+                          width="24"
+                          height="24"
+                          class="mr-2"
+                          src="public/icons/calendar-gray.svg"
+                          alt="avatar"
+                        />Thứ 2 - 12/12/2024
+                      </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="space-y-10">
-            <div style="width: 540px">
-              <div class="flex-items-center space-x-5">
+          <!-- Cột phải -->
+          <div
+            class="flex-1 flex flex-col justify-between"
+            style="width: 540px"
+          >
+            <!-- Phần đầu bên phải -->
+            <div class="mb-10">
+              <div class="flex items-center space-x-5">
                 <div
                   class="level-modal-tag bg-grayscale-white"
                   style="height: 160px; width: 172px"
@@ -451,7 +515,7 @@
                     alt="tag"
                   />
                 </div>
-                <div class="space-y-10">
+                <div class="space-y-10 flex-1">
                   <div
                     class="level-button-unit w-full bg-grayscale-white"
                     style="height: 60px"
@@ -473,12 +537,12 @@
                 </div>
               </div>
             </div>
+
+            <!-- Phần dưới bên phải: cần bằng chiều cao với bên trái -->
             <div
-              class="lesson-slide !h-fit pt-0 !mr-0 border-2 p-5 rounded-2xl bg-white border-black/10 flex justify-center"
-              style="width: 540px"
-              id="slide-1"
+              class="border-2 !pt-0 p-5 rounded-2xl bg-white border-black/10 flex justify-center h-full"
             >
-              <div class="flex flex-col h-full justify-between">
+              <div class="flex flex-col justify-between w-full">
                 <div class="space-y-5">
                   <div class="flex items-center">
                     <img
@@ -495,18 +559,18 @@
                     Bạn sẽ làm bài kiểm tra trên máy, gồm các phần Nghe hiểu,
                     Đọc - Viết.
                   </div>
+
                   <div class="flex flex-col items-center">
                     <div class="text-xl font-bold">Thời gian làm</div>
                     <div class="text-[#FF9800] heading-h3">30:00</div>
                   </div>
                 </div>
-                <a
-                  class="grayscale-white mt-12.5 btn-animation flex justify-center items-center heading-h3 px-5 button-hover button-primary bg-primary-green"
-                  href="#modal-center"
-                  uk-toggle
+
+                <button
+                  class="grayscale-white mt-12.5 btn-animation !h-20 flex justify-center items-center heading-h3 px-5 button-hover button-primary bg-primary-green"
                 >
                   Làm bài kiểm tra
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -696,7 +760,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
-    <script>
+    <!-- <script>
       // Slider dragging
       const slider = document.querySelector(".slider");
       let isDown = false;
@@ -796,6 +860,6 @@
 
         UIkit.modal(dropdownElement).hide(0);
       }
-    </script>
+    </script> -->
   </body>
 </html>

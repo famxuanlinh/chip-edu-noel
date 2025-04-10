@@ -250,6 +250,9 @@
   .my-6 {
     margin-block: calc(var(--spacing) * 6);
   }
+  .-mt-5 {
+    margin-top: calc(var(--spacing) * -5);
+  }
   .-mt-18\.5 {
     margin-top: calc(var(--spacing) * -18.5);
   }
@@ -344,6 +347,9 @@
     width: calc(var(--spacing) * 16);
     height: calc(var(--spacing) * 16);
   }
+  .\!h-20 {
+    height: calc(var(--spacing) * 20) !important;
+  }
   .\!h-50 {
     height: calc(var(--spacing) * 50) !important;
   }
@@ -359,8 +365,17 @@
   .\!h-full {
     height: 100% !important;
   }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
+  }
   .h-50 {
     height: calc(var(--spacing) * 50);
+  }
+  .h-\[60px\] {
+    height: 60px;
+  }
+  .h-\[80px\] {
+    height: 80px;
   }
   .h-full {
     height: 100%;
@@ -395,8 +410,14 @@
   .w-\[55\%\] {
     width: 55%;
   }
+  .w-\[80px\] {
+    width: 80px;
+  }
   .w-\[350px\] {
     width: 350px;
+  }
+  .w-\[540px\] {
+    width: 540px;
   }
   .w-fit {
     width: fit-content;
@@ -436,6 +457,9 @@
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
+  .cursor-auto {
+    cursor: auto;
+  }
   .cursor-pointer {
     cursor: pointer;
   }
@@ -463,6 +487,9 @@
   .items-start {
     align-items: flex-start;
   }
+  .items-stretch {
+    align-items: stretch;
+  }
   .justify-between {
     justify-content: space-between;
   }
@@ -477,6 +504,9 @@
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
@@ -639,6 +669,9 @@
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -657,8 +690,14 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
+  }
+  .\!pt-0 {
+    padding-top: calc(var(--spacing) * 0) !important;
   }
   .pt-0 {
     padding-top: calc(var(--spacing) * 0);
@@ -707,6 +746,9 @@
   }
   .text-center {
     text-align: center;
+  }
+  .text-left {
+    text-align: left;
   }
   .text-2xl {
     font-size: var(--text-2xl);
