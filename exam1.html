@@ -580,11 +580,13 @@
                   </div>
                 </div>
 
-                <button
+                <a
+                  href="#congrats-modal"
+                  uk-toggle
                   class="grayscale-white mt-12.5 btn-animation !h-20 flex justify-center items-center heading-h3 px-5 button-hover button-primary bg-primary-green"
                 >
                   Làm bài kiểm tra
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -601,6 +603,41 @@
           alt=""
           class="uk-position-center"
         />
+      </div>
+
+      <div
+        id="congrats-modal"
+        class="uk-flex-top congrats-modal-wrapper"
+        uk-modal
+      >
+        <div
+          style="padding: 0 !important; margin-top: 0 !important"
+          class="congrats-modal uk-modal-dialog rounded-5 uk-modal-body uk-margin-auto-vertical uk-position-relative p-0 m-0"
+        >
+          <div
+            class="flex-items-center result-embed-header"
+            style="
+              justify-content: space-between;
+              border-bottom: 1px solid #0000001a;
+            "
+          >
+            <p></p>
+
+            <button
+              type="button"
+              onclick="hideModal('congrats-modal')"
+              class="rounded-full flex-justify-center"
+              style="background-color: transparent"
+            >
+              <img src="public/icons/x2.svg" width="40" height="40" />
+            </button>
+          </div>
+          <embed
+            type="text/html"
+            src="/ket-qua-hoc-thu1.html"
+            class="w-full h-full rounded-b-5 result-embed"
+          />
+        </div>
       </div>
 
       <div id="modal-center" class="uk-flex-top" uk-modal>

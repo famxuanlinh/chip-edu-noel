@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chúc mừng</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/output.css" />
+
+    <style></style>
+  </head>
+  <body>
+    <div class="result-header-1">Kết quả học thử</div>
+    <!-- <div class="flex-justify-center">
+      <img
+        class="header-img top"
+        src="public/images/header-result.png"
+        alt=""
+      />
+    </div> -->
+
+    <div class="flex-justify-center share-button">
+      <button
+        class="button-primary btn-animation flex-center bg-primary-green px-5 grayscale-white button-m"
+        style="height: 56px; width: fit-content"
+      >
+        Chia sẻ bài đánh giá
+      </button>
+    </div>
+    <div class="flex">
+      <div class="result-sidebar grayscale-dark-gray">
+        <div>
+          <p class="heading-h3 !text-[22px] p-10">Báo cáo học tập Level 1A</p>
+          <ol>
+            <!-- <li class="border-bottom">
+              <a
+                class="flex-items-center"
+                href="#try-study-result"
+                id="link-try-study-result"
+                style="justify-content: space-between"
+                ><span></span>
+                <img
+                  style="transform: rotate(90deg)"
+                  src="public/icons/arrow-up.svg"
+                  width="28"
+                  height="28"
+                  alt=""
+              /></a>
+            </li> -->
+            <li
+              class="border-bottom flex"
+              style="justify-content: space-between"
+            >
+              <a
+                class="flex-items-center"
+                href="#try-study-overal"
+                id="link-try-study-overal"
+                style="justify-content: space-between"
+                ><span> Kết quả </span>
+                <img
+                  style="transform: rotate(90deg)"
+                  src="public/icons/arrow-up.svg"
+                  width="28"
+                  height="28"
+                  alt=""
+              /></a>
+            </li>
+            <li
+              class="border-bottom flex"
+              style="justify-content: space-between"
+            >
+              <a
+                class="flex-items-center"
+                href="#try-study-feedback"
+                id="link-try-study-feedback"
+                style="justify-content: space-between"
+                ><span> Đánh giá kỳ học </span>
+                <img
+                  style="transform: rotate(90deg)"
+                  src="public/icons/arrow-up.svg"
+                  width="28"
+                  height="28"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <a
+                class="flex-items-center"
+                href="#try-study-goal"
+                id="link-try-study-goal"
+                style="justify-content: space-between"
+                ><span>Lộ trình tiếp theo</span>
+                <img
+                  style="transform: rotate(90deg)"
+                  src="public/icons/arrow-up.svg"
+                  width="28"
+                  height="28"
+                  alt=""
+              /></a>
+            </li>
+          </ol>
+        </div>
+
+        <div class="mb-10 flex-justify-center">
+          <button
+            class="button-primary btn-animation flex-center bg-primary-green px-5 grayscale-white button-m"
+            style="height: 56px; width: fit-content"
+          >
+            Chia sẻ bài đánh giá
+          </button>
+        </div>
+      </div>
+      <div class="result-content">
+        <div class="result-content-1 !pt-0">
+          <!-- Kết quả -->
+
+          <div style="scroll-snap-align: start">
+            <!-- Tổng quan -->
+            <section id="try-study-overal" class="pb-10">
+              <div class="flex-justify-center">
+                <img class="header-img" src="public/exam2/title1.png" alt="" />
+              </div>
+              <div
+                class="mt-10 grayscale-dark-gray grid grid-cols-2 gap-10 pb-10"
+              >
+                <div
+                  class="col-span-1 px-3 py-5 rounded-10 drop-shadow-button-d bg-[#D2F0F6]"
+                >
+                  <p class="heading-h4 mb-5 text-center">Kỹ năng Nghe hiểu</p>
+                  <div
+                    style="font-weight: 800"
+                    class="game-b-l p-10 result-card result-list-2 text-[#00B26B] text-center rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
+                  >
+                    60/100
+                  </div>
+                </div>
+                <div
+                  class="col-span-1 px-3 result-card py-5 rounded-10 drop-shadow-button-d bg-yellowscale-light-yellow-2"
+                >
+                  <p class="heading-h4 mb-5 text-center">Điểm cần cải thiện</p>
+                  <div
+                    style="font-weight: 800"
+                    class="game-b-l p-10 result-list-2 result-card text-[#00B26B] text-center rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
+                  >
+                    60/100
+                  </div>
+                </div>
+                <div
+                  class="col-span-2 px-3 py-5 rounded-10 drop-shadow-button-d bg-greenscale-light-green"
+                >
+                  <p class="heading-h4 mb-5 text-center">Kỹ năng Nói</p>
+                  <div
+                    style="font-weight: 800"
+                    class="game-b-l p-10 result-card result-list-2 text-[#00B26B] text-center rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
+                  >
+                    60/100
+                  </div>
+                  <div
+                    style="font-weight: 800"
+                    class="game-b-l mt-5 p-10 result-card result-list-2 text-center rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
+                  >
+                    <div
+                      class="result-stats parent-box bg-grayscale-white flex-1"
+                    >
+                      <div class="space-y-6">
+                        <div class="result-row">
+                          <span class="result-name2">Phát âm</span>
+                          <div class="progress-bar2">
+                            <div class="bar" style="--bar-value: 80"></div>
+                            <p class="value">80%</p>
+                          </div>
+                        </div>
+                        <div class="result-row">
+                          <span class="result-name2">Từ vựng</span>
+                          <div class="progress-bar2">
+                            <div class="bar" style="--bar-value: 100"></div>
+                            <p class="value">100%</p>
+                          </div>
+                        </div>
+                        <div class="result-row">
+                          <span class="result-name2">Ngữ pháp</span>
+                          <div class="progress-bar2">
+                            <div class="bar" style="--bar-value: 40"></div>
+                            <p class="value">40%</p>
+                          </div>
+                        </div>
+                        <div class="result-row">
+                          <span class="result-name2">Phản xạ & trôi chảy</span>
+                          <div class="progress-bar2">
+                            <div class="bar" style="--bar-value: 38"></div>
+                            <p class="value">38%</p>
+                          </div>
+                        </div>
+                        <div class="result-row">
+                          <span class="result-name2">Thái độ học tập</span>
+                          <div class="progress-bar2">
+                            <div class="bar" style="--bar-value: 80"></div>
+                            <p class="value">80%</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-2">
+                  <div class="flex-items-center space-x-3 mb-3">
+                    <img
+                      src="public/images/avatar1.png"
+                      height="60"
+                      width="60"
+                      class="rounded-full"
+                      alt=""
+                    />
+                    <p class="button-l grayscale-dark-gray">
+                      Nhận xét của cô Tina
+                    </p>
+                  </div>
+
+                  <div
+                    class="flex-center !rounded-tl-none py-3 px-5 w-full grayscale-dark-gray rounded-5 p-5"
+                    style="
+                      flex-direction: column;
+                      border: 2px solid #0000001a;
+                      background-color: #0000000d;
+                    "
+                  >
+                    He loves to participate when he knows the answer. He always
+                    works very diligently when he is focused. I see him use new
+                    words he has learned in his work constantly. As long as he
+                    is not shy to speak English, his speaking skills will
+                    continue to grow and improve as an English student. When he
+                    practices his reading, he shows a better understanding of
+                    the material.I am excited about his potential and I can't
+                    wait to see how he will grow in the future.
+                  </div>
+                  <button
+                    class="body-xs flex mt-1 w-full"
+                    style="
+                      justify-content: end;
+                      color: #00000099;
+                      background-color: transparent;
+                    "
+                  >
+                    Dịch tiếng Việt
+                  </button>
+                </div>
+              </div>
+            </section>
+            <!-- Đánh giá -->
+            <section id="try-study-feedback">
+              <div class="flex-justify-center">
+                <img class="header-img" src="public/exam2/title2.png" alt="" />
+              </div>
+              <div
+                class="uk-position-relative grid grid-cols-2 mt-10 gap-10 grayscale-dark-gray pb-10"
+              >
+                <!-- <img
+                  class="uk-position-bottom-right result-desktop"
+                  src="public/images/feedback-bg.png"
+                  alt=""
+                  style="margin-right: 0 !important; z-index: -1"
+                /> -->
+                <div
+                  class="px-3 col-span-2 result-card py-5 rounded-10 drop-shadow-button-d bg-[#D2F0F6]"
+                >
+                  <p class="heading-h4 mb-5 text-center">
+                    Kiến thức đã được học
+                  </p>
+                  <ul
+                    style="list-style: disc; line-height: 160%"
+                    class="body-m p-10 result-list-2 result-card rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
+                  >
+                    <li>
+                      Con đã học được một lượng từ vựng liên quan đến các chủ
+                      đề: Hoa quả, Động vật, Lớp học, Bạn bè, Nhà cửa, Hoạt động
+                      vui chơi, Đồ ăn, Nghề nghiệp
+                    </li>
+                    <li>
+                      How many apples? - Three apples.<br />Is it a dog? -
+                      Yes/No.<br />Who's this? - He's my teacher.<br />Are you
+                      happy? - Yes, I am/No, I am not.<br />This is my
+                      bedroom.<br />I can run. I can sing.<br />I like fish. I
+                      don't like cheese.<br />She is a doctor.<br />Is he a
+                      pilot? - Yes, he is/No, he isn't.
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="px-3 py-5 col-span-1 h-fit rounded-10 drop-shadow-button-d bg-greenscale-light-green"
+                >
+                  <p class="heading-h4 mb-5 text-center">Điểm mạnh</p>
+                  <ul
+                    style="list-style: disc; line-height: 160%"
+                    class="body-m p-10 result-card result-list-2 rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
+                  >
+                    <li>
+                      Trong suốt buổi học, con tập trung và tích cực làm theo
+                      hướng dẫn của giáo viên trong lớp.
+                    </li>
+                    <li>
+                      Con có thể phát âm tốt các từ sau đây khi được giáo viên
+                      hướng dẫn (có thể bật âm đuôi của các từ một cách rõ ràng,
+                      phát âm đúng trọng âm của từ)
+                      <p>- Scales</p>
+                      <p>- Gills</p>
+                    </li>
+                    <li>Con có ngữ điệu thoải mái, tự nhiên khi nói.</li>
+                    <li>
+                      Con đã có khả năng sử dụng nhiều câu ghép/câu phức khi
+                      tương tác.
+                    </li>
+                    <li>
+                      Con hiểu được phần lớn những yêu cầu/ câu hỏi của giáo
+                      viên.
+                    </li>
+                    <li>
+                      Con có thể trả lời được các câu hỏi của giáo viên, tuy
+                      nhiên con chưa mở rộng được ý tưởng của mình.
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="px-3 col-span-1 h-fit result-card py-5 rounded-10 drop-shadow-button-d bg-yellowscale-light-yellow-2"
+                >
+                  <p class="heading-h4 mb-5 text-center">Điểm cần cải thiện</p>
+                  <ul
+                    style="list-style: disc; line-height: 160%"
+                    class="body-m p-10 result-list-2 result-card rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
+                  >
+                    <li>
+                      Trong suốt buổi học, con tập trung và tích cực làm theo
+                      hướng dẫn của giáo viên trong lớp.
+                    </li>
+                    <li>
+                      Con có thể phát âm tốt các từ sau đây khi được giáo viên
+                      hướng dẫn (có thể bật âm đuôi của các từ một cách rõ ràng,
+                      phát âm đúng trọng âm của từ).
+                    </li>
+                    <li>Con có ngữ điệu thoải mái, tự nhiên khi nói.</li>
+                    <li>
+                      Con đã có khả năng sử dụng nhiều câu ghép/câu phức khi
+                      tương tác.
+                    </li>
+                    <li>
+                      Con hiểu được phần lớn những yêu cầu/câu hỏi của giáo
+                      viên.
+                    </li>
+                    <li>
+                      Con có thể trả lời được các câu hỏi của giáo viên, tuy
+                      nhiên con chưa mở rộng được ý tưởng của mình.
+                    </li>
+                    <li>
+                      Con đã có khả năng sử dụng nhiều câu ghép/câu phức khi
+                      tương tác.
+                    </li>
+                    <li>
+                      Con hiểu được phần lớn những yêu cầu/câu hỏi của giáo
+                      viên.
+                    </li>
+                    <li>
+                      Con có thể trả lời được các câu hỏi của giáo viên, tuy
+                      nhiên con chưa mở rộng được ý tưởng của mình.
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="px-3 relative col-span-2 result-card py-5 rounded-10 drop-shadow-button-d bg-[#EEF3FC]"
+                >
+                  <img
+                    class="uk-position-top-right result-desktop"
+                    src="public/images/feedback-bg.png"
+                    alt=""
+                  />
+                  <p class="heading-h4 mb-5 text-center">Gợi ý học tập</p>
+                  <ul
+                    style="list-style: disc; line-height: 160%"
+                    class="body-m p-10 result-list-2 result-card rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
+                  >
+                    <li>
+                      Con tiếp tục phát huy những điểm mạnh của bản thân và cải
+                      thiện những điểm còn đang hạn chế để đạt kết quả tốt.
+                    </li>
+                    <li>
+                      Con được mở rộng vốn từ thuộc các lĩnh vực chuyên sâu hơn
+                      như địa lý, lịch sử, văn học, sinh học, toán học, sức
+                      khỏe, công nghệ, quan hệ gia đình và xã hội cùng các thành
+                      ngữ thông dụng trong giao tiếp.
+                    </li>
+                    <li>
+                      Con được luyện tập, chỉnh sửa phát âm, ngữ điệu để đạt
+                      được hiệu quả giao tiếp.
+                    </li>
+                    <li>
+                      Ở cấp độ này, con có thể nghe, đọc, hiểu nhiều loại thông
+                      tin, vận dụng linh hoạt cấu trúc từ vựng và ngữ pháp để
+                      phát triển, sắp xếp và diễn đạt các ý tưởng một cách
+                      logic, rành mạch.
+                    </li>
+                    <li>
+                      Ngoài ra, con có nhận thức về cách ứng xử và trách nhiệm
+                      đối với gia đình, cộng đồng. Đồng thời, được trang bị một
+                      số kỹ năng mềm phục vụ cho việc học tập và cuộc sống hàng
+                      ngày.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <!-- Định hướng học tập -->
+            <section id="try-study-goal" class="pb-16">
+              <div class="flex-justify-center">
+                <img class="header-img" src="public/exam2/title3.png" alt="" />
+              </div>
+              <div class="flex items-end mt-10 grayscale-dark-gray">
+                <div class="w-[332px]">
+                  <img src="public/exam2/left-image.png" alt="" />
+                </div>
+                <div class="space-y-5 flex-1">
+                  <div
+                    class="px-3 py-5 rounded-10 drop-shadow-button-d bg-[#F2F2EF]"
+                  >
+                    <div
+                      class="p-10 result-card rounded-8 inner-blur-inner-b4-20 bg-grayscale-white"
+                    >
+                      <ul
+                        style="list-style: disc; line-height: 160%"
+                        class="body-m result-list"
+                      >
+                        <li>
+                          Con tiếp tục phát huy những điểm mạnh của bản thân và
+                          cải thiện những điểm còn đang hạn chế để đạt kết quả
+                          tốt.
+                        </li>
+                        <li>
+                          Con được mở rộng vốn từ thuộc các lĩnh vực chuyên sâu
+                          hơn như địa lý, lịch sử, văn học, sinh học, toán học,
+                          sức khỏe, công nghệ, quan hệ gia đình và xã hội cùng
+                          các thành ngữ thông dụng trong giao tiếp.
+                        </li>
+                        <li>
+                          Con được luyện tập, chỉnh sửa phát âm, ngữ điệu để đạt
+                          được hiệu quả giao tiếp.
+                        </li>
+                        <li>
+                          Ở cấp độ này, con có thể nghe, đọc, hiểu nhiều loại
+                          thông tin, vận dụng linh hoạt cấu trúc từ vựng và ngữ
+                          pháp để phát triển, sắp xếp và diễn đạt các ý tưởng
+                          một cách logic, rành mạch.
+                        </li>
+                      </ul>
+                      <p class="body-m mt-10">
+                        Ngoài ra, con có nhận thức về cách ứng xử và trách nhiệm
+                        đối với gia đình, cộng đồng. Đồng thời, được trang bị
+                        một số kỹ năng mềm phục vụ cho việc học tập và cuộc sống
+                        hàng ngày.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const navLinks = document.querySelectorAll(".result-sidebar a");
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (event) => {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+            const targetId = link.getAttribute("href").substring(1); // Lấy id từ href
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+              targetSection.scrollIntoView({
+                behavior: "smooth", // Cuộn mượt
+                block: "start", // Đưa phần tử lên đầu viewport
+              });
+            }
+          });
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".result-sidebar a");
+
+        const observerOptions = {
+          root: null, // Sử dụng viewport hiện tại
+          rootMargin: "0px",
+          threshold: 0.5, // Kích hoạt khi 50% của section xuất hiện trong viewport
+        };
+
+        const observerCallback = (entries) => {
+          entries.forEach((entry) => {
+            const link = document.querySelector(
+              `.result-sidebar a[href="#${entry.target.id}"]`
+            );
+            if (entry.isIntersecting) {
+              link.classList.add("result-active-link");
+            } else {
+              link.classList.remove("result-active-link");
+            }
+          });
+        };
+
+        const observer = new IntersectionObserver(
+          observerCallback,
+          observerOptions
+        );
+
+        sections.forEach((section) => observer.observe(section));
+      });
+
+      const radarCtx = document.getElementById("radarChart").getContext("2d");
+      new Chart(radarCtx, {
+        type: "radar",
+        data: {
+          labels: [
+            ["Tập trung & tích cực"], // Split into two lines
+            ["Ngôn ngữ", "chính xác"], // Split into two lines
+            ["Phát âm", "chuẩn"], // Split into two lines
+            ["Sáng tạo", "& linh hoạt"], // Split into two lines
+            ["Tự tin", "giao tiếp"], // Split into two lines
+          ],
+          datasets: [
+            {
+              label: "Điểm đánh giá",
+              data: [8, 6, 7, 5, 4],
+              backgroundColor: "rgba(0, 200, 104, 0.5)", // 50% opacity
+              pointBackgroundColor: "transparent",
+              borderColor: "transparent",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            // tooltip: { enabled: false },
+          },
+          scales: {
+            r: {
+              angleLines: { display: true },
+              grid: {
+                circular: true, // Make the grid circular
+              },
+              suggestedMin: 0,
+              suggestedMax: 10,
+              ticks: {
+                display: false, // Hide inner axis labels
+                stepSize: 2, // Increase step size to 5
+                beginAtZero: true, // Ensure the axis starts at 0
+                max: 10,
+              },
+              pointLabels: {
+                font: {
+                  size: 13, // Adjust font size
+                },
+                color: "#252525",
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
