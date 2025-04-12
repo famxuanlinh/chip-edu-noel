@@ -375,11 +375,11 @@
                 <div
                   class="px-3 relative col-span-2 result-card py-5 rounded-10 drop-shadow-button-d bg-[#EEF3FC]"
                 >
-                  <img
+                  <!-- <img
                     class="uk-position-top-right result-desktop"
                     src="public/images/feedback-bg.png"
                     alt=""
-                  />
+                  /> -->
                   <p class="heading-h4 mb-5 text-center">Gợi ý học tập</p>
                   <ul
                     style="list-style: disc; line-height: 160%"
@@ -503,7 +503,7 @@
         const observerOptions = {
           root: null, // Sử dụng viewport hiện tại
           rootMargin: "0px",
-          threshold: 0.5, // Kích hoạt khi 50% của section xuất hiện trong viewport
+          threshold: 0.3, // Kích hoạt khi 50% của section xuất hiện trong viewport
         };
 
         const observerCallback = (entries) => {

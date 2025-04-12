@@ -192,7 +192,10 @@
                   />
                   <span class="flex-1 flex-center"> Dự án cá nhân</span>
                 </button>
-                <button
+                <a
+                  href="#result-modal"
+                  uk-toggle
+                  onclick="hideDropdown()"
                   class="button-primary flex-center w-full bg-greenscale-light-green px-5 grayscale-dark-gray button-l"
                   style="height: 60px"
                 >
@@ -203,7 +206,7 @@
                     alt=""
                   />
                   <span class="flex-1 flex-center"> Thành tích</span>
-                </button>
+                </a>
                 <button
                   class="button-primary flex-center w-full bg-primary-green px-5 grayscale-white button-l"
                   style="height: 60px"
@@ -640,6 +643,259 @@
         </div>
       </div>
 
+      <div
+        id="certificate-modal"
+        class="uk-flex-top congrats-modal-wrapper"
+        uk-modal
+      >
+        <div
+          style="padding: 0 !important; margin-top: 0 !important"
+          class="congrats-modal uk-modal-dialog !h-full rounded-5 uk-modal-body uk-margin-auto-vertical uk-position-relative p-0 m-0"
+        >
+          <div
+            class="flex-items-center result-embed-header"
+            style="justify-content: space-between"
+          >
+            <a href="#result-modal" uk-toggle class="project-header-button"
+              ><img src="/public/icons/arrow-left.svg" alt="icon arrow"
+            /></a>
+
+            <button
+              type="button"
+              onclick="hideModal('certificate-modal')"
+              class="rounded-full flex-justify-center"
+              style="background-color: transparent"
+            >
+              <img src="public/icons/x2.svg" width="40" height="40" />
+            </button>
+          </div>
+          <div class="p-10 pt-0 flex-1">
+            <div
+              class="flex justify-center !h-[calc(100vh-268px)] 2xl:!h-[calc(100vh-360px)]"
+            >
+              <img
+                src="public/exam2/certificate.png"
+                class="object-contain"
+                alt="image-upload"
+              />
+            </div>
+
+            <div class="flex-justify-center mt-10">
+              <div class="flex-items-center space-x-10 lesson-learned-buttons">
+                <button
+                  class="button-primary btn-animation grayscale-dark-gray flex-center bg-greenscale-light-green px-5 grayscale-white button-l"
+                  style="height: 60px; width: 340px"
+                >
+                  <img
+                    src="public/icons/video.svg"
+                    class="mr-2"
+                    width="40"
+                    height="40"
+                    alt="upload"
+                  />
+                  Báo cáo học tập
+                </button>
+
+                <button
+                  class="button-primary btn-animation grayscale-dark-gray flex-center bg-greenscale-light-green px-5 grayscale-white button-l"
+                  style="height: 60px; width: 340px"
+                >
+                  <img
+                    src="public/icons/download.svg"
+                    class="mr-2"
+                    width="40"
+                    height="40"
+                    alt="upload"
+                  />
+                  Tải xuống
+                </button>
+                <button
+                  class="button-primary btn-animation grayscale-dark-gray flex-center bg-greenscale-light-green px-5 grayscale-white button-l"
+                  style="height: 60px; width: 340px"
+                >
+                  <img
+                    src="public/icons/download.svg"
+                    class="mr-2"
+                    width="40"
+                    height="40"
+                    alt="upload"
+                  />
+                  Chia sẻ
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="result-modal"
+        class="uk-flex-top congrats-modal-wrapper"
+        uk-modal
+      >
+        <div
+          style="padding: 0 !important; margin-top: 0 !important"
+          class="congrats-modal !h-full uk-modal-dialog rounded-5 uk-modal-body uk-margin-auto-vertical uk-position-relative p-0 m-0"
+        >
+          <div
+            class="flex-items-center result-embed-header"
+            style="justify-content: space-between"
+          >
+            <p></p>
+            <p class="heading-h3 text-[#252525]">Thành tích học tập</p>
+
+            <button
+              type="button"
+              onclick="hideModal('result-modal')"
+              class="rounded-full flex-justify-center"
+              style="background-color: transparent"
+            >
+              <img src="public/icons/x2.svg" width="40" height="40" />
+            </button>
+          </div>
+          <div class="p-10 pt-0">
+            <div
+              id="project-done"
+              class="flex-items-center pt-0 space-x-10 !h-[calc(100vh-160px)] 2xl:!h-[calc(100vh-240px)] project-upload-wrapper-image"
+              style="padding-bottom: 14px"
+            >
+              <a href="#certificate-modal" uk-toggle class="relative flex-none">
+                <img
+                  src="public/exam2/0.png"
+                  width="400"
+                  height="400"
+                  class="object-contain"
+                  alt="image-upload"
+                />
+                <img
+                  src="public/exam2/new.png"
+                  width="108"
+                  height="60"
+                  class="object-contain absolute -top-5.5 -right-4"
+                  alt="image-upload"
+                />
+              </a>
+              <a href="#certificate-modal" uk-toggle class="relative flex-none">
+                <img
+                  src="public/exam2/1.png"
+                  width="400"
+                  height="400"
+                  class="object-contain"
+                  alt="image-upload"
+                />
+              </a>
+              <a href="#certificate-modal" uk-toggle class="relative flex-none">
+                <img
+                  src="public/exam2/2.png"
+                  width="400"
+                  height="400"
+                  class="object-contain"
+                  alt="image-upload"
+                />
+              </a>
+              <a href="#certificate-modal" uk-toggle class="relative flex-none">
+                <img
+                  src="public/exam2/3.png"
+                  width="400"
+                  height="400"
+                  class="object-contain"
+                  alt="image-upload"
+                />
+              </a>
+              <a href="#certificate-modal" uk-toggle class="relative flex-none">
+                <img
+                  src="public/exam2/4.png"
+                  width="400"
+                  height="400"
+                  class="object-contain"
+                  alt="image-upload"
+                />
+              </a>
+              <a href="#certificate-modal" uk-toggle class="relative flex-none">
+                <img
+                  src="public/exam2/5.png"
+                  width="400"
+                  height="400"
+                  class="object-contain"
+                  alt="image-upload"
+                />
+              </a>
+              <a href="#certificate-modal" uk-toggle class="relative flex-none">
+                <img
+                  src="public/exam2/6.png"
+                  width="400"
+                  height="400"
+                  class="object-contain"
+                  alt="image-upload"
+                />
+              </a>
+              <a href="#certificate-modal" uk-toggle class="relative flex-none">
+                <img
+                  src="public/exam2/7.png"
+                  width="400"
+                  height="400"
+                  class="object-contain"
+                  alt="image-upload"
+                />
+              </a>
+              <a href="#certificate-modal" uk-toggle class="relative flex-none">
+                <img
+                  src="public/exam2/8.png"
+                  width="400"
+                  height="400"
+                  class="object-contain"
+                  alt="image-upload"
+                />
+              </a>
+              <a href="#certificate-modal" uk-toggle class="relative flex-none">
+                <img
+                  src="public/exam2/9.png"
+                  width="400"
+                  height="400"
+                  class="object-contain"
+                  alt="image-upload"
+                />
+              </a>
+              <a href="#certificate-modal" uk-toggle class="relative flex-none">
+                <img
+                  src="public/exam2/10.png"
+                  width="400"
+                  height="400"
+                  class="object-contain"
+                  alt="image-upload"
+                />
+              </a>
+              <a href="#certificate-modal" uk-toggle class="relative flex-none">
+                <img
+                  src="public/exam2/11.png"
+                  width="400"
+                  height="400"
+                  class="object-contain"
+                  alt="image-upload"
+                />
+              </a>
+              <a href="#certificate-modal" uk-toggle class="relative flex-none">
+                <img
+                  src="public/exam2/12.png"
+                  width="400"
+                  height="400"
+                  class="object-contain"
+                  alt="image-upload"
+                />
+              </a>
+              <a href="#certificate-modal" uk-toggle class="relative flex-none">
+                <img
+                  src="public/exam2/13.png"
+                  width="400"
+                  height="400"
+                  class="object-contain"
+                  alt="image-upload"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div id="modal-center" class="uk-flex-top" uk-modal>
         <div
           class="level-modal uk-modal-dialog space-y-10 rounded-5 uk-modal-body uk-margin-auto-vertical"
@@ -654,7 +910,7 @@
             <p class="heading-h3 grayscale-dark-gray">Level 3</p>
             <button
               type="button"
-              onclick="hideModal()"
+              onclick="hideModal('modal-center')"
               class="rounded-full flex-justify-center"
               style="background-color: transparent"
             >
@@ -811,6 +1067,25 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script>
+      function hideModal(modalId) {
+        const dropdownElement = document.getElementById(modalId);
+
+        UIkit.modal(dropdownElement).hide(0);
+      }
+
+      function showModal(modalId) {
+        const dropdownElement = document.getElementById(modalId);
+
+        UIkit.modal(dropdownElement).show(0);
+      }
+
+      function hideDropdown() {
+        const dropdownElement = document.getElementById("my-dropdown");
+
+        UIkit.dropdown(dropdownElement).hide(0);
+      }
+    </script>
     <!-- <script>
       // Slider dragging
       const slider = document.querySelector(".slider");
