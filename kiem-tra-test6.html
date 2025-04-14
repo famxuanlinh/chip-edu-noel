@@ -111,10 +111,7 @@
                           <p class="exam1-content6-answer mb-6">
                             1. This is helicopter?
                           </p>
-                          <div
-                            class="flex flex-wrap gap-2"
-                            uk-sortable="group: sortable-group; animation: false"
-                          >
+                          <div class="flex flex-wrap gap-2">
                             <div class="exam1-content6-variant">is</div>
                             <div class="exam1-content6-variant">fish</div>
                             <div class="exam1-content6-variant">Goldenfish</div>
@@ -125,10 +122,7 @@
                         </div>
                       </div>
 
-                      <div
-                        class="exam1-content6-result"
-                        uk-sortable="group: sortable-group; ; animation: false"
-                      >
+                      <div class="exam1-content6-result">
                         <div
                           style="order: 9999; flex-shrink: 0"
                           class="exam1-placeholder flex-1 min-h-[70px] opacity-70 pointer-events-none z-40"
@@ -148,10 +142,7 @@
                           <p class="exam1-content6-answer mb-6">
                             2. This is helicopter?
                           </p>
-                          <div
-                            class="flex flex-wrap gap-2"
-                            uk-sortable="group: sortable-group; animation: false"
-                          >
+                          <div class="flex flex-wrap gap-2">
                             <div class="exam1-content6-variant">is</div>
                             <div class="exam1-content6-variant">fish</div>
                             <div class="exam1-content6-variant">Goldenfish</div>
@@ -162,10 +153,7 @@
                         </div>
                       </div>
 
-                      <div
-                        class="exam1-content6-result"
-                        uk-sortable="group: sortable-group; ; animation: false"
-                      >
+                      <div class="exam1-content6-result">
                         <div
                           style="order: 9999; flex-shrink: 0"
                           class="exam1-placeholder flex-1 min-h-[70px] opacity-70 pointer-events-none z-40"
@@ -586,58 +574,71 @@
     <script src="js/script.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .querySelectorAll(".exam1-content6-sentence")
-          .forEach((sentenceContainer) => {
-            const originalContainer = sentenceContainer.querySelector(".flex");
-            const resultContainer = sentenceContainer.nextElementSibling; // Find the corresponding result container
-            const placeholder =
-              resultContainer.querySelector(".exam1-placeholder");
+        const sentences = document.querySelectorAll(".exam1-content6-sentence");
 
-            function moveWord(wordElement) {
-              if (wordElement.parentElement === originalContainer) {
-                // Move word from original list to result list (before placeholder)
-                resultContainer.insertBefore(wordElement, placeholder);
-              } else {
-                // Move word back to original list
-                originalContainer.appendChild(wordElement);
-              }
+        sentences.forEach((sentenceContainer) => {
+          const originalContainer = sentenceContainer.querySelector(".flex");
+          const resultContainer = sentenceContainer.nextElementSibling; // Find the corresponding result container
+          const placeholder =
+            resultContainer.querySelector(".exam1-placeholder");
 
-              // Ensure placeholder is always at the end
-              resultContainer.appendChild(placeholder);
+          function moveWord(wordElement) {
+            if (wordElement.parentElement === originalContainer) {
+              // Move word from original list to result list (before placeholder)
+              resultContainer.insertBefore(wordElement, placeholder);
+            } else {
+              // Move word back to original list
+              originalContainer.appendChild(wordElement);
             }
 
-            // Add click event to each word
-            sentenceContainer
-              .querySelectorAll(".exam1-content6-variant")
-              .forEach((word) => {
-                word.addEventListener("click", function () {
-                  moveWord(this);
-                });
+            // Ensure placeholder is always at the end
+            resultContainer.appendChild(placeholder);
+          }
+
+          // Add click event to each word
+          sentenceContainer
+            .querySelectorAll(".exam1-content6-variant")
+            .forEach((word) => {
+              word.addEventListener("click", function () {
+                moveWord(this);
               });
-
-            // UIkit drag & drop event
-            UIkit.util.on(resultContainer, "moved", function () {
-              setTimeout(() => {
-                resultContainer.appendChild(placeholder);
-              }, 10); // Prevent UIkit temporary layout changes
             });
 
-            // Hide placeholder on drag start
-            UIkit.util.on(resultContainer, "start", function () {
-              // placeholder.style.display = "none";
-            });
+          // UIkit drag & drop event
+          // UIkit.util.on(resultContainer, "moved", function () {
+          //   setTimeout(() => {
+          //     resultContainer.appendChild(placeholder);
+          //   }, 10); // Prevent UIkit temporary layout changes
+          // });
 
-            // Show placeholder again if empty
-            UIkit.util.on(resultContainer, "stop", function () {
-              if (!resultContainer.querySelector(".exam1-content6-variant")) {
-                placeholder.style.display = "block";
-              }
-              setTimeout(() => {
-                resultContainer.appendChild(placeholder);
-              }, 10);
-            });
-          });
+          // Hide placeholder on drag start
+          // UIkit.util.on(resultContainer, "start", function () {
+          //   // placeholder.style.display = "none";
+          // });
+
+          // Show placeholder again if empty
+          // UIkit.util.on(resultContainer, "stop", function () {
+          //   if (!resultContainer.querySelector(".exam1-content6-variant")) {
+          //     placeholder.style.display = "block";
+          //   }
+          //   setTimeout(() => {
+          //     resultContainer.appendChild(placeholder);
+          //   }, 10);
+          // });
+        });
+
+        // Enable dragging across all sentences
+        // UIkit.util.on(".exam1-content6-variant", "moved", function (e) {
+        //   const wordElement = e.detail[1]; // The dragged element
+        //   const targetContainer = e.detail[0]; // The target container
+
+        //   if (targetContainer.classList.contains("exam1-content6-result")) {
+        //     targetContainer.insertBefore(
+        //       wordElement,
+        //       targetContainer.querySelector(".exam1-placeholder")
+        //     );
+        //   }
+        // });
       });
     </script>
   </body>

@@ -88,14 +88,14 @@ draggables.forEach((draggable) => {
     const target = e.target.closest(".draggable"); // Đảm bảo kéo cả wrapper
     if (target) {
       e.dataTransfer.setData("text", target.id);
-
       // Tránh opacity bị mờ khi kéo
       setTimeout(() => target.classList.add("dragging"), 0);
     }
   });
 
   draggable.addEventListener("dragend", (e) => {
-    e.target.classList.remove("dragging");
+    const target = e.target.closest(".draggable");
+    if (target) target.classList.remove("dragging");
   });
 
   // Xử lý khi click để quay về danh sách gốc với animation mượt mà
