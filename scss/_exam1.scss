@@ -16,26 +16,32 @@
   }
 
   &-content {
-    height: calc(100vh - 236px);
+    // height: calc(100vh - 236px);
     padding: 32px 54px;
     overflow-y: hidden;
     background-image: url("/public/exam1/bg.webp");
 
     @include maxw(1600) {
-      height: calc(100vh - 176px);
+      // height: calc(100vh - 176px);
       padding: 24px 46px;
+    }
+    @include maxw(1200) {
+      // height: calc(100vh - 176px);
+      padding: 16px 32px;
     }
   }
 
   &-footer {
     height: 128px;
     padding: 0 120px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     @include maxw(1600) {
       height: 88px;
+      margin-bottom: 16px;
     }
 
     &-num {

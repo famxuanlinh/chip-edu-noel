@@ -2697,15 +2697,18 @@ p {
   }
 }
 .exam1-content {
-  height: calc(100vh - 236px);
   padding: 32px 54px;
   overflow-y: hidden;
   background-image: url("/public/exam1/bg.webp");
 }
 @media screen and (max-width: 1600px) {
   .exam1-content {
-    height: calc(100vh - 176px);
     padding: 24px 46px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .exam1-content {
+    padding: 16px 32px;
   }
 }
 .exam1-footer {
@@ -2718,6 +2721,7 @@ p {
 @media screen and (max-width: 1600px) {
   .exam1-footer {
     height: 88px;
+    margin-bottom: 16px;
   }
 }
 .exam1-footer-num {
@@ -2819,12 +2823,22 @@ p {
   margin: 0 10px;
 }
 
+.exam1 {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 .exam1-zoom {
   zoom: 0.85;
 }
 @media screen and (max-width: 1600px) {
   .exam1-zoom {
     zoom: 0.75;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .exam1-zoom {
+    zoom: 0.65;
   }
 }
 .exam1-input {
@@ -3415,6 +3429,16 @@ p {
 }
 .exam1-content2-sentence input[type=text] {
   width: 240px !important;
+}
+@media screen and (max-width: 1400px) {
+  .exam1-content2-sentence input[type=text] {
+    width: 180px !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .exam1-content2-sentence input[type=text] {
+    width: 150px !important;
+  }
 }
 .exam1-content2-answer {
   color: var(--Secondary-Purple, #454575);
