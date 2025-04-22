@@ -2634,6 +2634,9 @@ p {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .exam2-wrapper {
   max-width: 1000px;
@@ -2697,6 +2700,7 @@ p {
   }
 }
 .exam1-content {
+  height: 100%;
   padding: 32px 54px;
   overflow-y: hidden;
   background-image: url("/public/exam1/bg.webp");
@@ -2883,11 +2887,16 @@ p {
   background-color: #fbe7e5;
 }
 .exam1-height {
-  height: calc(100vh - 236px - 64px);
+  height: calc(100vh - 236px - 30px);
 }
 @media screen and (max-width: 1600px) {
   .exam1-height {
-    height: calc(100vh - 176px - 48px);
+    height: calc(100vh - 176px - 16px);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .exam1-height {
+    height: calc(100vh - 176px + 18px);
   }
 }
 .exam1-content10 .draggable {

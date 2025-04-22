@@ -68,11 +68,16 @@
   }
 
   &-height {
-    height: calc(100vh - 236px - 64px);
+    height: calc(100vh - 236px - 30px);
 
     @include maxw(1600) {
-      height: calc(100vh - 176px - 48px);
+      height: calc(100vh - 176px - 16px);
     }
+
+    @include maxw(1200) {
+      height: calc(100vh - 176px + 18px);
+    }
+    // height: 100%;
   }
 
   &-content10 {
