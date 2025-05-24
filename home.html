@@ -591,13 +591,18 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const slider = UIkit.slider("#uk-slider-1");
-
+      window.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
-          slider.show(2);
-          UIkit.update(document.querySelector("#uk-slider-1"));
-        }, 100);
+          const nextButton = document.querySelector('[uk-slider-item="next"]');
+          if (nextButton) {
+            // Click "next" 4 times to reach the 5th item
+            for (let i = 0; i < 2; i++) {
+              setTimeout(() => {
+                nextButton.click();
+              }, i * 50); // delay between clicks (50ms)
+            }
+          }
+        }, 100); // wait for layout/render to stabilize
       });
     </script>
   </body>
