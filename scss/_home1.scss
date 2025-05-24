@@ -1,0 +1,21 @@
+.home-slide {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0.65);
+  transition: transform 0.3s ease-in-out;
+}
+
+.uk-slidenav > svg {
+  display: none;
+}
+
+#uk-slider-1 > div.home-slide.uk-active.uk-slide-active {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+// #uk-slider-1 {
+//   margin-left: 0 !important;
+// }

@@ -22,9 +22,10 @@
 @use "exam";
 @use "exam1";
 @use "exam1-content";
+@use "home1";
 
 html {
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
   font-family: Nunito;
 }
 
@@ -35,7 +36,7 @@ html {
   // font-size: 100%;
   box-sizing: border-box;
   font-family: Nunito;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 }
 
 ul,
