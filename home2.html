@@ -65,6 +65,18 @@
   </head>
   <body>
     <div id="container" class="scroll-container"></div>
+    <button
+      id="left-arrow"
+      style="position: fixed; left: 10px; top: 50%; z-index: 10"
+    >
+      ←
+    </button>
+    <button
+      id="right-arrow"
+      style="position: fixed; right: 10px; top: 50%; z-index: 10"
+    >
+      →
+    </button>
 
     <script>
       const container = document.getElementById("container");
@@ -211,6 +223,48 @@
         }, 100);
       });
 
+      initialize();
+    </script>
+
+    <script>
+      // ... [your existing code remains unchanged up to initialize()]
+
+      function scrollToNextItem(direction = 1) {
+        const items = [...container.querySelectorAll(".item")];
+        const currentScroll = container.scrollLeft;
+        const containerMid = currentScroll + container.clientWidth / 2;
+
+        // Find the center item
+        let centerIndex = items.findIndex((el) => {
+          const elLeft = el.offsetLeft;
+          const elRight = elLeft + el.offsetWidth;
+          return elLeft <= containerMid && elRight >= containerMid;
+        });
+
+        if (centerIndex === -1) return;
+
+        const targetIndex = centerIndex + direction;
+        const target = items[targetIndex];
+        if (!target) return;
+
+        container.scrollTo({
+          left:
+            target.offsetLeft -
+            container.clientWidth / 2 +
+            target.offsetWidth / 2,
+          behavior: "smooth",
+        });
+      }
+
+      document.getElementById("left-arrow").addEventListener("click", () => {
+        scrollToNextItem(-1);
+      });
+
+      document.getElementById("right-arrow").addEventListener("click", () => {
+        scrollToNextItem(1);
+      });
+
+      // continue initializing after adding arrow logic
       initialize();
     </script>
   </body>
