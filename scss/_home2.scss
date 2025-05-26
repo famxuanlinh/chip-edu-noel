@@ -532,8 +532,8 @@
   overflow-x: auto;
   // white-space: nowrap;
 
-  @include maxw() {
-    zoom: 0.75;
+  @include maxw(1700) {
+    zoom: 0.7;
   }
 }
 // .course-card {

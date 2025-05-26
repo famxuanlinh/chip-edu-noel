@@ -4166,9 +4166,9 @@ p {
 #lesson-container {
   overflow-x: auto;
 }
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1700px) {
   #lesson-container {
-    zoom: 0.75;
+    zoom: 0.7;
   }
 }
 
