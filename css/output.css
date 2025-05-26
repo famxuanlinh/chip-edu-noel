@@ -234,6 +234,12 @@
   .top-12 {
     top: calc(var(--spacing) * 12);
   }
+  .top-20 {
+    top: calc(var(--spacing) * 20);
+  }
+  .top-30 {
+    top: calc(var(--spacing) * 30);
+  }
   .-right-0\.5 {
     right: calc(var(--spacing) * -0.5);
   }
@@ -276,8 +282,14 @@
   .z-40 {
     z-index: 40;
   }
+  .z-50 {
+    z-index: 50;
+  }
   .z-99 {
     z-index: 99;
+  }
+  .z-100 {
+    z-index: 100;
   }
   .col-span-1 {
     grid-column: span 1 / span 1;
@@ -408,6 +420,9 @@
   .hidden {
     display: none;
   }
+  .inline {
+    display: inline;
+  }
   .aspect-video {
     aspect-ratio: var(--aspect-video);
   }
@@ -481,6 +496,9 @@
   }
   .h-full {
     height: 100%;
+  }
+  .h-screen {
+    height: 100vh;
   }
   .min-h-\[70px\] {
     min-height: 70px;
@@ -570,6 +588,9 @@
   }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -757,6 +778,9 @@
   .border-white {
     border-color: var(--color-white);
   }
+  .\!bg-\[\#D8EDDD\] {
+    background-color: #D8EDDD !important;
+  }
   .bg-\[\#00B26B\] {
     background-color: #00B26B;
   }
@@ -805,6 +829,9 @@
   .bg-\[\#FFFBFBCC\] {
     background-color: #FFFBFBCC;
   }
+  .bg-\[\#e5e5e5\] {
+    background-color: #e5e5e5;
+  }
   .bg-black\/5 {
     background-color: color-mix(in oklab, var(--color-black) 5%, transparent);
   }
@@ -819,6 +846,9 @@
   }
   .bg-white\/80 {
     background-color: color-mix(in oklab, var(--color-white) 80%, transparent);
+  }
+  .\!bg-\[url\(\'\/public\/home1\/bg1\.png\'\)\] {
+    background-image: url('/public/home1/bg1.png') !important;
   }
   .bg-\[url\(\'\/public\/home1\/unit\.svg\'\)\] {
     background-image: url('/public/home1/unit.svg');
@@ -958,6 +988,10 @@
     font-size: var(--text-lg) !important;
     line-height: var(--tw-leading, var(--text-lg--line-height)) !important;
   }
+  .\!text-xl {
+    font-size: var(--text-xl) !important;
+    line-height: var(--tw-leading, var(--text-xl--line-height)) !important;
+  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -1094,6 +1128,13 @@
   .select-none {
     -webkit-user-select: none;
     user-select: none;
+  }
+  .hover\:\!text-black {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-black) !important;
+      }
+    }
   }
   .max-lg\:transform-\[rotate\] {
     @media (width < 64rem) {
