@@ -4163,6 +4163,20 @@ p {
   display: none;
 }
 
+#lesson-container {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+@media screen and (max-width: 1600px) {
+  #lesson-container {
+    zoom: 0.8;
+  }
+}
+
+.course-card {
+  display: inline-block;
+}
+
 html {
   font-family: Nunito;
 }

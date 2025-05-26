@@ -1,3 +1,5 @@
+@use "mixin" as *;
+
 .test-card {
   display: flex;
   flex: none;
@@ -524,4 +526,16 @@
 
 #lesson-container::-webkit-scrollbar {
   display: none;
+}
+
+#lesson-container {
+  overflow-x: auto;
+  white-space: nowrap;
+
+  @include maxw() {
+    zoom: 0.8;
+  }
+}
+.course-card {
+  display: inline-block;
 }

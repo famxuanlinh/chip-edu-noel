@@ -382,22 +382,21 @@
             alt=""
           />
         </button>
+        <button
+          id="back-to-active-left"
+          class="fixed top-20 left-0 z-50 hidden"
+        >
+          <img width="60" src="public/home1/back-to-active.png" alt="back" />
+        </button>
+
+        <button
+          id="back-to-active-right"
+          class="fixed top-20 right-0 z-50 hidden"
+          style="transform: scaleX(-1)"
+        >
+          <img width="60" src="public/home1/back-to-active.png" alt="back" />
+        </button>
       </div>
-      <!-- Nút bên trái -->
-      <button id="back-to-active-left" class="fixed top-20 left-0 z-50 hidden">
-        <img width="60" src="public/home1/back-to-active.png" alt="back" />
-      </button>
-
-      <!-- Nút bên phải -->
-      <button
-        id="back-to-active-right"
-        style="transform: scaleX(-1)"
-        class="fixed top-20 right-0 z-50 hidden"
-      >
-        <img width="60" src="public/home1/back-to-active.png" alt="back" />
-      </button>
-
-      <!-- hedddd -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
@@ -739,50 +738,25 @@
           />
           <p class="card2-content-teacher-name !text-white">Cô Tina</p>
         </div>
-        <div
-          class="flex items-center button-shadow m-6 bg-[#FF9800] px-3 py-4 space-y-3"
-          style="flex-direction: column"
-        >
-          <div class="flex items-center justify-between w-full">
-            <img
-              width="40"
-              height="40"
-              src="public/home1/rocket.svg"
-              alt="avatar"
-            />
-            <p class="button-l text-white ml-3">Vào lớp</p>
-            <div class="flex items-center button-m text-white">
-              <img
-                width="16"
-                height="16"
-                class="mr-2"
-                src="public/home1/clock-white.svg"
-                alt="avatar"
-              />04:59
-            </div>
-          </div>
-          <div
-            class="flex items-center justify-center w-full bg-white inner-blur-inner-b4-20"
-            style="
-              padding: 10px 8px;
-              border-radius: 12px;
-              border: 2px solid rgba(0, 0, 0, 0.05);
-            "
-          >
-            <div class="flex items-center button-m grayscale-dark-gray">
-              <img
-                width="16"
-                height="16"
-                class="mr-2"
-                src="public/home1/clock-black.svg"
-                alt="avatar"
-              />
-            </div>
-            <div class="flex items-center caption-m grayscale-dark-gray">
-              04:59 - Thứ 2 - 12/12/2024
-            </div>
-          </div>
-        </div>
+       <div class=" m-6 flex flex-col items-center button-shadow bg-[#FF9800] px-2 py-3 space-y-3">
+                    <div class="flex items-center">
+                      <img width="36" height="36" class="mr-3" src="public/icons/rocket.svg" alt="avatar">
+                      <p class="button-l text-white">Vào lớp</p>
+                    </div>
+
+                    <div class="flex items-center w-full font-bold bg-white !text-xl inner-blur-inner-b4-20 justify-between" style="
+                        padding: 10px 8px;
+                        border-radius: 12px;
+                        border: 2px solid rgba(0, 0, 0, 0.05);
+                      ">
+                      <div class="flex items-center  grayscale-dark-gray">
+                        <img width="18" height="18" class="mr-2" src="public/icons/clock.svg" alt="clock">04:59
+                      </div>
+                      <div class="flex items-center  grayscale-dark-gray">
+                        <img width="18" height="18" class="mr-2" src="public/icons/calendar-gray.svg" alt="calendar">Thứ 2 - 12/12/2024
+                      </div>
+                    </div>
+                  </div>
         <div
           class="h-12 my-6 text-xl font-bold text-white flex justify-center items-center"
         >
@@ -1084,61 +1058,45 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const backBtnLeft = document.getElementById("back-to-active-left");
-        const backBtnRight = document.getElementById("back-to-active-right");
+        const leftBtn = document.getElementById("back-to-active-left");
+        const rightBtn = document.getElementById("back-to-active-right");
+        const container = document.getElementById("lesson-container");
 
-        setTimeout(() => {
-          const target = document.querySelector(".course-card.active");
+        const getActiveCard = () =>
+          document.querySelector(".course-card.active");
 
-          if (!target) {
-            console.log("Không tìm thấy .course-card.active");
-            return;
+        const updateButtons = () => {
+          const target = getActiveCard();
+          if (!target) return;
+
+          const containerRect = container.getBoundingClientRect();
+          const targetRect = target.getBoundingClientRect();
+
+          const isLeftOut = targetRect.right < containerRect.left;
+          const isRightOut = targetRect.left > containerRect.right;
+
+          leftBtn.classList.toggle("hidden", !isLeftOut);
+          rightBtn.classList.toggle("hidden", !isRightOut);
+        };
+
+        const scrollToActive = () => {
+          const target = getActiveCard();
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", inline: "center" });
           }
+        };
 
-          const observer = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                if (!entry.isIntersecting) {
-                  const rect = entry.boundingClientRect;
+        leftBtn.addEventListener("click", scrollToActive);
+        rightBtn.addEventListener("click", scrollToActive);
 
-                  // Ẩn cả hai trước
-                  backBtnLeft.classList.add("hidden");
-                  backBtnRight.classList.add("hidden");
+        // Use scroll event on the container
+        container.addEventListener("scroll", updateButtons);
 
-                  // Nếu phần tử nằm trái màn hình
-                  if (rect.right < 0) {
-                    backBtnLeft.classList.remove("hidden");
-                  }
-                  // Nếu phần tử nằm phải màn hình
-                  else if (rect.left > window.innerWidth) {
-                    backBtnRight.classList.remove("hidden");
-                  }
-                } else {
-                  // Phần tử đang hiển thị → ẩn cả hai nút
-                  backBtnLeft.classList.add("hidden");
-                  backBtnRight.classList.add("hidden");
-                }
-              });
-            },
-            {
-              root: null,
-              threshold: 0.1, // Kích hoạt khi phần tử ra khỏi vùng nhìn thấy 90%
-            }
-          );
+        // Also update on resize (viewport might change visibility)
+        window.addEventListener("resize", updateButtons);
 
-          observer.observe(target);
-
-          const scrollToActive = () => {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "center",
-              inline: "center",
-            });
-          };
-
-          backBtnLeft.addEventListener("click", scrollToActive);
-          backBtnRight.addEventListener("click", scrollToActive);
-        }, 1000);
+        // Initial update after slight delay
+        setTimeout(updateButtons, 300);
       });
     </script>
   </body>
