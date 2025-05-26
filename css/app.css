@@ -3739,6 +3739,12 @@ p {
   transition: transform 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 1700px) {
+  .home-slide {
+    zoom: 0.8;
+  }
+}
+
 .test-card {
   display: flex;
   flex: none;
