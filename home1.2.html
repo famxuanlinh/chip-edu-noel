@@ -383,7 +383,17 @@
           />
         </button>
       </div>
-      <button id="back-to-active" class="fixed top-20 left-0-5 z-99">
+      <!-- Nút bên trái -->
+      <button id="back-to-active-left" class="fixed top-20 left-0 z-50 hidden">
+        <img width="60" src="public/home1/back-to-active.png" alt="back" />
+      </button>
+
+      <!-- Nút bên phải -->
+      <button
+        id="back-to-active-right"
+        style="transform: scaleX(-1)"
+        class="fixed top-20 right-0 z-50 hidden"
+      >
         <img width="60" src="public/home1/back-to-active.png" alt="back" />
       </button>
 
@@ -515,7 +525,7 @@
                     </div>
 
                     <div
-                      class="flex items-center w-full bg-white inner-blur-inner-b4-20 justify-between"
+                      class="flex items-center w-full font-bold bg-white !text-xl inner-blur-inner-b4-20 justify-between"
                       style="
                         padding: 10px 8px;
                         border-radius: 12px;
@@ -523,22 +533,22 @@
                       "
                     >
                       <div
-                        class="flex items-center button-m grayscale-dark-gray"
+                        class="flex items-center  grayscale-dark-gray"
                       >
                         <img
-                          width="24"
-                          height="24"
+                          width="18"
+                          height="18"
                           class="mr-2"
                           src="public/icons/clock.svg"
                           alt="clock"
                         />04:59
                       </div>
                       <div
-                        class="flex items-center caption-m grayscale-dark-gray"
+                        class="flex items-center  grayscale-dark-gray"
                       >
                         <img
-                          width="24"
-                          height="24"
+                          width="18"
+                          height="18"
                           class="mr-2"
                           src="public/icons/calendar-gray.svg"
                           alt="calendar"
@@ -848,7 +858,7 @@
           <p class="card-content-teacher-name">Cô Tina</p>
         </div>
         <div class="card-content-buttons">
-          <div class="card-content-buttons-left">
+          <a href="#" class="card-content-buttons-left hover:!text-black">
             <img
               src="public/home1/book1.svg"
               width="20"
@@ -856,7 +866,7 @@
               height="20"
               alt="upload"
             />Nội dung
-          </div>
+          </a>
           <button
             class="card-content-buttons-right flex items-center px-4 bg-[#00B26B] text-white button-primary btn-animation"
           >
@@ -1074,39 +1084,60 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const backBtn = document.getElementById("back-to-active");
+        const backBtnLeft = document.getElementById("back-to-active-left");
+        const backBtnRight = document.getElementById("back-to-active-right");
 
         setTimeout(() => {
           const target = document.querySelector(".course-card.active");
 
-          if (target) {
-            console.log("Found active card:", target);
-
-            const observer = new IntersectionObserver(
-              (entries) => {
-                entries.forEach((entry) => {
-                  if (!entry.isIntersecting) {
-                    backBtn.style.display = "block";
-                  } else {
-                    backBtn.style.display = "none";
-                  }
-                });
-              },
-              {
-                root: null,
-                threshold: 0.1,
-              }
-            );
-
-            observer.observe(target);
-
-            // Click nút quay lại vị trí đang học
-            backBtn.addEventListener("click", () => {
-              target.scrollIntoView({ behavior: "smooth", block: "center" });
-            });
-          } else {
+          if (!target) {
             console.log("Không tìm thấy .course-card.active");
+            return;
           }
+
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                  const rect = entry.boundingClientRect;
+
+                  // Ẩn cả hai trước
+                  backBtnLeft.classList.add("hidden");
+                  backBtnRight.classList.add("hidden");
+
+                  // Nếu phần tử nằm trái màn hình
+                  if (rect.right < 0) {
+                    backBtnLeft.classList.remove("hidden");
+                  }
+                  // Nếu phần tử nằm phải màn hình
+                  else if (rect.left > window.innerWidth) {
+                    backBtnRight.classList.remove("hidden");
+                  }
+                } else {
+                  // Phần tử đang hiển thị → ẩn cả hai nút
+                  backBtnLeft.classList.add("hidden");
+                  backBtnRight.classList.add("hidden");
+                }
+              });
+            },
+            {
+              root: null,
+              threshold: 0.1, // Kích hoạt khi phần tử ra khỏi vùng nhìn thấy 90%
+            }
+          );
+
+          observer.observe(target);
+
+          const scrollToActive = () => {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+              inline: "center",
+            });
+          };
+
+          backBtnLeft.addEventListener("click", scrollToActive);
+          backBtnRight.addEventListener("click", scrollToActive);
         }, 1000);
       });
     </script>
