@@ -4165,7 +4165,6 @@ p {
 
 #lesson-container {
   overflow-x: auto;
-  white-space: nowrap;
 }
 @media screen and (max-width: 1600px) {
   #lesson-container {
