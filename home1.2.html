@@ -411,6 +411,182 @@
       let lastLoadDirection = null;
 
       function createItem(index) {
+        // Past test big card
+        if (index === 50) {
+          return `
+             <div class="course-card test-card">
+        <div class="relative w-full">
+          <div class="test-card-title">Mid-term Test</div>
+          <div class="mb-5 mx-6">
+            <div class="flex items-center space-x-5">
+              <div
+                class="level-modal-tag bg-white"
+                style="height: 105px; width: 172px"
+              >
+                <img
+                  width="60"
+                  height="60"
+                  src="/public/icons/tag-units.svg"
+                  alt="tag"
+                />
+                <div class="flex items-center gap-2">
+                  <p class="heading-h3 primary-green">20</p>
+                  <p class="button-xs pb-1">Units</p>
+                </div>
+              </div>
+              <div
+                id="small-scroll-exception"
+                class="space-y-4 flex-1 pr-1 h-[105px] overflow-y-auto"
+              >
+                <div class="h-10 level-button-unit w-full bg-grayscale-white">
+                  <button class="level-left-part w-19 !text-base button-s">
+                    Unit 1
+                  </button>
+                  <button
+                    class="level-right-part !text-base button-l line-clamp-1"
+                  >
+                    Lesson 1 he as alo
+                  </button>
+                </div>
+                <div class="h-10 level-button-unit w-full bg-grayscale-white">
+                  <button class="level-left-part w-19 button-s">Unit 2</button>
+                  <button
+                    class="level-right-part !text-base button-l line-clamp-1"
+                  >
+                    Lesson 2
+                  </button>
+                </div>
+                <div class="h-10 level-button-unit w-full bg-grayscale-white">
+                  <button class="level-left-part w-19 button-s">Unit 3</button>
+                  <button
+                    class="level-right-part !text-base button-l line-clamp-1"
+                  >
+                    Lesson 3
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 m-6 items-stretch gap-5.5">
+            <div
+              class="flex-1 border-2 p-5 rounded-2xl bg-[#FFFBFBCC] border-black/10 flex justify-center"
+              id="slide-1"
+            >
+              <div class="flex flex-col justify-between w-full">
+                <div class="flex flex-col justify-between h-full">
+                  <div class="space-y-5">
+                    <div class="flex justify-center items-center">
+                      <img
+                        class="rounded-full -ml-5"
+                        width="48"
+                        height="48"
+                        src="public/exam2/mic.png"
+                        alt="avatar"
+                      />
+                      <p class="button-l !text-lg text-black">Kỹ năng Nói</p>
+                    </div>
+
+                    <div class="flex-center flex-col">
+                      <div>
+                        <img
+                          class="rounded-full p-1"
+                          width="80"
+                          height="80"
+                          src="public/icons/try-learning-check.svg"
+                          alt="avatar"
+                        />
+                      </div>
+                      <p class="primary-green button-l mt-5">Đã hoàn thành</p>
+                    </div>
+
+                    <div
+                      class="text-[15px] text-center !leading-[160%] text-[#252525]"
+                    >
+                      Yayy! Bạn đã hoàn thành bài Bài kiểm tra Kỹ năng Nói rồi.
+                    </div>
+
+                    <div class="text-[#252525] mt-4 mb-4">
+                      <p class="text-xl font-bold text-center">Điểm</p>
+                      <p class="heading-h3 mt-1 text-center">95/100</p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div
+                      class="button-primary cursor-pointer btn-animation grayscale-dark-gray flex-center bg-greenscale-light-green px-5 grayscale-white button-l"
+                      style="height: 60px"
+                    >
+                      <img
+                        src="public/icons/video.svg"
+                        class="mr-2"
+                        width="40"
+                        height="40"
+                        alt="upload"
+                      />
+                      Video buổi học
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-1 flex flex-col justify-between">
+              <div
+                class="border-2 p-5 rounded-2xl bg-[#FFFBFBCC] border-black/10 flex justify-center h-full"
+              >
+                <div class="flex flex-col justify-between w-full">
+                  <div class="space-y-6">
+                    <div class="flex justify-center items-center">
+                      <img
+                        class="rounded-full -ml-5"
+                        width="36"
+                        height="36"
+                        src="public/exam2/speaker.png"
+                        alt="avatar"
+                      />
+                      <p class="button-l !text-lg text-black">
+                        Kỹ năng Nghe - Đọc - Viết
+                      </p>
+                    </div>
+                    <div class="flex-center flex-col">
+                      <div>
+                        <img
+                          class="rounded-full p-1"
+                          width="80"
+                          height="80"
+                          src="public/icons/try-learning-check.svg"
+                          alt="avatar"
+                        />
+                      </div>
+                      <p class="primary-green button-l mt-5">Đã hoàn thành</p>
+                    </div>
+
+                    <div
+                      class="text-[15px] text-center !leading-[160%] text-[#252525]"
+                    >
+                      Chúc mừng!!! Bạn đã hoàn thành bài Bài kiểm tra
+                      <strong>Kỹ năng Nghe - Đọc - Viết</strong> rồi.
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-2 mt-6">
+                    <div class="text-[#252525]">
+                      <p class="text-xl font-bold text-center">Điểm</p>
+                      <p class="heading-h3 text-center mt-1">82/100</p>
+                    </div>
+                    <div class="text-[#252525] w-full">
+                      <p class="text-xl font-bold text-center">Thời gian</p>
+                      <p class="heading-h3 text-center mt-1">29:59</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`;
+        }
+
         // Test big card
         if (index === 49) {
           return `
@@ -610,7 +786,7 @@
         }
 
         // Unit card
-        if (index === 50) {
+        if (index === 51) {
           return `
             <div
       class="course-card bg-[url('/public/home1/unit.svg')] flex-none bg-size-cover bg-no-repeat w-50 h-[508px] flex items-end justify-center"
