@@ -358,7 +358,11 @@
           </div>
         </div>
       </div>
-      <div id="lesson-container" class="scroll-container relative">
+      <div
+        id="lesson-container"
+        style="padding-left: 50%"
+        class="scroll-container relative"
+      >
         <button
           class="fixed left-5 transform -translate-y-1/2 z-99"
           id="left-arrow"
@@ -403,7 +407,7 @@
     <script>
       const container = document.getElementById("lesson-container");
       const totalItems = 100;
-      const activeItem = 41;
+      const activeItem = 2;
       const visibleBefore = 10;
       const visibleAfter = 10;
       const loadedItems = new Set();
@@ -786,7 +790,7 @@
         }
 
         // Unit card
-        if (index === 51) {
+        if (index === 51 || index === 1) {
           return `
             <div
       class="course-card bg-[url('/public/home1/unit.svg')] flex-none bg-size-cover bg-no-repeat w-50 h-[508px] flex items-end justify-center"
@@ -884,7 +888,7 @@
         }
 
         // Current card
-        if (index === 41) {
+        if (index === 2) {
           return `
   <div class="card2-lesson course-card active">
       <img
