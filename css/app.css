@@ -512,6 +512,15 @@ p {
   }
 }
 
+.exam-zoom {
+  zoom: 1;
+}
+@media screen and (max-width: 1600px) {
+  .exam-zoom {
+    zoom: 0.75;
+  }
+}
+
 .parent-zoom-1 {
   zoom: 0.82;
 }

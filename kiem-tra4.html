@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiểm tra đầu vào</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <body>
+    <div
+      class="exam flex items-center !bg-[url('/public/result/screen1.png')] bg-cover"
+    >
+      <!-- Khi chưa làm bài ktra -->
+      <div class="relative xam-zoom px-25 flex h-screen items-center gap-14">
+        <div class="text-white">
+          <img class="mb-14" src="/public/result/logo.svg" alt="" />
+          <p class="text-[40px] font-bold">Bài kiểm tra năng lực tiếng Anh</p>
+          <p
+            class="text-[40px] font-bold to-[#FA8D4A] bg-gradient-to-r from-[#FFE5A0] bg-clip-text text-transparent"
+          >
+            theo chuẩn <span class="text-[48px]">Cambridge</span>
+          </p>
+
+          <div class="flex flex-col gap-6 my-15">
+            <div class="flex items-start font-bold text-[28px] text-white">
+              <img
+                class="size-12 mr-2.5"
+                src="/public/result/check-icon.svg"
+                alt=""
+              />Bài kiểm tra mô phỏng theo định dạng bài thi Cambridge
+              (Starters, Movers, Flyers), đánh giá toàn diện năng lực tiếng Anh
+              của trẻ.
+            </div>
+            <div class="flex items-start font-bold text-[28px] text-white">
+              <img
+                class="size-12 mr-2.5"
+                src="/public/result/check-icon.svg"
+                alt=""
+              />Kiểm tra các kỹ năng Nghe – Đọc – Viết, bám sát thực tế, phù hợp
+              với từng độ tuổi.
+            </div>
+            <div class="flex items-start font-bold text-[28px] text-white">
+              <img
+                class="size-12 mr-2.5"
+                src="/public/result/check-icon.svg"
+                alt=""
+              />Nhận báo cáo năng lực chi tiết cùng tư vấn lộ trình học cá nhân
+              hóa hoàn toàn miễn phí.
+            </div>
+          </div>
+
+          <div class="flex items-center gap-15">
+            <a
+              href="#modal-gioi-thieu-ban-hoc"
+              uk-toggle
+              class="button-primary flex h-20 !text-white items-center justify-center btn-animation w-full flex-center px-5 button-m bg-[#FA8D4A]"
+            >
+              Xem lại kết quả
+            </a>
+            <a
+              href="#"
+              class="button-primary flex h-20 !text-white items-center justify-center btn-animation w-full flex-center px-5 button-m bg-[#00b26b]"
+            >
+              Bắt đầu làm bài test
+            </a>
+          </div>
+        </div>
+
+        <img
+          class="w-full -mt-23.5"
+          src="/public/result/right-img.png"
+          alt=""
+        />
+
+        <div id="modal-gioi-thieu-ban-hoc" class="uk-flex-top" uk-modal>
+          <div
+            style="border-radius: 20px"
+            class="level-modal !px-20 uk-modal-dialog parent-recommend-friend !rounded-5 uk-modal-body uk-margin-auto-vertical"
+          >
+            <div class="flex" style="justify-content: space-between">
+              <p></p>
+              <button
+                type="button"
+                onclick="hideModal('modal-gioi-thieu-ban-hoc')"
+                class="rounded-full flex-justify-center"
+                style="background-color: transparent"
+              >
+                <img src="public/icons/x2.svg" width="40" height="40" />
+              </button>
+            </div>
+            <div
+              class="auth-title !mt-5 mb-10 text-black text-center !text-[40px] heading-h2 grayscale-dark-gray flex-center"
+            >
+              Nhập số điện thoại để xem lại kết quả bài kiểm tra
+            </div>
+
+            <form id="registerForm">
+              <div class="flex flex-col gap-5">
+                <input
+                  class="uk-input !h-15 auth-input"
+                  type="text"
+                  placeholder="Số điện thoại/Tên đăng nhập"
+                  aria-label="Input"
+                  name="phone"
+                  required
+                />
+              </div>
+              <button
+                class="btn grayscale-white !h-15 bg-primary-green button-l bg-[#FA8D4A] text-white"
+                style="margin: 40px 0"
+              >
+                Xem lại kết quả
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script>
+      function hideModal(modalId) {
+        const dropdownElement = document.getElementById(modalId);
+
+        UIkit.modal(dropdownElement).hide(0);
+      }
+    </script>
+  </body>
+</html>

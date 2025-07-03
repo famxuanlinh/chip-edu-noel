@@ -172,6 +172,14 @@
   }
 }
 
+.exam-zoom {
+  zoom: 1;
+
+  @include maxw() {
+    zoom: 0.75;
+  }
+}
+
 .parent-zoom-1 {
   zoom: 0.82;
 
