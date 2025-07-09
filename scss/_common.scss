@@ -178,6 +178,10 @@
   @include maxw() {
     zoom: 0.75;
   }
+
+  @include maxw(1200) {
+    zoom: 0.6;
+  }
 }
 
 .parent-zoom-1 {
