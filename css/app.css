@@ -522,7 +522,21 @@ p {
 }
 @media screen and (max-width: 1200px) {
   .exam-zoom {
-    zoom: 0.6;
+    zoom: 0.5;
+  }
+}
+
+.exam-zoom-img {
+  zoom: 1;
+}
+@media screen and (max-width: 1600px) {
+  .exam-zoom-img {
+    zoom: 0.75;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .exam-zoom-img {
+    zoom: 0.4;
   }
 }
 

@@ -180,7 +180,19 @@
   }
 
   @include maxw(1200) {
-    zoom: 0.6;
+    zoom: 0.5;
+  }
+}
+
+.exam-zoom-img {
+  zoom: 1;
+
+  @include maxw() {
+    zoom: 0.75;
+  }
+
+  @include maxw(1200) {
+    zoom: 0.4;
   }
 }
 
