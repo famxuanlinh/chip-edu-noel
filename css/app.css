@@ -520,6 +520,11 @@ p {
     zoom: 0.75;
   }
 }
+@media screen and (max-width: 1400px) {
+  .exam-zoom {
+    zoom: 0.6;
+  }
+}
 @media screen and (max-width: 1200px) {
   .exam-zoom {
     zoom: 0.5;
@@ -532,6 +537,11 @@ p {
 @media screen and (max-width: 1600px) {
   .exam-zoom-img {
     zoom: 0.75;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .exam-zoom-img {
+    zoom: 0.6;
   }
 }
 @media screen and (max-width: 1200px) {
