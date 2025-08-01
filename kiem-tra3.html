@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiểm tra đầu vào</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+
+  <body>
+    <div
+      class="exam flex items-center justify-center bg-cover !bg-[url('/public/result/screen2.jpg')]"
+    >
+      <a href="#">
+        <img
+          class="absolute top-12 right-12"
+          src="/public/exam/icons/x.svg"
+          alt="x"
+        />
+      </a>
+
+      <!-- Khi chưa làm bài ktra -->
+      <div class="flex items-center exam-zoom h-screen gap-25 px-25">
+        <div class="exam-left">
+          <div class="exam-left-content">
+            <div
+              class="size-4 bg-[#D9D9D9] absolute transform-[translateY(-50%) rotate(45deg)] left-1/2 rounded-br bottom-0 translate-y-1/2 rotate-45"
+            ></div>
+            Chào mừng con đến với Bài kiểm tra năng lực tiếng Anh Cambridge!
+            <br />
+            <br />
+            Bài kiểm tra được thiết kế sinh động, phù hợp với từng độ tuổi, giúp
+            con thể hiện tốt nhất khả năng tiếng Anh của mình.
+            <br />
+            👇 Ba mẹ và con hãy chọn cấp độ phù hợp để bắt đầu nhé!
+          </div>
+          <img
+            class="scale-150 max-[1600px]:-ml-25 -ml-60 mt-20"
+            src="/public/result/Spacecraft.png"
+            alt=""
+          />
+        </div>
+        <div class="grid grid-cols-2 flex-1 gap-x-8 gap-y-10.5">
+          <div
+            class="exam-center-content max-w-125.5 text-white flex flex-col justify-between"
+          >
+            <p class="text-[32px] font-bold">Pre-Starters</p>
+            <p class="text-2xl">
+              - Độ tuổi tham khảo: 4-6 <br />
+              - Khả năng ngôn ngữ: Con chưa từng học Tiếng Anh hoặc mới chỉ biết
+              một vài từ vựng đơn lẻ, gặp khó khăn khi nói thành câu đơn cơ bản.
+            </p>
+
+            <a
+              href="#modal-gioi-thieu-ban-hoc"
+              uk-toggle
+              class="button-primary flex items-center justify-center btn-animation w-full flex-center px-5 button-m bg-[#FA8D4A]"
+              style="height: 56px; color: white"
+            >
+              Xem lại kết quả
+            </a>
+          </div>
+          <div
+            class="exam-center-content max-w-125.5 text-white flex flex-col justify-between"
+          >
+            <div class="">
+              <p class="text-[32px] font-bold">Starters</p>
+              <p class="text-2xl">
+                - Độ tuổi tham khảo: 6-7 <br />
+                - Khả năng ngôn ngữ: Con đã tiếp xúc với Tiếng Anh, có thể nói
+                một số từ và sử dụng câu đơn giản để giao tiếp cơ bản.
+              </p>
+            </div>
+
+            <a
+              href="#modal-gioi-thieu-ban-hoc"
+              uk-toggle
+              class="button-primary flex items-center justify-center btn-animation w-full flex-center px-5 button-m bg-[#00b26b]"
+              style="height: 56px; color: white"
+            >
+              Bắt đầu
+            </a>
+          </div>
+          <div class="exam-center-content max-w-125.5 text-white">
+            <p class="text-[32px] font-bold">Movers</p>
+            <p class="text-2xl">
+              - Độ tuổi tham khảo: 7-9 <br />
+              - Khả năng ngôn ngữ: Con có nền tảng Tiếng Anh cơ bản, có thể hiểu
+              và nói các câu đơn và câu ghép để diễn đạt ý tưởng.
+            </p>
+
+            <a
+              href="#modal-gioi-thieu-ban-hoc"
+              uk-toggle
+              class="button-primary flex items-center justify-center btn-animation w-full flex-center px-5 button-m bg-[#00b26b]"
+              style="height: 56px; color: white"
+            >
+              Bắt đầu
+            </a>
+          </div>
+          <div class="exam-center-content max-w-125.5 text-white">
+            <p class="text-[32px] font-bold">Flyers</p>
+            <p class="text-2xl">
+              - Độ tuổi tham khảo: 9-12<br />
+              - Khả năng ngôn ngữ: Con có vốn Tiếng Anh tốt, có thể giao tiếp và
+              bày tỏ ý kiến về nhiều chủ đề, sử dụng đa dạng cấu trúc câu.
+            </p>
+
+            <a
+              href="#modal-gioi-thieu-ban-hoc"
+              uk-toggle
+              class="button-primary flex items-center justify-center btn-animation w-full flex-center px-5 button-m bg-[#00b26b]"
+              style="height: 56px; color: white"
+            >
+              Bắt đầu
+            </a>
+          </div>
+
+          <!-- <img class="w-full -mt-23.5" src="/public/exam/hologram.png" alt="" /> -->
+        </div>
+      </div>
+
+      <div id="modal-gioi-thieu-ban-hoc" class="uk-flex-top" uk-modal>
+        <div
+          style="border-radius: 20px"
+          class="level-modal !px-20 uk-modal-dialog parent-recommend-friend !rounded-5 uk-modal-body uk-margin-auto-vertical"
+        >
+          <div class="flex" style="justify-content: space-between">
+            <p></p>
+            <button
+              type="button"
+              onclick="hideModal('modal-gioi-thieu-ban-hoc')"
+              class="rounded-full flex-justify-center"
+              style="background-color: transparent"
+            >
+              <img src="public/icons/x2.svg" width="40" height="40" />
+            </button>
+          </div>
+          <div
+            class="auth-title !mt-5 mb-10 text-black text-center !text-[40px] heading-h2 grayscale-dark-gray flex-center"
+          >
+            Đăng ký để con bắt đầu bài kiểm tra miễn phí!
+          </div>
+
+          <form id="registerForm">
+            <div class="flex flex-col gap-5">
+              <input
+                class="uk-input !h-15 auth-input"
+                type="text"
+                placeholder="Tên phụ huynh*"
+                aria-label="Input"
+                name="parentName"
+                required
+              />
+              <input
+                class="uk-input !h-15 auth-input"
+                type="text"
+                placeholder="Họ và tên bé*"
+                aria-label="Input"
+                name="childName"
+              />
+              <select
+                id="sex"
+                class="uk-select mt-1 !h-15 parent-input-form"
+                aria-label="Select"
+              >
+                <option class="text-[#999999]">Năm sinh</option>
+                <option>2000</option>
+                <option>2001</option>
+                <option>2002</option>
+                <option>2003</option>
+                <option>2004</option>
+                <option>2005</option>
+                <option>2006</option>
+                <option>2007</option>
+                <option>2008</option>
+                <option>2009</option>
+                <option>2010</option>
+                <option>2011</option>
+                <option>2012</option>
+                <option>2013</option>
+                <option>2014</option>
+                <option>2015</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+              </select>
+              <input
+                class="uk-input !h-15 auth-input"
+                type="text"
+                placeholder="Số điện thoại* "
+                aria-label="Input"
+                name="phone"
+                required
+              />
+
+              <input
+                class="uk-input !h-15 auth-input"
+                type="email"
+                placeholder="Họ và tên bé*"
+                aria-label="Input"
+                name="email"
+              />
+            </div>
+            <button
+              class="btn grayscale-white !h-17 bg-primary-green button-l bg-[#00b26b] text-white"
+              style="margin: 40px 0"
+            >
+              Làm bài kiểm tra
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+
+    <script>
+      function hideModal(modalId) {
+        const dropdownElement = document.getElementById(modalId);
+
+        UIkit.modal(dropdownElement).hide(0);
+      }
+    </script>
+  </body>
+</html>
