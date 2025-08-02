@@ -226,6 +226,9 @@
   .top-1 {
     top: calc(var(--spacing) * 1);
   }
+  .top-1\/2 {
+    top: calc(1/2 * 100%);
+  }
   .top-3 {
     top: calc(var(--spacing) * 3);
   }
@@ -282,6 +285,9 @@
   }
   .left-5 {
     left: calc(var(--spacing) * 5);
+  }
+  .left-\[43\%\] {
+    left: 43%;
   }
   .z-10 {
     z-index: 10;
@@ -373,6 +379,9 @@
   .mr-1 {
     margin-right: calc(var(--spacing) * 1);
   }
+  .mr-1\.5 {
+    margin-right: calc(var(--spacing) * 1.5);
+  }
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
   }
@@ -429,6 +438,9 @@
   }
   .ml-1 {
     margin-left: calc(var(--spacing) * 1);
+  }
+  .ml-1\.5 {
+    margin-left: calc(var(--spacing) * 1.5);
   }
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
@@ -550,6 +562,9 @@
   .h-screen {
     height: 100vh;
   }
+  .\!w-60 {
+    width: calc(var(--spacing) * 60) !important;
+  }
   .w-0 {
     width: calc(var(--spacing) * 0);
   }
@@ -624,6 +639,10 @@
   }
   .-translate-y-1 {
     --tw-translate-y: calc(var(--spacing) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-y-1\/2 {
+    --tw-translate-y: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-y-1 {
@@ -912,11 +931,23 @@
   .bg-\[\#00B26B\] {
     background-color: #00B26B;
   }
+  .bg-\[\#00b26b\] {
+    background-color: #00b26b;
+  }
   .bg-\[\#00140b\]\/60 {
     background-color: color-mix(in oklab, #00140b 60%, transparent);
   }
   .bg-\[\#00140b\]\/80 {
     background-color: color-mix(in oklab, #00140b 80%, transparent);
+  }
+  .bg-\[\#A9A9A9\] {
+    background-color: #A9A9A9;
+  }
+  .bg-\[\#D8EDDD\] {
+    background-color: #D8EDDD;
+  }
+  .bg-\[\#FF6047\] {
+    background-color: #FF6047;
   }
   .bg-\[\#FFF5D54D\]\/30 {
     background-color: color-mix(in oklab, #FFF5D54D 30%, transparent);
@@ -964,6 +995,15 @@
   }
   .bg-\[url\(\'\/public\/class\/In-class-0\.png\'\)\] {
     background-image: url('/public/class/In-class-0.png');
+  }
+  .bg-\[url\(\'\/public\/class\/In-class-1\.png\'\)\] {
+    background-image: url('/public/class/In-class-1.png');
+  }
+  .bg-\[url\(\'\/public\/class\/In-class-2\.png\'\)\] {
+    background-image: url('/public/class/In-class-2.png');
+  }
+  .bg-\[url\(\'\/public\/class\/In-class-3\.png\'\)\] {
+    background-image: url('/public/class/In-class-3.png');
   }
   .from-black {
     --tw-gradient-from: var(--color-black);
@@ -1177,6 +1217,9 @@
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
+  .text-\[28px\] {
+    font-size: 28px;
+  }
   .leading-4 {
     --tw-leading: calc(var(--spacing) * 4);
     line-height: calc(var(--spacing) * 4);
@@ -1218,6 +1261,15 @@
   }
   .text-\[\#00140b\] {
     color: #00140b;
+  }
+  .text-\[\#006638\] {
+    color: #006638;
+  }
+  .text-\[\#252525\] {
+    color: #252525;
+  }
+  .text-\[\#252525\]\/40 {
+    color: color-mix(in oklab, #252525 40%, transparent);
   }
   .text-\[\#B9F295\] {
     color: #B9F295;
