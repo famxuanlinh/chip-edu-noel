@@ -40,7 +40,7 @@
       }
     </style>
   </head>
-  <body class="font-nunito">
+  <body style="font-family: 'Nunito', sans-serif">
     <!-- Mobile warning -->
     <div
       class="uk-hidden@l uk-flex uk-flex-center uk-flex-middle"
@@ -57,9 +57,12 @@
       >
         <!-- Header -->
         <div
-          class="relative z-10 bg-white/10 backdrop-blur-md flex items-center rounded-3xl h-25 px-6"
+          class="relative flex-none z-10 bg-white/10 backdrop-blur-md flex items-center rounded-3xl h-25 px-6"
         >
-          <div class="uk-flex uk-flex-between items-center w-full">
+          <div
+            style="zoom: 0.8"
+            class="uk-flex uk-flex-between items-center w-full"
+          >
             <!-- Left side - Lesson info -->
             <div class="uk-flex uk-flex-column space-y-2">
               <div
@@ -227,51 +230,52 @@
           </div>
 
           <!-- Participants -->
-          <div class="w-75 flex mr-6 ml-4 flex-col gap-4">
-            <div class="uk-flex uk-flex-column space-y-4 h-full">
-              <!-- Teacher -->
+          <div
+            class="w-70 h-[calc(100vh-48px-100px-16px)] flex mr-4 2xl:mr-6 ml-4 flex-col gap-3 2xl:gap-4"
+          >
+            <!-- Teacher -->
+            <div
+              class="flex-1 relative rounded-3xl !bg-[url('/public/class/student.png')] bg-center bg-cover overflow-hidden"
+            >
               <div
-                class="flex-1 relative rounded-3xl !bg-[url('/public/class/student.png')] bg-center bg-cover overflow-hidden"
+                class="w-full flex items-center justify-center h-full relative bg-[#00140b]/80 backdrop-blur-md overflow-hidden"
               >
+                <img
+                  src="public/class/student.png"
+                  alt="Teacher"
+                  width="100"
+                  height="100"
+                  class="rounded-full aspect-square object-cover"
+                />
                 <div
-                  class="w-full flex items-center justify-center h-full relative bg-[#00140b]/80 backdrop-blur-md overflow-hidden"
+                  class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
                 >
-                  <img
-                    src="public/class/student.png"
-                    alt="Teacher"
-                    width="100"
-                    height="100"
-                    class="rounded-full aspect-square object-cover"
-                  />
-                  <div
-                    class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
-                  >
-                    <div class="text-white text-lg font-bold leading-7">
-                      Cô Vanessa
-                    </div>
+                  <div class="text-white text-lg font-bold leading-7">
+                    Cô Vanessa
                   </div>
                 </div>
               </div>
+            </div>
 
-              <!-- Student -->
+            <!-- Student -->
+            <div
+              class="flex-1 relative rounded-3xl overflow-hidden bg-[#00140b]/60"
+            >
               <div
-                class="flex-1 relative rounded-3xl overflow-hidden bg-[#00140b]/60"
+                class="w-full flex items-center h-full relative overflow-hidden"
               >
+                <img
+                  src="public/class/student2.png"
+                  alt="Student"
+                  class="w-full h-full object-cover"
+                />
                 <div
-                  class="w-full flex items-center h-full relative overflow-hidden"
+                  class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
                 >
-                  <img
-                    src="public/class/student2.png"
-                    alt="Student"
-                    class="w-full h-full object-cover"
-                  />
-                  <div
-                    class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
-                  >
-                    <div class="text-white text-lg font-bold leading-7">
-                      Hoàng Văn Việt
-                    </div>
-                    <!-- <div
+                  <div class="text-white text-lg font-bold leading-7">
+                    Hoàng Văn Việt
+                  </div>
+                  <!-- <div
                       class="flex items-center gap-2 text-white text-lg font-bold leading-7"
                     >
                       <img
@@ -282,68 +286,67 @@
                       />
                       <span>x1</span>
                     </div> -->
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex-1 relative rounded-3xl overflow-hidden bg-[#00140b]/60"
+            >
+              <div
+                class="w-full flex items-center h-full relative overflow-hidden"
+              >
+                <img
+                  src="public/class/student3.png"
+                  alt="Student"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
+                >
+                  <div class="text-white text-lg font-bold leading-7">
+                    Hoàng Văn Việt
+                  </div>
+                  <div
+                    class="flex items-center gap-2 text-white text-lg font-bold leading-7"
+                  >
+                    <img
+                      src="public/icons/star.svg"
+                      alt="Star"
+                      width="24"
+                      height="24"
+                    />
+                    <span>x1</span>
                   </div>
                 </div>
               </div>
+            </div>
+            <div
+              class="flex-1 relative rounded-3xl overflow-hidden bg-[#00140b]/60"
+            >
               <div
-                class="flex-1 relative rounded-3xl overflow-hidden bg-[#00140b]/60"
+                class="w-full flex items-center h-full relative overflow-hidden"
               >
+                <img
+                  src="public/class/student4.png"
+                  alt="Student"
+                  class="w-full h-full object-cover"
+                />
                 <div
-                  class="w-full flex items-center h-full relative overflow-hidden"
+                  class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
                 >
-                  <img
-                    src="public/class/student3.png"
-                    alt="Student"
-                    class="w-full h-full object-cover"
-                  />
-                  <div
-                    class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
-                  >
-                    <div class="text-white text-lg font-bold leading-7">
-                      Hoàng Văn Việt
-                    </div>
-                    <div
-                      class="flex items-center gap-2 text-white text-lg font-bold leading-7"
-                    >
-                      <img
-                        src="public/icons/star.svg"
-                        alt="Star"
-                        width="24"
-                        height="24"
-                      />
-                      <span>x1</span>
-                    </div>
+                  <div class="text-white text-lg font-bold leading-7">
+                    Hoàng Văn Việt
                   </div>
-                </div>
-              </div>
-              <div
-                class="flex-1 relative rounded-3xl overflow-hidden bg-[#00140b]/60"
-              >
-                <div
-                  class="w-full flex items-center h-full relative overflow-hidden"
-                >
-                  <img
-                    src="public/class/student4.png"
-                    alt="Student"
-                    class="w-full h-full object-cover"
-                  />
                   <div
-                    class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
+                    class="flex items-center gap-2 text-white text-lg font-bold leading-7"
                   >
-                    <div class="text-white text-lg font-bold leading-7">
-                      Hoàng Văn Việt
-                    </div>
-                    <div
-                      class="flex items-center gap-2 text-white text-lg font-bold leading-7"
-                    >
-                      <img
-                        src="public/icons/star.svg"
-                        alt="Star"
-                        width="24"
-                        height="24"
-                      />
-                      <span>x1</span>
-                    </div>
+                    <img
+                      src="public/icons/star.svg"
+                      alt="Star"
+                      width="24"
+                      height="24"
+                    />
+                    <span>x1</span>
                   </div>
                 </div>
               </div>
@@ -352,7 +355,7 @@
 
           <!-- Chat area -->
           <div
-            class="w-100 h-[calc(100vh-48px-100px-16px)] bg-white/50 rounded-3xl flex flex-col backdrop-blur-md"
+            class="w-86 h-[calc(100vh-48px-100px-16px)] bg-white/50 rounded-3xl flex flex-col backdrop-blur-md"
           >
             <div
               class="px-4 bg-white/40 h-17.5 flex text-[#00140b] text-2xl font-bold leading-10 m-0 items-center rounded-t-3xl"
