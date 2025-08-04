@@ -57,7 +57,7 @@
       >
         <!-- Header -->
         <div
-          class="relative z-10 bg-white/10 backdrop-blur-md flex items-center rounded-3xl h-25 px-6"
+          class="relative flex-none z-10 bg-white/10 backdrop-blur-md flex items-center rounded-3xl h-20 [1600px]:h-25 px-6"
         >
           <div
             style="zoom: 0.8"
@@ -83,7 +83,7 @@
                 class="w-16 h-16 relative overflow-hidden rounded-full flex items-center justify-center"
               >
                 <img
-                  src="public/class/cakeI1.png"
+                  src="public/class/cake1.png"
                   alt="America"
                   class="w-full h-full object-cover"
                 />
@@ -231,52 +231,50 @@
 
           <!-- Participants -->
           <div
-            class="w-54 2xl:w-70 h-[calc(100vh-48px-100px-16px+20px)] 2xl:h-[calc(100vh-48px-100px-16px)] flex mr-4 2xl:mr-6 ml-4 flex-col gap-3 2xl:gap-4"
+            class="w-54 [1500px]:w-70 h-[calc(100vh-48px-100px-16px+20px)] [1600px]:h-[calc(100vh-48px-100px-16px)] flex mr-4 2xl:mr-6 ml-4 flex-col gap-3 2xl:gap-4"
           >
-            <div class="uk-flex uk-flex-column space-y-4 h-full">
-              <!-- Teacher -->
+            <!-- Teacher -->
+            <div
+              class="flex-1 relative rounded-3xl !bg-[url('/public/class/student.png')] bg-center bg-cover overflow-hidden"
+            >
               <div
-                class="flex-1 relative rounded-3xl !bg-[url('/public/class/student.png')] bg-center bg-cover overflow-hidden"
+                class="w-full flex items-center justify-center h-full relative bg-[#00140b]/80 backdrop-blur-md overflow-hidden"
               >
+                <img
+                  src="public/class/student.png"
+                  alt="Teacher"
+                  width="100"
+                  height="100"
+                  class="rounded-full aspect-square object-cover"
+                />
                 <div
-                  class="w-full flex items-center justify-center h-full relative bg-[#00140b]/80 backdrop-blur-md overflow-hidden"
+                  class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
                 >
-                  <img
-                    src="public/class/student.png"
-                    alt="Teacher"
-                    width="100"
-                    height="100"
-                    class="rounded-full aspect-square object-cover"
-                  />
-                  <div
-                    class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
-                  >
-                    <div class="text-white 2xl:text-lg font-bold leading-7">
-                      Cô Vanessa
-                    </div>
+                  <div class="text-white 2xl:text-lg font-bold leading-7">
+                    Cô Vanessa
                   </div>
                 </div>
               </div>
+            </div>
 
-              <!-- Student -->
+            <!-- Student -->
+            <div
+              class="flex-1 relative rounded-3xl overflow-hidden bg-[#00140b]/60"
+            >
               <div
-                class="flex-1 relative rounded-3xl overflow-hidden bg-[#00140b]/60"
+                class="w-full flex items-center h-full relative overflow-hidden"
               >
+                <video class="student-card-image">
+                  <source src="public/class/video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
                 <div
-                  class="w-full flex items-center h-full relative overflow-hidden"
+                  class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
                 >
-                  <img
-                    src="public/class/student2.png"
-                    alt="Student"
-                    class="w-full h-full object-cover"
-                  />
-                  <div
-                    class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
-                  >
-                    <div class="text-white 2xl:text-lg font-bold leading-7">
-                      Hoàng Văn Việt
-                    </div>
-                    <div
+                  <div class="text-white [1600px]:text-lg font-bold leading-7">
+                    Hoàng Văn Việt
+                  </div>
+                  <!-- <div
                       class="flex items-center gap-2 text-white 2xl:text-lg font-bold leading-7"
                     >
                       <img
@@ -286,8 +284,7 @@
                         height="24"
                       />
                       <span>x1</span>
-                    </div>
-                  </div>
+                    </div> -->
                 </div>
               </div>
             </div>
@@ -295,7 +292,7 @@
 
           <!-- Chat area -->
           <div
-            class="w-54 2xl:w-70 h-[calc(100vh-48px-100px-16px+20px)] 2xl:h-[calc(100vh-48px-100px-16px)] flex mr-4 2xl:mr-6 ml-4 flex-col gap-3 2xl:gap-4"
+            class="w-86 [1500px]::w-100 h-[calc(100vh-48px-100px-16px+20px)] [1600px]:h-[calc(100vh-48px-100px-16px)] bg-white/50 rounded-3xl flex flex-col backdrop-blur-md"
           >
             <div
               class="px-4 bg-white/40 h-17.5 flex text-[#00140b] text-2xl font-bold leading-10 m-0 items-center rounded-t-3xl"

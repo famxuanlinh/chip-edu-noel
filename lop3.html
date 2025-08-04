@@ -57,7 +57,7 @@
       >
         <!-- Header -->
         <div
-          class="relative z-10 bg-white/10 backdrop-blur-md flex items-center rounded-3xl h-25 px-6"
+          class="relative flex-none z-10 bg-white/10 backdrop-blur-md flex items-center rounded-3xl h-20 [1600px]:h-25 px-6"
         >
           <div
             style="zoom: 0.8"
@@ -66,11 +66,25 @@
             <!-- Left side - Lesson info -->
             <div class="uk-flex uk-flex-column space-y-2">
               <div
-                class="inline-flex w-fit px-6 py-2 bg-[#FFF5D54D]/30 rounded-full mb-2"
+                class="inline-flex space-x-3 w-fit px-6 py-2 bg-[#FFF5D54D]/30 rounded-full mb-2"
               >
-                <span class="text-[#ffd675] text-base font-extrabold leading-4"
-                  >Trial Lesson</span
+                <div
+                  class="text-[#ffd675] flex items-center text-base font-extrabold leading-4"
                 >
+                  <a class="!text-[#ffd675]" href="#">Level 1</a>
+                  <img
+                    class="mx-3"
+                    src="public/class/arrow-right.svg"
+                    alt="arrow-right"
+                  />
+                  <a class="!text-[#ffd675]" href="#">Unit 5</a>
+                  <img
+                    class="mx-3"
+                    src="public/class/arrow-right.svg"
+                    alt="arrow-right"
+                  />
+                  <a class="!text-[#ffd675]" href="#">Lesson 3</a>
+                </div>
               </div>
               <div class="text-[#B9F295] text-2xl font-extrabold leading-7">
                 Bài học test 4 kỹ năng
@@ -83,7 +97,7 @@
                 class="w-16 h-16 relative overflow-hidden rounded-full flex items-center justify-center"
               >
                 <img
-                  src="public/class/cakeI1.png"
+                  src="public/class/cake1.png"
                   alt="America"
                   class="w-full h-full object-cover"
                 />
@@ -92,7 +106,7 @@
                 class="w-16 h-16 relative overflow-hidden rounded-full flex items-center justify-center"
               >
                 <img
-                  src="public/class/cakeI2.png"
+                  src="public/class/cake2.png"
                   alt="Vietnam"
                   class="w-full h-full object-cover"
                 />
@@ -101,7 +115,7 @@
                 class="w-16 h-16 relative overflow-hidden rounded-full flex items-center justify-center"
               >
                 <img
-                  src="public/class/cakeI3.png"
+                  src="public/class/cake3.png"
                   alt="America"
                   class="w-full h-full object-cover"
                 />
@@ -110,7 +124,7 @@
                 class="w-16 h-16 relative overflow-hidden rounded-full flex items-center justify-center"
               >
                 <img
-                  src="public/class/cakeI4.png"
+                  src="public/class/cake4.png"
                   alt="Vietnam"
                   class="w-full h-full object-cover"
                 />
@@ -119,7 +133,7 @@
                 class="w-16 h-16 relative overflow-hidden rounded-full flex items-center justify-center"
               >
                 <img
-                  src="public/class/cakeI5.png"
+                  src="public/class/cake5.png"
                   alt="America"
                   class="w-full h-full object-cover"
                 />
@@ -231,7 +245,7 @@
 
           <!-- Participants -->
           <div
-            class="w-54 2xl:w-70 h-[calc(100vh-48px-100px-16px+20px)] 2xl:h-[calc(100vh-48px-100px-16px)] flex mr-4 2xl:mr-6 ml-4 flex-col gap-3 2xl:gap-4"
+            class="w-54 [1500px]:w-70 h-[calc(100vh-48px-100px-16px+20px)] [1600px]:h-[calc(100vh-48px-100px-16px)] flex mr-4 2xl:mr-6 ml-4 flex-col gap-3 2xl:gap-4"
           >
             <!-- Teacher -->
             <div
@@ -264,15 +278,14 @@
               <div
                 class="w-full flex items-center h-full relative overflow-hidden"
               >
-                <img
-                  src="public/class/student2.png"
-                  alt="Student"
-                  class="w-full h-full object-cover"
-                />
+                <video class="student-card-image">
+                  <source src="public/class/video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
                 <div
                   class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
                 >
-                  <div class="text-white 2xl:text-lg font-bold leading-7">
+                  <div class="text-white [1600px]:text-lg font-bold leading-7">
                     Hoàng Văn Việt
                   </div>
                   <!-- <div
@@ -295,19 +308,18 @@
               <div
                 class="w-full flex items-center h-full relative overflow-hidden"
               >
-                <img
-                  src="public/class/student3.png"
-                  alt="Student"
-                  class="w-full h-full object-cover"
-                />
+                <video class="student-card-image">
+                  <source src="public/class/video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
                 <div
                   class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
                 >
-                  <div class="text-white 2xl:text-lg font-bold leading-7">
+                  <div class="text-white [1600px]:text-lg font-bold leading-7">
                     Hoàng Văn Việt
                   </div>
                   <div
-                    class="flex items-center gap-2 text-white 2xl:text-lg font-bold leading-7"
+                    class="flex items-center gap-2 text-white [1600px]:text-lg font-bold leading-7"
                   >
                     <img
                       src="public/icons/star.svg"
@@ -324,7 +336,7 @@
 
           <!-- Chat area -->
           <div
-            class="w-54 2xl:w-70 h-[calc(100vh-48px-100px-16px+20px)] 2xl:h-[calc(100vh-48px-100px-16px)] flex mr-4 2xl:mr-6 ml-4 flex-col gap-3 2xl:gap-4"
+            class="w-86 [1500px]::w-100 h-[calc(100vh-48px-100px-16px+20px)] [1600px]:h-[calc(100vh-48px-100px-16px)] bg-white/50 rounded-3xl flex flex-col backdrop-blur-md"
           >
             <div
               class="px-4 bg-white/40 h-17.5 flex text-[#00140b] text-2xl font-bold leading-10 m-0 items-center rounded-t-3xl"
