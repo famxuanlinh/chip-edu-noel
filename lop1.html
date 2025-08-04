@@ -57,7 +57,7 @@
       >
         <!-- Header -->
         <div
-          class="relative flex-none z-10 bg-white/10 backdrop-blur-md flex items-center rounded-3xl h-25 px-6"
+          class="relative flex-none z-10 bg-white/10 backdrop-blur-md flex items-center rounded-3xl h-20 2xl:h-25 px-6"
         >
           <div
             style="zoom: 0.8"
@@ -140,7 +140,7 @@
                     height="20"
                   />
                 </div>
-                <span class="text-white text-base font-bold leading-6"
+                <span class="text-white text-lg font-bold leading-6"
                   >Hỗ trợ: 1900.111.111</span
                 >
               </div>
@@ -231,7 +231,7 @@
 
           <!-- Participants -->
           <div
-            class="w-70 h-[calc(100vh-48px-100px-16px)] flex mr-4 2xl:mr-6 ml-4 flex-col gap-3 2xl:gap-4"
+            class="w-54 2xl:w-70 h-[calc(100vh-48px-100px-16px+20px)] 2xl:h-[calc(100vh-48px-100px-16px)] flex mr-4 2xl:mr-6 ml-4 flex-col gap-3 2xl:gap-4"
           >
             <!-- Teacher -->
             <div
@@ -250,7 +250,7 @@
                 <div
                   class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
                 >
-                  <div class="text-white text-lg font-bold leading-7">
+                  <div class="text-white 2xl:text-lg font-bold leading-7">
                     Cô Vanessa
                   </div>
                 </div>
@@ -272,11 +272,11 @@
                 <div
                   class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
                 >
-                  <div class="text-white text-lg font-bold leading-7">
+                  <div class="text-white 2xl:text-lg font-bold leading-7">
                     Hoàng Văn Việt
                   </div>
                   <!-- <div
-                      class="flex items-center gap-2 text-white text-lg font-bold leading-7"
+                      class="flex items-center gap-2 text-white 2xl:text-lg font-bold leading-7"
                     >
                       <img
                         src="public/icons/star.svg"
@@ -303,11 +303,11 @@
                 <div
                   class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
                 >
-                  <div class="text-white text-lg font-bold leading-7">
+                  <div class="text-white 2xl:text-lg font-bold leading-7">
                     Hoàng Văn Việt
                   </div>
                   <div
-                    class="flex items-center gap-2 text-white text-lg font-bold leading-7"
+                    class="flex items-center gap-2 text-white 2xl:text-lg font-bold leading-7"
                   >
                     <img
                       src="public/icons/star.svg"
@@ -334,11 +334,11 @@
                 <div
                   class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
                 >
-                  <div class="text-white text-lg font-bold leading-7">
+                  <div class="text-white 2xl:text-lg font-bold leading-7">
                     Hoàng Văn Việt
                   </div>
                   <div
-                    class="flex items-center gap-2 text-white text-lg font-bold leading-7"
+                    class="flex items-center gap-2 text-white 2xl:text-lg font-bold leading-7"
                   >
                     <img
                       src="public/icons/star.svg"
@@ -355,7 +355,7 @@
 
           <!-- Chat area -->
           <div
-            class="w-86 h-[calc(100vh-48px-100px-16px)] bg-white/50 rounded-3xl flex flex-col backdrop-blur-md"
+            class="w-86 2xl:w-100 h-[calc(100vh-48px-100px-16px+20px)] 2xl:h-[calc(100vh-48px-100px-16px)] bg-white/50 rounded-3xl flex flex-col backdrop-blur-md"
           >
             <div
               class="px-4 bg-white/40 h-17.5 flex text-[#00140b] text-2xl font-bold leading-10 m-0 items-center rounded-t-3xl"
@@ -421,11 +421,11 @@
               <input
                 type="text"
                 placeholder="Nhập tin nhắn"
-                class="flex-1 h-14 px-6 items-center bg-white/60 border-none focus-visible:!outline-none rounded-full text-lg font-medium leading-7 text-black/60 placeholder-black/60"
+                class="flex-1 h-14 px-6 items-center bg-white/60 border-none focus-visible:!outline-none w-full rounded-full text-lg font-medium leading-7 text-black/60 placeholder-black/60"
                 id="chat-input"
               />
               <button
-                class="w-14 h-14 bg-[#00B26B] border-none rounded-full flex items-center justify-center cursor-pointer transition-colors hover:bg-green-700"
+                class="w-14 h-14 bg-[#00B26B] border-none rounded-full flex-none flex items-center justify-center cursor-pointer transition-colors hover:bg-green-700"
                 onclick="sendMessage()"
               >
                 <img
