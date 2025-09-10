@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Huy Hiệu Siêng Năng - Tailwind + UIkit</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.19.4/dist/css/uikit.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.4/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.4/dist/js/uikit-icons.min.js"></script>
+  </head>
+  <body
+    class="bg-gray-100 font-[Nunito] min-h-screen flex items-center justify-center p-6"
+  >
+    <button
+      class="px-6 py-3 rounded-xl bg-indigo-600 text-black font-bold shadow hover:bg-indigo-500 transition"
+      uk-toggle="target: #modal-badge-detail"
+    >
+      Xem huy hiệu
+    </button>
+
+    <!-- Modal -->
+    <div id="modal-badge-detail" class="uk-modal-full" uk-modal>
+      <div
+        class="uk-modal-dialog uk-modal-body p-0 flex items-center min-h-screen bg-black/40"
+      >
+        <div class="relative mx-auto w-full max-w-3xl">
+          <div
+            class="bg-white rounded-3xl shadow-2xl p-8 md:p-10 flex flex-col gap-10"
+          >
+            <!-- Close Button -->
+            <button
+              class="uk-modal-close uk-icon-button absolute top-4 right-4 hover:bg-gray-200"
+              uk-icon="icon: close; ratio: 1.4"
+              aria-label="Đóng"
+            ></button>
+
+            <!-- Top Visual (badge + background gradient) -->
+            <div class="relative flex flex-col items-center w-full">
+              <div
+                class="w-full rounded-2xl h-48 bg-gradient-to-br from-purple-500 via-sky-400 to-amber-300 flex items-end justify-center overflow-hidden"
+              >
+                <img
+                  src="public/figma-assets/badge-main.png"
+                  alt="Badge"
+                  class="w-32 h-32 object-contain drop-shadow-lg mb-2"
+                />
+                <img
+                  src="public/figma-assets/character-run.png"
+                  alt="Character"
+                  class="absolute right-6 bottom-2 w-36 h-auto drop-shadow"
+                />
+              </div>
+              <div class="mt-6 text-center px-4">
+                <h1
+                  class="font-extrabold text-2xl md:text-3xl text-gray-800 leading-tight"
+                >
+                  Huy hiệu siêng năng cấp 1
+                </h1>
+                <p
+                  class="font-semibold text-gray-700 text-base md:text-lg mt-3"
+                >
+                  Hoàn thành 100% bài tập của 15 buổi liên tiếp
+                </p>
+              </div>
+            </div>
+
+            <!-- Progress Box -->
+            <div class="flex flex-col items-center gap-6">
+              <div
+                class="w-full bg-gray-100 rounded-2xl p-6 flex flex-col gap-6"
+              >
+                <p
+                  class="text-gray-800 font-semibold text-center leading-relaxed"
+                >
+                  Hoàn thành 100% bài tập của 7 buổi nữa để đạt huy hiệu này
+                </p>
+                <div class="relative w-full max-w-lg mx-auto">
+                  <div
+                    class="h-8 w-full rounded-xl bg-white shadow-inner flex items-center px-2"
+                  >
+                    <div
+                      class="h-5 rounded-full bg-gradient-to-r from-orange-400 to-orange-500 relative flex items-center"
+                      style="width: 50%"
+                    >
+                      <div
+                        class="absolute -top-5 right-0 translate-x-1/2 flex flex-col items-center"
+                      >
+                        <span
+                          class="w-12 h-12 rounded-full bg-yellow-400 border-4 border-white shadow flex items-center justify-center font-extrabold text-green-600 text-sm"
+                          >8</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-3 text-sm text-gray-600 justify-center"
+                >
+                  <span
+                    class="inline-block px-4 py-1 rounded-full bg-gray-900 text-white font-bold text-xs tracking-wide"
+                    >8 buổi</span
+                  >
+                  <span class="font-medium">/ 15 buổi</span>
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center w-full gap-4">
+                <div
+                  class="px-6 py-4 rounded-full bg-black/5 text-gray-800 font-semibold text-center text-sm md:text-base max-w-xl"
+                >
+                  💡 Bé hãy làm bài tập ngay sau khi buổi học kết thúc để ôn
+                  luyện nhé!
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex flex-wrap gap-4 justify-end pt-2">
+              <button
+                class="uk-modal-close px-5 py-3 rounded-xl bg-gray-200 text-gray-700 font-bold hover:bg-gray-300 transition"
+              >
+                Đóng
+              </button>
+              <button
+                id="btn-simulate-progress"
+                class="px-6 py-3 rounded-xl bg-indigo-600 text-white font-bold hover:bg-indigo-500 transition"
+              >
+                +1 buổi
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Simulated progress logic
+      let current = 8;
+      const target = 15;
+      const bar = document.querySelector(
+        "#modal-badge-detail .bg-gradient-to-r"
+      );
+      const bubble = document.querySelector("#modal-badge-detail .w-12");
+      const countChip = document.querySelector(
+        "#modal-badge-detail .px-4.py-1"
+      );
+
+      function updateProgress() {
+        const pct = Math.min(current / target, 1) * 100;
+        bar.style.width = pct + "%";
+        bubble.textContent = current;
+        countChip.textContent = current + " buổi";
+        if (current >= target) {
+          UIkit.notification({
+            message: "🎉 Đã đạt huy hiệu!",
+            status: "success",
+          });
+        }
+      }
+
+      document
+        .getElementById("btn-simulate-progress")
+        .addEventListener("click", () => {
+          if (current < target) {
+            current++;
+            updateProgress();
+          } else {
+            UIkit.notification({ message: "Đã tối đa!", status: "primary" });
+          }
+        });
+
+      // Auto open modal
+      // UIkit.modal('#modal-badge-detail').show();
+    </script>
+  </body>
+</html>
