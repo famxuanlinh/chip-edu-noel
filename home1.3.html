@@ -250,12 +250,7 @@
                   class="button-primary flex-center w-full bg-greenscale-light-green px-5 grayscale-dark-gray button-l"
                   style="height: 60px"
                 >
-                  <img
-                    src="public/icons/Treasure.png"
-                    width="40"
-                    height="40"
-                    alt=""
-                  />
+                  <img src="public/icons/Treasure.png" width="40" alt="" />
                   <span class="flex-1 flex-center"> Kho báu</span>
                 </a>
                 <button
@@ -338,7 +333,7 @@
                 >
                   <div
                     id="scroll-hide"
-                    class="space-y-2_5 px-3 h-[350px] overflow-y-auto"
+                    class="space-y-2.5 px-3 h-[350px] overflow-y-auto"
                   >
                     <div class="lesson-practice-right-table-row">
                       <div class="flex-items-center space-x-1">
@@ -653,7 +648,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="p-3 bg-primary-green rounded-b-5">
+                  <div class="p-3 bg-primary-green rounded-b-[20px]">
                     <div class="lesson-practice-right-table-row">
                       <div class="flex-items-center space-x-1">
                         <div
@@ -700,8 +695,134 @@
           </div>
         </div>
       </div>
+      <!-- <button
+        class="uk-button"
+        type="button"
+        onclick="UIkit.notification({message: ' <div class="flex items-center gap-10">
+          <img src="public/icons/check.svg" alt="icon check" />
+          <span
+            >Đừng quên buổi học hôm nay để nối dài chuỗi chuyên cần nhé!</span
+          >
+          <img
+            onclick="UIkit.notification('close')"
+            src="public/icons/close.svg"
+            alt="icon close"
+          />
+        </div>', pos: 'top-left'})"
+      >
+        Notification
+      </button> -->
+      <div class="flex gap-10 items-center justify-end">
+        <button
+          class="uk-button uk-button-default w-fit demo"
+          type="button"
+          onclick="UIkit.notification({
+      message: `
+        <div class='flex items-center'>
+          <img src='public/figma-assets/bird-noti.png' class='-mr-10' alt='icon check' />
+          <span class='caption-l'>Đừng quên buổi học hôm nay để nối dài chuỗi chuyên cần nhé!</span>
+         
+        </div>
+      `,
+      pos: 'top-left'
+    })"
+        >
+          Notification
+        </button>
+        <button
+          uk-toggle="target: #medal-preview5-done"
+          type="button"
+          class=""
+          data-category="racing"
+        >
+          Hoàn thành modal
+        </button>
+      </div>
+
+      <div id="medal-preview5-done" class="uk-flex-top" uk-modal>
+        <div
+          style="
+            height: fit-content;
+            max-width: 640px !important;
+            width: 100% !important;
+            border-radius: 20px;
+            padding: 0 !important;
+          "
+          class="relative level-modal uk-modal-dialog space-y-10 uk-modal-body uk-margin-auto-vertical"
+        >
+          <button
+            type="button"
+            onclick="hideModal('medal-preview5-done')"
+            class="rounded-full z-10 flex-justify-center"
+            style="
+              background-color: transparent;
+              position: absolute;
+              top: 20px;
+              right: 20px;
+            "
+          >
+            <img src="public/icons/x2.svg" width="40" height="40" />
+          </button>
+          <div>
+            <div class="relative h-80">
+              <!-- <img
+                src="public/figma-assets/medal3.png"
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                alt=""
+                width="284"
+                height="284"
+              /> -->
+
+              <img
+                class="medal-animation-image absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500"
+                src="public/figma-assets/covu.png"
+                alt=""
+              />
+
+              <img
+                src="public/figma-assets/medal-bg1-red.png"
+                class="rounded-t-[20px] h-full w-full"
+                alt=""
+              />
+            </div>
+            <div class="flex p-6 flex-col items-center gap-6">
+              <div class="space-y-2 flex flex-col items-center">
+                <div class="text-[#3A3335] text-center caption-l">
+                  Bạn chưa hoàn thành luyện tập hôm nay, hãy hoàn thành 100% bài
+                  tập để giữ chuỗi nào!
+                </div>
+                <div class="flex items-center gap-4 mt-4">
+                  <button
+                    onclick="hideModal('medal-preview5-done')"
+                    type="button"
+                    class="button-primary px-5 w-fit btn-animation flex-center bg-primary-green grayscale-white button-m"
+                    style="color: white; background-color: #00b26b"
+                  >
+                    Tiếp tục làm bài
+                  </button>
+                  <button
+                    onclick="hideModal('medal-preview5-done')"
+                    type="button"
+                    class="button-primary px-5 w-fit btn-animation flex-center bg-primary-green grayscale-white button-m"
+                    style="color: white; background-color: #ff6047"
+                  >
+                    Thoát
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script>
+      function hideModal(modalId) {
+        const dropdownElement = document.getElementById(modalId);
+
+        UIkit.modal(dropdownElement).hide(0);
+      }
+    </script>
   </body>
 </html>

@@ -585,6 +585,9 @@
   .mt-20 {
     margin-top: calc(var(--spacing) * 20) !important;
   }
+  .-mr-10 {
+    margin-right: calc(var(--spacing) * -10) !important;
+  }
   .mr-0 {
     margin-right: calc(var(--spacing) * 0) !important;
   }
@@ -878,6 +881,9 @@
   }
   .h-50 {
     height: calc(var(--spacing) * 50) !important;
+  }
+  .h-80 {
+    height: calc(var(--spacing) * 80) !important;
   }
   .h-\[72px\] {
     height: 72px !important;
@@ -1231,6 +1237,13 @@
       margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse))) !important;
     }
   }
+  .space-y-2\.5 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0 !important;
+      margin-block-start: calc(calc(var(--spacing) * 2.5) * var(--tw-space-y-reverse)) !important;
+      margin-block-end: calc(calc(var(--spacing) * 2.5) * calc(1 - var(--tw-space-y-reverse))) !important;
+    }
+  }
   .space-y-3 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0 !important;
@@ -1439,6 +1452,10 @@
     border-top-right-radius: 20px !important;
     border-bottom-right-radius: 20px !important;
   }
+  .rounded-b-\[20px\] {
+    border-bottom-right-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+  }
   .rounded-br {
     border-bottom-right-radius: 0.25rem !important;
   }
@@ -1563,6 +1580,9 @@
   }
   .bg-\[\#FFFBFBCC\] {
     background-color: #FFFBFBCC !important;
+  }
+  .bg-\[\#FFFCD5\] {
+    background-color: #FFFCD5 !important;
   }
   .bg-\[\#d8eddd\] {
     background-color: #d8eddd !important;
