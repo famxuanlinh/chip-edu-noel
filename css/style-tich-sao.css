@@ -637,3 +637,12 @@
   transform: translateY(-50%);
   right: 32px;
 }
+
+.uk-slideshow-items {
+  aspect-ratio: 670 / 502 !important;
+}
+
+.uk-thumbnav .uk-active > a {
+  border: 2px solid #00b26b;
+  border-radius: 22px;
+}
