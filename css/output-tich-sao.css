@@ -1725,6 +1725,9 @@
   .bg-\[url\(\'\/public\/class\/In-class-3\.png\'\)\] {
     background-image: url('/public/class/In-class-3.png') !important;
   }
+  .bg-\[url\(\'\/public\/figma-assets\/profile-bg\.png\'\)\] {
+    background-image: url('/public/figma-assets/profile-bg.png') !important;
+  }
   .bg-\[url\(\'\/public\/home1\/unit\.svg\'\)\] {
     background-image: url('/public/home1/unit.svg') !important;
   }
