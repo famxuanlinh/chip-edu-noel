@@ -663,6 +663,12 @@
   .mb-25 {
     margin-bottom: calc(var(--spacing) * 25) !important;
   }
+  .mb-27 {
+    margin-bottom: calc(var(--spacing) * 27) !important;
+  }
+  .mb-27\.5 {
+    margin-bottom: calc(var(--spacing) * 27.5) !important;
+  }
   .-ml-3 {
     margin-left: calc(var(--spacing) * -3) !important;
   }
@@ -857,6 +863,9 @@
   }
   .h-16 {
     height: calc(var(--spacing) * 16) !important;
+  }
+  .h-16\.5 {
+    height: calc(var(--spacing) * 16.5) !important;
   }
   .h-17 {
     height: calc(var(--spacing) * 17) !important;
@@ -1207,6 +1216,9 @@
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6) !important;
+  }
+  .gap-7 {
+    gap: calc(var(--spacing) * 7) !important;
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8) !important;
@@ -1769,6 +1781,9 @@
   .bg-right-bottom {
     background-position: right bottom !important;
   }
+  .bg-right-top {
+    background-position: right top !important;
+  }
   .bg-no-repeat {
     background-repeat: no-repeat !important;
   }
@@ -2309,6 +2324,9 @@
   }
   .text-white\/60 {
     color: color-mix(in oklab, var(--color-white) 60%, transparent) !important;
+  }
+  .capitalize {
+    text-transform: capitalize !important;
   }
   .underline {
     text-decoration-line: underline !important;

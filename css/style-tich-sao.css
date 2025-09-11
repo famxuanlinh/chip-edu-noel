@@ -646,3 +646,13 @@
   border: 2px solid #00b26b;
   border-radius: 22px;
 }
+
+.modal-zoom {
+  zoom: 1;
+}
+
+@media screen and (max-width: 1600px) {
+  .modal-zoom {
+    zoom: 0.75;
+  }
+}
