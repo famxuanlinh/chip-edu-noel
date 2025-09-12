@@ -750,7 +750,11 @@
                 <div
                   class="flex bg-white rounded-2xl border border-gray-100 hover:shadow-md transition-all"
                 >
-                  <div class="flex flex-col items-center">
+                  <a
+                    type="button"
+                    uk-toggle="target: #gift-preview1"
+                    class="flex flex-col hover:text-current text-[#3A3335] items-center hover:no-underline"
+                  >
                     <img
                       src="public/figma-assets/doi-qua.jpg"
                       alt="Gift"
@@ -818,7 +822,7 @@
                         >Đổi quà</a
                       > -->
                     </div>
-                  </div>
+                  </a>
                 </div>
 
                 <!-- Gift Item 3 -->
@@ -1067,6 +1071,156 @@
       </div>
 
       <!-- Quà xem trước modal -->
+      <div id="gift-preview1" class="uk-flex-top" uk-modal>
+        <div
+          style="
+            height: fit-content;
+            max-width: 1420px !important;
+            width: 100% !important;
+            border-radius: 20px;
+          "
+          class="relative level-modal modal-zoom uk-modal-dialog space-y-10 uk-modal-body uk-margin-auto-vertical"
+        >
+          <button
+            type="button"
+            onclick="hideModal('gift-preview')"
+            class="rounded-full flex-justify-center"
+            style="
+              background-color: transparent;
+              position: absolute;
+              top: 20px;
+              right: 20px;
+            "
+          >
+            <img src="public/icons/x2.svg" width="40" height="40" />
+          </button>
+          <div>
+            <div class="space-y-10 rounded-3xl mt-4">
+              <div class="grid grid-cols-2 gap-12">
+                <div
+                  class="uk-position-relative mb-27.5"
+                  uk-slideshow="animation: fade"
+                >
+                  <div
+                    class="uk-slideshow-items"
+                    style="aspect-ratio: 670 / 502; border-radius: 20px"
+                  >
+                    <div>
+                      <img src="public/figma-assets/gift.png" alt="" uk-cover />
+                    </div>
+                    <div>
+                      <img
+                        src="public/figma-assets/doi-qua.jpg"
+                        alt=""
+                        uk-cover
+                      />
+                    </div>
+                    <div>
+                      <img src="public/figma-assets/gift.png" alt="" uk-cover />
+                    </div>
+                  </div>
+
+                  <div class="uk-position-bottom-center-out uk-position-small">
+                    <ul class="uk-thumbnav">
+                      <li uk-slideshow-item="0">
+                        <a href="#"
+                          ><img
+                            src="public/figma-assets/gift.png"
+                            width="100"
+                            height="67"
+                            style="
+                              aspect-ratio: 670 / 502;
+                              border-radius: 20px;
+                              object-fit: cover;
+                            "
+                            alt=""
+                        /></a>
+                      </li>
+                      <li uk-slideshow-item="1">
+                        <a href="#"
+                          ><img
+                            src="public/figma-assets/doi-qua.jpg"
+                            width="100"
+                            height="67"
+                            style="
+                              aspect-ratio: 670 / 502;
+                              border-radius: 20px;
+                              object-fit: cover;
+                            "
+                            alt=""
+                        /></a>
+                      </li>
+                      <li uk-slideshow-item="2">
+                        <a href="#"
+                          ><img
+                            src="public/figma-assets/gift.png"
+                            width="100"
+                            height="67"
+                            style="
+                              aspect-ratio: 670 / 502;
+                              border-radius: 20px;
+                              object-fit: cover;
+                            "
+                            alt=""
+                        /></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <a
+                    class="uk-position-center-left uk-position-small uk-hidden-hover"
+                    href
+                    uk-slidenav-previous
+                    uk-slideshow-item="previous"
+                  ></a>
+                  <a
+                    class="uk-position-center-right uk-position-small uk-hidden-hover"
+                    href
+                    uk-slidenav-next
+                    uk-slideshow-item="next"
+                  ></a>
+                </div>
+                <div class="">
+                  <div class="text-[#3A3335] heading-h4 capitalize">
+                    Balo xanh lơ
+                  </div>
+                  <p
+                    class="flex text-primary gap-1 my-4 items-center heading-h4"
+                  >
+                    500
+                    <img
+                      src="public/figma-assets/star.svg"
+                      alt="Star"
+                      class="w-6 h-6"
+                    />
+                  </p>
+                  <p class="body-s text-black/60 mb-6">
+                    Hộp bút trong suốt size lớn cho bé đủ hoạ tiết xinh xắn phối
+                    hạt kim tuyến lấp lánh chuyển động lung linh làm cho hộp bút
+                    trở nên sinh động, bé thêm hứng thú <br />
+                    Ngoài ra, với kích thước lớn của túi thì các mẹ và các bạn
+                    nữ có thể tha hồ đựng mỹ phẩm, trang sức, đồ trang điểm….vô
+                    cùng tiện lợi nhé! Với các họa tiết ngộ nghĩnh, đáng yêu,
+                    cùng các hạt kim tuyến lấp lánh di chuyển sống động, hộp bút
+                    sẽ tăng hứng thú học tập và tạo hứng thú cho bé trong việc
+                    học.
+                  </p>
+                  <div class="text-[#3A3335] heading-h4 mb-4">Đổi quà</div>
+                  <p class="body-s text-black/60 mb-6">
+                    Bạn còn thiếu 200
+                    <img
+                      src="public/figma-assets/star.svg"
+                      alt="Star"
+                      class="w-6 h-6"
+                    />
+                    để có thể đổi món quà này <br />
+                    Hãy tích luỹ thêm và quay lại sau nhé!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div id="gift-preview" class="uk-flex-top" uk-modal>
         <div
           style="
@@ -2472,7 +2626,7 @@
               <img
                 class="medal-animation-image absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500"
                 data-gif-src="public/figma-assets/siengnang_fix.gif"
-                data-png-src="public/figma-assets/medal3.png"
+                data-png-src="public/figma-assets/CCc1.png"
                 src="public/figma-assets/siengnang_fix.gif"
                 alt=""
                 width="284"

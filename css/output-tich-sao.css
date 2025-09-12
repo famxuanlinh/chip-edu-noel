@@ -1001,6 +1001,9 @@
   .grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
   }
+  .\!flex-col {
+    flex-direction: column !important;
+  }
   .flex-col {
     flex-direction: column !important;
   }
@@ -2224,10 +2227,24 @@
       }
     }
   }
+  .hover\:text-current {
+    &:hover {
+      @media (hover: hover) {
+        color: currentColor !important;
+      }
+    }
+  }
   .hover\:text-gray-700 {
     &:hover {
       @media (hover: hover) {
         color: var(--color-gray-700) !important;
+      }
+    }
+  }
+  .hover\:no-underline {
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: none !important;
       }
     }
   }
