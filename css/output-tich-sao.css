@@ -66,6 +66,7 @@
     --radius-3xl: 1.5rem;
     --radius-4xl: 2rem;
     --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 0.15);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --blur-md: 12px;
     --blur-2xl: 40px;
     --aspect-video: 16 / 9;
@@ -795,6 +796,9 @@
   }
   .h-\[350px\] {
     height: 350px !important;
+  }
+  .h-\[400px\] {
+    height: 400px !important;
   }
   .h-\[480px\] {
     height: 480px !important;
@@ -2131,6 +2135,10 @@
     --tw-duration: 500ms !important;
     transition-duration: 500ms !important;
   }
+  .ease-in-out {
+    --tw-ease: var(--ease-in-out) !important;
+    transition-timing-function: var(--ease-in-out) !important;
+  }
   .select-none {
     -webkit-user-select: none !important;
     user-select: none !important;
@@ -2671,6 +2679,10 @@
   inherits: false;
 }
 @property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ease {
   syntax: "*";
   inherits: false;
 }

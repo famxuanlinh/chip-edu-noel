@@ -1083,7 +1083,7 @@
         >
           <button
             type="button"
-            onclick="hideModal('gift-preview')"
+            onclick="hideModal('gift-preview1')"
             class="rounded-full flex-justify-center"
             style="
               background-color: transparent;
@@ -1206,13 +1206,15 @@
                   </p>
                   <div class="text-[#3A3335] heading-h4 mb-4">Đổi quà</div>
                   <p class="body-s text-black/60 mb-6">
-                    Bạn còn thiếu 200
-                    <img
-                      src="public/figma-assets/star.svg"
-                      alt="Star"
-                      class="w-6 h-6"
-                    />
-                    để có thể đổi món quà này <br />
+                    <span class="flex items-center gap-1">
+                      Bạn còn thiếu 200
+                      <img
+                        src="public/figma-assets/star.svg"
+                        alt="Star"
+                        class="w-6 h-6"
+                      />
+                      để có thể đổi món quà này
+                    </span>
                     Hãy tích luỹ thêm và quay lại sau nhé!
                   </p>
                 </div>
@@ -2612,7 +2614,7 @@
             <img src="public/icons/x2.svg" width="40" height="40" />
           </button>
           <div>
-            <div class="relative h-[480px]">
+            <div class="relative h-[400px]">
               <!-- <img
                 src="public/figma-assets/sangtao2.gif"
                 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
@@ -2929,14 +2931,13 @@
       });
     </script>
     <script>
-      // Reusable Medal Animation System
       class MedalAnimationManager {
         constructor() {
-          this.animations = new Map(); // Track running animations
-          this.defaultDelay = 6000; // 8 seconds default
+          this.animations = new Map(); // modalId -> timeout
+          this.defaultDelay = 5500; // 5.5s; adjust to your GIF duration
+          this.preloads = new Map(); // modalId -> HTMLImageElement (preloaded)
         }
 
-        // Start animation for a specific medal image
         startAnimation(modalId, options = {}) {
           const modal = document.getElementById(modalId);
           if (!modal) return;
@@ -2944,10 +2945,9 @@
           const medalImage = modal.querySelector(".medal-animation-image");
           if (!medalImage) return;
 
-          // Stop any existing animation for this modal
-          this.stopAnimation(modalId);
+          this.stopAnimation(modalId); // clear previous timeout if any
 
-          const delay = options.delay || this.defaultDelay;
+          const delay = options.delay ?? this.defaultDelay;
           const gifSrc = medalImage.dataset.gifSrc || options.gifSrc;
           const pngSrc = medalImage.dataset.pngSrc || options.pngSrc;
 
@@ -2956,50 +2956,69 @@
             return;
           }
 
-          // Reset to GIF
+          // Reset to GIF visibly
           medalImage.src = gifSrc;
-          medalImage.style.opacity = "1";
+          medalImage.classList.remove("is-hidden");
+          medalImage.classList.add("is-visible");
 
-          // Set up the animation timeout
-          const animationTimeout = setTimeout(() => {
-            this.transitionToPng(medalImage, pngSrc);
-            this.animations.delete(modalId);
-          }, delay);
+          // Preload PNG first
+          this.preloadPng(modalId, pngSrc).then(() => {
+            const timeout = setTimeout(() => {
+              this.transitionToPng(medalImage, pngSrc);
+              this.animations.delete(modalId);
+            }, delay);
 
-          // Store the timeout reference
-          this.animations.set(modalId, animationTimeout);
+            this.animations.set(modalId, timeout);
+          });
         }
 
-        // Transition from GIF to PNG with fade effect
+        preloadPng(modalId, src) {
+          const cached = this.preloads.get(modalId);
+          if (cached && cached.src === src && cached.complete) {
+            return Promise.resolve();
+          }
+          return new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => {
+              this.preloads.set(modalId, img);
+              resolve();
+            };
+            img.onerror = () => resolve(); // fail-safe
+            img.src = src;
+          });
+        }
+
         transitionToPng(medalImage, pngSrc) {
           // Fade out
-          medalImage.style.opacity = "0";
+          medalImage.classList.remove("is-visible");
+          medalImage.classList.add("is-hidden");
 
-          // Change image source during fade
+          // After fade-out, swap src, then fade back in on next frame
+          const FADE_MS = 500; // keep in sync with CSS
           setTimeout(() => {
             medalImage.src = pngSrc;
-            // Fade back in
-            medalImage.style.opacity = "1";
-          }, 250); // Half of transition duration
+
+            // Ensure browser applies src change before fade-in
+            requestAnimationFrame(() => {
+              medalImage.classList.remove("is-hidden");
+              medalImage.classList.add("is-visible");
+            });
+          }, FADE_MS / 2); // switch mid-way feels smoother; tweak if you like
         }
 
-        // Stop animation for a specific modal
         stopAnimation(modalId) {
-          if (this.animations.has(modalId)) {
-            clearTimeout(this.animations.get(modalId));
+          const t = this.animations.get(modalId);
+          if (t) {
+            clearTimeout(t);
             this.animations.delete(modalId);
           }
         }
 
-        // Stop all animations
         stopAllAnimations() {
-          this.animations.forEach((timeout, modalId) => {
-            clearTimeout(timeout);
-          });
+          this.animations.forEach(clearTimeout);
           this.animations.clear();
         }
 
-        // Reset modal to initial state
         resetModal(modalId) {
           this.stopAnimation(modalId);
           const modal = document.getElementById(modalId);
@@ -3008,51 +3027,46 @@
           const medalImage = modal.querySelector(".medal-animation-image");
           if (medalImage && medalImage.dataset.gifSrc) {
             medalImage.src = medalImage.dataset.gifSrc;
-            medalImage.style.opacity = "1";
+            medalImage.classList.remove("is-hidden");
+            medalImage.classList.add("is-visible");
           }
         }
       }
 
-      // Create global instance
+      // Global instance
       window.medalAnimationManager = new MedalAnimationManager();
 
-      // Enhanced Modal Management System
+      // Show/Hide helpers (unchanged, with slight safety)
       window.showModal = function (modalId, animationOptions = {}) {
         const modal = document.getElementById(modalId);
-        if (modal) {
-          UIkit.modal(modal).show();
-
-          // Start animation if modal has medal animation image
-          setTimeout(() => {
-            const hasAnimation = modal.querySelector(".medal-animation-image");
-            if (hasAnimation) {
-              window.medalAnimationManager.startAnimation(
-                modalId,
-                animationOptions
-              );
-            }
-          }, 100); // Small delay to ensure modal is fully shown
-        }
+        if (!modal) return;
+        UIkit.modal(modal).show();
+        setTimeout(() => {
+          if (modal.querySelector(".medal-animation-image")) {
+            window.medalAnimationManager.startAnimation(
+              modalId,
+              animationOptions
+            );
+          }
+        }, 100);
       };
 
       window.hideModal = function (modalId) {
         const modal = document.getElementById(modalId);
-        if (modal) {
-          // Stop animation when hiding modal
-          window.medalAnimationManager.stopAnimation(modalId);
-          UIkit.modal(modal).hide();
-        }
+        if (!modal) return;
+        window.medalAnimationManager.stopAnimation(modalId);
+        UIkit.modal(modal).hide();
       };
 
       // Auto-handle UIkit modal events
-      document.addEventListener("shown", function (e) {
+      document.addEventListener("shown", (e) => {
         const modalId = e.target.id;
         if (modalId && e.target.querySelector(".medal-animation-image")) {
           window.medalAnimationManager.startAnimation(modalId);
         }
       });
 
-      document.addEventListener("hidden", function (e) {
+      document.addEventListener("hidden", (e) => {
         const modalId = e.target.id;
         if (modalId) {
           window.medalAnimationManager.resetModal(modalId);
