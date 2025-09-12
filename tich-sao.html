@@ -701,7 +701,11 @@
                 <div
                   class="flex bg-white rounded-2xl border border-gray-100 hover:shadow-md transition-all"
                 >
-                  <div class="flex flex-col items-center">
+                  <button
+                    type="button"
+                    uk-toggle="target: #gift-preview"
+                    class="flex flex-col items-center"
+                  >
                     <img
                       src="public/figma-assets/doi-qua.jpg"
                       alt="Gift"
@@ -731,14 +735,14 @@
                       </p>
 
                       <a
-                        href="#gift-preview"
+                        href="#confirm-change-gift"
                         uk-toggle
                         style="height: 40px"
                         class="!text-white w-fit !rounded-[20px] px-4 !text-lg !h-10 !leading-4.5 flex items-center justify-center button-link-white font-extrabold bg-[#00b26b] button-primary btn-animation"
                         >Đổi quà</a
                       >
                     </div>
-                  </div>
+                  </button>
                 </div>
 
                 <!-- Gift Item 2 -->
@@ -851,13 +855,12 @@
                         Chiếc balo dễ thương màu xanh sẽ giúp bé đựng tất cả các
                         thiết bị học tập
                       </p>
-                      <a
-                        href="#gift-preview"
-                        uk-toggle
+                      <div
                         style="height: 40px"
                         class="w-fit text-white !rounded-[20px] px-4 !text-lg !h-10 !leading-4.5 flex items-center justify-center button-link-white font-extrabold bg-primary button-primary btn-animation"
-                        >Đổi quà</a
                       >
+                        Đổi quà
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -939,7 +942,7 @@
                       </p>
 
                       <p
-                        class="flex text-[#FF6047] gap-1 items-center font-bold text-sm"
+                        class="flex text-black/60 gap-1 items-center font-bold text-sm"
                       >
                         Đã đổi vào ngày 01/08/2025
                       </p>
@@ -2456,7 +2459,7 @@
           </button>
           <div>
             <div class="relative h-[480px]">
-              <img
+              <!-- <img
                 src="public/figma-assets/sangtao2.gif"
                 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                 alt=""
@@ -2464,17 +2467,17 @@
                 width="284"
                 id="gif-once"
                 height="284"
-              />
+              /> -->
 
-              <!-- <img
+              <img
                 class="medal-animation-image absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500"
-                data-gif-src="public/figma-assets/sangtao2.gif"
+                data-gif-src="public/figma-assets/siengnang_fix.gif"
                 data-png-src="public/figma-assets/medal3.png"
-                src="public/figma-assets/sangtao2.gif"
+                src="public/figma-assets/siengnang_fix.gif"
                 alt=""
                 width="284"
                 height="284"
-              /> -->
+              />
 
               <img
                 src="public/figma-assets/medal-bg1-yellow.png"
