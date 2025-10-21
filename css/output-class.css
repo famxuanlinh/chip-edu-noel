@@ -260,6 +260,9 @@
   .\!h-\[172px\] {
     height: 172px !important;
   }
+  .\!h-full {
+    height: 100% !important;
+  }
   .h-0 {
     height: calc(var(--spacing) * 0);
   }
