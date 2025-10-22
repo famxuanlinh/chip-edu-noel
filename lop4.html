@@ -53,7 +53,7 @@
     <div class="uk-visible@l">
       <!-- Background with gradient -->
       <div
-        class="h-screen bg-[url('/public/class/In-class-0.png')] bg-right-bottom bg-cover flex flex-col gap-4 relative overflow-hidden p-4 xl:p-6"
+        class="h-screen bg-[url('/public/class/In-class-0.png')] bg-right-bottom bg-cover flex flex-col gap-4 relative overflow-hidden p-4 [1600px]:p-6"
       >
         <!-- Header -->
         <div
@@ -219,10 +219,12 @@
         </div>
 
         <!-- Participants -->
-        <div class="flex h-[172px] justify-center items-center gap-3 2xl:gap-4">
+        <div
+          class="flex h-32 [1600px]:h-43 justify-center items-center gap-3 2xl:gap-4"
+        >
           <!-- Teacher -->
           <div
-            class="h-[172px] relative rounded-3xl !bg-[url('/public/class/student.png')] bg-center bg-cover overflow-hidden"
+            class="h-32 [1600px]:h-43 relative rounded-3xl !bg-[url('/public/class/student.png')] bg-center bg-cover overflow-hidden"
           >
             <div
               class="w-full aspect-[295/172] flex items-center justify-center h-full relative bg-[#00140b]/80 backdrop-blur-md overflow-hidden"
@@ -247,7 +249,7 @@
           <!-- Student -->
           <div class="relative rounded-3xl overflow-hidden bg-[#00140b]/60">
             <div class="items-center relative h-fit overflow-hidden">
-              <video class="!h-[172px] aspect-[295/172]">
+              <video class="!h-32 [1600px]:h-43 aspect-[295/172]">
                 <source src="public/class/video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -273,7 +275,7 @@
           </div>
           <div class="relative rounded-3xl overflow-hidden bg-[#00140b]/60">
             <div class="items-center relative h-fit overflow-hidden">
-              <video class="!h-[172px] aspect-[295/172]">
+              <video class="!h-32 [1600px]:h-43 aspect-[295/172]">
                 <source src="public/class/video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -299,7 +301,7 @@
           </div>
           <div class="relative rounded-3xl overflow-hidden bg-[#00140b]/60">
             <div class="items-center relative h-fit overflow-hidden">
-              <video class="!h-[172px] aspect-[295/172]">
+              <video class="!h-32 [1600px]:h-43 aspect-[295/172]">
                 <source src="public/class/video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -325,7 +327,7 @@
           </div>
           <div class="relative rounded-3xl overflow-hidden bg-[#00140b]/60">
             <div class="items-center relative h-fit overflow-hidden">
-              <video class="!h-[172px] aspect-[295/172]">
+              <video class="!h-32 [1600px]:h-43 aspect-[295/172]">
                 <source src="public/class/video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -353,7 +355,7 @@
 
         <!-- Main content -->
         <div
-          class="relative flex h-[calc(100vh-48px-100px-16px+20px-172px)] [1600px]:h-[calc(100vh-48px-100px-16px-182px)]"
+          class="relative flex h-[calc(100vh-48px-100px-16px+20px-130px)] [1600px]:h-[calc(100vh-48px-100px-16px-182px)]"
         >
           <!-- Video area -->
           <div
