@@ -1,4 +1,7 @@
 @import "tailwindcss" source(none);
 
-@source "../lop4.html";
 @source "../lop.html";
+@source "../lop1.html";
+@source "../lop2.html";
+@source "../lop3.html";
+@source "../lop4.html";
