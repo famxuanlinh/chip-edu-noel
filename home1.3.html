@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+    <link href="css/output-tich-sao.css" rel="stylesheet" />
+    <link href="css/style-tich-sao.css" rel="stylesheet" />
+
+    <style>
+      .body {
+        font-family: "Nunito", sans-serif;
+      }
+      .scroll-container {
+        display: flex;
+        height: 100%;
+        overflow-x: auto;
+        gap: 48px;
+        padding: 10px;
+        zoom: 0.85;
+        align-items: center;
+        position: relative;
+      }
+
+      .loader {
+        width: 40px;
+        height: 40px;
+        margin: 0 70px;
+        margin-bottom: 60px;
+        animation: spin 1s linear infinite;
+        flex: 0 0 auto;
+        background-image: url("public/home1/loading.svg");
+
+        background-size: 100%;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="home !bg-[url('/public/home1/bg1.png')] flex h-screen flex-col uk-position-relative"
+    >
+      <div class="home-header project-upload-body-title">
+        <div style="width: 368px" class="flex-items-center">
+          <img
+            width="100"
+            height="100"
+            src="/public/icons/planet3-small.svg"
+            alt="icon planet"
+          />
+          <p class="heading-h3 grayscale-white pl-5">Tiến trình học</p>
+        </div>
+        <div>
+          <div class="flex-items-center">
+            <a
+              class="btn-animation !h-20 !bg-[#D8EDDD] flex-items-center heading-h3 px-5 button-hover button-primary bg-primary-yellow"
+            >
+              <span class="px-4 text-[#006638]">Level 0</span>
+              <img
+                width="32"
+                height="32"
+                src="public/home1/info.svg"
+                alt="icon arrow"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="uk-inline">
+          <button type="button" class="home-header-info-box">
+            <div
+              class="bg-greenscale-light-green heading-h2 p-5 button-primary-1 bg-primary-yellow flex-items-center space-x-4"
+            >
+              <div
+                class="rounded-full"
+                style="
+                  background-color: white;
+                  width: fit-content;
+                  height: fit-content;
+                "
+              >
+                <img
+                  class="rounded-full p-1"
+                  width="80"
+                  height="80"
+                  src="public/figma-assets/avatar1.png"
+                  alt="avatar"
+                />
+              </div>
+              <div class="home-header-info space-y-4">
+                <p class="button-l flex-justify-center">Student’s Name</p>
+                <div class="flex-items-center">
+                  <div
+                    class="project-info-tag flex-items-center inner-blur-inner-b2-50 button-s"
+                  >
+                    <img
+                      src="public/icons/star.svg"
+                      class="mr-2"
+                      width="24"
+                      height="24"
+                      alt=""
+                    />200
+                  </div>
+                  <div
+                    class="project-info-tag flex-items-center inner-blur-inner-b2-50 button-s"
+                  >
+                    <img
+                      src="public/icons/book.svg"
+                      class="mr-2"
+                      width="24"
+                      height="24"
+                      alt=""
+                    />15 buổi
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+          <div
+            class="home-header-dropdown space-x-12"
+            uk-dropdown="mode: click; pos: top-right; animation: uk-animation-slide-top-small; duration: 1000"
+            id="my-dropdown"
+            style="padding: 0 !important"
+          >
+            <div style="display: flex">
+              <div class="space-y-5 relative p-10" style="width: 410px">
+                <a
+                  class="rounded-full absolute top-6 left-6 btn-icon flex-justify-center"
+                  href="/index.html"
+                >
+                  <img src="public/icons/switch.svg" width="40" height="40" />
+                </a>
+                <div
+                  class="project-info flex-center space-x-4"
+                  style="flex-direction: column"
+                >
+                  <div class="flex-center">
+                    <div class="avatar-bg" style="margin-right: -10px">
+                      <img
+                        class="rounded-full p-1"
+                        width="60"
+                        height="60"
+                        src="public/figma-assets/avatar1.png"
+                        alt="avatar"
+                      />
+                    </div>
+                    <div class="avatar-bg relative" style="z-index: 1">
+                      <img
+                        class="rounded-full p-1"
+                        width="120"
+                        height="120"
+                        src="public/figma-assets/avatar1.png"
+                        alt="avatar"
+                      />
+                      <img
+                        class="rounded-full absolute -top-4 -right-4"
+                        width="64"
+                        height="64"
+                        src="public/figma-assets/medal6.png"
+                        alt="avatar"
+                      />
+                    </div>
+                    <div class="avatar-bg" style="margin-left: -10px">
+                      <img
+                        class="rounded-full p-1"
+                        width="60"
+                        height="60"
+                        src="public/figma-assets/avatar1.png"
+                        alt="avatar"
+                      />
+                    </div>
+                  </div>
+                  <div class="space-y-5">
+                    <p class="heading-h3 grayscale-dark-gray mt-6">
+                      Student’s Name
+                    </p>
+                    <div class="flex-items-center">
+                      <div
+                        class="project-info-tag flex-items-center inner-blur-inner-b2-50 button-s"
+                      >
+                        <img
+                          src="public/icons/star.svg"
+                          class="mr-2"
+                          width="24"
+                          height="24"
+                          alt=""
+                        />200
+                      </div>
+                      <div
+                        class="project-info-tag flex-items-center inner-blur-inner-b2-50 button-s"
+                      >
+                        <img
+                          src="public/icons/book.svg"
+                          class="mr-2"
+                          width="24"
+                          height="24"
+                          alt=""
+                        />15 buổi
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  href="#result-modal"
+                  uk-toggle
+                  onclick="hideDropdown()"
+                  class="button-primary flex-center w-full bg-greenscale-light-green px-5 grayscale-dark-gray button-l"
+                  style="height: 60px"
+                >
+                  <img
+                    src="public/icons/medal.svg"
+                    width="40"
+                    height="40"
+                    alt=""
+                  />
+                  <span class="flex-1 flex-center"> Thành tích</span>
+                </a>
+                <button
+                  class="button-primary flex-center w-full bg-greenscale-light-green px-5 grayscale-dark-gray button-l"
+                  style="height: 60px"
+                >
+                  <img
+                    src="public/icons/pencil.svg"
+                    width="40"
+                    height="40"
+                    alt=""
+                  />
+                  <span class="flex-1 flex-center"> Dự án cá nhân</span>
+                </button>
+
+                <a
+                  href="/tich-sao.html"
+                  class="button-primary flex-center w-full bg-greenscale-light-green px-5 grayscale-dark-gray button-l"
+                  style="height: 60px"
+                >
+                  <img src="public/icons/Treasure.png" width="40" alt="" />
+                  <span class="flex-1 flex-center"> Kho báu</span>
+                </a>
+                <button
+                  class="button-primary flex-center w-full bg-primary-green px-5 grayscale-white button-l"
+                  style="height: 60px"
+                >
+                  <img
+                    src="public/icons/parent.svg"
+                    width="40"
+                    height="40"
+                    alt=""
+                  />
+                  <span class="flex-1 flex-center"> Phụ huynh</span>
+                </button>
+              </div>
+              <div
+                class="rounded-r-[20px] bg-right-top px-6 py-7 relative bg-cover"
+                style="
+                  background-image: url('/public/figma-assets/profile-bg.jpg');
+                "
+              >
+                <button
+                  type="button"
+                  onclick="hideDropdown()"
+                  class="absolute top-7 right-6"
+                  style="background-color: transparent"
+                >
+                  <img src="public/icons/x2.svg" width="40" height="40" />
+                </button>
+                <div class="flex items-center gap-3">
+                  <div
+                    class="caption-xs flex items-center justify-center h-8.5 px-3 rounded-full bg-white text-[#FF9800]"
+                  >
+                    Level 3
+                  </div>
+                  <div class="heading-h4 text-black">Bảng đua TOP</div>
+                </div>
+                <div class="flex items-end justify-between mt-6 mb-4">
+                  <div class="button-s">
+                    <select
+                      class="uk-select !rounded-2xl h-13 border border-gray-200"
+                      aria-label="Select"
+                    >
+                      <option>Tháng 1</option>
+                      <option>Tháng 2</option>
+                      <option>Tháng 3</option>
+                      <option>Tháng 4</option>
+                      <option>Tháng 5</option>
+                      <option>Tháng 6</option>
+                      <option>Tháng 7</option>
+                      <option>Tháng 8</option>
+                      <option>Tháng 9</option>
+                      <option>Tháng 10</option>
+                      <option>Tháng 11</option>
+                      <option>Tháng 12</option>
+                    </select>
+                  </div>
+                  <div class="caption-s text-black flex items-center gap-2">
+                    <img
+                      width="20"
+                      height="20"
+                      class="mr-2"
+                      src="public/figma-assets/clock.svg"
+                      alt="clock"
+                    />Còn 3 ngày để thăng hạng
+                  </div>
+                </div>
+                <div
+                  style="
+                    border-radius: 20px;
+                    border: 1px solid var(--Yellowscale-Light-Yellow, #ffd768);
+                    background: var(
+                      --Grayscale-Dim-White-80,
+                      rgba(255, 255, 255, 0.8)
+                    );
+                    box-shadow: 0 12px 6px 0 rgba(226, 124, 34, 0.15),
+                      0 0 20px 0 rgba(255, 255, 255, 0.6), 0 0 6px 0 #fff200;
+                  "
+                  class="inner-blur-inner-b8-60 rounded-5 pt-3"
+                >
+                  <div
+                    id="scroll-hide"
+                    class="space-y-2.5 px-3 h-[350px] overflow-y-auto"
+                  >
+                    <div class="lesson-practice-right-table-row">
+                      <div class="flex-items-center space-x-1">
+                        <div
+                          class="rounded-full"
+                          style="
+                            background-color: white;
+                            width: fit-content;
+                            height: fit-content;
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                          "
+                        >
+                          <img
+                            class="rounded-full p-1"
+                            width="64"
+                            height="64"
+                            src="public/images/avatar1.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <img
+                          width="40"
+                          height="40"
+                          src="public/icons/medal1.svg"
+                          alt="medal"
+                        />
+                        <span class="min-w-70">Pop The Balloon</span>
+                      </div>
+                      <div class="flex-items-center space-x-10">
+                        <div class="space-x-1 flex-items-center">
+                          <span class="primary-green">1200</span
+                          ><img
+                            src="public/icons/star.svg"
+                            width="20"
+                            height="20"
+                            alt="upload"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lesson-practice-right-table-row">
+                      <div class="flex-items-center space-x-1">
+                        <div
+                          class="rounded-full"
+                          style="
+                            background-color: white;
+                            width: fit-content;
+                            height: fit-content;
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                          "
+                        >
+                          <img
+                            class="rounded-full p-1"
+                            width="64"
+                            height="64"
+                            src="public/images/avatar1.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <img
+                          width="40"
+                          height="40"
+                          src="public/icons/medal2.svg"
+                          alt="medal"
+                        />
+                        <span class="min-w-70">Pop The Balloon</span>
+                      </div>
+                      <div class="flex-items-center space-x-10">
+                        <div class="space-x-1 flex-items-center">
+                          <span class="primary-green">1200</span
+                          ><img
+                            src="public/icons/star.svg"
+                            width="20"
+                            height="20"
+                            alt="upload"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lesson-practice-right-table-row">
+                      <div class="flex-items-center space-x-1">
+                        <div
+                          class="rounded-full"
+                          style="
+                            background-color: white;
+                            width: fit-content;
+                            height: fit-content;
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                          "
+                        >
+                          <img
+                            class="rounded-full p-1"
+                            width="64"
+                            height="64"
+                            src="public/images/avatar1.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <img
+                          width="40"
+                          height="40"
+                          src="public/icons/medal3.svg"
+                          alt="medal"
+                        />
+                        <span class="min-w-70">Pop The Balloon</span>
+                      </div>
+                      <div class="flex-items-center space-x-10">
+                        <div class="space-x-1 flex-items-center">
+                          <span class="primary-green">1200</span
+                          ><img
+                            src="public/icons/star.svg"
+                            width="20"
+                            height="20"
+                            alt="upload"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lesson-practice-right-table-row">
+                      <div class="flex-items-center space-x-1">
+                        <div
+                          class="rounded-full"
+                          style="
+                            background-color: white;
+                            width: fit-content;
+                            height: fit-content;
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                          "
+                        >
+                          <img
+                            class="rounded-full p-1"
+                            width="64"
+                            height="64"
+                            src="public/images/avatar1.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div
+                          class="flex-center button-m primary-green"
+                          style="width: 40px"
+                        >
+                          #4
+                        </div>
+                        <span class="min-w-70">Pop The Balloon</span>
+                      </div>
+                      <div class="flex-items-center space-x-10">
+                        <div class="space-x-1 flex-items-center">
+                          <span class="primary-green">1200</span
+                          ><img
+                            src="public/icons/star.svg"
+                            width="20"
+                            height="20"
+                            alt="upload"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lesson-practice-right-table-row">
+                      <div class="flex-items-center space-x-1">
+                        <div
+                          class="rounded-full"
+                          style="
+                            background-color: white;
+                            width: fit-content;
+                            height: fit-content;
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                          "
+                        >
+                          <img
+                            class="rounded-full p-1"
+                            width="64"
+                            height="64"
+                            src="public/images/avatar1.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div
+                          class="flex-center button-m primary-green"
+                          style="width: 40px"
+                        >
+                          #4
+                        </div>
+                        <span class="min-w-70">Pop The Balloon</span>
+                      </div>
+                      <div class="flex-items-center space-x-10">
+                        <div class="space-x-1 flex-items-center">
+                          <span class="primary-green">1200</span
+                          ><img
+                            src="public/icons/star.svg"
+                            width="20"
+                            height="20"
+                            alt="upload"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lesson-practice-right-table-row">
+                      <div class="flex-items-center space-x-1">
+                        <div
+                          class="rounded-full"
+                          style="
+                            background-color: white;
+                            width: fit-content;
+                            height: fit-content;
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                          "
+                        >
+                          <img
+                            class="rounded-full p-1"
+                            width="64"
+                            height="64"
+                            src="public/images/avatar1.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div
+                          class="flex-center button-m primary-green"
+                          style="width: 40px"
+                        >
+                          #4
+                        </div>
+                        <span class="min-w-70">Pop The Balloon</span>
+                      </div>
+                      <div class="flex-items-center space-x-10">
+                        <div class="space-x-1 flex-items-center">
+                          <span class="primary-green">1200</span
+                          ><img
+                            src="public/icons/star.svg"
+                            width="20"
+                            height="20"
+                            alt="upload"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lesson-practice-right-table-row">
+                      <div class="flex-items-center space-x-1">
+                        <div
+                          class="rounded-full"
+                          style="
+                            background-color: white;
+                            width: fit-content;
+                            height: fit-content;
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                          "
+                        >
+                          <img
+                            class="rounded-full p-1"
+                            width="64"
+                            height="64"
+                            src="public/images/avatar1.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div
+                          class="flex-center button-m primary-green"
+                          style="width: 40px"
+                        >
+                          #4
+                        </div>
+                        <span class="min-w-70">Pop The Balloon</span>
+                      </div>
+                      <div class="flex-items-center space-x-10">
+                        <div class="space-x-1 flex-items-center">
+                          <span class="primary-green">1200</span
+                          ><img
+                            src="public/icons/star.svg"
+                            width="20"
+                            height="20"
+                            alt="upload"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lesson-practice-right-table-row">
+                      <div class="flex-items-center space-x-1">
+                        <div
+                          class="rounded-full"
+                          style="
+                            background-color: white;
+                            width: fit-content;
+                            height: fit-content;
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                          "
+                        >
+                          <img
+                            class="rounded-full p-1"
+                            width="64"
+                            height="64"
+                            src="public/images/avatar1.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div
+                          class="flex-center button-m primary-green"
+                          style="width: 40px"
+                        >
+                          #4
+                        </div>
+                        <span class="min-w-70">Pop The Balloon</span>
+                      </div>
+                      <div class="flex-items-center space-x-10">
+                        <div class="space-x-1 flex-items-center">
+                          <span class="primary-green">1200</span
+                          ><img
+                            src="public/icons/star.svg"
+                            width="20"
+                            height="20"
+                            alt="upload"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-3 bg-primary-green rounded-b-[20px]">
+                    <div class="lesson-practice-right-table-row">
+                      <div class="flex-items-center space-x-1">
+                        <div
+                          class="rounded-full"
+                          style="
+                            background-color: white;
+                            width: fit-content;
+                            height: fit-content;
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                          "
+                        >
+                          <img
+                            class="rounded-full p-1"
+                            width="64"
+                            height="64"
+                            src="public/images/avatar1.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div
+                          class="flex-center button-m primary-green"
+                          style="width: 40px"
+                        >
+                          #5
+                        </div>
+                        <span class="min-w-70">Pop The Balloon</span>
+                      </div>
+                      <div class="flex-items-center space-x-10">
+                        <div class="space-x-1 flex-items-center">
+                          <span class="primary-green">1200</span
+                          ><img
+                            src="public/icons/star.svg"
+                            width="20"
+                            height="20"
+                            alt="upload"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <button
+        class="uk-button"
+        type="button"
+        onclick="UIkit.notification({message: ' <div class="flex items-center gap-10">
+          <img src="public/icons/check.svg" alt="icon check" />
+          <span
+            >Đừng quên buổi học hôm nay để nối dài chuỗi chuyên cần nhé!</span
+          >
+          <img
+            onclick="UIkit.notification('close')"
+            src="public/icons/close.svg"
+            alt="icon close"
+          />
+        </div>', pos: 'top-left'})"
+      >
+        Notification
+      </button> -->
+      <div class="flex gap-10 items-center justify-end">
+        <button
+          class="uk-button uk-button-default w-fit demo"
+          type="button"
+          onclick="UIkit.notification({
+      message: `
+        <div class='flex items-center !mr-10'>
+          <img src='public/figma-assets/thongbao.gif' class='-mr-10 h-21' alt='icon check' />
+          <span class='caption-l'>Đừng quên buổi học hôm nay để nối dài chuỗi chuyên cần nhé!</span>
+         
+        </div>
+      `,
+      pos: 'top-left'
+    })"
+        >
+          Notification
+        </button>
+        <button
+          uk-toggle="target: #medal-preview5-done"
+          type="button"
+          class=""
+          data-category="racing"
+        >
+          Hoàn thành modal
+        </button>
+      </div>
+
+      <div id="medal-preview5-done" class="uk-flex-top" uk-modal>
+        <div
+          style="
+            height: fit-content;
+            max-width: 640px !important;
+            width: 100% !important;
+            border-radius: 20px;
+            padding: 0 !important;
+          "
+          class="relative level-modal uk-modal-dialog space-y-10 uk-modal-body uk-margin-auto-vertical"
+        >
+          <button
+            type="button"
+            onclick="hideModal('medal-preview5-done')"
+            class="rounded-full z-10 flex-justify-center"
+            style="
+              background-color: transparent;
+              position: absolute;
+              top: 20px;
+              right: 20px;
+            "
+          >
+            <img src="public/icons/x2.svg" width="40" height="40" />
+          </button>
+          <div>
+            <div class="relative h-80">
+              <!-- <img
+                src="public/figma-assets/medal3.png"
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                alt=""
+                width="284"
+                height="284"
+              /> -->
+
+              <img
+                class="medal-animation-image !h-[292px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500"
+                src="public/figma-assets/covu.gif"
+                alt=""
+              />
+
+              <img
+                src="public/figma-assets/medal-bg1-red.png"
+                class="rounded-t-[20px] h-full w-full"
+                alt=""
+              />
+            </div>
+            <div class="flex p-6 flex-col items-center gap-6">
+              <div class="space-y-2 flex flex-col items-center">
+                <div class="text-[#3A3335] text-center caption-l">
+                  Bạn chưa hoàn thành luyện tập hôm nay, hãy hoàn thành 100% bài
+                  tập để giữ chuỗi nào!
+                </div>
+                <div class="flex items-center gap-4 mt-4">
+                  <button
+                    onclick="hideModal('medal-preview5-done')"
+                    type="button"
+                    class="button-primary px-5 w-fit btn-animation flex-center bg-primary-green grayscale-white button-m"
+                    style="color: white; background-color: #00b26b"
+                  >
+                    Tiếp tục làm bài
+                  </button>
+                  <button
+                    onclick="hideModal('medal-preview5-done')"
+                    type="button"
+                    class="button-primary px-5 w-fit btn-animation flex-center bg-primary-green grayscale-white button-m"
+                    style="color: white; background-color: #ff6047"
+                  >
+                    Thoát
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script>
+      function hideModal(modalId) {
+        const dropdownElement = document.getElementById(modalId);
+
+        UIkit.modal(dropdownElement).hide(0);
+      }
+    </script>
+  </body>
+</html>

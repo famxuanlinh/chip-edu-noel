@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lớp học thử</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/css/uikit.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/output-class.css" />
+
+    <style>
+      .button-primary {
+        border-radius: 20px;
+        box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.1) inset,
+          0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+      }
+
+      .button-primary:hover {
+        opacity: 0.85;
+      }
+
+      .button-primary:active:after {
+        box-shadow: 0 0 0 0 white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 1;
+        transition: 0s;
+      }
+
+      .button-primary:active {
+        top: 2px;
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body style="font-family: 'Nunito', sans-serif">
+    <!-- Mobile warning -->
+    <div
+      class="uk-hidden@l uk-flex uk-flex-center uk-flex-middle"
+      style="width: 100vw; height: 100vh; flex-direction: column"
+    >
+      <p>Kích thước màn hình không hỗ trợ.</p>
+      <p>Vui lòng sử dụng kích thước màn hình lớn hơn</p>
+    </div>
+
+    <div class="uk-visible@l">
+      <!-- Background with gradient -->
+      <div
+        class="h-screen bg-[url('/public/class/In-class-2.png')] bg-right-bottom bg-cover flex flex-col gap-4 relative overflow-hidden p-6"
+      >
+        <!-- Header -->
+        <div
+          class="relative flex-none z-10 bg-white/10 backdrop-blur-md flex items-center rounded-3xl h-20 [1600px]:h-25 px-6"
+        >
+          <div
+            style="zoom: 0.8"
+            class="uk-flex uk-flex-between items-center w-full"
+          >
+            <!-- Left side - Lesson info -->
+            <div class="uk-flex uk-flex-column space-y-2">
+              <div
+                class="inline-flex w-fit px-6 py-2 bg-[#FFF5D54D]/30 rounded-full mb-2"
+              >
+                <span class="text-[#ffd675] text-base font-extrabold leading-4"
+                  >Trial Lesson</span
+                >
+              </div>
+              <div class="text-[#B9F295] text-2xl font-extrabold leading-7">
+                Bài học test 4 kỹ năng
+              </div>
+            </div>
+
+            <!-- Center - Flag icons -->
+            <div class="uk-flex space-x-8">
+              <div
+                class="w-16 h-16 relative overflow-hidden rounded-full flex items-center justify-center"
+              >
+                <img
+                  src="public/class/cake1.png"
+                  alt="America"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="w-16 h-16 relative overflow-hidden rounded-full flex items-center justify-center"
+              >
+                <img
+                  src="public/class/cake2.png"
+                  alt="Vietnam"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="w-16 h-16 relative overflow-hidden rounded-full flex items-center justify-center"
+              >
+                <img
+                  src="public/class/cake3.png"
+                  alt="America"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="w-16 h-16 relative overflow-hidden rounded-full flex items-center justify-center"
+              >
+                <img
+                  src="public/class/cake4.png"
+                  alt="Vietnam"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="w-16 h-16 relative overflow-hidden rounded-full flex items-center justify-center"
+              >
+                <img
+                  src="public/class/cake5.png"
+                  alt="America"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Right side - Action buttons -->
+            <div class="uk-flex items-center space-x-6">
+              <!-- Support phone -->
+              <div
+                class="flex items-center gap-2 px-4 py-2 bg-white/20 h-fit rounded-full"
+              >
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <img
+                    src="public/class/fi-br-call-history.png"
+                    alt="Phone"
+                    width="20"
+                    height="20"
+                  />
+                </div>
+                <span class="text-white text-lg font-bold leading-6"
+                  >Hỗ trợ: 1900.111.111</span
+                >
+              </div>
+
+              <!-- Zalo button -->
+              <div class="flex flex-col items-center gap-1 cursor-pointer">
+                <div
+                  class="w-14 h-14 button-primary bg-white !rounded-full flex items-center justify-center shadow-lg relative"
+                >
+                  <img
+                    src="public/class/Zalo.png"
+                    alt="Zalo"
+                    width="24"
+                    height="24"
+                  />
+                </div>
+                <span class="text-white text-sm font-bold leading-6 text-center"
+                  >Zalo</span
+                >
+              </div>
+
+              <!-- Help button -->
+              <div class="flex flex-col items-center gap-1 cursor-pointer">
+                <div
+                  id="btn-support-box"
+                  onclick="toggleVisibility('support-box')"
+                  class="w-14 h-14 button-primary bg-white !rounded-full flex items-center justify-center shadow-lg relative"
+                >
+                  <img
+                    src="public/class/fi-br-info.png"
+                    alt="Help"
+                    width="24"
+                    height="24"
+                  />
+                </div>
+                <span class="text-white text-sm font-bold leading-6 text-center"
+                  >Trợ giúp</span
+                >
+              </div>
+
+              <!-- Reload button -->
+              <div class="flex flex-col items-center gap-1 cursor-pointer">
+                <div
+                  class="w-14 h-14 button-primary bg-white !rounded-full flex items-center justify-center shadow-lg relative"
+                >
+                  <img
+                    src="public/class/fi-br-refresh.png"
+                    alt="Reload"
+                    width="24"
+                    height="24"
+                  />
+                </div>
+                <span class="text-white text-sm font-bold leading-6 text-center"
+                  >Tải lại</span
+                >
+              </div>
+
+              <!-- Exit button -->
+              <div class="flex flex-col items-center gap-1 cursor-pointer">
+                <div
+                  class="w-14 h-14 button-primary bg-[#ff6047] !rounded-full flex items-center justify-center shadow-lg relative"
+                >
+                  <img
+                    src="public/class/fi-br-power.png"
+                    alt="Exit"
+                    width="24"
+                    height="24"
+                  />
+                </div>
+                <span class="text-white text-sm font-bold leading-6 text-center"
+                  >Thoát</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="relative flex flex-1">
+          <!-- Video area -->
+          <div
+            class="flex-1 bg-white/10 rounded-3xl flex items-center justify-center overflow-hidden"
+          >
+            <img
+              src="public/class/image.png"
+              alt="Course video"
+              class="object-contain w-full"
+            />
+          </div>
+
+          <!-- Participants -->
+          <div
+            class="w-54 [1500px]:w-70 h-[calc(100vh-48px-100px-16px+20px)] [1600px]:h-[calc(100vh-48px-100px-16px)] flex mr-4 2xl:mr-6 ml-4 flex-col gap-3 2xl:gap-4"
+          >
+            <!-- Teacher -->
+            <div
+              class="flex-1 relative rounded-3xl !bg-[url('/public/class/student.png')] bg-center bg-cover overflow-hidden"
+            >
+              <div
+                class="w-full flex items-center justify-center h-full relative bg-[#00140b]/80 backdrop-blur-md overflow-hidden"
+              >
+                <img
+                  src="public/class/student.png"
+                  alt="Teacher"
+                  width="100"
+                  height="100"
+                  class="rounded-full aspect-square object-cover"
+                />
+                <div
+                  class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
+                >
+                  <div class="text-white 2xl:text-lg font-bold leading-7">
+                    Cô Vanessa
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Student -->
+            <div
+              class="flex-1 relative rounded-3xl overflow-hidden bg-[#00140b]/60"
+            >
+              <div
+                class="w-full flex items-center h-full relative overflow-hidden"
+              >
+                <video class="student-card-image">
+                  <source src="public/class/video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div
+                  class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
+                >
+                  <div class="text-white [1600px]:text-lg font-bold leading-7">
+                    Hoàng Văn Việt
+                  </div>
+                  <!-- <div
+                    class="flex items-center gap-2 text-white 2xl:text-lg font-bold leading-7"
+                  >
+                    <img
+                      src="public/icons/star.svg"
+                      alt="Star"
+                      width="24"
+                      height="24"
+                    />
+                    <span>x1</span>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex-1 relative rounded-3xl overflow-hidden bg-[#00140b]/60"
+            >
+              <div
+                class="w-full flex items-center h-full relative overflow-hidden"
+              >
+                <video class="student-card-image">
+                  <source src="public/class/video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div
+                  class="absolute bottom-0 left-0 right-0 px-4 py-1.5 bg-gradient-to-t from-black/30 to-transparent flex justify-between items-center"
+                >
+                  <div class="text-white [1600px]:text-lg font-bold leading-7">
+                    Hoàng Văn Việt
+                  </div>
+                  <div
+                    class="flex items-center gap-2 text-white [1600px]:text-lg font-bold leading-7"
+                  >
+                    <img
+                      src="public/icons/star.svg"
+                      alt="Star"
+                      width="24"
+                      height="24"
+                    />
+                    <span>x1</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat area -->
+          <div
+            id="chat-box"
+            class="w-86 [1500px]::w-100 h-[calc(100vh-48px-100px-16px+20px)] [1600px]:h-[calc(100vh-48px-100px-16px)] bg-white/50 rounded-3xl flex flex-col backdrop-blur-md"
+          >
+            <div
+              class="px-4 bg-white/40 h-17.5 flex text-[#00140b] text-2xl font-bold leading-10 m-0 items-center rounded-t-3xl"
+            >
+              Trò chuyện với giáo viên
+            </div>
+
+            <div
+              class="flex-1 pt-6 px-6 flex flex-col gap-4 overflow-y-auto"
+              id="chat-messages"
+            >
+              <!-- Teacher message -->
+              <div class="flex items-start max-w-75 gap-2 justify-start">
+                <div class="bg-white rounded-xl p-2 px-3 relative">
+                  <div
+                    class="text-[#00B26B] text-sm font-semibold leading-5 mb-1"
+                  >
+                    Cô Vanessa
+                  </div>
+                  <div class="flex items-end gap-2">
+                    <div
+                      class="text-[#00140b] text-lg font-medium leading-7 mb-1"
+                    >
+                      Are you ready?
+                    </div>
+                    <div
+                      class="text-black/40 text-sm font-medium leading-6 text-right"
+                    >
+                      07:37
+                    </div>
+                  </div>
+                  <!-- <img
+                      class="absolute -left-2 top-3 w-0 h-0 border-t-2 border-b-2 border-r-2 border-t-transparent border-b-transparent border-r-white"
+                    ></img> -->
+                  <img
+                    src="public/class/arrow-message.svg"
+                    alt="arrow-message"
+                    class="absolute -left-1.5 top-0"
+                  />
+                </div>
+              </div>
+
+              <!-- Student message -->
+              <div class="flex items-start gap-2 justify-end">
+                <div
+                  class="bg-[#d8eddd] max-w-75 flex items-end gap-2 rounded-xl p-2 px-3 relative"
+                >
+                  <div
+                    class="text-[#00140b] text-lg font-medium leading-7 mb-1"
+                  >
+                    I'm ready, teacher
+                  </div>
+                  <div
+                    class="text-black/40 text-sm flex-none font-medium leading-6 text-right"
+                  >
+                    07:37
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 flex items-center gap-2.5">
+              <input
+                type="text"
+                placeholder="Nhập tin nhắn"
+                class="flex-1 h-14 px-6 items-center bg-white/60 border-none focus-visible:!outline-none w-full rounded-full text-lg font-medium leading-7 text-black/60 placeholder-black/60"
+                id="chat-input"
+              />
+              <button
+                class="w-14 h-14 bg-[#00B26B] border-none rounded-full flex-none flex items-center justify-center cursor-pointer transition-colors hover:bg-green-700"
+                onclick="sendMessage()"
+              >
+                <img
+                  src="public/class/fi-br-paper-plane.png"
+                  alt="Send"
+                  width="24"
+                  height="24"
+                />
+              </button>
+            </div>
+          </div>
+
+          <!-- Support box -->
+          <div
+            id="support-box"
+            class="w-86 [1500px]::w-100 h-[calc(100vh-48px-100px-16px+20px)] [1600px]:h-[calc(100vh-48px-100px-16px)] bg-white/50 rounded-3xl flex flex-col backdrop-blur-md hidden"
+          >
+            <div
+              class="px-4 bg-white/40 h-17.5 flex text-[#00140b] text-2xl font-bold leading-10 m-0 items-center justify-between rounded-t-3xl"
+            >
+              <span>Trợ giúp</span>
+              <button
+                class="w-8 h-8 rounded-full p-2 hover:bg-white/20 transition-colors flex items-center justify-center"
+                onclick="toggleVisibility('support-box')"
+              >
+                <img
+                  src="public/class/x-close.svg"
+                  width="24"
+                  height="24"
+                  class="cursor-pointer text-black"
+                  alt="Close"
+                />
+              </button>
+            </div>
+            <div class="flex-1 pt-6 px-6 flex flex-col gap-4 overflow-y-auto">
+              <div class="bg-white/60 rounded-xl px-3 py-2">
+                <div class="text-[#00140b] text-lg font-medium leading-7 mb-2">
+                  Cách 1: Tải lại lớp học
+                </div>
+                <button
+                  class="bg-[#00B26B] hover:bg-green-700 text-white rounded-xl px-4 py-2 flex items-center justify-center transition-colors w-fit text-base font-medium"
+                  onclick="refreshPage()"
+                >
+                  <img
+                    src="public/class/reload_white.svg"
+                    width="24"
+                    height="24"
+                    class="mr-2"
+                    alt="Reload"
+                  />
+                  Tải lại lớp
+                </button>
+              </div>
+              <div class="bg-white/60 rounded-xl px-3 py-2">
+                <div class="text-[#00140b] text-lg font-medium leading-7">
+                  Cách 2: Đưa thiết bị lại gần nơi có sóng wifi mạnh
+                </div>
+              </div>
+              <div class="bg-white/60 rounded-xl px-3 py-2">
+                <div class="text-[#00140b] text-lg font-medium leading-7">
+                  Cách 3: Đổi sang kết nối Internet mạnh hơn
+                </div>
+              </div>
+              <div class="text-[#535557] text-base font-normal leading-6">
+                Nếu bạn đã thử các cách trên mà vẫn không khắc phục được, hãy
+                gửi yêu cầu cho Admin để được hỗ trợ.
+              </div>
+              <form class="space-y-4 mb-4">
+                <div class="relative">
+                  <select
+                    class="w-full h-11 px-4 bg-white/60 border-none rounded-lg text-[#535557] text-base font-medium focus:outline-none focus:ring-2 focus:ring-[#00B26B] appearance-none"
+                  >
+                    <option value="">Bạn đang gặp vấn đề gì?</option>
+                    <option value="1">Option 01</option>
+                    <option value="2">Option 02</option>
+                    <option value="3">Option 03</option>
+                    <option value="4">Option 04</option>
+                  </select>
+                  <div
+                    class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-5 h-5 text-[#535557]"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <button
+                  class="w-full bg-[#00B26B] hover:bg-green-700 text-white rounded-xl px-4 py-3 flex items-center justify-center transition-colors text-base font-medium"
+                >
+                  Gửi yêu cầu trợ giúp
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
+    <script src="js/class-script.js"></script>
+  </body>
+</html>

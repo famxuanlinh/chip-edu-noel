@@ -5,6 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css --watch",
+    "dev-class": "npx @tailwindcss/cli -i ./css/input-class.css -o ./css/output-class.css --watch",
+    "dev-tich-sao": "npx @tailwindcss/cli -i ./css/input-tich-sao.css -o ./css/output-tich-sao.css --watch",
     "dev-scss": "sass scss/app.scss css/app.css --watch"
   },
   "author": "",

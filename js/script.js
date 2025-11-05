@@ -88,20 +88,22 @@ draggables.forEach((draggable) => {
     const target = e.target.closest(".draggable"); // Đảm bảo kéo cả wrapper
     if (target) {
       e.dataTransfer.setData("text", target.id);
-
       // Tránh opacity bị mờ khi kéo
       setTimeout(() => target.classList.add("dragging"), 0);
     }
   });
 
   draggable.addEventListener("dragend", (e) => {
-    e.target.classList.remove("dragging");
+    const target = e.target.closest(".draggable");
+    if (target) target.classList.remove("dragging");
   });
 
   // Xử lý khi click để quay về danh sách gốc với animation mượt mà
   draggable.addEventListener("click", (e) => {
     const wrapper = e.target.closest(".draggable");
+
     if (!wrapper) return;
+    wrapper.classList.remove("dragging");
 
     const parentZone = wrapper.parentElement;
 
@@ -172,31 +174,31 @@ dropZones.forEach((zone) => {
 });
 
 // Xử lý sự kiện kéo thả
-dropZones.forEach((zone) => {
-  zone.addEventListener("dragover", (e) => {
-    e.preventDefault();
-    zone.classList.add("dragover");
-  });
+// dropZones.forEach((zone) => {
+//   zone.addEventListener("dragover", (e) => {
+//     e.preventDefault();
+//     zone.classList.add("dragover");
+//   });
 
-  zone.addEventListener("dragleave", () => {
-    zone.classList.remove("dragover");
-  });
+//   zone.addEventListener("dragleave", () => {
+//     zone.classList.remove("dragover");
+//   });
 
-  zone.addEventListener("drop", (e) => {
-    e.preventDefault();
-    zone.classList.remove("dragover");
+//   zone.addEventListener("drop", (e) => {
+//     e.preventDefault();
+//     zone.classList.remove("dragover");
 
-    const draggedId = e.dataTransfer.getData("text");
-    const draggedElement = document.getElementById(draggedId);
+//     const draggedId = e.dataTransfer.getData("text");
+//     const draggedElement = document.getElementById(draggedId);
 
-    if (!draggedElement) return;
+//     if (!draggedElement) return;
 
-    // Đảm bảo chỉ có một phần tử trong mỗi drop-zone
-    if (!zone.hasChildNodes()) {
-      zone.appendChild(draggedElement);
-    }
-  });
-});
+//     // Đảm bảo chỉ có một phần tử trong mỗi drop-zone
+//     if (!zone.hasChildNodes()) {
+//       zone.appendChild(draggedElement);
+//     }
+//   });
+// });
 
 // Translate
 document.querySelectorAll(".toggle-trans").forEach((button) => {
@@ -215,6 +217,7 @@ const audio = document.getElementById("audio");
 const playPauseBtn = document.getElementById("playPauseBtn");
 const progressBar = document.getElementById("progressBar");
 const timeDisplay = document.getElementById("timeDisplay");
+const audioPlayer = document.querySelector(".audio-player");
 
 let isPlaying = false;
 
@@ -230,20 +233,25 @@ playPauseBtn.addEventListener("click", () => {
 // When audio plays
 audio.addEventListener("play", () => {
   isPlaying = true;
-  playPauseBtn.src = "public/exam1/icons/pause-green.svg"; // Change icon
-  progressBar.style.background = "blue"; // Change background color
+  playPauseBtn.src = "public/exam1/icons/pause-green.svg";
+  audioPlayer.classList.add("playing");
+  audioPlayer.classList.remove("paused");
 });
 
 // When audio pauses
 audio.addEventListener("pause", () => {
   isPlaying = false;
-  playPauseBtn.src = "public/exam1/icons/play-orange.svg"; // Change icon
-  progressBar.style.background = "orange"; // Change background color
+  playPauseBtn.src = "public/exam1/icons/play-orange.svg";
+  audioPlayer.classList.add("paused");
+  audioPlayer.classList.remove("playing");
 });
-
 // Update progress bar and time
 audio.addEventListener("timeupdate", () => {
   const progress = (audio.currentTime / audio.duration) * 100;
+  progressBar.style.setProperty(
+    "--progress",
+    `${progress + (progress < 20 ? 2 : progress > 70 ? -2 : 1)}%`
+  );
   progressBar.value = progress;
 
   // Update time display
@@ -290,5 +298,5 @@ function startCountdown(durationInSeconds) {
 
 // Bắt đầu đếm ngược từ 29 phút 10 giây (tổng cộng 1750 giây)
 window.onload = function () {
-  startCountdown(65);
+  startCountdown(1750);
 };
