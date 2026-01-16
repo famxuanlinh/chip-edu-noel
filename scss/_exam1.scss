@@ -16,26 +16,33 @@
   }
 
   &-content {
-    height: calc(100vh - 236px);
+    // height: calc(100vh - 236px);
+    height: 100%;
     padding: 32px 54px;
     overflow-y: hidden;
     background-image: url("/public/exam1/bg.webp");
 
     @include maxw(1600) {
-      height: calc(100vh - 176px);
+      // height: calc(100vh - 176px);
       padding: 24px 46px;
+    }
+    @include maxw(1200) {
+      // height: calc(100vh - 176px + 18px);
+      padding: 16px 32px;
     }
   }
 
   &-footer {
     height: 128px;
     padding: 0 120px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     @include maxw(1600) {
       height: 88px;
+      margin-bottom: 16px;
     }
 
     &-num {
@@ -45,6 +52,7 @@
       justify-content: center;
       align-items: center;
       border-radius: 30px;
+      position: relative;
 
       text-align: center;
       font-size: 24px;
@@ -78,6 +86,76 @@
           color: #ff9800;
         }
       }
+
+      &.true {
+        background: #00b26b;
+        border: 3px solid transparent;
+        color: white;
+
+        &::after {
+          content: "";
+          background: url("/public/exam1/icons/true.png");
+          width: 24px; /* Điều chỉnh kích thước */
+          background-size: contain;
+          height: 24px;
+          position: absolute;
+          bottom: -1px;
+          border-radius: 100%;
+          right: -1px;
+        }
+
+        &:hover {
+          color: white;
+        }
+      }
+      &.fail {
+        background: #ff6047;
+        border: 3px solid transparent;
+        color: white;
+
+        &::after {
+          content: "";
+          background: url("/public/exam1/icons/fail.png");
+          width: 24px; /* Điều chỉnh kích thước */
+          background-size: contain;
+          height: 24px;
+          position: absolute;
+          bottom: -1px;
+          border-radius: 100%;
+          right: -1px;
+        }
+
+        &:hover {
+          color: white;
+        }
+      }
+      &.current {
+        border: 3px solid white;
+        outline: 2px solid #ff9800;
+      }
     }
+  }
+}
+
+#exam-scroll {
+  position: relative;
+  overflow-y: auto;
+  padding-right: 12px;
+
+  // Tùy chỉnh thanh cuộn
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background-color: transparent;
+    margin: 0 10px;
   }
 }
